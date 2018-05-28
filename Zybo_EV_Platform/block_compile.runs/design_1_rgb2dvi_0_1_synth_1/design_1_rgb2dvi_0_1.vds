@@ -1,0 +1,453 @@
+#-----------------------------------------------------------
+# Vivado v2017.4_AR70530_AR70530 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri May 11 19:34:43 2018
+# Process ID: 9224
+# Current directory: C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1
+# Command line: vivado.exe -log design_1_rgb2dvi_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rgb2dvi_0_1.tcl
+# Log file: C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1/design_1_rgb2dvi_0_1.vds
+# Journal file: C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_rgb2dvi_0_1.tcl -notrace
+Command: synth_design -top design_1_rgb2dvi_0_1 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13324 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 409.941 ; gain = 100.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_rgb2dvi_0_1' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/synth/design_1_rgb2dvi_0_1.vhd:72]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
+	Parameter kClkPrimitive bound to: PLL - type: string 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kD0Swap bound to: 0 - type: bool 
+	Parameter kD1Swap bound to: 0 - type: bool 
+	Parameter kD2Swap bound to: 0 - type: bool 
+	Parameter kClkSwap bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'rgb2dvi' declared at 'c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/rgb2dvi.vhd:62' bound to instance 'U0' of component 'rgb2dvi' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/synth/design_1_rgb2dvi_0_1.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/rgb2dvi.vhd:94]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
+	Parameter kClkPrimitive bound to: PLL - type: string 
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kD0Swap bound to: 0 - type: bool 
+	Parameter kD1Swap bound to: 0 - type: bool 
+	Parameter kD2Swap bound to: 0 - type: bool 
+	Parameter kClkSwap bound to: 0 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsyncReset.vhd:72]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsyncReset.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsync.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/OutputSERDES.vhd:76]
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutputBuffer' to cell 'OBUFDS' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/OutputSERDES.vhd:83]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERDESE2' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/OutputSERDES.vhd:92]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/OutputSERDES.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (3#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/OutputSERDES.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (4#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (5#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/rgb2dvi.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'design_1_rgb2dvi_0_1' (6#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/synth/design_1_rgb2dvi_0_1.vhd:72]
+WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port SerialClk
+WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port aRst
+WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 463.168 ; gain = 153.703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 463.168 ; gain = 153.703
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/src/rgb2dvi_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/src/rgb2dvi_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/src/rgb2dvi.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/src/rgb2dvi.xdc] for cell 'U0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/src/rgb2dvi_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/src/rgb2dvi_clocks.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 821.871 ; gain = 0.070
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 821.871 ; gain = 512.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 821.871 ; gain = 512.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 821.871 ; gain = 512.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:96]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:96]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:96]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:96]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 821.871 ; gain = 512.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 9     
+	   4 Input      5 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 9     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module TMDS_Encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:150]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC0_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:114]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC0_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:148]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pC1_1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pC1_2_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pVde_1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pVde_2_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC0_1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC0_2_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC1_1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC1_2_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pVde_1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pVde_2_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
+INFO: [Synth 8-3886] merging instance 'U0/DataEncoders[0].DataEncoder/n0q_m_2_reg[0]' (FD) to 'U0/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/DataEncoders[1].DataEncoder/n0q_m_2_reg[0]' (FD) to 'U0/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/DataEncoders[2].DataEncoder/n0q_m_2_reg[0]' (FD) to 'U0/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\DataEncoders[1].DataEncoder/pC0_1_reg )
+INFO: [Synth 8-3886] merging instance 'U0/DataEncoders[1].DataEncoder/pC0_2_reg' (FD) to 'U0/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\DataEncoders[1].DataEncoder/pC0_1_reg )
+WARNING: [Synth 8-3332] Sequential element (DataEncoders[0].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
+WARNING: [Synth 8-3332] Sequential element (DataEncoders[1].DataEncoder/pC0_1_reg) is unused and will be removed from module rgb2dvi.
+WARNING: [Synth 8-3332] Sequential element (DataEncoders[1].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
+WARNING: [Synth 8-3332] Sequential element (DataEncoders[2].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 821.871 ; gain = 512.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:20 . Memory (MB): peak = 821.871 ; gain = 512.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:22 . Memory (MB): peak = 845.965 ; gain = 536.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:22 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |LUT1        |     1|
+|2     |LUT2        |    19|
+|3     |LUT3        |    31|
+|4     |LUT4        |    20|
+|5     |LUT5        |    34|
+|6     |LUT6        |    85|
+|7     |MUXF7       |     3|
+|8     |OSERDESE2   |     4|
+|9     |OSERDESE2_1 |     4|
+|10    |FDPE        |     2|
+|11    |FDRE        |   117|
+|12    |FDSE        |    15|
+|13    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+---------------+------+
+|      |Instance                             |Module         |Cells |
++------+-------------------------------------+---------------+------+
+|1     |top                                  |               |   339|
+|2     |  U0                                 |rgb2dvi        |   339|
+|3     |    ClockSerializer                  |OutputSERDES   |     3|
+|4     |    \DataEncoders[0].DataEncoder     |TMDS_Encoder   |   115|
+|5     |    \DataEncoders[0].DataSerializer  |OutputSERDES_0 |     3|
+|6     |    \DataEncoders[1].DataEncoder     |TMDS_Encoder_1 |   105|
+|7     |    \DataEncoders[1].DataSerializer  |OutputSERDES_2 |     3|
+|8     |    \DataEncoders[2].DataEncoder     |TMDS_Encoder_3 |   105|
+|9     |    \DataEncoders[2].DataSerializer  |OutputSERDES_4 |     3|
+|10    |    LockLostReset                    |ResetBridge    |     2|
+|11    |      SyncAsyncx                     |SyncAsync      |     2|
++------+-------------------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 855.531 ; gain = 187.363
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:24 . Memory (MB): peak = 855.531 ; gain = 546.066
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:28 . Memory (MB): peak = 855.531 ; gain = 557.539
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1/design_1_rgb2dvi_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/design_1_rgb2dvi_0_1.xci
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/design_1_rgb2dvi_0_1_synth_1/design_1_rgb2dvi_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_rgb2dvi_0_1_utilization_synth.rpt -pb design_1_rgb2dvi_0_1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 855.531 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 19:36:28 2018...

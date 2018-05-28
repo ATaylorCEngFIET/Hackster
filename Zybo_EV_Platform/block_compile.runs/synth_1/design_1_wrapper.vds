@@ -1,0 +1,856 @@
+#-----------------------------------------------------------
+# Vivado v2017.4_AR70530_AR70530 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri May 11 20:57:10 2018
+# Process ID: 3432
+# Current directory: C:/hdl_projects/block_compile/block_compile.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/hdl_projects/block_compile/block_compile.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/hdl_projects/block_compile/block_compile.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/hdl_projects/digilent'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_high_speed_selectio_wiz:hssio_ctrl:1.0'. The one found in location 'c:/Xilinx/Vivado/2017.4/patches/AR70530/vivado/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_ctrl.xml' will take precedence over the same Interface in location 'c:/Xilinx/Vivado/2017.4/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_ctrl.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_high_speed_selectio_wiz:hssio_data_bidir:1.0'. The one found in location 'c:/Xilinx/Vivado/2017.4/patches/AR70530/vivado/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_data_bidir.xml' will take precedence over the same Interface in location 'c:/Xilinx/Vivado/2017.4/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_data_bidir.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_high_speed_selectio_wiz:hssio_data_rx:1.0'. The one found in location 'c:/Xilinx/Vivado/2017.4/patches/AR70530/vivado/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_data_rx.xml' will take precedence over the same Interface in location 'c:/Xilinx/Vivado/2017.4/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_data_rx.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_high_speed_selectio_wiz:hssio_data_tx:1.0'. The one found in location 'c:/Xilinx/Vivado/2017.4/patches/AR70530/vivado/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_data_tx.xml' will take precedence over the same Interface in location 'c:/Xilinx/Vivado/2017.4/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_data_tx.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_high_speed_selectio_wiz:hssio_fab_to_ip:1.0'. The one found in location 'c:/Xilinx/Vivado/2017.4/patches/AR70530/vivado/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_fab_to_ip.xml' will take precedence over the same Interface in location 'c:/Xilinx/Vivado/2017.4/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_fab_to_ip.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_high_speed_selectio_wiz:hssio_ip_to_pins:1.0'. The one found in location 'c:/Xilinx/Vivado/2017.4/patches/AR70530/vivado/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_ip_to_pins.xml' will take precedence over the same Interface in location 'c:/Xilinx/Vivado/2017.4/data/ip/xilinx/high_speed_selectio_wiz_v3_2/interfaces/hssio_ip_to_pins.xml'
+add_files: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 409.563 ; gain = 143.000
+Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9660 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 509.750 ; gain = 98.461
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:51]
+INFO: [Synth 8-3491] module 'design_1' declared at 'C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:3339' bound to instance 'design_1_i' of component 'design_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'design_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:3384]
+INFO: [Synth 8-3491] module 'design_1_axi_dynclk_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axi_dynclk_0_0_stub.vhdl:5' bound to instance 'axi_dynclk_0' of component 'design_1_axi_dynclk_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4267]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_dynclk_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axi_dynclk_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4295]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1624]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:196]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:439]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_1_stub.vhdl:90]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1CA5Z32' (1#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:196]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O7FAN0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1086]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O7FAN0' (2#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1086]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1F69D31' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1489]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1F69D31' (3#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1489]
+INFO: [Synth 8-3491] module 'design_1_xbar_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:2081]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xbar_1_stub.vhdl:89]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (4#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1624]
+INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4396]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axi_vdma_0_0_stub.vhdl:78]
+INFO: [Synth 8-3491] module 'design_1_axis_subset_converter_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axis_subset_converter_0_0_stub.vhdl:5' bound to instance 'axis_subset_converter_0' of component 'design_1_axis_subset_converter_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4466]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_subset_converter_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axis_subset_converter_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_1_axis_subset_converter_0_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axis_subset_converter_0_1_stub.vhdl:5' bound to instance 'axis_subset_converter_1' of component 'design_1_axis_subset_converter_0_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4481]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_subset_converter_0_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_axis_subset_converter_0_1_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_dvi2rgb_1_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_dvi2rgb_1_1_stub.vhdl:5' bound to instance 'dvi2rgb_1' of component 'design_1_dvi2rgb_1_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4498]
+INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_1_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_dvi2rgb_1_1_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_1_ila_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4520]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_ila_1_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_1_0_stub.vhdl:5' bound to instance 'ila_1' of component 'design_1_ila_1_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4527]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_1_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_ila_3_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_3_0_stub.vhdl:5' bound to instance 'ila_3' of component 'design_1_ila_3_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4540]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_3_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_3_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_ila_4_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_4_0_stub.vhdl:5' bound to instance 'ila_4' of component 'design_1_ila_4_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4548]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_4_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_ila_4_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4554]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_processing_system7_0_0_stub.vhdl:122]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:2360]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (5#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:569]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (6#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:569]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:670]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (7#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:670]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:775]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (8#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:775]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:882]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (9#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:882]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_VQEDA7' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:987]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_VQEDA7' (10#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:987]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1198]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1381]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (11#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:1198]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:3167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (12#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:2360]
+INFO: [Synth 8-3491] module 'design_1_rgb2dvi_0_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_rgb2dvi_0_1_stub.vhdl:5' bound to instance 'rgb2dvi_0' of component 'design_1_rgb2dvi_0_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4833]
+INFO: [Synth 8-638] synthesizing module 'design_1_rgb2dvi_0_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_rgb2dvi_0_1_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4847]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_v_axi4s_vid_out_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'design_1_v_axi4s_vid_out_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4860]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_axi4s_vid_out_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_v_tc_0_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_tc_0_1_stub.vhdl:5' bound to instance 'v_tc_0' of component 'design_1_v_tc_0_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4893]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_0_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_tc_0_1_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_v_tc_1_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_tc_1_0_stub.vhdl:5' bound to instance 'v_tc_1' of component 'design_1_v_tc_1_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4926]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_1_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_tc_1_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'design_1_v_vid_in_axi4s_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_vid_in_axi4s_0_0_stub.vhdl:5' bound to instance 'v_vid_in_axi4s_0' of component 'design_1_v_vid_in_axi4s_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4961]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_vid_in_axi4s_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_v_vid_in_axi4s_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xlconstant_0_0_stub.vhdl:5' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4992]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_0' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xlconstant_0_0_stub.vhdl:12]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xlconstant_0_1_stub.vhdl:5' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_0_1' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4996]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_1' [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/realtime/design_1_xlconstant_0_1_stub.vhdl:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4671]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_interconnect_0'. This will prevent further optimization [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:4318]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (13#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/synth/design_1.vhd:3384]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:22655' bound to instance 'hdmi_in_ddc_scl_iobuf' of component 'IOBUF' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:22655]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (14#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:22655]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:22655' bound to instance 'hdmi_in_ddc_sda_iobuf' of component 'IOBUF' [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (15#1) [C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:51]
+WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_17KQ732 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_17KQ732 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_17KQ732 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_17KQ732 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_1F69D31 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_1F69D31 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_1F69D31 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_1F69D31 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_bid[5]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_bid[4]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_bid[3]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_bid[2]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_bid[1]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_rid[5]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_rid[4]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_rid[3]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_rid[2]
+WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_AXI_rid[1]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S01_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 566.785 ; gain = 155.496
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 566.785 ; gain = 155.496
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp24/design_1_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp24/design_1_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp25/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp25/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp26/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp26/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp27/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp27/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc] for cell 'design_1_i/dvi2rgb_1'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc] for cell 'design_1_i/dvi2rgb_1'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp29/design_1_v_tc_1_0_in_context.xdc] for cell 'design_1_i/v_tc_1'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp29/design_1_v_tc_1_0_in_context.xdc] for cell 'design_1_i/v_tc_1'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc] for cell 'design_1_i/rgb2dvi_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc] for cell 'design_1_i/rgb2dvi_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp31/design_1_xlconstant_0_0_in_context.xdc] for cell 'design_1_i/xlconstant_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp31/design_1_xlconstant_0_0_in_context.xdc] for cell 'design_1_i/xlconstant_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp32/design_1_xlconstant_0_1_in_context.xdc] for cell 'design_1_i/xlconstant_1'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp32/design_1_xlconstant_0_1_in_context.xdc] for cell 'design_1_i/xlconstant_1'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp33/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp33/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp34/design_1_v_tc_0_1_in_context.xdc] for cell 'design_1_i/v_tc_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp34/design_1_v_tc_0_1_in_context.xdc] for cell 'design_1_i/v_tc_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp35/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp35/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp36/design_1_axi_dynclk_0_0_in_context.xdc] for cell 'design_1_i/axi_dynclk_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp36/design_1_axi_dynclk_0_0_in_context.xdc] for cell 'design_1_i/axi_dynclk_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp37/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp37/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp38/design_1_ila_1_1_in_context.xdc] for cell 'design_1_i/ila_1'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp38/design_1_ila_1_1_in_context.xdc] for cell 'design_1_i/ila_1'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp39/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_0'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp39/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp40/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp40/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp41/design_1_ila_3_0_in_context.xdc] for cell 'design_1_i/ila_3'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp41/design_1_ila_3_0_in_context.xdc] for cell 'design_1_i/ila_3'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp42/design_1_ila_4_0_in_context.xdc] for cell 'design_1_i/ila_4'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp42/design_1_ila_4_0_in_context.xdc] for cell 'design_1_i/ila_4'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp43/design_1_axis_subset_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_subset_converter_1'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp43/design_1_axis_subset_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_subset_converter_1'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp44/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp44/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp45/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp45/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.srcs/constrs_1/new/cosnt.xdc]
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.srcs/constrs_1/new/cosnt.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/hdl_projects/block_compile/block_compile.srcs/constrs_1/new/cosnt.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 905.523 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_vdma_0' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.060' specified during out-of-context synthesis of instance 'design_1_i/rgb2dvi_0' at clock pin 'PixelClk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_axi4s_vid_out_0' at clock pin 'vid_io_out_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_tc_0' at clock pin 'clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_tc_1' at clock pin 'clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_vid_in_axi4s_0' at clock pin 'vid_io_in_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cke. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 132).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 133).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 134).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 135).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 136).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 137).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 138).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 139).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_odt. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 140).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 141).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 142).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 143).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 144).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 145).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 146).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 147).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 148).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 149).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 150).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 151).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 152).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 153).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 154).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 155).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 156).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 157).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 158).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 159).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 160).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 161).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 162).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 163).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 164).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 165).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 166).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 167).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 168).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 169).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 170).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 171).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 172).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 173).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 174).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 175).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 176).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 177).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 178).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 179).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 180).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 181).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 182).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 183).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 184).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 185).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 186).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 187).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 188).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 189).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 190).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 191).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 192).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 193).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 194).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 195).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 196).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 197).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 198).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 199).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 200).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 201).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 202).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 203).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 204).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 205).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 206).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 207).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 208).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 209).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 210).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 211).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 212).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 213).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 214).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 215).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 216).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 217).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 218).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 219).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 220).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 221).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 222).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 223).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 224).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 225).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 226).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 227).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 228).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 229).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 230).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 231).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 232).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 233).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 234).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 235).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 236).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 237).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 238).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 239).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 240).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 241).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 242).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 243).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 244).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 245).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 246).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 247).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 248).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 249).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 250).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 251).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 252).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 253).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 254).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 255).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 256).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 257).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 258).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 259).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 260).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 261).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp23/design_1_processing_system7_0_0_in_context.xdc, line 262).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_clk_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_clk_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_clk_p. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_clk_p. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_data_n[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_data_n[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_data_n[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_data_n[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_data_n[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_data_n[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_data_p[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_data_p[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_data_p[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_data_p[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_in_data_p[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_in_data_p[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp28/design_1_dvi2rgb_1_1_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_clk_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_clk_n. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_clk_p. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_clk_p. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_n[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_n[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_n[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_n[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_n[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_n[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_p[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_p[0]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_p[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_p[1]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_p[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_p[2]. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/synth_1/.Xil/Vivado-3432-DESKTOP-HQKVQ13/dcp30/design_1_rgb2dvi_0_1_in_context.xdc, line 16).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_dynclk_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_vdma_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_subset_converter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_subset_converter_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/dvi2rgb_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rgb2dvi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/v_axi4s_vid_out_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/v_tc_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/v_tc_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/v_vid_in_axi4s_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlconstant_1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_bid[5]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_bid[4]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_bid[3]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_bid[2]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_bid[1]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_rid[5]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_rid[4]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_rid[3]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_rid[2]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_AXI_rid[1]
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S01_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK1' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/dvi2rgb_1/PixelClk' to pin 'design_1_i/dvi2rgb_1/bbstub_PixelClk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/dvi2rgb_1/RefClk' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 905.523 ; gain = 494.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |design_1_xbar_1                    |         1|
+|2     |design_1_auto_pc_1                 |         1|
+|3     |design_1_xbar_0                    |         1|
+|4     |design_1_auto_pc_0                 |         1|
+|5     |design_1_axi_dynclk_0_0            |         1|
+|6     |design_1_axi_gpio_0_0              |         1|
+|7     |design_1_axi_vdma_0_0              |         1|
+|8     |design_1_axis_subset_converter_0_0 |         1|
+|9     |design_1_axis_subset_converter_0_1 |         1|
+|10    |design_1_dvi2rgb_1_1               |         1|
+|11    |design_1_ila_0_0                   |         1|
+|12    |design_1_ila_1_0                   |         1|
+|13    |design_1_ila_3_0                   |         1|
+|14    |design_1_ila_4_0                   |         1|
+|15    |design_1_processing_system7_0_0    |         1|
+|16    |design_1_rgb2dvi_0_1               |         1|
+|17    |design_1_rst_ps7_0_50M_0           |         1|
+|18    |design_1_v_axi4s_vid_out_0_0       |         1|
+|19    |design_1_v_tc_0_1                  |         1|
+|20    |design_1_v_tc_1_0                  |         1|
+|21    |design_1_v_vid_in_axi4s_0_0        |         1|
+|22    |design_1_xlconstant_0_0            |         1|
+|23    |design_1_xlconstant_0_1            |         1|
++------+-----------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |design_1_auto_pc_0_bbox_13                |     1|
+|2     |design_1_auto_pc_1_bbox_2                 |     1|
+|3     |design_1_axi_dynclk_0_0_bbox_0            |     1|
+|4     |design_1_axi_gpio_0_0_bbox_1              |     1|
+|5     |design_1_axi_vdma_0_0_bbox_4              |     1|
+|6     |design_1_axis_subset_converter_0_0_bbox_5 |     1|
+|7     |design_1_axis_subset_converter_0_1_bbox_6 |     1|
+|8     |design_1_dvi2rgb_1_1_bbox_7               |     1|
+|9     |design_1_ila_0_0_bbox_8                   |     1|
+|10    |design_1_ila_1_0_bbox_9                   |     1|
+|11    |design_1_ila_3_0_bbox_10                  |     1|
+|12    |design_1_ila_4_0_bbox_11                  |     1|
+|13    |design_1_processing_system7_0_0_bbox_12   |     1|
+|14    |design_1_rgb2dvi_0_1_bbox_15              |     1|
+|15    |design_1_rst_ps7_0_50M_0_bbox_16          |     1|
+|16    |design_1_v_axi4s_vid_out_0_0_bbox_17      |     1|
+|17    |design_1_v_tc_0_1_bbox_18                 |     1|
+|18    |design_1_v_tc_1_0_bbox_19                 |     1|
+|19    |design_1_v_vid_in_axi4s_0_0_bbox_20       |     1|
+|20    |design_1_xbar_0_bbox_14                   |     1|
+|21    |design_1_xbar_1_bbox_3                    |     1|
+|22    |design_1_xlconstant_0_0_bbox_21           |     1|
+|23    |design_1_xlconstant_0_1_bbox_22           |     1|
+|24    |LUT1                                      |     8|
+|25    |IOBUF                                     |     2|
+|26    |OBUF                                      |     1|
++------+------------------------------------------+------+
+
+Report Instance Areas: 
++------+-----------------------+------------------------------+------+
+|      |Instance               |Module                        |Cells |
++------+-----------------------+------------------------------+------+
+|1     |top                    |                              |  2471|
+|2     |  design_1_i           |design_1                      |  2468|
+|3     |    axi_interconnect_0 |design_1_axi_interconnect_0_0 |   619|
+|4     |      m00_couplers     |m00_couplers_imp_1CA5Z32      |   265|
+|5     |    ps7_0_axi_periph   |design_1_ps7_0_axi_periph_0   |   884|
+|6     |      s00_couplers     |s00_couplers_imp_UYSKKA       |   177|
++------+-----------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 909.816 ; gain = 159.789
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 909.816 ; gain = 498.527
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 920.840 ; gain = 511.277
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 920.840 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 20:58:32 2018...
