@@ -1,0 +1,884 @@
+INFO: [HLS 200-0] Workspace C:/Users/aptay/HLS_Area/cvt_colour/solution1 opened at Fri Jun 22 22:13:15 +0100 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0.001 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.002 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.005 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0.002 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.005 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/dsp48e1.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.001 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.004 sec.
+Command     import_lib returned 0; 0.024 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.004 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.015 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.015 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.009 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.137 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.188 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.192 sec.
+Command     ap_source returned 0; 0.192 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0.027 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.031 sec.
+Command       ap_source returned 0; 0.032 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_hp.hlp 
+Command       ap_source returned 0; 0.002 sec.
+Command     import_lib returned 0; 0.05 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.003 sec.
+Command     ap_source returned 0; 0.003 sec.
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart returned 1; 0.037 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed slow 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.052 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0.003 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.102 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed slow 
+Command     config_chip_info returned 0; 0 sec.
+Command   open_solution returned 0; 0.472 sec.
+Execute   export_design -rtl vhdl -format ip_catalog -vendor adiuvoengineering -display_name SOBEL 
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.004 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.008 sec.
+Command           ap_source returned 0; 0.012 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.103 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.148 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.151 sec.
+Command     ap_source returned 0; 0.151 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.003 sec.
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.004 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.009 sec.
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.012 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.103 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.148 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.152 sec.
+Command     ap_source returned 0; 0.152 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.002 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Duplicate.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AddWeighted.compgen.tcl 
+Command     ap_source returned 0; 0.121 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Command     ap_source returned 0; 0.016 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Duplicate.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel_1.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AddWeighted.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.compgen.tcl 
+Command     ap_source returned 0; 0.033 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Duplicate.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AddWeighted.compgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Command     ap_source returned 0; 0.008 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.constraint.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.constraint.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     sc_get_clocks image_filter 
+Command     sc_get_clocks returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/impl/misc/image_filter_ap_dadd_3_full_dsp_64_ip.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/impl/misc/image_filter_ap_dmul_4_max_dsp_64_ip.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/impl/misc/image_filter_ap_sitodp_4_no_dsp_32_ip.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.constraint.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.constraint.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.008 sec.
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.015 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.009 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.104 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.152 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.156 sec.
+Command     ap_source returned 0; 0.156 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.002 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.009 sec.
+Command           ap_source returned 0; 0.014 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.015 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.012 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.106 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.16 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.163 sec.
+Command     ap_source returned 0; 0.163 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.004 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.008 sec.
+Command           ap_source returned 0; 0.012 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.011 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.009 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.107 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.15 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.153 sec.
+Command     ap_source returned 0; 0.153 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.002 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Duplicate.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AddWeighted.compgen.tcl 
+Command     ap_source returned 0; 0.085 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.compgen.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.008 sec.
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.015 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.009 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.104 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.152 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.154 sec.
+Command     ap_source returned 0; 0.154 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.002 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.03 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.009 sec.
+Command           ap_source returned 0; 0.014 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.015 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.011 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.112 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.162 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.165 sec.
+Command     ap_source returned 0; 0.166 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.005 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.008 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.012 sec.
+Command           ap_source returned 0; 0.02 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.017 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.107 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.171 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.174 sec.
+Command     ap_source returned 0; 0.174 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.002 sec.
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Block_proc.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor_1.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D_1.compgen.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/GaussianBlur.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Duplicate.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Filter2D.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Sobel_1.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/AddWeighted.compgen.tcl 
+Command     ap_source returned 0; 0.083 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/CvtColor.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/Mat2AXIvideo.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.constraint.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/image_filter.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.004 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.009 sec.
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.009 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.104 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.15 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.152 sec.
+Command     ap_source returned 0; 0.153 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.004 sec.
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/aptay/HLS_Area/cvt_colour/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Command   export_design returned 0; 90.489 sec.
+Command ap_source returned 0; 90.969 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0 sec.

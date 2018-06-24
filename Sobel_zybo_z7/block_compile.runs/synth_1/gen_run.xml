@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528019785">
+  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/cosnt.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xlconstant_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rgb2dvi_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_dvi2rgb_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_vid_in_axi4s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dynclk_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_image_filter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xlconstant_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_5_0"/>
+</GenRun>

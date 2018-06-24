@@ -1,0 +1,80 @@
+WARNING: [Common 17-306] Update version (2017.4_AR70530) does not match product version (2017.3).
+#-----------------------------------------------------------
+# xsim v2017.3_AR70530 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Jun  3 10:32:20 2018
+# Process ID: 11404
+# Current directory: C:/Users/aptay/HLS_Area/cvt_colour/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/image_filter/xsim_script.tcl}
+# Log file: C:/Users/aptay/HLS_Area/cvt_colour/solution1/sim/vhdl/xsim.log
+# Journal file: C:/Users/aptay/HLS_Area/cvt_colour/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/image_filter/xsim_script.tcl
+# xsim {image_filter} -autoloadwcfg -tclbatch {image_filter.tcl}
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source image_filter.tcl
+## log_wave [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /apatb_image_filter_top/AESL_inst_image_filter/*]
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set OUTPUT_STREAM_group [add_wave_group OUTPUT_STREAM(axis) -into $coutputgroup]
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TREADY -into $OUTPUT_STREAM_group -color #ffff00 -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TVALID -into $OUTPUT_STREAM_group -color #ffff00 -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TDEST -into $OUTPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TID -into $OUTPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TLAST -into $OUTPUT_STREAM_group -color #ffff00 -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TUSER -into $OUTPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TSTRB -into $OUTPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TKEEP -into $OUTPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/OUTPUT_STREAM_TDATA -into $OUTPUT_STREAM_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set INPUT_STREAM_group [add_wave_group INPUT_STREAM(axis) -into $cinputgroup]
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TREADY -into $INPUT_STREAM_group -color #ffff00 -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TVALID -into $INPUT_STREAM_group -color #ffff00 -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TDEST -into $INPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TID -into $INPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TLAST -into $INPUT_STREAM_group -color #ffff00 -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TUSER -into $INPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TSTRB -into $INPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TKEEP -into $INPUT_STREAM_group -radix hex
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/INPUT_STREAM_TDATA -into $INPUT_STREAM_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/ap_start -into $blocksiggroup
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/ap_done -into $blocksiggroup
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/ap_ready -into $blocksiggroup
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/ap_idle -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_image_filter_top/AESL_inst_image_filter/ap_clk -into $clockgroup
+## save_wave_config image_filter.wcfg
+## run all
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 225 ns  Iteration: 16  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_daddrcU_U74/image_filter_ap_dadd_3_full_dsp_64_u/U0/i_synth/addsub_op/ADDSUB/speed_op/logic/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2017.3\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 51945100 ps  Iteration: 10  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_dmulsc4_U76/image_filter_ap_dmul_4_max_dsp_64_u/U0/i_synth/mult/OP/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2017.3\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 51945100 ps  Iteration: 10  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_dmulsc4_U77/image_filter_ap_dmul_4_max_dsp_64_u/U0/i_synth/mult/OP/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2017.3\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Note: simulation done!
+Time: 9476775 ns  Iteration: 1  Process: /apatb_image_filter_top/generate_sim_done_proc  File: C:/Users/aptay/HLS_Area/cvt_colour/solution1/sim/vhdl/image_filter.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 9476775 ns  Iteration: 1  Process: /apatb_image_filter_top/generate_sim_done_proc  File: C:/Users/aptay/HLS_Area/cvt_colour/solution1/sim/vhdl/image_filter.autotb.vhd
+$finish called at time : 9476775 ns
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:13:14 . Memory (MB): peak = 224.641 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jun  3 10:45:44 2018...

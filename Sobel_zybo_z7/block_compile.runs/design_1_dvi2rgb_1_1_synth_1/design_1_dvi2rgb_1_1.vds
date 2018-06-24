@@ -1,0 +1,906 @@
+#-----------------------------------------------------------
+# Vivado v2017.4_AR70530_AR70530 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Jun  2 17:56:09 2018
+# Process ID: 18452
+# Current directory: C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1
+# Command line: vivado.exe -log design_1_dvi2rgb_1_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_dvi2rgb_1_1.tcl
+# Log file: C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/design_1_dvi2rgb_1_1.vds
+# Journal file: C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_dvi2rgb_1_1.tcl -notrace
+Command: synth_design -top design_1_dvi2rgb_1_1 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21640 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 484.785 ; gain = 125.516
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:135]
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/dvi2rgb.vhd:211]
+WARNING: [Synth 8-1565] actual for formal port potherchrdy is neither a static name nor a globally static expression [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/dvi2rgb.vhd:232]
+WARNING: [Synth 8-1565] actual for formal port potherchvld is neither a static name nor a globally static expression [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/dvi2rgb.vhd:233]
+INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_1_1' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/synth/design_1_dvi2rgb_1_1.vhd:80]
+	Parameter kEmulateDDC bound to: 1 - type: bool 
+	Parameter kRstActiveHigh bound to: 0 - type: bool 
+	Parameter kClkRange bound to: 1 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+	Parameter kAddBUFG bound to: 0 - type: bool 
+	Parameter kEdidFileName bound to: dgl_720p_cea.data - type: string 
+	Parameter kDebug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'dvi2rgb' declared at 'c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/synth/design_1_dvi2rgb_1_1.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/dvi2rgb.vhd:111]
+	Parameter kEmulateDDC bound to: 1 - type: bool 
+	Parameter kRstActiveHigh bound to: 0 - type: bool 
+	Parameter kAddBUFG bound to: 0 - type: bool 
+	Parameter kClkRange bound to: 1 - type: integer 
+	Parameter kEdidFileName bound to: dgl_720p_cea.data - type: string 
+	Parameter kDebug bound to: 0 - type: bool 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'TMDS_Clocking' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:82]
+	Parameter kClkRange bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsyncReset.vhd:72]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsyncReset.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsyncReset.vhd:72]
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:125]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:139]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 6.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 1.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:180]
+INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:239]
+	Parameter BUFR_DIVIDE bound to: 5 - type: string 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (2#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (3#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:98]
+	Parameter kCtlTknCount bound to: 128 - type: integer 
+	Parameter kTimeoutMs bound to: 50 - type: integer 
+	Parameter kRefClkFrqMHz bound to: 200 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'InputSERDES' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/InputSERDES.vhd:85]
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/InputSERDES.vhd:92]
+	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
+	Parameter DELAY_SRC bound to: IDATAIN - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: VARIABLE - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_DATAIN_INVERTED bound to: 1'b0 
+	Parameter IS_IDATAIN_INVERTED bound to: 1'b0 
+	Parameter PIPE_SEL bound to: FALSE - type: string 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: float 
+	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
+INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/InputSERDES.vhd:102]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISERDESE2' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/InputSERDES.vhd:130]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/InputSERDES.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (4#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/InputSERDES.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SyncBase' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncBase.vhd:74]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (4#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase' (5#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncBase.vhd:74]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (5#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:95]
+	Parameter kUseFastAlgorithm bound to: 0 - type: bool 
+	Parameter kCtlTknCount bound to: 128 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element pTkn0FlagQ_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:172]
+WARNING: [Synth 8-6014] Unused sequential element pTkn1FlagQ_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:173]
+WARNING: [Synth 8-6014] Unused sequential element pTkn2FlagQ_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:174]
+WARNING: [Synth 8-6014] Unused sequential element pTkn3FlagQ_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:175]
+WARNING: [Synth 8-6014] Unused sequential element pDelayFastOvf_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:209]
+INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (6#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'ChannelBond' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (7#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (8#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/EEPROM_8b.vhd:85]
+	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
+	Parameter kSlaveAddress bound to: 7'b1010000 
+	Parameter kAddrBits bound to: 8 - type: integer 
+	Parameter kWritable bound to: 0 - type: bool 
+	Parameter kInitFileName bound to: dgl_720p_cea.data - type: string 
+INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TWI_SlaveCtl.vhd:87]
+	Parameter SLAVE_ADDRESS bound to: 8'b10100000 
+	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "gray" *) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TWI_SlaveCtl.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/GlitchFilter.vhd:69]
+	Parameter kNoOfPeriodsToFilter bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (9#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/GlitchFilter.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (10#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TWI_SlaveCtl.vhd:87]
+INFO: [Synth 8-226] default block is never used [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/EEPROM_8b.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (11#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/EEPROM_8b.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (12#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/dvi2rgb.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'design_1_dvi2rgb_1_1' (13#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/synth/design_1_dvi2rgb_1_1.vhd:80]
+WARNING: [Synth 8-3331] design dvi2rgb has unconnected port aRst
+WARNING: [Synth 8-3331] design dvi2rgb has unconnected port pRst
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 640.988 ; gain = 281.719
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 640.988 ; gain = 281.719
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_refclk'. The XDC file c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_refclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_pixclk'. The XDC file c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_pixclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/dvi2rgb.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/dvi2rgb.xdc] for cell 'U0'
+Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/dvi2rgb_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/dvi2rgb_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_dvi2rgb_1_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_dvi2rgb_1_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc] for cell 'U0'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_15/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:1]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~ "*ila_core_inst/use_probe_debug_circuit_2_reg*" && IS_SEQUENTIAL}'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:1]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_15/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:1]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_15/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:2]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~ "*ila_core_inst/en_adv_trigger_2_reg*" && IS_SEQUENTIAL}'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:2]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_15/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:2]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_1a/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~ "*ila_core_inst/en_adv_trigger_2_reg*" && IS_SEQUENTIAL}'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:3]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_1a/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:3]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/dout_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:4]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/temp_reg0_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:4]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/dout_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:4]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/dout_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:5]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/temp_reg0_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:5]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/dout_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:5]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/dout_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:6]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/temp_reg0_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/dout_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:7]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/temp_reg0_reg*" && IS_SEQUENTIAL }'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:7]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg*" && IS_SEQUENTIAL }]'. [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc:7]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/ila_timing_workaround.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 876.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:02 ; elapsed = 00:01:15 . Memory (MB): peak = 876.914 ; gain = 517.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:02 ; elapsed = 00:01:15 . Memory (MB): peak = 876.914 ; gain = 517.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+WARNING: set_property IODELAY_GROUP could not find object (constraint file  c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/src/dvi2rgb.xdc, line 8).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/dont_touch.xdc, line 20).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:15 . Memory (MB): peak = 876.914 ; gain = 517.645
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element rDlyRstCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:115]
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'PhaseAlign'
+INFO: [Synth 8-5546] ROM "pCtlTknRst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pEyeOpenEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pDelayOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "pDelayWaitOvf" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pStateNxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pIDLY_LD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pAligned" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pFoundJtrFlag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn0Flag" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element pCtlTknCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element pEyeOpenCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:187]
+WARNING: [Synth 8-6014] Unused sequential element pWrA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element pRdA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:96]
+INFO: [Synth 8-5544] ROM "pAlignRst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pC0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pVde" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element rTimeoutCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:151]
+INFO: [Synth 8-5544] ROM "sOut" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element Filter.cntPeriods_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/GlitchFilter.vhd:83]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWI_SlaveCtl'
+INFO: [Synth 8-5544] ROM "shiftBitOut" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "nstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "eeprom" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                              000 |                              000
+               staddress |                              001 |                              001
+            stturnaround |                              011 |                              110
+                  stsack |                              010 |                              100
+                  stread |                              111 |                              010
+                  stmack |                              100 |                              101
+                 stwrite |                              110 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWI_SlaveCtl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:16 . Memory (MB): peak = 876.914 ; gain = 517.645
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 13    
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 13    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 102   
++---RAMs : 
+	              320 Bit         RAMs := 3     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 8     
+	   5 Input      8 Bit        Muxes := 3     
+	 257 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 3     
+	  23 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 102   
+	  12 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SyncAsync__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module TMDS_Clocking 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module SyncAsync__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SyncBase 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module SyncBase__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module PhaseAlign 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 21    
+	  12 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module ChannelBond 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              320 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TMDS_Decoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module GlitchFilter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TWI_SlaveCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  23 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 1     
+Module EEPROM_8b 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	 257 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/pC0_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/pC1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:269]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/pVde_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:270]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/pC0_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:268]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/pC1_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:269]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/pVde_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:270]
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/pC0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/pVde" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element TMDS_ClockingX/rDlyRstCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Clocking.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:187]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/ChannelBondX/pWrA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:96]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/rTimeoutCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:151]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:187]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/ChannelBondX/pWrA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:96]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/rTimeoutCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:151]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/PhaseAlign.vhd:187]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[0].DecoderX/ChannelBondX/pWrA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/ChannelBond.vhd:96]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[0].DecoderX/rTimeoutCnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/TMDS_Decoder.vhd:151]
+WARNING: [Synth 8-6014] Unused sequential element GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/Filter.cntPeriods_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/GlitchFilter.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/Filter.cntPeriods_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/80ae/src/GlitchFilter.vhd:83]
+WARNING: [Synth 8-3331] design dvi2rgb has unconnected port aRst
+WARNING: [Synth 8-3331] design dvi2rgb has unconnected port pRst
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pAllVld_q_reg' (FD) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pAllVld_q_reg'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pAllVld_q_reg' (FD) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pAllVld_q_reg'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
+WARNING: [Synth 8-3332] Sequential element (DataDecoders[2].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
+WARNING: [Synth 8-3332] Sequential element (DataDecoders[1].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
+WARNING: [Synth 8-3332] Sequential element (DataDecoders[0].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:26 . Memory (MB): peak = 876.914 ; gain = 517.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-------------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                      | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------------------------------------------+-----------+----------------------+--------------+
+|U0          | DataDecoders[2].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|U0          | DataDecoders[1].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|U0          | DataDecoders[0].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
++------------+-------------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:01:51 . Memory (MB): peak = 876.914 ; gain = 517.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:52 . Memory (MB): peak = 894.441 ; gain = 535.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+-------------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                      | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------------------------------------------+-----------+----------------------+--------------+
+|U0          | DataDecoders[2].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|U0          | DataDecoders[1].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|U0          | DataDecoders[0].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
++------------+-------------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'U0/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'U0/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'U0/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[1]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:36 ; elapsed = 00:01:53 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFIO       |     1|
+|2     |BUFR        |     1|
+|3     |CARRY4      |    18|
+|4     |IDELAYCTRL  |     1|
+|5     |IDELAYE2    |     3|
+|6     |ISERDESE2   |     3|
+|7     |ISERDESE2_1 |     3|
+|8     |LUT1        |    25|
+|9     |LUT2        |    63|
+|10    |LUT3        |    72|
+|11    |LUT4        |    84|
+|12    |LUT5        |    83|
+|13    |LUT6        |   157|
+|14    |MMCME2_ADV  |     1|
+|15    |MUXF7       |    16|
+|16    |MUXF8       |     8|
+|17    |RAM32M      |     6|
+|18    |FDCE        |    10|
+|19    |FDPE        |    20|
+|20    |FDRE        |   428|
+|21    |FDSE        |    12|
+|22    |IBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+-------------------------------+-----------------------------+------+
+|      |Instance                       |Module                       |Cells |
++------+-------------------------------+-----------------------------+------+
+|1     |top                            |                             |  1019|
+|2     |  U0                           |dvi2rgb                      |  1019|
+|3     |    \DataDecoders[0].DecoderX  |TMDS_Decoder                 |   264|
+|4     |      ChannelBondX             |ChannelBond_17               |    55|
+|5     |      InputSERDES_X            |InputSERDES_18               |     4|
+|6     |      PhaseAlignX              |PhaseAlign_19                |   143|
+|7     |      SyncBaseOvf              |SyncBase_20                  |     8|
+|8     |        SyncAsyncx             |SyncAsync__parameterized1_23 |     2|
+|9     |      SyncBaseRst              |SyncBase__parameterized0_21  |     3|
+|10    |        SyncAsyncx             |SyncAsync_22                 |     2|
+|11    |    \DataDecoders[1].DecoderX  |TMDS_Decoder_0               |   259|
+|12    |      ChannelBondX             |ChannelBond_10               |    53|
+|13    |      InputSERDES_X            |InputSERDES_11               |     4|
+|14    |      PhaseAlignX              |PhaseAlign_12                |   143|
+|15    |      SyncBaseOvf              |SyncBase_13                  |     8|
+|16    |        SyncAsyncx             |SyncAsync__parameterized1_16 |     2|
+|17    |      SyncBaseRst              |SyncBase__parameterized0_14  |     3|
+|18    |        SyncAsyncx             |SyncAsync_15                 |     2|
+|19    |    \DataDecoders[2].DecoderX  |TMDS_Decoder_1               |   265|
+|20    |      ChannelBondX             |ChannelBond                  |    58|
+|21    |      InputSERDES_X            |InputSERDES                  |     4|
+|22    |      PhaseAlignX              |PhaseAlign                   |   144|
+|23    |      SyncBaseOvf              |SyncBase                     |     8|
+|24    |        SyncAsyncx             |SyncAsync__parameterized1    |     2|
+|25    |      SyncBaseRst              |SyncBase__parameterized0     |     3|
+|26    |        SyncAsyncx             |SyncAsync_9                  |     2|
+|27    |    \GenerateDDC.DDC_EEPROM    |EEPROM_8b                    |   191|
+|28    |      I2C_SlaveController      |TWI_SlaveCtl                 |   104|
+|29    |        GlitchF_SCL            |GlitchFilter                 |    12|
+|30    |        GlitchF_SDA            |GlitchFilter_6               |    12|
+|31    |        SyncSCL                |SyncAsync_7                  |     3|
+|32    |        SyncSDA                |SyncAsync_8                  |     3|
+|33    |    LockLostReset              |ResetBridge                  |     2|
+|34    |      SyncAsyncx               |SyncAsync_5                  |     2|
+|35    |    TMDS_ClockingX             |TMDS_Clocking                |    37|
+|36    |      LockLostReset            |ResetBridge_2                |     4|
+|37    |        SyncAsyncx             |SyncAsync_4                  |     3|
+|38    |      MMCM_LockSync            |SyncAsync__parameterized0    |     4|
+|39    |      RdyLostReset             |ResetBridge_3                |     3|
+|40    |        SyncAsyncx             |SyncAsync                    |     2|
++------+-------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:34 . Memory (MB): peak = 901.125 ; gain = 305.930
+Synthesis Optimization Complete : Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 901.125 ; gain = 541.855
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+149 Infos, 61 Warnings, 9 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:02:03 . Memory (MB): peak = 901.125 ; gain = 543.598
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/design_1_dvi2rgb_1_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_1_1/design_1_dvi2rgb_1_1.xci
+INFO: [Coretcl 2-1174] Renamed 39 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/design_1_dvi2rgb_1_1_synth_1/design_1_dvi2rgb_1_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_dvi2rgb_1_1_utilization_synth.rpt -pb design_1_dvi2rgb_1_1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.108 . Memory (MB): peak = 901.125 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  2 17:58:40 2018...

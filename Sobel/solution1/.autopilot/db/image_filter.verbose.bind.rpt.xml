@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'image_filter'" level="0">
+<item name = "Date">Fri Jun 22 22:10:01 2018
+</item>
+<item name = "Version">2017.4_AR70530_AR70530 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Project">cvt_colour</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 10.05, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">942498, 942498, 942482, 942482, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_AddWeighted_fu_420">AddWeighted, 942481, 942481, 942481, 942481, none</column>
+<column name="grp_Sobel_fu_427">Sobel, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_Sobel_1_fu_433">Sobel_1, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_GaussianBlur_fu_439">GaussianBlur, 930660, 930660, 930660, 930660, none</column>
+<column name="grp_AXIvideo2Mat_fu_445">AXIvideo2Mat, 3, 926643, 3, 926643, none</column>
+<column name="grp_CvtColor_1_fu_470">CvtColor_1, 1, 925921, 1, 925921, none</column>
+<column name="grp_Mat2AXIvideo_fu_480">Mat2AXIvideo, 924481, 924481, 924481, 924481, none</column>
+<column name="grp_CvtColor_fu_501">CvtColor, 923761, 923761, 923761, 923761, none</column>
+<column name="grp_Duplicate_fu_509">Duplicate, 923761, 923761, 923761, 923761, none</column>
+<column name="StgValue_36_Block_proc_fu_516">Block_proc, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
