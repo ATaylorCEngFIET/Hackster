@@ -1,0 +1,694 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.1_AR70530 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date             : Sun Jul  8 15:56:45 2018
+| Host             : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xczu3eg-sbva484-1-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 2.150        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.834        |
+| Device Static (W)        | 0.316        |
+| Effective TJA (C/W)      | 2.7          |
+| Max Ambient (C)          | 94.1         |
+| Junction Temperature (C) | 30.9         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.021 |        3 |       --- |             --- |
+| CLB Logic                |     0.040 |    16756 |       --- |             --- |
+|   LUT as Distributed RAM |     0.021 |      640 |     28800 |            2.22 |
+|   LUT as Logic           |     0.013 |     5505 |     70560 |            7.80 |
+|   LUT as Shift Register  |     0.004 |      971 |     28800 |            3.37 |
+|   Register               |     0.001 |     7542 |    141120 |            5.34 |
+|   CARRY8                 |    <0.001 |        2 |      8820 |            0.02 |
+|   Others                 |     0.000 |      374 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |        4 |     70560 |           <0.01 |
+| Signals                  |     0.021 |    11427 |       --- |             --- |
+| I/O                      |    <0.001 |        1 |        82 |            1.22 |
+| PS8                      |     1.751 |        1 |       --- |             --- |
+| Static Power             |     0.316 |          |           |                 |
+|   PS Static              |     0.100 |          |           |                 |
+|   PL Static              |     0.216 |          |           |                 |
+| Total                    |     2.150 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------------+-------------+-----------+-------------+------------+
+| Vccint          |       0.850 |     0.151 |       0.096 |      0.054 |
+| Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |
+| Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |
+| Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
+| Vccaux_io       |       1.800 |     0.026 |       0.000 |      0.025 |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
+| VCC_PSINTFP     |       0.850 |     0.969 |       0.932 |      0.037 |
+| VCC_PSINTLP     |       0.850 |     0.316 |       0.309 |      0.007 |
+| VPS_MGTRAVCC    |       0.850 |     0.135 |       0.134 |      0.001 |
+| VCC_PSINTFP_DDR |       0.850 |     0.195 |       0.190 |      0.005 |
+| VCC_PSPLL       |       1.200 |     0.070 |       0.068 |      0.002 |
+| VPS_MGTRAVTT    |       1.800 |     0.034 |       0.033 |      0.001 |
+| VCCO_PSDDR_504  |       1.200 |     0.249 |       0.215 |      0.034 |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |
+| VCC_PSDDR_PLL   |       1.800 |     0.012 |       0.011 |      0.001 |
+| VCCO_PSIO0_500  |       1.800 |     0.001 |       0.001 |      0.001 |
+| VCCO_PSIO1_501  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCCO_PSIO2_502  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCCO_PSIO3_503  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |
++-----------------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 8.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++----------+------------------------------------------------------+-----------------+
+| Clock    | Domain                                               | Constraint (ns) |
++----------+------------------------------------------------------+-----------------+
+| clk_pl_0 | design_1_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[0] |            10.0 |
++----------+------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------------------------------------------------+-----------+
+| Name                                                                                    | Power (W) |
++-----------------------------------------------------------------------------------------+-----------+
+| design_1_wrapper                                                                        |     1.834 |
+|   design_1_i                                                                            |     1.833 |
+|     axi_gpio_0                                                                          |    <0.001 |
+|       U0                                                                                |    <0.001 |
+|         AXI_LITE_IPIF_I                                                                 |    <0.001 |
+|           I_SLAVE_ATTACHMENT                                                            |    <0.001 |
+|             I_DECODER                                                                   |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I             |    <0.001 |
+|               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I             |    <0.001 |
+|         gpio_core_1                                                                     |    <0.001 |
+|     axi_smc                                                                             |     0.081 |
+|       inst                                                                              |     0.081 |
+|         clk_map                                                                         |    <0.001 |
+|           psr_aclk                                                                      |    <0.001 |
+|             U0                                                                          |    <0.001 |
+|               EXT_LPF                                                                   |    <0.001 |
+|                 ACTIVE_LOW_AUX.ACT_LO_AUX                                               |    <0.001 |
+|               SEQ                                                                       |    <0.001 |
+|                 SEQ_COUNTER                                                             |    <0.001 |
+|         m00_exit_pipeline                                                               |    <0.001 |
+|           m00_exit                                                                      |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               ar_reg                                                                    |    <0.001 |
+|               aw_reg                                                                    |    <0.001 |
+|               b_reg                                                                     |    <0.001 |
+|               exit_inst                                                                 |    <0.001 |
+|                 gen_r_cmd_fifo.r_cmd_fifo                                               |    <0.001 |
+|                 gen_w_cmd_fifo.w_cmd_fifo                                               |    <0.001 |
+|               r_reg                                                                     |    <0.001 |
+|               w_reg                                                                     |    <0.001 |
+|         m00_nodes                                                                       |     0.008 |
+|           m00_ar_node                                                                   |     0.001 |
+|             inst                                                                        |     0.001 |
+|               inst_mi_handler                                                           |     0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m00_aw_node                                                                   |     0.001 |
+|             inst                                                                        |     0.001 |
+|               inst_mi_handler                                                           |     0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m00_b_node                                                                    |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               inst_mi_handler                                                           |    <0.001 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m00_r_node                                                                    |     0.003 |
+|             inst                                                                        |     0.003 |
+|               inst_mi_handler                                                           |     0.003 |
+|                 gen_normal_area.gen_fi_regulator.inst_fi_regulator                      |    <0.001 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.gen_upsizer.inst_upsizer                                |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.003 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.003 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.003 |
+|                       xpm_memory_base_inst                                              |     0.003 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_12_17                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_18_23                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_24_29                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_30_35                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_54_59                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_60_65                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_6_11                      |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m00_w_node                                                                    |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               inst_mi_handler                                                           |    <0.001 |
+|                 gen_normal_area.gen_downsizer.inst_downsizer                            |    <0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_66_71                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|         m01_exit_pipeline                                                               |     0.003 |
+|           m01_exit                                                                      |     0.003 |
+|             inst                                                                        |     0.003 |
+|               ar_reg                                                                    |    <0.001 |
+|               aw_reg                                                                    |    <0.001 |
+|               b_reg                                                                     |    <0.001 |
+|               exit_inst                                                                 |    <0.001 |
+|                 gen_r_cmd_fifo.r_cmd_fifo                                               |    <0.001 |
+|                 gen_w_cmd_fifo.w_cmd_fifo                                               |    <0.001 |
+|               r_reg                                                                     |    <0.001 |
+|               splitter_inst                                                             |     0.002 |
+|                 gen_axi4lite.axilite_b2s                                                |     0.002 |
+|                   RD.ar_channel_0                                                       |    <0.001 |
+|                     ar_cmd_fsm_0                                                        |    <0.001 |
+|                     cmd_translator_0                                                    |    <0.001 |
+|                       incr_cmd_0                                                        |    <0.001 |
+|                   RD.r_channel_0                                                        |    <0.001 |
+|                     rd_data_fifo_0                                                      |    <0.001 |
+|                     transaction_fifo_0                                                  |    <0.001 |
+|                   SI_REG                                                                |    <0.001 |
+|                     ar_pipe                                                             |    <0.001 |
+|                     aw_pipe                                                             |    <0.001 |
+|                     b_pipe                                                              |    <0.001 |
+|                     r_pipe                                                              |    <0.001 |
+|                   WR.aw_channel_0                                                       |    <0.001 |
+|                     aw_cmd_fsm_0                                                        |    <0.001 |
+|                     cmd_translator_0                                                    |    <0.001 |
+|                       incr_cmd_0                                                        |    <0.001 |
+|                     null_beat_supress_0                                                 |    <0.001 |
+|                   WR.b_channel_0                                                        |    <0.001 |
+|                     gen_b_fifo.bid_fifo_0                                               |    <0.001 |
+|                     gen_b_fifo.bresp_fifo_0                                             |    <0.001 |
+|               w_reg                                                                     |    <0.001 |
+|         m01_nodes                                                                       |     0.010 |
+|           m01_ar_node                                                                   |     0.001 |
+|             inst                                                                        |     0.001 |
+|               inst_mi_handler                                                           |     0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.001 |
+|                       xpm_memory_base_inst                                              |     0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m01_aw_node                                                                   |     0.001 |
+|             inst                                                                        |     0.001 |
+|               inst_mi_handler                                                           |     0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m01_b_node                                                                    |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               inst_mi_handler                                                           |    <0.001 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m01_r_node                                                                    |     0.004 |
+|             inst                                                                        |     0.004 |
+|               inst_mi_handler                                                           |     0.004 |
+|                 gen_normal_area.gen_fi_regulator.inst_fi_regulator                      |    <0.001 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.gen_upsizer.inst_upsizer                                |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.003 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.003 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.003 |
+|                       xpm_memory_base_inst                                              |     0.003 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_12_17                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_18_23                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_24_29                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_30_35                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_54_59                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_60_65                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_6_11                      |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           m01_w_node                                                                    |     0.003 |
+|             inst                                                                        |     0.003 |
+|               inst_mi_handler                                                           |     0.003 |
+|                 gen_normal_area.gen_downsizer.inst_downsizer                            |    <0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.003 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.003 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.003 |
+|                       xpm_memory_base_inst                                              |     0.003 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_12_17                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_18_23                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_24_29                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_30_35                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_54_59                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_60_65                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_66_71                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_6_11                      |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|         s00_entry_pipeline                                                              |     0.040 |
+|           s00_mmu                                                                       |     0.008 |
+|             inst                                                                        |     0.008 |
+|               ar_reg_stall                                                              |    <0.001 |
+|               ar_sreg                                                                   |    <0.001 |
+|               aw_reg_stall                                                              |    <0.001 |
+|               aw_sreg                                                                   |     0.001 |
+|               b_sreg                                                                    |    <0.001 |
+|               gen_endpoint.decerr_slave_inst                                            |    <0.001 |
+|               gen_wroute_fifo.wroute_fifo                                               |    <0.001 |
+|               gen_wroute_fifo.wroute_split                                              |    <0.001 |
+|               r_sreg                                                                    |     0.002 |
+|               w_sreg                                                                    |     0.002 |
+|           s00_si_converter                                                              |     0.028 |
+|             inst                                                                        |     0.028 |
+|               converter.wrap_narrow_inst                                                |     0.019 |
+|                 ar_reg_slice                                                            |     0.002 |
+|                 aw_reg_slice                                                            |    <0.001 |
+|                 gen_thread_arb.r_thread_arb                                             |     0.002 |
+|                 gen_thread_loop[0].r_cmd_fifo                                           |    <0.001 |
+|                 gen_thread_loop[0].r_payld_fifo                                         |     0.003 |
+|                   cmd_fifo                                                              |    <0.001 |
+|                 gen_thread_loop[1].r_cmd_fifo                                           |    <0.001 |
+|                 gen_thread_loop[1].r_payld_fifo                                         |     0.002 |
+|                   cmd_fifo                                                              |    <0.001 |
+|                 gen_thread_loop[2].r_cmd_fifo                                           |    <0.001 |
+|                 gen_thread_loop[2].r_payld_fifo                                         |     0.002 |
+|                   cmd_fifo                                                              |    <0.001 |
+|                 gen_thread_loop[3].r_cmd_fifo                                           |    <0.001 |
+|                 gen_thread_loop[3].r_payld_fifo                                         |     0.001 |
+|                   cmd_fifo                                                              |    <0.001 |
+|                 w_cmd_fifo                                                              |    <0.001 |
+|                 w_payld_fifo                                                            |     0.002 |
+|                   cmd_fifo                                                              |    <0.001 |
+|               splitter_inst                                                             |     0.003 |
+|                 ar_cmd_reg                                                              |    <0.001 |
+|                 aw_cmd_reg                                                              |    <0.001 |
+|                 b_reg                                                                   |    <0.001 |
+|                 gen_rsplitter.gen_rthread_loop[1].r_split_fifo                          |    <0.001 |
+|                 gen_wsplitter.gen_wthread_loop[0].b_split_fifo                          |    <0.001 |
+|                 gen_wsplitter.gen_wthread_loop[1].b_split_fifo                          |    <0.001 |
+|                 gen_wsplitter.gen_wthread_loop[2].b_split_fifo                          |    <0.001 |
+|                 gen_wsplitter.gen_wthread_loop[3].b_split_fifo                          |    <0.001 |
+|                 gen_wsplitter.w_split_fifo                                              |    <0.001 |
+|                 gen_wsplitter.wsplit_first_offset_fifo                                  |    <0.001 |
+|                 gen_wsplitter.wsplit_last_offset_fifo                                   |    <0.001 |
+|           s00_transaction_regulator                                                     |     0.004 |
+|             inst                                                                        |     0.004 |
+|               gen_endpoint.gen_r_multithread.r_multithread                              |     0.002 |
+|                 aid_encode                                                              |    <0.001 |
+|                 allocate_queue                                                          |    <0.001 |
+|                 cmd_reg                                                                 |     0.001 |
+|               gen_endpoint.gen_w_multithread.w_multithread                              |     0.002 |
+|                 aid_encode                                                              |    <0.001 |
+|                 allocate_queue                                                          |    <0.001 |
+|                 cmd_reg                                                                 |    <0.001 |
+|         s00_nodes                                                                       |     0.018 |
+|           s00_ar_node                                                                   |     0.003 |
+|             inst                                                                        |     0.003 |
+|               inst_mi_handler                                                           |     0.003 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.002 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.002 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.002 |
+|                       xpm_memory_base_inst                                              |     0.002 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           s00_aw_node                                                                   |     0.003 |
+|             inst                                                                        |     0.003 |
+|               inst_mi_handler                                                           |     0.002 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.002 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.002 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.001 |
+|                       xpm_memory_base_inst                                              |     0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|           s00_b_node                                                                    |     0.001 |
+|             inst                                                                        |     0.001 |
+|               inst_mi_handler                                                           |     0.001 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_recv                                                    |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 gen_si_handler.gen_arbiter_rr_normal_area.inst_arbiter                  |    <0.001 |
+|                 gen_si_handler.gen_request_counters.gen_req_counter[0].inst_req_counter |    <0.001 |
+|                 gen_si_handler.gen_request_counters.gen_req_counter[1].inst_req_counter |    <0.001 |
+|           s00_r_node                                                                    |     0.006 |
+|             inst                                                                        |     0.006 |
+|               inst_mi_handler                                                           |     0.006 |
+|                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                  |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.005 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.005 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.004 |
+|                       xpm_memory_base_inst                                              |     0.004 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_12_17                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_18_23                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_24_29                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_30_35                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_54_59                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_60_65                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_6_11                      |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 inst_ingress                                                            |    <0.001 |
+|                   inst_pipeline_recv                                                    |    <0.001 |
+|                   inst_pipeline_valid                                                   |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 gen_si_handler.gen_arbiter_rr_normal_area.inst_arbiter                  |    <0.001 |
+|                 gen_si_handler.gen_request_counters.gen_req_counter[0].inst_req_counter |    <0.001 |
+|                 gen_si_handler.gen_request_counters.gen_req_counter[1].inst_req_counter |    <0.001 |
+|           s00_w_node                                                                    |     0.006 |
+|             inst                                                                        |     0.006 |
+|               inst_mi_handler                                                           |     0.006 |
+|                 gen_normal_area.gen_fifo_req.inst_fifo_req                              |    <0.001 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |    <0.001 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |    <0.001 |
+|                       xpm_memory_base_inst                                              |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_node_payld                                    |     0.005 |
+|                   gen_xpm_memory_fifo.inst_fifo                                         |     0.005 |
+|                     gen_mem_rep[0].inst_rd_addrb                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_wr_addra                                        |    <0.001 |
+|                     gen_mem_rep[0].inst_xpm_memory                                      |     0.004 |
+|                       xpm_memory_base_inst                                              |     0.004 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_0_5                       |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_12_17                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_18_23                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_24_29                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_30_35                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_36_41                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_42_47                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_48_53                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_54_59                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_60_65                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_66_71                     |    <0.001 |
+|                         gen_wr_a.gen_word_narrow.mem_reg_0_31_6_11                      |    <0.001 |
+|                     gen_wr.inst_wr_addra_p1                                             |    <0.001 |
+|                 gen_normal_area.inst_fifo_send                                          |    <0.001 |
+|               inst_si_handler                                                           |    <0.001 |
+|                 inst_arb_stall_late                                                     |    <0.001 |
+|         switchboards                                                                    |     0.001 |
+|           ar_switchboard                                                                |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               gen_mi[0].inst_opipe_payld                                                |    <0.001 |
+|               gen_mi[1].inst_opipe_payld                                                |    <0.001 |
+|           aw_switchboard                                                                |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               gen_mi[0].inst_opipe_payld                                                |    <0.001 |
+|               gen_mi[1].inst_opipe_payld                                                |    <0.001 |
+|           b_switchboard                                                                 |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               gen_mi[0].inst_mux_payld                                                  |    <0.001 |
+|               gen_mi[0].inst_opipe_payld                                                |    <0.001 |
+|           r_switchboard                                                                 |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               gen_mi[0].inst_mux_payld                                                  |    <0.001 |
+|               gen_mi[0].inst_opipe_payld                                                |    <0.001 |
+|           w_switchboard                                                                 |    <0.001 |
+|             inst                                                                        |    <0.001 |
+|               gen_mi[0].inst_opipe_payld                                                |    <0.001 |
+|               gen_mi[1].inst_opipe_payld                                                |    <0.001 |
+|     rst_ps8_0_99M                                                                       |    <0.001 |
+|       U0                                                                                |    <0.001 |
+|         EXT_LPF                                                                         |    <0.001 |
+|           ACTIVE_LOW_AUX.ACT_LO_AUX                                                     |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT                                                     |    <0.001 |
+|         SEQ                                                                             |    <0.001 |
+|           SEQ_COUNTER                                                                   |    <0.001 |
+|     zynq_ultra_ps_e_0                                                                   |     1.752 |
+|       U0                                                                                |     1.752 |
++-----------------------------------------------------------------------------------------+-----------+
+
+

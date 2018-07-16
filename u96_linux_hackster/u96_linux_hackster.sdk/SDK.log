@@ -1,0 +1,541 @@
+12:44:24 INFO  : Registering command handlers for SDK TCF services
+12:44:24 INFO  : Launching XSCT server: xsct.bat -interactive C:\hdl_projects\u96_linux_hackster\u96_linux_hackster.sdk\temp_xsdb_launch_script.tcl
+12:44:29 INFO  : XSCT server has started successfully.
+12:44:32 INFO  : Successfully done setting XSCT server connection channel  
+12:44:37 INFO  : Successfully done setting SDK workspace  
+12:44:37 INFO  : Processing command line option -hwspec C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper.hdf.
+12:44:37 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado' *****
+12:49:18 INFO  : Refreshed build settings on project test_uart
+13:11:45 INFO  : Connected to target on host '192.168.1.178' and port '3121'.
+13:11:45 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:11:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:192.168.1.178:3121
+----------------End of Script----------------
+
+13:11:57 INFO  : Connected to target on host '192.168.1.178' and port '3121'.
+13:11:57 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:12:08 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:12:08 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:12:08 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:13:23 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:13:32 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:15:12 INFO  : Connected to target on host '192.168.1.178' and port '3121'.
+13:16:01 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:16:10 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:16:33 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:16:42 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:17:50 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:17:50 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:17:50 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:17:56 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:17:56 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:17:56 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:18:05 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:18:05 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:18:05 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:18:30 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:18:30 WARN  : SDK version '2018.1' doesn't match hw_server version '2017.3'. Some debug features may not work.
+13:18:33 INFO  : Jtag cable 'JTAG Cable V1.7 AAo1BId+0' is selected.
+13:18:33 INFO  : 'jtag frequency' command is executed.
+13:18:33 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:18:33 INFO  : Context for 'APU' is selected.
+13:18:34 INFO  : System reset is completed.
+13:18:37 INFO  : 'after 3000' command is executed.
+13:18:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable V1.7 AAo1BId+0" && level==0} -index 0' command is executed.
+13:18:42 ERROR : (XSDB Server)-code 1 -level 0 -errorcode NONE -errorinfo {Code 1 Time 1352239234384 Format {JTAG node is not accessible}
+    while executing
+"error [lindex $data 0]"
+    invoked from within
+"if { [lindex $data 0] != "" } {
+		    error [lindex $data 0]
+		}"
+    ("eval" body line 2)
+    invoked from within
+"eval $script"} -errorline 12
+
+13:18:42 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:18:45 ERROR : no targets found with "name =~"APU*" && jtag_cable_name =~ "JTAG Cable V1.7 AAo1BId+0"". available targets:
+  1* PS TAP
+     2  PMU
+     3  PL
+  4  DAP (JTAG port open error. Invalid DAP ACK value: 4)
+13:18:45 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable V1.7 AAo1BId+0"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG Cable V1.7 AAo1BId+0" && level==0} -index 0
+fpga -file C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable V1.7 AAo1BId+0"} -index 1
+----------------End of Script----------------
+
+13:20:30 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:20:30 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:20:33 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:20:42 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:21:02 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:21:11 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:24:02 INFO  : Launching XSCT server: xsct.bat -interactive C:\hdl_projects\u96_linux_hackster\u96_linux_hackster.sdk\temp_xsdb_launch_script.tcl
+13:24:05 INFO  : XSCT server has started successfully.
+13:24:05 INFO  : Successfully done setting XSCT server connection channel  
+13:24:05 INFO  : Successfully done setting SDK workspace  
+13:24:22 INFO  : Registering command handlers for SDK TCF services
+13:24:22 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado' *****
+13:24:22 INFO  : Processing command line option -hwspec C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper.hdf.
+13:24:22 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:24:49 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:24:50 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:24:50 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:25:54 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:25:54 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:25:54 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:25:58 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:25:58 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:25:58 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:26:25 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:26:34 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:29:23 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:29:23 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:29:23 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:29:27 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:29:27 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:29:27 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:30:04 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:30:05 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:30:05 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:32:01 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:32:10 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:32:17 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:32:18 ERROR : Could not read jtag device properties from the line: 4  dummy_dap (irlen 4)
+13:32:18 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:37:15 INFO  : Connected to target on host '192.168.1.178' and port '3121'.
+13:37:20 INFO  : Connected to target on host '192.168.1.178' and port '3121'.
+13:37:26 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:37:26 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+----------------End of Script----------------
+
+13:37:29 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:37:30 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:37:30 INFO  : 'jtag frequency' command is executed.
+13:37:30 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:37:30 INFO  : Context for 'APU' is selected.
+13:37:31 INFO  : System reset is completed.
+13:37:34 INFO  : 'after 3000' command is executed.
+13:37:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:40:30 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:40:30 INFO  : Context for 'APU' is selected.
+13:40:31 INFO  : Hardware design information is loaded from 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:40:31 INFO  : 'configparams force-mem-access 1' command is executed.
+13:40:31 INFO  : Context for 'APU' is selected.
+13:40:31 INFO  : Sourcing of 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+13:40:45 INFO  : 'psu_init' command is executed.
+13:40:46 INFO  : 'after 1000' command is executed.
+13:40:46 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:40:47 INFO  : 'after 1000' command is executed.
+13:40:47 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:40:47 INFO  : 'catch {psu_protection}' command is executed.
+13:40:48 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:40:48 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:40:54 INFO  : The application 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:40:54 INFO  : 'configparams force-mem-access 0' command is executed.
+13:40:54 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0
+fpga -file C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+loadhw -hw C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+source C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -processor
+dow C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:40:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:40:54 INFO  : 'con' command is executed.
+13:40:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+con
+----------------End of Script----------------
+
+13:40:54 INFO  : Launch script is exported to file 'C:\hdl_projects\u96_linux_hackster\u96_linux_hackster.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:42:17 INFO  : Disconnected from the channel tcfchan#3.
+13:42:18 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:42:30 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:42:30 INFO  : 'jtag frequency' command is executed.
+13:42:30 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:42:30 INFO  : Context for 'APU' is selected.
+13:42:31 INFO  : System reset is completed.
+13:42:34 INFO  : 'after 3000' command is executed.
+13:42:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:42:37 ERROR : Error occured during Prog B register check
+13:42:37 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Error occured during Prog B register check
+13:42:37 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+----------------End of Script----------------
+
+13:42:42 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:42:42 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:42:42 INFO  : 'jtag frequency' command is executed.
+13:42:42 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:42:42 INFO  : Context for 'APU' is selected.
+13:42:43 INFO  : System reset is completed.
+13:42:47 INFO  : 'after 3000' command is executed.
+13:42:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:42:49 ERROR : Error occured during Prog B register check
+13:42:49 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Error occured during Prog B register check
+13:42:49 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+----------------End of Script----------------
+
+13:43:00 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:43:00 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:43:00 INFO  : 'jtag frequency' command is executed.
+13:43:00 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:43:00 INFO  : Context for 'APU' is selected.
+13:43:01 INFO  : System reset is completed.
+13:43:04 INFO  : 'after 3000' command is executed.
+13:43:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:43:07 ERROR : Error occured during Prog B register check
+13:43:07 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Error occured during Prog B register check
+13:43:07 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+----------------End of Script----------------
+
+13:43:30 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:43:31 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:43:31 INFO  : 'jtag frequency' command is executed.
+13:43:31 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:43:31 INFO  : Context for 'APU' is selected.
+13:43:32 INFO  : System reset is completed.
+13:43:35 INFO  : 'after 3000' command is executed.
+13:43:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:46:32 ERROR : fpga configuration failed. DONE PIN is not HIGH
+13:46:32 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: fpga configuration failed. DONE PIN is not HIGH
+13:46:32 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+----------------End of Script----------------
+
+13:47:46 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:47:47 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:47:47 INFO  : 'jtag frequency' command is executed.
+13:47:47 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:47:47 INFO  : Context for 'APU' is selected.
+13:47:48 INFO  : System reset is completed.
+13:47:51 INFO  : 'after 3000' command is executed.
+13:47:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:50:47 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:50:48 INFO  : Context for 'APU' is selected.
+13:50:48 INFO  : Hardware design information is loaded from 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:50:48 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:48 INFO  : Context for 'APU' is selected.
+13:50:48 INFO  : Sourcing of 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+13:51:01 INFO  : 'psu_init' command is executed.
+13:51:02 INFO  : 'after 1000' command is executed.
+13:51:02 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:51:03 INFO  : 'after 1000' command is executed.
+13:51:03 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:51:04 INFO  : 'catch {psu_protection}' command is executed.
+13:51:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:51:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:51:10 INFO  : The application 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:51:10 INFO  : 'configparams force-mem-access 0' command is executed.
+13:51:10 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0
+fpga -file C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+loadhw -hw C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+source C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -processor
+dow C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:51:10 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:51:10 INFO  : 'con' command is executed.
+13:51:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+con
+----------------End of Script----------------
+
+13:51:10 INFO  : Launch script is exported to file 'C:\hdl_projects\u96_linux_hackster\u96_linux_hackster.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:54:40 INFO  : Disconnected from the channel tcfchan#4.
+13:54:42 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+13:54:53 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+13:54:53 INFO  : 'jtag frequency' command is executed.
+13:54:53 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+13:54:53 INFO  : Context for 'APU' is selected.
+13:54:54 INFO  : System reset is completed.
+13:54:57 INFO  : 'after 3000' command is executed.
+13:54:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+13:57:54 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:57:54 INFO  : Context for 'APU' is selected.
+13:57:54 INFO  : Hardware design information is loaded from 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:57:54 INFO  : 'configparams force-mem-access 1' command is executed.
+13:57:54 INFO  : Context for 'APU' is selected.
+13:57:54 INFO  : Sourcing of 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+13:58:08 INFO  : 'psu_init' command is executed.
+13:58:09 INFO  : 'after 1000' command is executed.
+13:58:09 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:58:10 INFO  : 'after 1000' command is executed.
+13:58:10 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:58:10 INFO  : 'catch {psu_protection}' command is executed.
+13:58:10 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:58:11 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:58:11 ERROR : Memory write error at 0x0. Invalid DAP IDCODE. Invalid DAP ACK value: 0
+13:58:11 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0
+fpga -file C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+loadhw -hw C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+source C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -processor
+dow C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf
+----------------End of Script----------------
+
+14:00:49 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+14:00:50 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+14:00:50 INFO  : 'jtag frequency' command is executed.
+14:00:50 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+14:00:50 INFO  : Context for 'APU' is selected.
+14:00:51 INFO  : System reset is completed.
+14:00:54 INFO  : 'after 3000' command is executed.
+14:00:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+14:03:50 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:03:50 INFO  : Context for 'APU' is selected.
+14:03:51 INFO  : Hardware design information is loaded from 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:03:51 INFO  : 'configparams force-mem-access 1' command is executed.
+14:03:51 INFO  : Context for 'APU' is selected.
+14:03:51 INFO  : Sourcing of 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+14:04:05 INFO  : 'psu_init' command is executed.
+14:04:06 INFO  : 'after 1000' command is executed.
+14:04:06 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+14:04:07 INFO  : 'after 1000' command is executed.
+14:04:07 INFO  : 'psu_ps_pl_reset_config' command is executed.
+14:04:07 INFO  : 'catch {psu_protection}' command is executed.
+14:04:07 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:04:08 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:04:13 INFO  : The application 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:04:14 INFO  : 'configparams force-mem-access 0' command is executed.
+14:04:14 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0
+fpga -file C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+loadhw -hw C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+source C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -processor
+dow C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:04:14 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:04:14 INFO  : 'con' command is executed.
+14:04:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+con
+----------------End of Script----------------
+
+14:04:14 INFO  : Launch script is exported to file 'C:\hdl_projects\u96_linux_hackster\u96_linux_hackster.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:09:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1531054541704,  Project:1531050194801
+14:09:42 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:09:45 INFO  : Copied contents of C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+14:10:06 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:10:13 INFO  : 
+14:10:14 INFO  : Updating hardware inferred compiler options for test_uart.
+14:10:14 INFO  : Clearing existing target manager status.
+14:10:14 INFO  : Closing and re-opening the MSS file of ther project test_uart_bsp
+14:10:16 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:10:19 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:11:34 INFO  : Disconnected from the channel tcfchan#5.
+14:11:37 INFO  : Connected through redirection to target on host '192.168.1.178' and port '3121'.
+14:11:37 INFO  : Jtag cable 'JTAG Cable 2018.1 AAo1BId+0' is selected.
+14:11:37 INFO  : 'jtag frequency' command is executed.
+14:11:37 INFO  : Sourcing of 'C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+14:11:37 INFO  : Context for 'APU' is selected.
+14:11:38 INFO  : System reset is completed.
+14:11:41 INFO  : 'after 3000' command is executed.
+14:11:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0' command is executed.
+14:14:37 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:14:37 INFO  : Context for 'APU' is selected.
+14:14:38 INFO  : Hardware design information is loaded from 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:14:38 INFO  : 'configparams force-mem-access 1' command is executed.
+14:14:38 INFO  : Context for 'APU' is selected.
+14:14:38 INFO  : Sourcing of 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+14:14:52 INFO  : 'psu_init' command is executed.
+14:14:53 INFO  : 'after 1000' command is executed.
+14:14:53 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+14:14:54 INFO  : 'after 1000' command is executed.
+14:14:54 INFO  : 'psu_ps_pl_reset_config' command is executed.
+14:14:54 INFO  : 'catch {psu_protection}' command is executed.
+14:14:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:14:55 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:15:00 INFO  : The application 'C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:15:00 INFO  : 'configparams force-mem-access 0' command is executed.
+14:15:00 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.1.178:3121]
+source C:/Xilinx/SDK/2018.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0" && level==0} -index 0
+fpga -file C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+loadhw -hw C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+source C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+rst -processor
+dow C:/hdl_projects/u96_linux_hackster/u96_linux_hackster.sdk/test_uart/Debug/test_uart.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:15:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:15:01 INFO  : 'con' command is executed.
+14:15:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "JTAG Cable 2018.1 AAo1BId+0"} -index 1
+con
+----------------End of Script----------------
+
+14:15:01 INFO  : Launch script is exported to file 'C:\hdl_projects\u96_linux_hackster\u96_linux_hackster.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+15:37:20 INFO  : Disconnected from the channel tcfchan#6.

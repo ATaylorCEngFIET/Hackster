@@ -1,0 +1,24 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace portBus fan_out -pg 1 -y 280 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 3 -y 530 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -y 190 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -y 190 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace netloc axi_smc_M01_AXI 1 0 5 10 280 NJ 280 NJ 280 NJ 280 1580
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 30 170 310 300 920 190 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 2 NJ 170 N
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 4 20 290 N 290 N 290 1280
+preplace netloc axi_gpio_0_gpio_io_o 1 1 4 NJ 100 NJ 100 NJ 100 1590J
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 910
+levelinfo -pg 1 -10 170 610 1110 1440 1620 -top 0 -bot 630
+",
+}
+{
+   da_axi4_cnt: "2",
+   da_board_cnt: "1",
+   da_bram_cntlr_cnt: "1",
+   da_zynq_ultra_ps_e_cnt: "1",
+}
