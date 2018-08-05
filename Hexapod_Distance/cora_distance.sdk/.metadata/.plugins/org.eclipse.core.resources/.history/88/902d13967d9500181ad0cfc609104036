@@ -1,0 +1,48 @@
+#include "xil_cache.h"
+#include "xparameters.h"
+#include <stdio.h>
+#include <MyDisp.h>
+#include <mtds.h>
+#include "sleep.h"
+
+extern "C" {
+#include "PmodMAXSONAR.h "
+#include "xparameters.h"
+
+
+}
+
+#define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_0_AXI_LITE_GPIO_BASEADDR
+#define CLK_FREQ 100000000
+
+PmodMAXSONAR sonar;
+
+
+int main()
+{
+	MAXSONAR_begin(&sonar, PMOD_MAXSONAR_BASEADDR, CLK_FREQ);
+
+	printf("www.adiuvoengineering.com Presents\n\r");
+	printf("Sonar Distance Measuring Example\n\r");
+
+
+    mydisp.begin();
+    mydisp.clearDisplay(clrBlack);
+    mydisp.setForeground(clrWhite);
+    mydisp.setPen(penSolid);
+    mydisp.setForeground(clrBlue);
+
+    mydisp.drawImage((char*) "Images/IMG_0100.BMP", 20, 20);
+    mydisp.drawImage((char*) "Images/logo_large.BMP", 60, 130);
+    mydisp.drawText((char*) "www.adiuvoengineering.com", 20, 60);
+    mydisp.drawText((char*) "ARTY S7 Example", 70, 70);
+
+    print("\n\r");
+    u32 dist;
+    while (1) {
+	  dist = MAXSONAR_getDistance(&sonar);
+	  xil_printf("dist (in) = %3d\r", dist);
+	  usleep(200000);
+    }
+	return 0;
+}

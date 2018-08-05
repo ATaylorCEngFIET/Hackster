@@ -1,0 +1,27 @@
+19:06:45 **** Build of configuration Debug for project sonar ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sonar_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:45:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+    sprintf(c, "%d", dist);
+                         ^
+Finished building: ../src/main.cc
+ 
+Building target: sonar.elf
+Invoking: ARM v7 g++ linker
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sonar_bsp/ps7_cortexa9_0/lib -o "sonar.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: sonar.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sonar.elf  |tee "sonar.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121764	   2640	  24768	 149172	  246b4	sonar.elf
+Finished building: sonar.elf.size
+ 
+
+19:06:46 Build Finished (took 1s.82ms)
+

@@ -1,0 +1,25 @@
+#include "xil_cache.h"
+#include "xparameters.h"
+#include <stdio.h>
+#include <MyDisp.h>
+#include <mtds.h>
+#include "sleep.h"
+
+extern "C" {
+#include "PmodMAXSONAR.h "
+#include "xparameters.h"
+
+
+}
+
+#define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_0_AXI_LITE_GPIO_BASEADDR
+
+PmodMAXSONAR sonar;
+
+
+int main()
+{
+
+	printf("sonar\n\r");
+	return 0;
+}

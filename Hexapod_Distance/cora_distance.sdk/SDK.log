@@ -1,0 +1,1739 @@
+10:35:03 INFO  : Registering command handlers for SDK TCF services
+10:35:04 INFO  : Launching XSCT server: xsct.bat -interactive C:\hdl_projects\cora_distance\cora_distance.sdk\temp_xsdb_launch_script.tcl
+10:35:08 INFO  : XSCT server has started successfully.
+10:35:11 INFO  : Successfully done setting XSCT server connection channel  
+10:35:11 INFO  : Processing command line option -hwspec C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf.
+10:35:11 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado' *****
+10:35:11 INFO  : Successfully done setting SDK workspace  
+10:40:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+10:40:02 INFO  : 'fpga -state' command is executed.
+10:40:07 INFO  : Memory regions updated for context APU
+10:40:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:40:18 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+10:40:18 INFO  : 'jtag frequency' command is executed.
+10:40:18 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:40:18 INFO  : Context for 'APU' is selected.
+10:40:18 INFO  : System reset is completed.
+10:40:21 INFO  : 'after 3000' command is executed.
+10:40:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+10:40:23 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:40:23 INFO  : Context for 'APU' is selected.
+10:40:23 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:40:23 INFO  : 'configparams force-mem-access 1' command is executed.
+10:40:23 INFO  : Context for 'APU' is selected.
+10:40:23 INFO  : 'ps7_init' command is executed.
+10:40:23 INFO  : 'ps7_post_config' command is executed.
+10:40:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:40:24 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:40:24 INFO  : 'configparams force-mem-access 0' command is executed.
+10:40:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:40:24 INFO  : Memory regions updated for context APU
+10:40:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:40:24 INFO  : 'con' command is executed.
+10:40:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+10:40:24 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:31:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:16 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+11:31:16 INFO  : 'jtag frequency' command is executed.
+11:31:16 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:31:16 INFO  : Context for 'APU' is selected.
+11:31:16 INFO  : System reset is completed.
+11:31:19 INFO  : 'after 3000' command is executed.
+11:31:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+11:31:21 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:31:21 INFO  : Context for 'APU' is selected.
+11:31:21 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:31:21 INFO  : 'configparams force-mem-access 1' command is executed.
+11:31:21 INFO  : Context for 'APU' is selected.
+11:31:22 INFO  : 'ps7_init' command is executed.
+11:31:22 INFO  : 'ps7_post_config' command is executed.
+11:31:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:31:22 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:31:22 INFO  : 'configparams force-mem-access 0' command is executed.
+11:31:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:31:22 INFO  : Memory regions updated for context APU
+11:31:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:31:22 INFO  : 'con' command is executed.
+11:31:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+11:31:22 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+11:45:14 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1533120264918,  Project:1533115819414
+11:45:14 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+11:45:17 INFO  : Copied contents of C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+11:45:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:45:31 INFO  : 
+11:45:32 INFO  : Updating hardware inferred compiler options for sonar.
+11:45:32 INFO  : Clearing existing target manager status.
+11:45:32 INFO  : Closing and re-opening the MSS file of ther project sonar_bsp
+11:45:33 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+11:45:36 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+11:47:42 INFO  : Disconnected from the channel tcfchan#1.
+11:48:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:48:18 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+11:48:18 INFO  : 'jtag frequency' command is executed.
+11:48:18 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:48:18 INFO  : Context for 'APU' is selected.
+11:48:18 INFO  : System reset is completed.
+11:48:21 INFO  : 'after 3000' command is executed.
+11:48:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+11:48:22 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:48:22 INFO  : Context for 'APU' is selected.
+11:48:22 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:48:22 INFO  : 'configparams force-mem-access 1' command is executed.
+11:48:22 INFO  : Context for 'APU' is selected.
+11:48:23 INFO  : 'ps7_init' command is executed.
+11:48:23 INFO  : 'ps7_post_config' command is executed.
+11:48:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:48:23 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:48:23 INFO  : 'configparams force-mem-access 0' command is executed.
+11:48:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:48:23 INFO  : Memory regions updated for context APU
+11:48:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:48:24 INFO  : 'con' command is executed.
+11:48:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+11:48:24 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+11:56:25 INFO  : Disconnected from the channel tcfchan#2.
+11:56:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:26 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+11:56:26 INFO  : 'jtag frequency' command is executed.
+11:56:26 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:56:26 INFO  : Context for 'APU' is selected.
+11:56:26 INFO  : System reset is completed.
+11:56:29 INFO  : 'after 3000' command is executed.
+11:56:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+11:56:31 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:56:31 INFO  : Context for 'APU' is selected.
+11:56:35 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:56:35 INFO  : 'configparams force-mem-access 1' command is executed.
+11:56:35 INFO  : Context for 'APU' is selected.
+11:56:36 INFO  : 'ps7_init' command is executed.
+11:56:36 INFO  : 'ps7_post_config' command is executed.
+11:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:36 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:56:36 INFO  : 'configparams force-mem-access 0' command is executed.
+11:56:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:56:36 INFO  : Memory regions updated for context APU
+11:56:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:36 INFO  : 'con' command is executed.
+11:56:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+11:56:36 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+11:57:24 INFO  : Disconnected from the channel tcfchan#3.
+11:57:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:26 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+11:57:26 INFO  : 'jtag frequency' command is executed.
+11:57:26 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:57:27 INFO  : Context for 'APU' is selected.
+11:57:27 INFO  : System reset is completed.
+11:57:30 INFO  : 'after 3000' command is executed.
+11:57:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+11:57:32 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:57:33 INFO  : Context for 'APU' is selected.
+11:57:33 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:57:33 INFO  : 'configparams force-mem-access 1' command is executed.
+11:57:33 INFO  : Context for 'APU' is selected.
+11:57:33 INFO  : 'ps7_init' command is executed.
+11:57:33 INFO  : 'ps7_post_config' command is executed.
+11:57:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:34 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:57:34 INFO  : 'configparams force-mem-access 0' command is executed.
+11:57:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:57:34 INFO  : Memory regions updated for context APU
+11:57:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:57:34 INFO  : 'con' command is executed.
+11:57:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+11:57:34 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:01:14 INFO  : Disconnected from the channel tcfchan#4.
+12:01:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:01:16 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:01:16 INFO  : 'jtag frequency' command is executed.
+12:01:16 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:01:16 INFO  : Context for 'APU' is selected.
+12:01:16 INFO  : System reset is completed.
+12:01:19 INFO  : 'after 3000' command is executed.
+12:01:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:01:20 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:01:20 INFO  : Context for 'APU' is selected.
+12:01:20 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:01:21 INFO  : 'configparams force-mem-access 1' command is executed.
+12:01:21 INFO  : Context for 'APU' is selected.
+12:01:21 INFO  : 'ps7_init' command is executed.
+12:01:21 INFO  : 'ps7_post_config' command is executed.
+12:01:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:21 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:01:21 INFO  : 'configparams force-mem-access 0' command is executed.
+12:01:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:01:22 INFO  : Memory regions updated for context APU
+12:01:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:22 INFO  : 'con' command is executed.
+12:01:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:01:22 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:04:49 INFO  : Disconnected from the channel tcfchan#5.
+12:04:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:50 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:04:50 INFO  : 'jtag frequency' command is executed.
+12:04:50 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:04:50 INFO  : Context for 'APU' is selected.
+12:04:50 INFO  : System reset is completed.
+12:04:53 INFO  : 'after 3000' command is executed.
+12:04:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:04:55 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:04:55 INFO  : Context for 'APU' is selected.
+12:04:55 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:04:55 INFO  : 'configparams force-mem-access 1' command is executed.
+12:04:55 INFO  : Context for 'APU' is selected.
+12:04:55 INFO  : 'ps7_init' command is executed.
+12:04:55 INFO  : 'ps7_post_config' command is executed.
+12:04:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:56 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:04:56 INFO  : 'configparams force-mem-access 0' command is executed.
+12:04:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:04:56 INFO  : Memory regions updated for context APU
+12:04:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:56 INFO  : 'con' command is executed.
+12:04:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:04:56 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:05:17 INFO  : Disconnected from the channel tcfchan#6.
+12:05:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:05:18 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:05:18 INFO  : 'jtag frequency' command is executed.
+12:05:19 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:05:19 INFO  : Context for 'APU' is selected.
+12:05:19 INFO  : System reset is completed.
+12:05:22 INFO  : 'after 3000' command is executed.
+12:05:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:05:23 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:05:23 INFO  : Context for 'APU' is selected.
+12:05:23 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:05:23 INFO  : 'configparams force-mem-access 1' command is executed.
+12:05:23 INFO  : Context for 'APU' is selected.
+12:05:24 INFO  : 'ps7_init' command is executed.
+12:05:24 INFO  : 'ps7_post_config' command is executed.
+12:05:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:05:24 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:05:24 INFO  : 'configparams force-mem-access 0' command is executed.
+12:05:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:05:24 INFO  : Memory regions updated for context APU
+12:05:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:05:24 INFO  : 'con' command is executed.
+12:05:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:05:24 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:14:40 INFO  : Disconnected from the channel tcfchan#7.
+12:14:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:14:41 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:14:41 INFO  : 'jtag frequency' command is executed.
+12:14:41 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:14:41 INFO  : Context for 'APU' is selected.
+12:14:41 INFO  : System reset is completed.
+12:14:44 INFO  : 'after 3000' command is executed.
+12:14:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:14:46 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:14:46 INFO  : Context for 'APU' is selected.
+12:14:46 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:14:46 INFO  : 'configparams force-mem-access 1' command is executed.
+12:14:46 INFO  : Context for 'APU' is selected.
+12:14:47 INFO  : 'ps7_init' command is executed.
+12:14:47 INFO  : 'ps7_post_config' command is executed.
+12:14:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:14:47 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:14:47 INFO  : 'configparams force-mem-access 0' command is executed.
+12:14:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:14:47 INFO  : Memory regions updated for context APU
+12:14:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:14:47 INFO  : 'con' command is executed.
+12:14:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:14:47 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:25:27 INFO  : Disconnected from the channel tcfchan#8.
+12:25:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:25:29 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:25:29 INFO  : 'jtag frequency' command is executed.
+12:25:29 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:25:29 INFO  : Context for 'APU' is selected.
+12:25:29 INFO  : System reset is completed.
+12:25:32 INFO  : 'after 3000' command is executed.
+12:25:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:25:33 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:25:33 INFO  : Context for 'APU' is selected.
+12:25:33 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:25:33 INFO  : 'configparams force-mem-access 1' command is executed.
+12:25:33 INFO  : Context for 'APU' is selected.
+12:25:34 INFO  : 'ps7_init' command is executed.
+12:25:34 INFO  : 'ps7_post_config' command is executed.
+12:25:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:34 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:25:34 INFO  : 'configparams force-mem-access 0' command is executed.
+12:25:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:25:34 INFO  : Memory regions updated for context APU
+12:25:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:25:35 INFO  : 'con' command is executed.
+12:25:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:25:35 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:27:23 INFO  : Disconnected from the channel tcfchan#9.
+12:27:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:25 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:27:25 INFO  : 'jtag frequency' command is executed.
+12:27:25 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:27:25 INFO  : Context for 'APU' is selected.
+12:27:25 INFO  : System reset is completed.
+12:27:28 INFO  : 'after 3000' command is executed.
+12:27:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:27:29 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:27:30 INFO  : Context for 'APU' is selected.
+12:27:30 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:27:30 INFO  : 'configparams force-mem-access 1' command is executed.
+12:27:30 INFO  : Context for 'APU' is selected.
+12:27:30 INFO  : 'ps7_init' command is executed.
+12:27:30 INFO  : 'ps7_post_config' command is executed.
+12:27:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:30 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:27:30 INFO  : 'configparams force-mem-access 0' command is executed.
+12:27:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:27:31 INFO  : Memory regions updated for context APU
+12:27:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:31 INFO  : 'con' command is executed.
+12:27:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:27:31 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:28:02 INFO  : Disconnected from the channel tcfchan#10.
+12:28:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:28:04 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:28:04 INFO  : 'jtag frequency' command is executed.
+12:28:04 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:28:05 INFO  : Context for 'APU' is selected.
+12:28:05 INFO  : System reset is completed.
+12:28:08 INFO  : 'after 3000' command is executed.
+12:28:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:28:11 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:28:12 INFO  : Context for 'APU' is selected.
+12:28:13 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:28:13 INFO  : 'configparams force-mem-access 1' command is executed.
+12:28:13 INFO  : Context for 'APU' is selected.
+12:28:13 INFO  : 'ps7_init' command is executed.
+12:28:13 INFO  : 'ps7_post_config' command is executed.
+12:28:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:13 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:28:13 INFO  : 'configparams force-mem-access 0' command is executed.
+12:28:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:28:14 INFO  : Memory regions updated for context APU
+12:28:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:14 INFO  : 'con' command is executed.
+12:28:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:28:14 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:30:30 INFO  : Disconnected from the channel tcfchan#11.
+12:30:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:32 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:30:32 INFO  : 'jtag frequency' command is executed.
+12:30:32 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:30:32 INFO  : Context for 'APU' is selected.
+12:30:32 INFO  : System reset is completed.
+12:30:35 INFO  : 'after 3000' command is executed.
+12:30:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:30:36 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:30:37 INFO  : Context for 'APU' is selected.
+12:30:37 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:30:37 INFO  : 'configparams force-mem-access 1' command is executed.
+12:30:37 INFO  : Context for 'APU' is selected.
+12:30:37 INFO  : 'ps7_init' command is executed.
+12:30:37 INFO  : 'ps7_post_config' command is executed.
+12:30:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:30:37 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:30:37 INFO  : 'configparams force-mem-access 0' command is executed.
+12:30:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:30:38 INFO  : Memory regions updated for context APU
+12:30:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:30:38 INFO  : 'con' command is executed.
+12:30:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:30:38 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:31:14 INFO  : Disconnected from the channel tcfchan#12.
+12:31:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:31:15 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:31:15 INFO  : 'jtag frequency' command is executed.
+12:31:15 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:31:15 INFO  : Context for 'APU' is selected.
+12:31:16 INFO  : System reset is completed.
+12:31:19 INFO  : 'after 3000' command is executed.
+12:31:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:31:20 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:31:20 INFO  : Context for 'APU' is selected.
+12:31:20 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:31:20 INFO  : 'configparams force-mem-access 1' command is executed.
+12:31:20 INFO  : Context for 'APU' is selected.
+12:31:21 INFO  : 'ps7_init' command is executed.
+12:31:21 INFO  : 'ps7_post_config' command is executed.
+12:31:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:31:21 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:31:21 INFO  : 'configparams force-mem-access 0' command is executed.
+12:31:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:31:21 INFO  : Memory regions updated for context APU
+12:31:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:31:21 INFO  : 'con' command is executed.
+12:31:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:31:21 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+12:39:07 INFO  : Disconnected from the channel tcfchan#13.
+12:39:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:39:09 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+12:39:09 INFO  : 'jtag frequency' command is executed.
+12:39:09 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:39:09 INFO  : Context for 'APU' is selected.
+12:39:09 INFO  : System reset is completed.
+12:39:12 INFO  : 'after 3000' command is executed.
+12:39:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+12:39:13 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:39:13 INFO  : Context for 'APU' is selected.
+12:39:13 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:39:13 INFO  : 'configparams force-mem-access 1' command is executed.
+12:39:13 INFO  : Context for 'APU' is selected.
+12:39:14 INFO  : 'ps7_init' command is executed.
+12:39:14 INFO  : 'ps7_post_config' command is executed.
+12:39:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:14 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:39:14 INFO  : 'configparams force-mem-access 0' command is executed.
+12:39:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:39:14 INFO  : Memory regions updated for context APU
+12:39:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:39:15 INFO  : 'con' command is executed.
+12:39:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+12:39:15 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+13:11:36 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1533125365475,  Project:1533120264918
+13:11:36 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:11:47 INFO  : Copied contents of C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+13:11:57 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:12:01 INFO  : 
+13:12:02 INFO  : Updating hardware inferred compiler options for sonar.
+13:12:02 INFO  : Clearing existing target manager status.
+13:12:02 INFO  : Closing and re-opening the MSS file of ther project sonar_bsp
+13:12:03 INFO  : Closing and re-opening the MSS file of ther project sonar_bsp
+13:12:03 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:12:06 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:14:29 INFO  : Disconnected from the channel tcfchan#14.
+13:14:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:14:31 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+13:14:31 INFO  : 'jtag frequency' command is executed.
+13:14:31 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:14:31 INFO  : Context for 'APU' is selected.
+13:14:31 INFO  : System reset is completed.
+13:14:34 INFO  : 'after 3000' command is executed.
+13:14:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+13:14:36 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:14:36 INFO  : Context for 'APU' is selected.
+13:14:36 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:14:36 INFO  : 'configparams force-mem-access 1' command is executed.
+13:14:36 INFO  : Context for 'APU' is selected.
+13:14:36 INFO  : 'ps7_init' command is executed.
+13:14:36 INFO  : 'ps7_post_config' command is executed.
+13:14:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:37 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:14:37 INFO  : 'configparams force-mem-access 0' command is executed.
+13:14:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:14:37 INFO  : Memory regions updated for context APU
+13:14:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:37 INFO  : 'con' command is executed.
+13:14:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+13:14:37 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+13:15:11 INFO  : Disconnected from the channel tcfchan#15.
+13:15:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:15:13 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+13:15:13 INFO  : 'jtag frequency' command is executed.
+13:15:13 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:15:13 INFO  : Context for 'APU' is selected.
+13:15:13 INFO  : System reset is completed.
+13:15:16 INFO  : 'after 3000' command is executed.
+13:15:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+13:15:18 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:15:18 INFO  : Context for 'APU' is selected.
+13:15:18 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:15:18 INFO  : 'configparams force-mem-access 1' command is executed.
+13:15:18 INFO  : Context for 'APU' is selected.
+13:15:18 INFO  : 'ps7_init' command is executed.
+13:15:18 INFO  : 'ps7_post_config' command is executed.
+13:15:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:15:19 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:15:19 INFO  : 'configparams force-mem-access 0' command is executed.
+13:15:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:15:19 INFO  : Memory regions updated for context APU
+13:15:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:15:19 INFO  : 'con' command is executed.
+13:15:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+13:15:19 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+13:16:21 INFO  : Disconnected from the channel tcfchan#16.
+13:16:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:16:23 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+13:16:23 INFO  : 'jtag frequency' command is executed.
+13:16:23 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:16:23 INFO  : Context for 'APU' is selected.
+13:16:23 INFO  : System reset is completed.
+13:16:26 INFO  : 'after 3000' command is executed.
+13:16:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+13:16:27 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:16:27 INFO  : Context for 'APU' is selected.
+13:16:27 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:16:28 INFO  : 'configparams force-mem-access 1' command is executed.
+13:16:28 INFO  : Context for 'APU' is selected.
+13:16:28 INFO  : 'ps7_init' command is executed.
+13:16:28 INFO  : 'ps7_post_config' command is executed.
+13:16:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:28 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:16:28 INFO  : 'configparams force-mem-access 0' command is executed.
+13:16:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:16:29 INFO  : Memory regions updated for context APU
+13:16:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:29 INFO  : 'con' command is executed.
+13:16:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+13:16:29 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+13:20:34 INFO  : Disconnected from the channel tcfchan#17.
+13:20:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:20:35 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+13:20:36 INFO  : 'jtag frequency' command is executed.
+13:20:36 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:20:36 INFO  : Context for 'APU' is selected.
+13:20:36 INFO  : System reset is completed.
+13:20:39 INFO  : 'after 3000' command is executed.
+13:20:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+13:20:40 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:20:40 INFO  : Context for 'APU' is selected.
+13:20:40 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:20:40 INFO  : 'configparams force-mem-access 1' command is executed.
+13:20:40 INFO  : Context for 'APU' is selected.
+13:20:41 INFO  : 'ps7_init' command is executed.
+13:20:41 INFO  : 'ps7_post_config' command is executed.
+13:20:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:41 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:20:41 INFO  : 'configparams force-mem-access 0' command is executed.
+13:20:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:20:41 INFO  : Memory regions updated for context APU
+13:20:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:42 INFO  : 'con' command is executed.
+13:20:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+13:20:42 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+13:24:08 INFO  : Disconnected from the channel tcfchan#18.
+13:24:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:13 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+13:24:13 INFO  : 'jtag frequency' command is executed.
+13:24:13 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:24:13 INFO  : Context for 'APU' is selected.
+13:24:13 INFO  : System reset is completed.
+13:24:16 INFO  : 'after 3000' command is executed.
+13:24:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+13:24:18 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:24:18 INFO  : Context for 'APU' is selected.
+13:24:18 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:24:18 INFO  : 'configparams force-mem-access 1' command is executed.
+13:24:18 INFO  : Context for 'APU' is selected.
+13:24:19 INFO  : 'ps7_init' command is executed.
+13:24:19 INFO  : 'ps7_post_config' command is executed.
+13:24:19 INFO  : 'configparams force-mem-access 0' command is executed.
+13:24:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:24:19 INFO  : Memory regions updated for context APU
+13:24:19 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+13:24:35 INFO  : Disconnected from the channel tcfchan#19.
+13:25:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:25:07 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+13:25:07 INFO  : 'jtag frequency' command is executed.
+13:25:07 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:25:07 INFO  : Context for 'APU' is selected.
+13:25:08 INFO  : System reset is completed.
+13:25:11 INFO  : 'after 3000' command is executed.
+13:25:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+13:25:12 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:25:12 INFO  : Context for 'APU' is selected.
+13:25:12 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:25:12 INFO  : 'configparams force-mem-access 1' command is executed.
+13:25:12 INFO  : Context for 'APU' is selected.
+13:25:13 INFO  : 'ps7_init' command is executed.
+13:25:13 INFO  : 'ps7_post_config' command is executed.
+13:25:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:25:13 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:25:13 INFO  : 'configparams force-mem-access 0' command is executed.
+13:25:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:25:13 INFO  : Memory regions updated for context APU
+13:25:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:25:14 INFO  : 'con' command is executed.
+13:25:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+13:25:14 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+14:06:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1533128728572,  Project:1533125365475
+14:06:39 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:06:41 INFO  : Copied contents of C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+14:06:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:06:54 INFO  : 
+14:06:55 INFO  : Updating hardware inferred compiler options for sonar.
+14:06:55 INFO  : Clearing existing target manager status.
+14:06:55 INFO  : Closing and re-opening the MSS file of ther project sonar_bsp
+14:06:56 INFO  : Closing and re-opening the MSS file of ther project sonar_bsp
+14:06:56 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:06:59 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:09:49 INFO  : Disconnected from the channel tcfchan#20.
+14:10:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:10:18 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+14:10:18 INFO  : 'jtag frequency' command is executed.
+14:10:18 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:10:18 INFO  : Context for 'APU' is selected.
+14:10:18 INFO  : System reset is completed.
+14:10:21 INFO  : 'after 3000' command is executed.
+14:10:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+14:10:22 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:10:22 INFO  : Context for 'APU' is selected.
+14:10:23 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:10:23 INFO  : 'configparams force-mem-access 1' command is executed.
+14:10:23 INFO  : Context for 'APU' is selected.
+14:10:23 INFO  : 'ps7_init' command is executed.
+14:10:23 INFO  : 'ps7_post_config' command is executed.
+14:10:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:10:24 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:10:24 INFO  : 'configparams force-mem-access 0' command is executed.
+14:10:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:10:24 INFO  : Memory regions updated for context APU
+14:10:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:10:24 INFO  : 'con' command is executed.
+14:10:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+14:10:24 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+14:31:39 INFO  : Disconnected from the channel tcfchan#21.
+14:31:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:31:41 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+14:31:41 INFO  : 'jtag frequency' command is executed.
+14:31:41 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:31:41 INFO  : Context for 'APU' is selected.
+14:31:41 INFO  : System reset is completed.
+14:31:44 INFO  : 'after 3000' command is executed.
+14:31:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+14:31:45 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:31:45 INFO  : Context for 'APU' is selected.
+14:31:45 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:31:46 INFO  : 'configparams force-mem-access 1' command is executed.
+14:31:46 INFO  : Context for 'APU' is selected.
+14:31:46 INFO  : 'ps7_init' command is executed.
+14:31:46 INFO  : 'ps7_post_config' command is executed.
+14:31:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:47 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:31:47 INFO  : 'configparams force-mem-access 0' command is executed.
+14:31:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:31:47 INFO  : Memory regions updated for context APU
+14:31:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:47 INFO  : 'con' command is executed.
+14:31:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+14:31:47 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+14:32:43 INFO  : Disconnected from the channel tcfchan#22.
+14:32:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:32:45 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+14:32:45 INFO  : 'jtag frequency' command is executed.
+14:32:45 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:32:45 INFO  : Context for 'APU' is selected.
+14:32:45 INFO  : System reset is completed.
+14:32:48 INFO  : 'after 3000' command is executed.
+14:32:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+14:32:49 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:32:50 INFO  : Context for 'APU' is selected.
+14:32:50 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:32:50 INFO  : 'configparams force-mem-access 1' command is executed.
+14:32:50 INFO  : Context for 'APU' is selected.
+14:32:50 INFO  : 'ps7_init' command is executed.
+14:32:50 INFO  : 'ps7_post_config' command is executed.
+14:32:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:32:51 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:32:51 INFO  : 'configparams force-mem-access 0' command is executed.
+14:32:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:32:51 INFO  : Memory regions updated for context APU
+14:32:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:32:51 INFO  : 'con' command is executed.
+14:32:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+14:32:51 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+14:36:53 INFO  : Disconnected from the channel tcfchan#23.
+14:36:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:54 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+14:36:54 INFO  : 'jtag frequency' command is executed.
+14:36:54 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:36:54 INFO  : Context for 'APU' is selected.
+14:36:55 INFO  : System reset is completed.
+14:36:58 INFO  : 'after 3000' command is executed.
+14:36:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+14:36:59 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:36:59 INFO  : Context for 'APU' is selected.
+14:36:59 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:36:59 INFO  : 'configparams force-mem-access 1' command is executed.
+14:36:59 INFO  : Context for 'APU' is selected.
+14:37:00 INFO  : 'ps7_init' command is executed.
+14:37:00 INFO  : 'ps7_post_config' command is executed.
+14:37:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:00 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:37:00 INFO  : 'configparams force-mem-access 0' command is executed.
+14:37:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:37:00 INFO  : Memory regions updated for context APU
+14:37:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:01 INFO  : 'con' command is executed.
+14:37:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+14:37:01 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+17:39:12 INFO  : Disconnected from the channel tcfchan#24.
+17:39:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:39:14 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+17:39:14 INFO  : 'jtag frequency' command is executed.
+17:39:14 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:39:14 INFO  : Context for 'APU' is selected.
+17:39:14 INFO  : System reset is completed.
+17:39:17 INFO  : 'after 3000' command is executed.
+17:39:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+17:39:18 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:39:19 INFO  : Context for 'APU' is selected.
+17:39:19 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:39:19 INFO  : 'configparams force-mem-access 1' command is executed.
+17:39:19 INFO  : Context for 'APU' is selected.
+17:39:19 INFO  : 'ps7_init' command is executed.
+17:39:19 INFO  : 'ps7_post_config' command is executed.
+17:39:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:39:20 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:39:20 INFO  : 'configparams force-mem-access 0' command is executed.
+17:39:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:39:20 INFO  : Memory regions updated for context APU
+17:39:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:39:20 INFO  : 'con' command is executed.
+17:39:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+17:39:20 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+17:42:17 INFO  : Disconnected from the channel tcfchan#25.
+17:45:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:45:10 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+17:45:10 INFO  : 'jtag frequency' command is executed.
+17:45:10 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:45:10 INFO  : Context for 'APU' is selected.
+17:45:10 INFO  : System reset is completed.
+17:45:13 INFO  : 'after 3000' command is executed.
+17:45:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+17:45:15 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:45:15 INFO  : Context for 'APU' is selected.
+17:45:15 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:45:15 INFO  : 'configparams force-mem-access 1' command is executed.
+17:45:15 INFO  : Context for 'APU' is selected.
+17:45:16 INFO  : 'ps7_init' command is executed.
+17:45:16 INFO  : 'ps7_post_config' command is executed.
+17:45:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:45:16 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:45:16 INFO  : 'configparams force-mem-access 0' command is executed.
+17:45:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:45:16 INFO  : Memory regions updated for context APU
+17:45:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:45:17 INFO  : 'con' command is executed.
+17:45:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+17:45:17 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+17:50:53 INFO  : Disconnected from the channel tcfchan#26.
+17:50:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:50:55 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+17:50:55 INFO  : 'jtag frequency' command is executed.
+17:50:55 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:50:55 INFO  : Context for 'APU' is selected.
+17:50:55 INFO  : System reset is completed.
+17:50:58 INFO  : 'after 3000' command is executed.
+17:50:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+17:50:59 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:51:00 INFO  : Context for 'APU' is selected.
+17:51:00 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+17:51:00 INFO  : 'configparams force-mem-access 1' command is executed.
+17:51:00 INFO  : Context for 'APU' is selected.
+17:51:01 INFO  : 'ps7_init' command is executed.
+17:51:01 INFO  : 'ps7_post_config' command is executed.
+17:51:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:51:01 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:51:01 INFO  : 'configparams force-mem-access 0' command is executed.
+17:51:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:51:01 INFO  : Memory regions updated for context APU
+17:51:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:51:02 INFO  : 'con' command is executed.
+17:51:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+17:51:02 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:04:24 WARN  : channel "tcfchan#1" closed
+18:08:28 INFO  : Disconnected from the channel tcfchan#27.
+18:08:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:08:30 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:08:30 INFO  : 'jtag frequency' command is executed.
+18:08:30 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:08:30 INFO  : Context for 'APU' is selected.
+18:08:30 INFO  : System reset is completed.
+18:08:33 INFO  : 'after 3000' command is executed.
+18:08:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:08:34 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:08:34 INFO  : Context for 'APU' is selected.
+18:08:35 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:08:35 INFO  : 'configparams force-mem-access 1' command is executed.
+18:08:35 INFO  : Context for 'APU' is selected.
+18:08:35 INFO  : 'ps7_init' command is executed.
+18:08:35 INFO  : 'ps7_post_config' command is executed.
+18:08:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:36 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:08:36 INFO  : 'configparams force-mem-access 0' command is executed.
+18:08:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:08:36 INFO  : Memory regions updated for context APU
+18:08:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:36 INFO  : 'con' command is executed.
+18:08:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:08:36 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:14:00 INFO  : Disconnected from the channel tcfchan#28.
+18:14:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:14:02 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:14:02 INFO  : 'jtag frequency' command is executed.
+18:14:02 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:14:02 INFO  : Context for 'APU' is selected.
+18:14:02 INFO  : System reset is completed.
+18:14:05 INFO  : 'after 3000' command is executed.
+18:14:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:14:06 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:14:07 INFO  : Context for 'APU' is selected.
+18:14:07 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:14:07 INFO  : 'configparams force-mem-access 1' command is executed.
+18:14:07 INFO  : Context for 'APU' is selected.
+18:14:07 INFO  : 'ps7_init' command is executed.
+18:14:07 INFO  : 'ps7_post_config' command is executed.
+18:14:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:14:08 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:14:08 INFO  : 'configparams force-mem-access 0' command is executed.
+18:14:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:14:08 INFO  : Memory regions updated for context APU
+18:14:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:14:08 INFO  : 'con' command is executed.
+18:14:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:14:08 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:21:04 INFO  : Disconnected from the channel tcfchan#29.
+18:21:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:21:06 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:21:06 INFO  : 'jtag frequency' command is executed.
+18:21:06 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:21:06 INFO  : Context for 'APU' is selected.
+18:21:06 INFO  : System reset is completed.
+18:21:09 INFO  : 'after 3000' command is executed.
+18:21:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:21:11 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:21:11 INFO  : Context for 'APU' is selected.
+18:21:11 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:21:11 INFO  : 'configparams force-mem-access 1' command is executed.
+18:21:11 INFO  : Context for 'APU' is selected.
+18:21:12 INFO  : 'ps7_init' command is executed.
+18:21:12 INFO  : 'ps7_post_config' command is executed.
+18:21:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:21:12 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:21:12 INFO  : 'configparams force-mem-access 0' command is executed.
+18:21:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:21:12 INFO  : Memory regions updated for context APU
+18:21:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:21:13 INFO  : 'con' command is executed.
+18:21:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:21:13 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:22:54 INFO  : Disconnected from the channel tcfchan#30.
+18:23:47 INFO  : Registering command handlers for SDK TCF services
+18:23:47 INFO  : Launching XSCT server: xsct.bat -interactive C:\hdl_projects\cora_distance\cora_distance.sdk\temp_xsdb_launch_script.tcl
+18:23:52 INFO  : XSCT server has started successfully.
+18:23:52 INFO  : Successfully done setting XSCT server connection channel  
+18:23:55 INFO  : Successfully done setting SDK workspace  
+18:23:55 INFO  : Processing command line option -hwspec C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper.hdf.
+18:23:55 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado' *****
+18:23:55 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+18:24:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:24:48 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:24:48 INFO  : 'jtag frequency' command is executed.
+18:24:48 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:24:50 INFO  : Context for 'APU' is selected.
+18:24:50 INFO  : System reset is completed.
+18:24:53 INFO  : 'after 3000' command is executed.
+18:24:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:24:55 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:24:56 INFO  : Context for 'APU' is selected.
+18:24:56 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:24:56 INFO  : 'configparams force-mem-access 1' command is executed.
+18:24:57 INFO  : Context for 'APU' is selected.
+18:24:58 INFO  : 'ps7_init' command is executed.
+18:24:58 INFO  : 'ps7_post_config' command is executed.
+18:24:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:24:58 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:24:58 INFO  : 'configparams force-mem-access 0' command is executed.
+18:24:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:24:58 INFO  : Memory regions updated for context APU
+18:24:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:24:58 INFO  : 'con' command is executed.
+18:24:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:24:58 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:35:52 INFO  : Disconnected from the channel tcfchan#1.
+18:35:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:35:54 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:35:54 INFO  : 'jtag frequency' command is executed.
+18:35:54 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:35:54 INFO  : Context for 'APU' is selected.
+18:35:54 INFO  : System reset is completed.
+18:35:57 INFO  : 'after 3000' command is executed.
+18:35:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:35:58 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:35:58 INFO  : Context for 'APU' is selected.
+18:36:02 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:36:02 INFO  : 'configparams force-mem-access 1' command is executed.
+18:36:02 INFO  : Context for 'APU' is selected.
+18:36:03 INFO  : 'ps7_init' command is executed.
+18:36:03 INFO  : 'ps7_post_config' command is executed.
+18:36:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:36:03 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:36:03 INFO  : 'configparams force-mem-access 0' command is executed.
+18:36:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:36:03 INFO  : Memory regions updated for context APU
+18:36:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:36:03 INFO  : 'con' command is executed.
+18:36:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:36:03 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:37:39 INFO  : Disconnected from the channel tcfchan#2.
+18:37:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:37:40 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:37:40 INFO  : 'jtag frequency' command is executed.
+18:37:40 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:37:40 INFO  : Context for 'APU' is selected.
+18:37:41 INFO  : System reset is completed.
+18:37:44 INFO  : 'after 3000' command is executed.
+18:37:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:37:45 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:37:45 INFO  : Context for 'APU' is selected.
+18:37:48 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:37:48 INFO  : 'configparams force-mem-access 1' command is executed.
+18:37:48 INFO  : Context for 'APU' is selected.
+18:37:49 INFO  : 'ps7_init' command is executed.
+18:37:49 INFO  : 'ps7_post_config' command is executed.
+18:37:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:37:49 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:37:49 INFO  : 'configparams force-mem-access 0' command is executed.
+18:37:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:37:49 INFO  : Memory regions updated for context APU
+18:37:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:37:50 INFO  : 'con' command is executed.
+18:37:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:37:50 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:43:04 INFO  : Disconnected from the channel tcfchan#3.
+18:43:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:05 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+18:43:05 INFO  : 'jtag frequency' command is executed.
+18:43:05 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:43:05 INFO  : Context for 'APU' is selected.
+18:43:05 INFO  : System reset is completed.
+18:43:08 INFO  : 'after 3000' command is executed.
+18:43:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+18:43:10 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:43:10 INFO  : Context for 'APU' is selected.
+18:43:14 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:43:14 INFO  : 'configparams force-mem-access 1' command is executed.
+18:43:14 INFO  : Context for 'APU' is selected.
+18:43:14 INFO  : 'ps7_init' command is executed.
+18:43:14 INFO  : 'ps7_post_config' command is executed.
+18:43:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:15 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:43:15 INFO  : 'configparams force-mem-access 0' command is executed.
+18:43:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:43:15 INFO  : Memory regions updated for context APU
+18:43:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:15 INFO  : 'con' command is executed.
+18:43:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+18:43:15 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+18:55:57 INFO  : Invoking Bootgen: bootgen -image sonar.bif -arch zynq -o C:\hdl_projects\cora_distance\cora_distance.sdk\sonar\bootimage\BOOT.bin
+18:55:57 INFO  : Creating new bif file C:\hdl_projects\cora_distance\cora_distance.sdk\sonar\bootimage\sonar.bif
+18:55:59 INFO  : Bootgen command execution is done.
+19:02:20 INFO  : Disconnected from the channel tcfchan#4.
+19:02:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:02:22 INFO  : Jtag cable 'Digilent Cora Z7 - 7007S 210370A93076A' is selected.
+19:02:22 INFO  : 'jtag frequency' command is executed.
+19:02:22 INFO  : Sourcing of 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:02:22 INFO  : Context for 'APU' is selected.
+19:02:22 INFO  : System reset is completed.
+19:02:25 INFO  : 'after 3000' command is executed.
+19:02:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1' command is executed.
+19:02:26 INFO  : FPGA configured successfully with bitstream "C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+19:02:27 INFO  : Context for 'APU' is selected.
+19:02:30 INFO  : Hardware design information is loaded from 'C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:02:30 INFO  : 'configparams force-mem-access 1' command is executed.
+19:02:30 INFO  : Context for 'APU' is selected.
+19:02:31 INFO  : 'ps7_init' command is executed.
+19:02:31 INFO  : 'ps7_post_config' command is executed.
+19:02:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:02:31 INFO  : The application 'C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:02:31 INFO  : 'configparams force-mem-access 0' command is executed.
+19:02:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A" && level==0} -index 1
+fpga -file C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+loadhw -hw C:/hdl_projects/cora_distance/cora_distance.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+dow C:/hdl_projects/cora_distance/cora_distance.sdk/sonar/Debug/sonar.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:02:31 INFO  : Memory regions updated for context APU
+19:02:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:02:31 INFO  : 'con' command is executed.
+19:02:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370A93076A"} -index 0
+con
+----------------End of Script----------------
+
+19:02:31 INFO  : Launch script is exported to file 'C:\hdl_projects\cora_distance\cora_distance.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_sonar.elf_on_local.tcl'
+19:10:41 INFO  : Invoking Bootgen: bootgen -image sonar.bif -arch zynq -o C:\hdl_projects\cora_distance\cora_distance.sdk\sonar\bootimage\BOOT.bin -w on
+19:10:43 INFO  : Bootgen command execution is done.
+08:34:45 INFO  : Disconnected from the channel tcfchan#5.
