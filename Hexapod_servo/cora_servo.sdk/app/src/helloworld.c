@@ -50,9 +50,12 @@
 #include "xil_printf.h"
 #include "xiic.h"
 #include "Xscugic.h"
-
+#include "PmodMAXSONAR.h "
+#include "PmodNAV.h"
+#include "math.h"
 
 typedef enum {up,down} position_t;
+typedef enum {fwd,center,back} swing_t;
 
 void SetUpInterruptSystem();
 void SendHandler(XIic *InstancePtr);
@@ -62,8 +65,14 @@ void StatusHandler(XIic *InstancePtr, int Event);
 void checki2c();
 void SetFreq();
 void reset_shield();
+void startup();
 void WriteLeg(int leg, position_t position );
-
+void centralise(int leg, swing_t position );
+void straight();
+void reverse();
+void right_turn();
+void left_turn();
+float NavDemo_AngleInXY(NAV_RectCoord r);
 
 #define IIC_dev 			XPAR_IIC_0_DEVICE_ID
 #define int_dev 			XPAR_SCUGIC_0_DEVICE_ID
@@ -79,16 +88,40 @@ void WriteLeg(int leg, position_t position );
 #define down_l_on 			0x00
 #define down_h_off			0x00
 #define down_l_off			0x7a
+#define cent_h_on			0x00
+#define cent_l_on			0x00
+#define cent_h_off			0x01
+#define cent_l_off			0x6f
+#define fwd_h_on			0x00
+#define fwd_l_on			0x00
+#define fwd_h_off			0x01
+#define fwd_l_off			0x33
+#define bck_h_on			0x00
+#define bck_l_on 			0x00
+#define bck_h_off			0x01
+#define bck_l_off			0xad
+
+#define joint_offset        0x08
+#define joint_time 			250000
+
+#define min_dist			10
+
+#define PMOD_MAXSONAR_BASEADDR XPAR_PMODMAXSONAR_0_AXI_LITE_GPIO_BASEADDR
+#define CLK_FREQ 100000000
+
+char *compass[8] = {"North", "North-East", "East", "South-East", "South","South-West", "West", "North-West"};
 
 XIic  iic;
 XScuGic Intc;
+PmodMAXSONAR sonar;
+PmodNAV nav;
 
 volatile u8 TransmitComplete;
 volatile u8 ReceiveComplete;
 
 int main()
 {
-
+	u32 dist;
 	u32  Status;
     XIic_Config *iic_conf;
     u8 Options;
@@ -96,9 +129,15 @@ int main()
     u8 RecvBuffer [1];
 
 
+
     init_platform();
 
     print("Hello World\n\r");
+
+    MAXSONAR_begin(&sonar, PMOD_MAXSONAR_BASEADDR, CLK_FREQ);
+
+    NAV_begin (&nav,XPAR_PMODNAV_0_AXI_LITE_GPIO_BASEADDR,XPAR_PMODNAV_0_AXI_LITE_SPI_BASEADDR);
+    NAV_Init(&nav);
 
     iic_conf = XIic_LookupConfig(IIC_dev);
     XIic_CfgInitialize(&iic, iic_conf, iic_conf->BaseAddress);
@@ -122,18 +161,388 @@ int main()
 	printf("Scale %x\n\r",RecvBuffer[0]);
 
 
+	startup();
+
 
     while(1){
 
-        WriteLeg(0, up );
-        usleep(10000000);
-        WriteLeg(0, down);
-        usleep(10000000);
+      float magXYd ;
+      float newXYd;
+      int target;
+      char *str;
+
+
+      dist = MAXSONAR_getDistance(&sonar);
+   	  printf("dist (in) = %3d\r\n", dist);
+
+      NAV_GetData(&nav);
+      magXYd = NavDemo_AngleInXY(nav.magData);
+      printf("dir = %f\r\n", magXYd);
+
+   	if (dist > min_dist ){
+   	    straight();
+   		printf("straight \r\n");
+
+   	}
+   	else
+   	{
+   		printf("obsticle detected\n\r");
+
+   		dist = MAXSONAR_getDistance(&sonar);
+   		newXYd = NavDemo_AngleInXY(nav.magData);
+   		target = (int)(magXYd+90.0) % 360;
+   		if((magXYd +90.0)>360){
+			while((int)newXYd>=target){
+				//right_turn();
+				NAV_GetData(&nav);
+				newXYd = NavDemo_AngleInXY(nav.magData);
+			}
+   		}
+   		else{
+			while((int)newXYd<=target){
+				right_turn();
+				NAV_GetData(&nav);
+				newXYd = NavDemo_AngleInXY(nav.magData);
+			}
+   		}
+
+
+   	//	reverse();
+   	}
+
     }
 
     cleanup_platform();
     return 0;
 }
+
+
+void startup()
+{
+	int i;
+
+	//centralise joints
+	centralise(0, center );
+	centralise(1, center );
+	centralise(2, center );
+	centralise(3, center );
+	centralise(4, center );
+	centralise(5, center );
+    // put all legs into down position
+    WriteLeg(0, down);
+    WriteLeg(1, down);
+    WriteLeg(2, down);
+    WriteLeg(3, down);
+    WriteLeg(4, down);
+    WriteLeg(5, down);
+
+    for (i = 0; i<6;i++){
+
+    	WriteLeg(i, up);
+    	usleep(joint_time);
+    	centralise(i, fwd );
+    	usleep(joint_time);
+    	centralise(i, back );
+    	usleep(joint_time);
+    	centralise(i, center );
+    	usleep(joint_time);
+    	WriteLeg(i, down);
+    	usleep(joint_time);
+    }
+
+}
+
+
+void reverse()
+{
+
+	WriteLeg(0, up);
+	usleep(joint_time);
+	centralise(0, fwd );
+	WriteLeg(0, down);
+
+
+	WriteLeg(3, up);
+	usleep(joint_time);
+	centralise(3, fwd );
+	WriteLeg(3, down);
+
+
+	WriteLeg(4, up);
+	usleep(joint_time);
+	centralise(4, fwd );
+	WriteLeg(4, down);
+
+	usleep(joint_time);
+	WriteLeg(1, up);
+	WriteLeg(5, up);
+	WriteLeg(2, up);
+
+	usleep(joint_time);
+	centralise(0, center );
+	centralise(3, center );
+	centralise(4, center );
+
+	usleep(joint_time);
+	WriteLeg(1, down );
+	WriteLeg(5, down );
+	WriteLeg(2, down);
+
+
+	WriteLeg(1, up);
+	usleep(joint_time);
+	centralise(1, fwd );
+	WriteLeg(1, down);
+
+
+	WriteLeg(2, up);
+	usleep(joint_time);
+	centralise(2, fwd );
+	WriteLeg(2, down);
+
+
+	WriteLeg(5, up);
+	usleep(joint_time);
+	centralise(5, fwd );
+	WriteLeg(5, down);
+
+
+	usleep(joint_time);
+	WriteLeg(0, up);
+	WriteLeg(3, up);
+	WriteLeg(4, up);
+
+	usleep(joint_time);
+	centralise(1, center );
+	centralise(2, center );
+	centralise(5, center );
+
+	usleep(joint_time);
+	WriteLeg(0, down );
+	WriteLeg(3, down );
+	WriteLeg(4, down);
+
+}
+
+
+
+
+void straight()
+{
+
+	WriteLeg(0, up);
+	usleep(joint_time);
+	centralise(0, back );
+	WriteLeg(0, down);
+
+
+	WriteLeg(3, up);
+	usleep(joint_time);
+	centralise(3, back );
+	WriteLeg(3, down);
+
+
+	WriteLeg(4, up);
+	usleep(joint_time);
+	centralise(4, back );
+	WriteLeg(4, down);
+
+	usleep(joint_time);
+	WriteLeg(1, up);
+	WriteLeg(5, up);
+	WriteLeg(2, up);
+
+	usleep(joint_time);
+	centralise(0, center );
+	centralise(3, center );
+	centralise(4, center );
+
+
+	//usleep(joint_time);
+	//WriteLeg(1, down );
+	//WriteLeg(5, down );
+	//WriteLeg(2, down);
+
+
+	WriteLeg(1, up);
+	usleep(joint_time);
+	centralise(1, back );
+	WriteLeg(1, down);
+
+
+	WriteLeg(2, up);
+	usleep(joint_time);
+	centralise(2, back );
+	WriteLeg(2, down);
+
+
+	WriteLeg(5, up);
+	usleep(joint_time);
+	centralise(5, back );
+	WriteLeg(5, down);
+
+
+	usleep(joint_time);
+	WriteLeg(0, up);
+	WriteLeg(3, up);
+	WriteLeg(4, up);
+
+	usleep(joint_time);
+	centralise(1, center );
+	centralise(2, center );
+	centralise(5, center );
+
+	//usleep(joint_time);
+	//WriteLeg(0, down );
+	//WriteLeg(3, down );
+	//WriteLeg(4, down);
+
+}
+
+void right_turn()
+{
+
+	WriteLeg(0, up);
+	usleep(joint_time);
+	centralise(0, fwd );
+	WriteLeg(0, down);
+
+
+	WriteLeg(3, up);
+	usleep(joint_time);
+	centralise(3, back );
+	WriteLeg(3, down);
+
+
+	WriteLeg(4, up);
+	usleep(joint_time);
+	centralise(4, fwd );
+	WriteLeg(4, down);
+
+	usleep(joint_time);
+	WriteLeg(1, up);
+	WriteLeg(5, up);
+	WriteLeg(2, up);
+
+	usleep(joint_time);
+	centralise(0, center );
+	centralise(3, center );
+	centralise(4, center );
+
+
+	//usleep(joint_time);
+	//WriteLeg(1, down );
+	//WriteLeg(5, down );
+	//WriteLeg(2, down);
+
+
+	WriteLeg(1, up);
+	usleep(joint_time);
+	centralise(1, back );
+	WriteLeg(1, down);
+
+
+	WriteLeg(2, up);
+	usleep(joint_time);
+	centralise(2, fwd );
+	WriteLeg(2, down);
+
+
+	WriteLeg(5, up);
+	usleep(joint_time);
+	centralise(5, back );
+	WriteLeg(5, down);
+
+
+	usleep(joint_time);
+	WriteLeg(0, up);
+	WriteLeg(3, up);
+	WriteLeg(4, up);
+
+	usleep(joint_time);
+	centralise(1, center );
+	centralise(2, center );
+	centralise(5, center );
+
+	//usleep(joint_time);
+	//WriteLeg(0, down );
+	//WriteLeg(3, down );
+	//WriteLeg(4, down);
+
+}
+
+void left_turn()
+{
+
+	WriteLeg(0, up);
+	usleep(joint_time);
+	centralise(0, back );
+	WriteLeg(0, down);
+
+
+	WriteLeg(3, up);
+	usleep(joint_time);
+	centralise(3, fwd );
+	WriteLeg(3, down);
+
+
+	WriteLeg(4, up);
+	usleep(joint_time);
+	centralise(4, back );
+	WriteLeg(4, down);
+
+	usleep(joint_time);
+	WriteLeg(1, up);
+	WriteLeg(5, up);
+	WriteLeg(2, up);
+
+	usleep(joint_time);
+	centralise(0, center );
+	centralise(3, center );
+	centralise(4, center );
+
+
+	//usleep(joint_time);
+	//WriteLeg(1, down );
+	//WriteLeg(5, down );
+	//WriteLeg(2, down);
+
+
+	WriteLeg(1, up);
+	usleep(joint_time);
+	centralise(1, fwd );
+	WriteLeg(1, down);
+
+
+	WriteLeg(2, up);
+	usleep(joint_time);
+	centralise(2, back );
+	WriteLeg(2, down);
+
+
+	WriteLeg(5, up);
+	usleep(joint_time);
+	centralise(5, fwd );
+	WriteLeg(5, down);
+
+
+	usleep(joint_time);
+	WriteLeg(0, up);
+	WriteLeg(3, up);
+	WriteLeg(4, up);
+
+	usleep(joint_time);
+	centralise(1, center );
+	centralise(2, center );
+	centralise(5, center );
+
+	//usleep(joint_time);
+	//WriteLeg(0, down );
+	//WriteLeg(3, down );
+	//WriteLeg(4, down);
+
+}
+
 
 void reset_shield()
 {
@@ -176,40 +585,163 @@ void SetFreq()
 }
 
 
+void centralise(int leg, swing_t position )
+{
+u8 SendBuffer [2];
+u8 RecvBuffer [1];
+ if (position == center){
+		SendBuffer[0] = 0x06+(4*(leg+joint_offset));
+		SendBuffer[1] = cent_l_on;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		SendBuffer[0] = 0x07+(4*(leg+joint_offset));
+		SendBuffer[1] = cent_h_on;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		SendBuffer[0] = 0x08+(4*(leg+joint_offset));
+		SendBuffer[1] = cent_l_off;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		SendBuffer[0] = 0x09+(4*(leg+joint_offset));
+		SendBuffer[1] = cent_h_off;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		//printf("down even\r\n");
+	}
+ else
+	 if (position == fwd && (leg == 0 || leg == 2 || leg ==4)){
+			SendBuffer[0] = 0x06+(4*(leg+joint_offset));
+			SendBuffer[1] = fwd_l_on;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x07+(4*(leg+joint_offset));
+			SendBuffer[1] = fwd_h_on;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x08+(4*(leg+joint_offset));
+			SendBuffer[1] = fwd_l_off;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x09+(4*(leg+joint_offset));
+			SendBuffer[1] = fwd_h_off;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			//printf("down even\r\n");
+		}
+ else
+	 if (position == back && (leg == 0 || leg == 2 || leg ==4)){
+			SendBuffer[0] = 0x06+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_l_on;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x07+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_h_on;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x08+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_l_off;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x09+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_h_off;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			//printf("down even\r\n");
+		}
+ else
+	 if (position == fwd && (leg == 1 || leg == 3 || leg ==5)){
+			SendBuffer[0] = 0x06+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_l_on;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x07+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_h_on;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x08+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_l_off;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			SendBuffer[0] = 0x09+(4*(leg+joint_offset));
+			SendBuffer[1] = bck_h_off;
+			XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+			//printf("down even\r\n");
+		}
+  else
+		 if (position == back && (leg == 1 || leg == 3 || leg ==5)){
+					SendBuffer[0] = 0x06+(4*(leg+joint_offset));
+					SendBuffer[1] = fwd_l_on;
+					XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+					SendBuffer[0] = 0x07+(4*(leg+joint_offset));
+					SendBuffer[1] = fwd_h_on;
+					XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+					SendBuffer[0] = 0x08+(4*(leg+joint_offset));
+					SendBuffer[1] = fwd_l_off;
+					XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+					SendBuffer[0] = 0x09+(4*(leg+joint_offset));
+					SendBuffer[1] = fwd_h_off;
+					XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+					//printf("down even\r\n");
+				}
+
+}
+
+
 void WriteLeg(int leg, position_t position )
 //this positions a leg to either up or dwn
 {
     u8 SendBuffer [2];
     u8 RecvBuffer [1];
 
-    if (position == up){
-    	SendBuffer[0] = 0x06;
+    if (position == down && (leg == 0 || leg == 2 || leg ==4)){
+    	SendBuffer[0] = 0x06+(4*leg);
     	SendBuffer[1] = up_l_on;
         XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
-        SendBuffer[0] = 0x07;
+        SendBuffer[0] = 0x07+(4*leg);
         SendBuffer[1] = up_h_on;
         XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
-        SendBuffer[0] = 0x08;
+        SendBuffer[0] = 0x08+(4*leg);
         SendBuffer[1] = up_l_off;
         XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
-        SendBuffer[0] = 0x09;
+        SendBuffer[0] = 0x09+(4*leg);
         SendBuffer[1] = up_h_off;
         XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+        //printf("up even\r\n");
     }
-    else{
-		SendBuffer[0] = 0x06;
+    else
+	 if (position == down && (leg == 1 || leg == 3 || leg == 5)){
+		SendBuffer[0] = 0x06+(4*leg);
 		SendBuffer[1] = down_l_on;
 		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
-		SendBuffer[0] = 0x07;
+		SendBuffer[0] = 0x07+(4*leg);
 		SendBuffer[1] = down_h_on;
 		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
-		SendBuffer[0] = 0x08;
+		SendBuffer[0] = 0x08+(4*leg);
 		SendBuffer[1] = down_l_off;
 		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
-		SendBuffer[0] = 0x09;
+		SendBuffer[0] = 0x09+(4*leg);
 		SendBuffer[1] = down_h_off;
 		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		//printf("up even\r\n");
+
+	 }
+    else
+    	if (position == up && (leg == 0 || leg == 2 || leg ==4)){
+		SendBuffer[0] = 0x06+(4*leg);
+		SendBuffer[1] = down_l_on;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		SendBuffer[0] = 0x07+(4*leg);
+		SendBuffer[1] = down_h_on;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		SendBuffer[0] = 0x08+(4*leg);
+		SendBuffer[1] = down_l_off;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		SendBuffer[0] = 0x09+(4*leg);
+		SendBuffer[1] = down_h_off;
+		XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		//printf("down even\r\n");
     }
+	else
+		if (position == up && (leg == 1 || leg == 3 || leg ==5)){
+		    	SendBuffer[0] = 0x06+(4*leg);
+		    	SendBuffer[1] = up_l_on;
+		        XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		        SendBuffer[0] = 0x07+(4*leg);
+		        SendBuffer[1] = up_h_on;
+		        XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		        SendBuffer[0] = 0x08+(4*leg);
+		        SendBuffer[1] = up_l_off;
+		        XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		        SendBuffer[0] = 0x09+(4*leg);
+		        SendBuffer[1] = up_h_off;
+		        XIic_Send(iic.BaseAddress,IIC_SLAVE_ADDR,(u8 *)&SendBuffer, sizeof(SendBuffer),XIIC_STOP);
+		        //printf("down odd\r\n");
+		    }
 
 
 }
@@ -265,4 +797,17 @@ void SendHandler(XIic *InstancePtr)
 {
 	TransmitComplete = 0;
 	//printf("here tx \n\r");
+}
+
+float NavDemo_AngleInXY(NAV_RectCoord r) {
+   float d;
+   if (r.X == 0)
+      d = (r.Y < 0) ? 90 : 0;
+   else
+      d = atan2f(r.Y, r.X) * 180 / M_PI;
+   if (d > 360)
+      d -= 360;
+   else if (d < 0)
+      d += 360;
+   return d;
 }

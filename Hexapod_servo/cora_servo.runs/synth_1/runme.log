@@ -18,51 +18,100 @@ Resolution: An invalid XILINX_PATH location has been detected. To resolve this i
 WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/hdl_projects/digilent'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 335.844 ; gain = 46.883
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_PmodMAXSONAR_0_0
+design_1_PmodNAV_0_0
+
+add_files: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 374.359 ; gain = 86.336
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27872 
+INFO: Helper process launched with PID 8704 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 447.941 ; gain = 103.008
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 481.477 ; gain = 100.211
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:42]
-INFO: [Synth 8-3491] module 'design_1' declared at 'C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:579' bound to instance 'design_1_i' of component 'design_1' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'design_1' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:615]
-INFO: [Synth 8-3491] module 'design_1_axi_iic_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_axi_iic_0_0_stub.vhdl:5' bound to instance 'axi_iic_0' of component 'design_1_axi_iic_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:879]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_axi_iic_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:909]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_processing_system7_0_0_stub.vhdl:83]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:392]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:78]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (1#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (2#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:392]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:1048]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_xlconcat_0_0_stub.vhdl:5' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:1061]
-INFO: [Synth 8-638] synthesizing module 'design_1_xlconcat_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-2432-DESKTOP-HQKVQ13/realtime/design_1_xlconcat_0_0_stub.vhdl:13]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (3#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:615]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'shield_i2c_scl_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:58]
+INFO: [Synth 8-3491] module 'design_1' declared at 'C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:1581' bound to instance 'design_1_i' of component 'design_1' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'design_1' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:1665]
+INFO: [Synth 8-3491] module 'design_1_PmodMAXSONAR_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_PmodMAXSONAR_0_0_stub.vhdl:5' bound to instance 'PmodMAXSONAR_0' of component 'design_1_PmodMAXSONAR_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:2244]
+INFO: [Synth 8-638] synthesizing module 'design_1_PmodMAXSONAR_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_PmodMAXSONAR_0_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'design_1_PmodNAV_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_PmodNAV_0_0_stub.vhdl:5' bound to instance 'PmodNAV_0' of component 'design_1_PmodNAV_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:2292]
+INFO: [Synth 8-638] synthesizing module 'design_1_PmodNAV_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_PmodNAV_0_0_stub.vhdl:74]
+INFO: [Synth 8-3491] module 'design_1_axi_iic_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_axi_iic_0_0_stub.vhdl:5' bound to instance 'axi_iic_0' of component 'design_1_axi_iic_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:2358]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_axi_iic_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:2388]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_processing_system7_0_0_stub.vhdl:83]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:869]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (1#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (2#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:269]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (3#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:269]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:370]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (4#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:370]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:494]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:677]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (5#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:494]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:1478]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (6#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:869]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:2586]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_xlconcat_0_0_stub.vhdl:5' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:2599]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconcat_0_0' [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/.Xil/Vivado-17528-DESKTOP-HQKVQ13/realtime/design_1_xlconcat_0_0_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (7#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/synth/design_1.vhd:1665]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin10_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:279]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (4#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'shield_i2c_sda_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:126]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (5#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:42]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (8#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin1_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:286]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin2_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:293]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin3_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:300]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin4_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:307]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin7_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:314]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin8_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:321]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'ja_pin9_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:328]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin10_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:335]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin1_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:342]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin2_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:349]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin3_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:356]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin4_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:363]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin7_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:370]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin8_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:377]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'jb_0_pin9_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:384]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'shield_i2c_scl_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:391]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'shield_i2c_sda_iobuf' of component 'IOBUF' [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:398]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (9#1) [C:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:58]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 503.965 ; gain = 159.031
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 538.941 ; gain = 157.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -75,12 +124,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 503.965 ; gain = 159.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 538.941 ; gain = 157.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 503.965 ; gain = 159.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 538.941 ; gain = 157.676
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -95,6 +144,12 @@ Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design
 Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_0'
 Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
 Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
+Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_in_context.xdc] for cell 'design_1_i/PmodMAXSONAR_0'
+Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_in_context.xdc] for cell 'design_1_i/PmodMAXSONAR_0'
+Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodNAV_0_0/design_1_PmodNAV_0_0/design_1_PmodNAV_0_0_in_context.xdc] for cell 'design_1_i/PmodNAV_0'
+Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodNAV_0_0/design_1_PmodNAV_0_0/design_1_PmodNAV_0_0_in_context.xdc] for cell 'design_1_i/PmodNAV_0'
+Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/dont_touch.xdc]
@@ -102,19 +157,19 @@ Finished Parsing XDC File [C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/do
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  A total of 18 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 18 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 758.711 ; gain = 0.078
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 812.738 ; gain = 0.012
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 758.711 ; gain = 413.777
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 812.738 ; gain = 431.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 758.711 ; gain = 413.777
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 812.738 ; gain = 431.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -385,12 +440,15 @@ Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint
 Applied set_property DONT_TOUCH = true for design_1_i/axi_iic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/PmodMAXSONAR_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/PmodNAV_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 758.711 ; gain = 413.777
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 812.738 ; gain = 431.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 758.711 ; gain = 413.777
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 812.738 ; gain = 431.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -425,12 +483,16 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 758.711 ; gain = 413.777
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 812.738 ; gain = 431.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -444,13 +506,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:01:00 . Memory (MB): peak = 809.113 ; gain = 464.180
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:57 . Memory (MB): peak = 845.363 ; gain = 464.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:00 . Memory (MB): peak = 809.188 ; gain = 464.254
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:57 . Memory (MB): peak = 845.512 ; gain = 464.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -462,7 +524,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:00 . Memory (MB): peak = 809.516 ; gain = 464.582
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:57 . Memory (MB): peak = 846.371 ; gain = 465.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -486,7 +548,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -499,7 +561,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -511,25 +573,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -539,55 +601,61 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |      |BlackBox name                   |Instances |
 +------+--------------------------------+----------+
-|1     |design_1_auto_pc_0              |         1|
-|2     |design_1_axi_iic_0_0            |         1|
-|3     |design_1_processing_system7_0_0 |         1|
-|4     |design_1_rst_ps7_0_50M_0        |         1|
-|5     |design_1_xlconcat_0_0           |         1|
+|1     |design_1_xbar_0                 |         1|
+|2     |design_1_auto_pc_0              |         1|
+|3     |design_1_PmodMAXSONAR_0_0       |         1|
+|4     |design_1_PmodNAV_0_0            |         1|
+|5     |design_1_axi_iic_0_0            |         1|
+|6     |design_1_processing_system7_0_0 |         1|
+|7     |design_1_rst_ps7_0_50M_0        |         1|
+|8     |design_1_xlconcat_0_0           |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
 +------+---------------------------------------+------+
 |      |Cell                                   |Count |
 +------+---------------------------------------+------+
-|1     |design_1_auto_pc_0_bbox_2              |     1|
-|2     |design_1_axi_iic_0_0_bbox_0            |     1|
-|3     |design_1_processing_system7_0_0_bbox_1 |     1|
-|4     |design_1_rst_ps7_0_50M_0_bbox_3        |     1|
-|5     |design_1_xlconcat_0_0_bbox_4           |     1|
-|6     |IOBUF                                  |     2|
+|1     |design_1_PmodMAXSONAR_0_0_bbox_0       |     1|
+|2     |design_1_PmodNAV_0_0_bbox_1            |     1|
+|3     |design_1_auto_pc_0_bbox_4              |     1|
+|4     |design_1_axi_iic_0_0_bbox_2            |     1|
+|5     |design_1_processing_system7_0_0_bbox_3 |     1|
+|6     |design_1_rst_ps7_0_50M_0_bbox_6        |     1|
+|7     |design_1_xbar_0_bbox_5                 |     1|
+|8     |design_1_xlconcat_0_0_bbox_7           |     1|
+|9     |IOBUF                                  |    18|
 +------+---------------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |   427|
-|2     |  design_1_i         |design_1                    |   425|
-|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   177|
+|1     |top                  |                            |  1085|
+|2     |  design_1_i         |design_1                    |  1067|
+|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   662|
 |4     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 810.457 ; gain = 465.523
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.746 ; gain = 465.480
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 810.457 ; gain = 210.777
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 810.457 ; gain = 465.523
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 846.746 ; gain = 191.684
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:58 . Memory (MB): peak = 846.750 ; gain = 465.480
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  A total of 18 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 18 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-41 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+71 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 828.391 ; gain = 492.547
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 869.168 ; gain = 494.809
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/cora_servo/cora_servo.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 828.734 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Aug  4 22:34:03 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 869.508 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 11 16:24:56 2018...

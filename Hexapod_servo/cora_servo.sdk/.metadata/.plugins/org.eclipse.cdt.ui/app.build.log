@@ -1,8 +1,83 @@
-13:20:29 **** Incremental Build of configuration Debug for project app ****
+19:17:34 **** Build of configuration Debug for project app ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-make: Nothing to be done for `main-build'.
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:153:2: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+  usleep(500);
+  ^~~~~~
+  fseek
+../src/helloworld.c:176:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+       printf("dist (in) = %3d\r\n", dist);
+                           ~~^
+                           %3ld
+../src/helloworld.c:172:13: warning: unused variable 'str' [-Wunused-variable]
+       char *str;
+             ^~~
+../src/helloworld.c:127:8: warning: unused variable 'Options' [-Wunused-variable]
+     u8 Options;
+        ^~~~~~~
+../src/helloworld.c:125:7: warning: unused variable 'Status' [-Wunused-variable]
+  u32  Status;
+       ^~~~~~
+../src/helloworld.c: In function 'centralise':
+../src/helloworld.c:591:4: warning: unused variable 'RecvBuffer' [-Wunused-variable]
+ u8 RecvBuffer [1];
+    ^~~~~~~~~~
+../src/helloworld.c: In function 'WriteLeg':
+../src/helloworld.c:679:8: warning: unused variable 'RecvBuffer' [-Wunused-variable]
+     u8 RecvBuffer [1];
+        ^~~~~~~~~~
+In file included from ../../app_bsp/ps7_cortexa9_0/include/xiic.h:327:0,
+                 from ../src/helloworld.c:51:
+../src/helloworld.c: In function 'SetUpInterruptSystem':
+../../app_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/helloworld.c:756:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/helloworld.c:749:6: note: declared here
+ void SetUpInterruptSystem()
+      ^~~~~~~~~~~~~~~~~~~~
+In file included from ../../app_bsp/ps7_cortexa9_0/include/xiic.h:327:0,
+                 from ../src/helloworld.c:51:
+../../app_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/helloworld.c:761:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/helloworld.c:749:6: note: declared here
+ void SetUpInterruptSystem()
+      ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:771:10: warning: 'return' with a value, in function returning void
+   return Status;
+          ^~~~~~
+../src/helloworld.c:749:6: note: declared here
+ void SetUpInterruptSystem()
+      ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: app.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/ps7_cortexa9_0/lib -o "app.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: app.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  97364	   4260	  23632	 125256	  1e948	app.elf
+Finished building: app.elf.size
+ 
 
-13:20:29 Build Finished (took 286ms)
+19:17:35 Build Finished (took 1s.323ms)
 

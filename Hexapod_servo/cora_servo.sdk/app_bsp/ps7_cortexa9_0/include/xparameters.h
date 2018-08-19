@@ -30,6 +30,30 @@
  
  
 /******************************************************************/
+/* Definitions for driver PMODMAXSONAR */
+#define XPAR_PMODMAXSONAR_NUM_INSTANCES 1
+
+/* Definitions for peripheral PMODMAXSONAR_0 */
+#define XPAR_PMODMAXSONAR_0_DEVICE_ID 0
+#define XPAR_PMODMAXSONAR_0_AXI_LITE_GPIO_BASEADDR 0x40000000
+#define XPAR_PMODMAXSONAR_0_AXI_LITE_GPIO_HIGHADDR 0x40000FFF
+
+
+/******************************************************************/
+
+/* Definitions for driver PMODNAV */
+#define XPAR_PMODNAV_NUM_INSTANCES 1
+
+/* Definitions for peripheral PMODNAV_0 */
+#define XPAR_PMODNAV_0_DEVICE_ID 0
+#define XPAR_PMODNAV_0_AXI_LITE_SPI_BASEADDR 0x40010000
+#define XPAR_PMODNAV_0_AXI_LITE_SPI_HIGHADDR 0x4001FFFF
+#define XPAR_PMODNAV_0_AXI_LITE_GPIO_BASEADDR 0x40001000
+#define XPAR_PMODNAV_0_AXI_LITE_GPIO_HIGHADDR 0x40001FFF
+
+
+/******************************************************************/
+
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000
@@ -251,6 +275,27 @@
 #define XPAR_IIC_0_HIGHADDR 0x4160FFFF
 #define XPAR_IIC_0_TEN_BIT_ADR 0
 #define XPAR_IIC_0_GPO_WIDTH 1
+
+
+/******************************************************************/
+
+/* Definitions for driver IICPS */
+#define XPAR_XIICPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PS7_I2C_0 */
+#define XPAR_PS7_I2C_0_DEVICE_ID 0
+#define XPAR_PS7_I2C_0_BASEADDR 0xE0004000
+#define XPAR_PS7_I2C_0_HIGHADDR 0xE0004FFF
+#define XPAR_PS7_I2C_0_I2C_CLK_FREQ_HZ 108333336
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral PS7_I2C_0 */
+#define XPAR_XIICPS_0_DEVICE_ID XPAR_PS7_I2C_0_DEVICE_ID
+#define XPAR_XIICPS_0_BASEADDR 0xE0004000
+#define XPAR_XIICPS_0_HIGHADDR 0xE0004FFF
+#define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 108333336
 
 
 /******************************************************************/

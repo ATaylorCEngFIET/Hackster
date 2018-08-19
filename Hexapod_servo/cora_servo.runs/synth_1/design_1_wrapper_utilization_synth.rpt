@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Aug  4 22:34:03 2018
+| Date         : Sat Aug 11 16:24:55 2018
 | Host         : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    2 |     0 |       100 |  2.00 |
+| Bonded IOB                  |   18 |     0 |       100 | 18.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -146,8 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUFT    |    2 |                  IO |
-| IBUF     |    2 |                  IO |
+| OBUFT    |   18 |                  IO |
+| IBUF     |   18 |                  IO |
 +----------+------+---------------------+
 
 
@@ -158,10 +158,13 @@ Table of Contents
 |             Ref Name            | Used |
 +---------------------------------+------+
 | design_1_xlconcat_0_0           |    1 |
+| design_1_xbar_0                 |    1 |
 | design_1_rst_ps7_0_50M_0        |    1 |
 | design_1_processing_system7_0_0 |    1 |
 | design_1_axi_iic_0_0            |    1 |
 | design_1_auto_pc_0              |    1 |
+| design_1_PmodNAV_0_0            |    1 |
+| design_1_PmodMAXSONAR_0_0       |    1 |
 +---------------------------------+------+
 
 

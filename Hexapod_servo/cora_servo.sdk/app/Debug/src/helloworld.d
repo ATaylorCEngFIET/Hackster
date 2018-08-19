@@ -16,7 +16,11 @@ src/helloworld.o src/helloworld.o: ../src/helloworld.c ../src/platform.h \
  ../../app_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
  ../../app_bsp/ps7_cortexa9_0/include/Xscugic.h \
  ../../app_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
- ../../app_bsp/ps7_cortexa9_0/include/xil_exception.h
+ ../../app_bsp/ps7_cortexa9_0/include/xil_exception.h \
+ ../../app_bsp/ps7_cortexa9_0/include/PmodMAXSONAR.h\  \
+ ../../app_bsp/ps7_cortexa9_0/include/PmodNAV.h \
+ ../../app_bsp/ps7_cortexa9_0/include/xspi.h \
+ ../../app_bsp/ps7_cortexa9_0/include/xspi_l.h
 
 ../src/platform.h:
 
@@ -55,3 +59,11 @@ src/helloworld.o src/helloworld.o: ../src/helloworld.c ../src/platform.h \
 ../../app_bsp/ps7_cortexa9_0/include/xscugic_hw.h:
 
 ../../app_bsp/ps7_cortexa9_0/include/xil_exception.h:
+
+../../app_bsp/ps7_cortexa9_0/include/PmodMAXSONAR.h\ :
+
+../../app_bsp/ps7_cortexa9_0/include/PmodNAV.h:
+
+../../app_bsp/ps7_cortexa9_0/include/xspi.h:
+
+../../app_bsp/ps7_cortexa9_0/include/xspi_l.h:

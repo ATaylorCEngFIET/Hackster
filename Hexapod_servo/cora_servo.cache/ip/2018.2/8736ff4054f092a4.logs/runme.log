@@ -1,0 +1,514 @@
+
+*** Running vivado
+    with args -log design_1_PmodMAXSONAR_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_PmodMAXSONAR_0_0.tcl
+
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+source design_1_PmodMAXSONAR_0_0.tcl -notrace
+Command: synth_design -top design_1_PmodMAXSONAR_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14288 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 460.813 ; gain = 95.313
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_PmodMAXSONAR_0_0' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/synth/design_1_PmodMAXSONAR_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PmodMAXSONAR' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ipshared/ce41/src/PmodMAXSONAR.v:13]
+INFO: [Synth 8-6157] synthesizing module 'PmodMAXSONAR_PWM_Analyzer_0_1' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_PWM_Analyzer_0_1/synth/PmodMAXSONAR_PWM_Analyzer_0_1.v:56]
+INFO: [Synth 8-6157] synthesizing module 'PWM_Analyzer_v1_0' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/PWM_Analyzer_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'PWM_Analyzer_v1_0_S00_AXI' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/PWM_Analyzer_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/PWM_Analyzer_v1_0_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/PWM_Analyzer_v1_0_S00_AXI.v:364]
+INFO: [Synth 8-6157] synthesizing module 'pulseLength' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/pulseLength.v:3]
+	Parameter init bound to: 2'b00 
+	Parameter first bound to: 2'b01 
+	Parameter low bound to: 2'b10 
+	Parameter high bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'pulseLength' (1#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/pulseLength.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'PWM_Analyzer_v1_0_S00_AXI' (2#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/PWM_Analyzer_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'PWM_Analyzer_v1_0' (3#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/d9d6/hdl/PWM_Analyzer_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'PmodMAXSONAR_PWM_Analyzer_0_1' (4#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_PWM_Analyzer_0_1/synth/PmodMAXSONAR_PWM_Analyzer_0_1.v:56]
+INFO: [Synth 8-6157] synthesizing module 'PmodMAXSONAR_pmod_bridge_0_0' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_pmod_bridge_0_0/synth/PmodMAXSONAR_pmod_bridge_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'pmod_concat' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:12]
+	Parameter Top_Row_Interface bound to: GPIO - type: string 
+	Parameter Bottom_Row_Interface bound to: Disabled - type: string 
+WARNING: [Synth 8-3848] Net in_top_uart_gpio_bus_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:87]
+WARNING: [Synth 8-3848] Net in_top_i2c_gpio_bus_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:90]
+WARNING: [Synth 8-3848] Net in_bottom_bus_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:94]
+WARNING: [Synth 8-3848] Net in_bottom_uart_gpio_bus_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:97]
+WARNING: [Synth 8-3848] Net in_bottom_i2c_gpio_bus_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:100]
+WARNING: [Synth 8-3848] Net in0_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:104]
+WARNING: [Synth 8-3848] Net in1_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:105]
+WARNING: [Synth 8-3848] Net in2_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:106]
+WARNING: [Synth 8-3848] Net in3_I in module/entity pmod_concat does not have driver. [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'pmod_concat' (5#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/5912/src/pmod_concat.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'PmodMAXSONAR_pmod_bridge_0_0' (6#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_pmod_bridge_0_0/synth/PmodMAXSONAR_pmod_bridge_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'PmodMAXSONAR_xlconstant_0_0' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_xlconstant_0_0/synth/PmodMAXSONAR_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 15 - type: integer 
+	Parameter CONST_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (7#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/f1c3/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PmodMAXSONAR_xlconstant_0_0' (8#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_xlconstant_0_0/synth/PmodMAXSONAR_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PmodMAXSONAR_xlslice_0_0' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_xlslice_0_0/synth/PmodMAXSONAR_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 4 - type: integer 
+	Parameter DIN_FROM bound to: 3 - type: integer 
+	Parameter DIN_TO bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (9#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PmodMAXSONAR_xlslice_0_0' (10#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_xlslice_0_0/synth/PmodMAXSONAR_xlslice_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'PmodMAXSONAR' (11#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ipshared/ce41/src/PmodMAXSONAR.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_PmodMAXSONAR_0_0' (12#1) [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/synth/design_1_PmodMAXSONAR_0_0.v:57]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[2]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[1]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[3]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[2]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in0_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in1_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in2_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in3_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[3]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[2]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[3]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[2]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in0_O
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in1_O
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in2_O
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in3_O
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in0_T
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in1_T
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in2_T
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in3_T
+WARNING: [Synth 8-3331] design PWM_Analyzer_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design PWM_Analyzer_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design PWM_Analyzer_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design PWM_Analyzer_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design PWM_Analyzer_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design PWM_Analyzer_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 516.605 ; gain = 151.105
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 516.605 ; gain = 151.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 516.605 ; gain = 151.105
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_ooc.xdc] for cell 'inst'
+WARNING: [Designutils 20-1758] instance inst wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file 'c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/src/PmodMAXSONAR_pmod_bridge_0_0/PmodMAXSONAR_pmod_bridge_0_0_board.xdc'.
+Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc] for cell 'inst'
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:3]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:4]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:5]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:6]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:7]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:8]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:9]
+CRITICAL WARNING: [Common 17-69] Command failed: BOARD_PART_PIN cannot be assigned to more than one port [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc:10]
+Finished Parsing XDC File [c:/hdl_projects/cora_servo/cora_servo.srcs/sources_1/bd/design_1/ip/design_1_PmodMAXSONAR_0_0/design_1_PmodMAXSONAR_0_0_board.xdc] for cell 'inst'
+Parsing XDC File [C:/hdl_projects/cora_servo/cora_servo.runs/design_1_PmodMAXSONAR_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/hdl_projects/cora_servo/cora_servo.runs/design_1_PmodMAXSONAR_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/hdl_projects/cora_servo/cora_servo.runs/design_1_PmodMAXSONAR_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_PmodMAXSONAR_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_PmodMAXSONAR_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 847.793 ; gain = 1.504
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 847.793 ; gain = 482.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 847.793 ; gain = 482.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/pmod_bridge_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xlslice_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/PWM_Analyzer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/pmod_bridge_0/inst. (constraint file  C:/hdl_projects/cora_servo/cora_servo.runs/design_1_PmodMAXSONAR_0_0_synth_1/dont_touch.xdc, line 20).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/hdl_projects/cora_servo/cora_servo.runs/design_1_PmodMAXSONAR_0_0_synth_1/dont_touch.xdc, line 26).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:43 . Memory (MB): peak = 847.793 ; gain = 482.293
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'ps_reg' in module 'pulseLength'
+INFO: [Synth 8-5544] ROM "ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                               00 |                               00
+                   first |                               01 |                               01
+                     low |                               10 |                               10
+                    high |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ps_reg' using encoding 'sequential' in module 'pulseLength'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:43 . Memory (MB): peak = 847.793 ; gain = 482.293
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               31 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	   4 Input     31 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pulseLength 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     31 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 4     
+Module PWM_Analyzer_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design PmodMAXSONAR_xlslice_0_0 has unconnected port Din[2]
+WARNING: [Synth 8-3331] design PmodMAXSONAR_xlslice_0_0 has unconnected port Din[1]
+WARNING: [Synth 8-3331] design PmodMAXSONAR_xlslice_0_0 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[3]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[2]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_I[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_I[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in0_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in1_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in2_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in3_I
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_uart_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_top_i2c_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[3]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[2]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[3]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[2]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_uart_gpio_bus_T[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_O[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_O[0]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_T[1]
+WARNING: [Synth 8-3331] design pmod_concat has unconnected port in_bottom_i2c_gpio_bus_T[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst/PWM_Analyzer_0/inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/PWM_Analyzer_0/inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/PWM_Analyzer_0/\inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/PWM_Analyzer_0/inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/PWM_Analyzer_0/inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/PWM_Analyzer_0/\inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module PmodMAXSONAR_PWM_Analyzer_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module PmodMAXSONAR_PWM_Analyzer_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module PmodMAXSONAR_PWM_Analyzer_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module PmodMAXSONAR_PWM_Analyzer_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module PmodMAXSONAR_PWM_Analyzer_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/PWM_Analyzer_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module PmodMAXSONAR_PWM_Analyzer_0_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:45 . Memory (MB): peak = 847.793 ; gain = 482.293
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 847.793 ; gain = 482.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 857.121 ; gain = 491.621
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    24|
+|2     |LUT1   |     1|
+|3     |LUT2   |    63|
+|4     |LUT3   |    34|
+|5     |LUT4   |    22|
+|6     |LUT5   |     7|
+|7     |LUT6   |    36|
+|8     |FDRE   |   202|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+------------------------------+------+
+|      |Instance                               |Module                        |Cells |
++------+---------------------------------------+------------------------------+------+
+|1     |top                                    |                              |   389|
+|2     |  inst                                 |PmodMAXSONAR                  |   389|
+|3     |    PWM_Analyzer_0                     |PmodMAXSONAR_PWM_Analyzer_0_1 |   389|
+|4     |      inst                             |PWM_Analyzer_v1_0             |   389|
+|5     |        PWM_Analyzer_v1_0_S00_AXI_inst |PWM_Analyzer_v1_0_S00_AXI     |   389|
+|6     |          pulse_length                 |pulseLength                   |   267|
+|7     |    pmod_bridge_0                      |PmodMAXSONAR_pmod_bridge_0_0  |     0|
+|8     |      inst                             |pmod_concat                   |     0|
+|9     |    xlconstant_0                       |PmodMAXSONAR_xlconstant_0_0   |     0|
+|10    |    xlslice_0                          |PmodMAXSONAR_xlslice_0_0      |     0|
++------+---------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 867.980 ; gain = 502.480
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 57 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 867.980 ; gain = 171.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:01:05 . Memory (MB): peak = 867.980 ; gain = 502.480
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 110 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:08 . Memory (MB): peak = 869.160 ; gain = 515.125
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/cora_servo/cora_servo.runs/design_1_PmodMAXSONAR_0_0_synth_1/design_1_PmodMAXSONAR_0_0.dcp' has been generated.
