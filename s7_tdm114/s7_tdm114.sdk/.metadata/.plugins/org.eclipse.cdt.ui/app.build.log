@@ -1,0 +1,257 @@
+19:16:42 **** Build of configuration Debug for project app ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PCA9534_CTRL':
+../src/helloworld.c:157:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(500000);
+   ^~~~~~
+   fseek
+../src/helloworld.c:132:8: warning: unused variable 'Status' [-Wunused-variable]
+   s32  Status ;
+        ^~~~~~
+../src/helloworld.c: In function 'Initial_Camera':
+../src/helloworld.c:314:31: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status =Initial_setting_1 ( mt9m114_config_1, mt9m114_config_QTY_1 );
+                               ^~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:320:34: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status =Initial_setting_1 ( mt9m114_config_2, mt9m114_config_QTY_2 );
+                                  ^~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:325:34: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status =Initial_setting_1 ( mt9m114_config_3, mt9m114_config_QTY_3 );
+                                  ^~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:330:32: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status = Initial_setting_2 ( mt9m114_config_4 , mt9m114_config_QTY_4 );
+                                ^~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:336:32: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status = Initial_setting_2 ( mt9m114_config_5 , mt9m114_config_QTY_5 );
+                                ^~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:342:32: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status = Initial_setting_2 ( mt9m114_config_6 , mt9m114_config_QTY_6 );
+                                ^~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:346:32: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status = Initial_setting_2 ( mt9m114_config_7 , mt9m114_config_QTY_7 );
+                                ^~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:350:32: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status = Initial_setting_2 ( mt9m114_config_8 , mt9m114_config_QTY_8 );
+                                ^~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:354:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_9 , mt9m114_config_QTY_9);
+                                   ^~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:358:32: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status = Initial_setting_2 ( mt9m114_config_10 , mt9m114_config_QTY_10 );
+                                ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:362:31: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+   Status =Initial_setting_1 ( mt9m114_config_11, mt9m114_config_QTY_11 );
+                               ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:366:34: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status =Initial_setting_1 ( mt9m114_config_12, mt9m114_config_QTY_12 );
+                                  ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:371:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_13 , mt9m114_config_QTY_13 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:375:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_14 , mt9m114_config_QTY_14 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:379:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_15 , mt9m114_config_QTY_15 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:383:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_16 , mt9m114_config_QTY_16 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:387:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_17 , mt9m114_config_QTY_17 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:391:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_18 , mt9m114_config_QTY_18 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:395:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_19 , mt9m114_config_QTY_19 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:399:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_20 , mt9m114_config_QTY_20 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:403:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_21 , mt9m114_config_QTY_21 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:407:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_22 , mt9m114_config_QTY_22 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:411:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_23 , mt9m114_config_QTY_23 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:415:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_24 , mt9m114_config_QTY_24 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:419:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_25 , mt9m114_config_QTY_25 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:423:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_26 , mt9m114_config_QTY_26 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:427:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_27 , mt9m114_config_QTY_27 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:431:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_28 , mt9m114_config_QTY_28 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:435:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_29 , mt9m114_config_QTY_29 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:439:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_30 , mt9m114_config_QTY_30 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:443:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_31 , mt9m114_config_QTY_31 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:447:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_32 , mt9m114_config_QTY_32 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:451:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_33 , mt9m114_config_QTY_33 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:455:35: warning: passing argument 1 of 'Initial_setting_2' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status = Initial_setting_2 ( mt9m114_config_34 , mt9m114_config_QTY_34 );
+                                   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:35:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int Initial_setting_2 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:460:34: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status =Initial_setting_1 ( mt9m114_config_35, mt9m114_config_QTY_35 );
+                                  ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:464:34: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status =Initial_setting_1 ( mt9m114_config_36, mt9m114_config_QTY_36 );
+                                  ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:468:34: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+      Status =Initial_setting_1 ( mt9m114_config_37, mt9m114_config_QTY_37 );
+                                  ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[3] {aka long unsigned int (*)[3]}'
+ int Initial_setting_1 (u32 *mt9m114_config , int mt9m114_config_QTY  );
+     ^~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: app.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: app.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 111620	  10724	1048976	1171320	 11df78	app.elf
+Finished building: app.elf.size
+ 
+
+19:16:44 Build Finished (took 2s.57ms)
+

@@ -1,0 +1,1065 @@
+
+*** Running vivado
+    with args -log dbg_hub.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dbg_hub.tcl
+
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+source dbg_hub.tcl -notrace
+Command: synth_design -top dbg_hub -part xc7s50csga324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1784 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 489.285 ; gain = 111.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dbg_hub' [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/synth/dbg_hub.v:58]
+INFO: [Synth 8-6157] synthesizing module 'BSCANE2' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:424]
+INFO: [Synth 8-6155] done synthesizing module 'BSCANE2' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:424]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (4#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+WARNING: [Synth 8-3848] Net update_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:1]
+WARNING: [Synth 8-3848] Net capture_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:2]
+WARNING: [Synth 8-3848] Net reset_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:3]
+WARNING: [Synth 8-3848] Net runtest_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:4]
+WARNING: [Synth 8-3848] Net tms_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:5]
+WARNING: [Synth 8-3848] Net tck_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:6]
+WARNING: [Synth 8-3848] Net tdi_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:7]
+WARNING: [Synth 8-3848] Net sel_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:8]
+WARNING: [Synth 8-3848] Net shift_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:9]
+WARNING: [Synth 8-3848] Net drck_0 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:10]
+WARNING: [Synth 8-3848] Net update_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:12]
+WARNING: [Synth 8-3848] Net capture_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:13]
+WARNING: [Synth 8-3848] Net reset_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:14]
+WARNING: [Synth 8-3848] Net runtest_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:15]
+WARNING: [Synth 8-3848] Net tms_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:16]
+WARNING: [Synth 8-3848] Net tck_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:17]
+WARNING: [Synth 8-3848] Net tdi_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:18]
+WARNING: [Synth 8-3848] Net sel_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:19]
+WARNING: [Synth 8-3848] Net shift_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:20]
+WARNING: [Synth 8-3848] Net drck_1 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:21]
+WARNING: [Synth 8-3848] Net update_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:23]
+WARNING: [Synth 8-3848] Net capture_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:24]
+WARNING: [Synth 8-3848] Net reset_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:25]
+WARNING: [Synth 8-3848] Net runtest_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:26]
+WARNING: [Synth 8-3848] Net tms_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:27]
+WARNING: [Synth 8-3848] Net tck_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:28]
+WARNING: [Synth 8-3848] Net tdi_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:29]
+WARNING: [Synth 8-3848] Net sel_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:30]
+WARNING: [Synth 8-3848] Net shift_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:31]
+WARNING: [Synth 8-3848] Net drck_2 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:32]
+WARNING: [Synth 8-3848] Net update_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:34]
+WARNING: [Synth 8-3848] Net capture_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:35]
+WARNING: [Synth 8-3848] Net reset_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:36]
+WARNING: [Synth 8-3848] Net runtest_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:37]
+WARNING: [Synth 8-3848] Net tms_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:38]
+WARNING: [Synth 8-3848] Net tck_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:39]
+WARNING: [Synth 8-3848] Net tdi_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:40]
+WARNING: [Synth 8-3848] Net sel_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:41]
+WARNING: [Synth 8-3848] Net shift_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:42]
+WARNING: [Synth 8-3848] Net drck_3 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:43]
+WARNING: [Synth 8-3848] Net update_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:45]
+WARNING: [Synth 8-3848] Net capture_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:46]
+WARNING: [Synth 8-3848] Net reset_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:47]
+WARNING: [Synth 8-3848] Net runtest_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:48]
+WARNING: [Synth 8-3848] Net tms_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:49]
+WARNING: [Synth 8-3848] Net tck_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:50]
+WARNING: [Synth 8-3848] Net tdi_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:51]
+WARNING: [Synth 8-3848] Net sel_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:52]
+WARNING: [Synth 8-3848] Net shift_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:53]
+WARNING: [Synth 8-3848] Net drck_4 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:54]
+WARNING: [Synth 8-3848] Net update_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:56]
+WARNING: [Synth 8-3848] Net capture_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:57]
+WARNING: [Synth 8-3848] Net reset_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:58]
+WARNING: [Synth 8-3848] Net runtest_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:59]
+WARNING: [Synth 8-3848] Net tms_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:60]
+WARNING: [Synth 8-3848] Net tck_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:61]
+WARNING: [Synth 8-3848] Net tdi_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:62]
+WARNING: [Synth 8-3848] Net sel_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:63]
+WARNING: [Synth 8-3848] Net shift_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:64]
+WARNING: [Synth 8-3848] Net drck_5 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:65]
+WARNING: [Synth 8-3848] Net update_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:67]
+WARNING: [Synth 8-3848] Net capture_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:68]
+WARNING: [Synth 8-3848] Net reset_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:69]
+WARNING: [Synth 8-3848] Net runtest_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:70]
+WARNING: [Synth 8-3848] Net tms_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:71]
+WARNING: [Synth 8-3848] Net tck_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:72]
+WARNING: [Synth 8-3848] Net tdi_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:73]
+WARNING: [Synth 8-3848] Net sel_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:74]
+WARNING: [Synth 8-3848] Net shift_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:75]
+WARNING: [Synth 8-3848] Net drck_6 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:76]
+WARNING: [Synth 8-3848] Net update_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:78]
+WARNING: [Synth 8-3848] Net capture_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:79]
+WARNING: [Synth 8-3848] Net reset_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:80]
+WARNING: [Synth 8-3848] Net runtest_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:81]
+WARNING: [Synth 8-3848] Net tms_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:82]
+WARNING: [Synth 8-3848] Net tck_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:83]
+WARNING: [Synth 8-3848] Net tdi_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:84]
+WARNING: [Synth 8-3848] Net sel_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:85]
+WARNING: [Synth 8-3848] Net shift_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:86]
+WARNING: [Synth 8-3848] Net drck_7 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:87]
+WARNING: [Synth 8-3848] Net update_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:89]
+WARNING: [Synth 8-3848] Net capture_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:90]
+WARNING: [Synth 8-3848] Net reset_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:91]
+WARNING: [Synth 8-3848] Net runtest_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:92]
+WARNING: [Synth 8-3848] Net tms_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:93]
+WARNING: [Synth 8-3848] Net tck_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:94]
+WARNING: [Synth 8-3848] Net tdi_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:95]
+WARNING: [Synth 8-3848] Net sel_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:96]
+WARNING: [Synth 8-3848] Net shift_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:97]
+WARNING: [Synth 8-3848] Net drck_8 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:98]
+WARNING: [Synth 8-3848] Net update_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:100]
+WARNING: [Synth 8-3848] Net capture_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:101]
+WARNING: [Synth 8-3848] Net reset_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:102]
+WARNING: [Synth 8-3848] Net runtest_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:103]
+WARNING: [Synth 8-3848] Net tms_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:104]
+WARNING: [Synth 8-3848] Net tck_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:105]
+WARNING: [Synth 8-3848] Net tdi_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:106]
+WARNING: [Synth 8-3848] Net sel_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:107]
+WARNING: [Synth 8-3848] Net shift_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:108]
+WARNING: [Synth 8-3848] Net drck_9 in module/entity xsdbm_v3_0_0_xsdbm_id does not have driver. [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh:109]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'dbg_hub' (51#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/synth/dbg_hub.v:58]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_SEL_I[7]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_SEL_I[6]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_SEL_I[5]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_SEL_I[4]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_SEL_I[3]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_SEL_I[2]
+WARNING: [Synth 8-3331] design xsdbm_v3_0_0_bus_ctl has unconnected port SL_MULT_DRDY_I
+WARNING: [Synth 8-3331] design wr_handshaking_flags has unconnected port WR_ACK
+WARNING: [Synth 8-3331] design wr_handshaking_flags has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_handshaking_flags has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design wr_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port RD_EN
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port SRST_FULL_FF
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port EMPTY
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port RAM_RD_EN
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design wr_logic__parameterized0 has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design rd_fwft has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_fwft has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_fwft has unconnected port RAM_ALMOST_EMPTY
+WARNING: [Synth 8-3331] design rd_handshaking_flags__parameterized0 has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design rd_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RAM_WR_EN
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port FULL
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design dmem has unconnected port SRST
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port FAB_REGOUT_EN
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port SFT_RST
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port SRST
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port SLEEP
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design memory__parameterized0 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port ALMOST_FULL_I
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port PROG_FULL_I
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port ALMOST_EMPTY_I
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port PROG_EMPTY_I
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port WR_ACK_I
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port DATA_COUNT_I[4]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port DATA_COUNT_I[3]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port DATA_COUNT_I[2]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port DATA_COUNT_I[1]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port DATA_COUNT_I[0]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port WR_DATA_COUNT_I[4]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port WR_DATA_COUNT_I[3]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port WR_DATA_COUNT_I[2]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port WR_DATA_COUNT_I[1]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port WR_DATA_COUNT_I[0]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port RD_DATA_COUNT_I[4]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port RD_DATA_COUNT_I[3]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port RD_DATA_COUNT_I[2]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port RD_DATA_COUNT_I[1]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port RD_DATA_COUNT_I[0]
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port SBITERR_I
+WARNING: [Synth 8-3331] design output_blk__parameterized0 has unconnected port DBITERR_I
+WARNING: [Synth 8-3331] design input_blk has unconnected port CLK
+WARNING: [Synth 8-3331] design input_blk has unconnected port INT_CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 656.203 ; gain = 278.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 656.203 ; gain = 278.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 656.203 ; gain = 278.039
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+.p 3
+.s 3
+.r iSTATE
+	 Default Default 
+	 iSTATE iSTATE0 
+	 iSTATE0 iSTATE 
+.e
+INFO: [Synth 8-802] inferred FSM for state register 'id_state_reg' in module 'xsdbm_v3_0_0_bscan_switch'
+INFO: [Synth 8-5544] ROM "shiftreg0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "iGOT_SYNC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SL_DEN_MASK_O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SL_DEN_MASK_O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SL_DEN_MASK_O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cnt_is_zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wdc_eq_zero" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wdc_eq_zero" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "drdy_or" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+.p 3
+.s 3
+.r iSTATE
+	 Default Default 
+	 iSTATE iSTATE0 
+	 iSTATE0 iSTATE 
+.e
+INFO: [Synth 8-802] inferred FSM for state register 'SWITCH_N_EXT_BSCAN.id_state_reg' in module 'xsdbm_v3_0_0_xsdbm_id'
+INFO: [Synth 8-6159] Found Keep on FSM register 'id_state_reg' in module 'xsdbm_v3_0_0_bscan_switch', re-encoding will not be performed
+INFO: [Synth 8-6159] Found Keep on FSM register 'SWITCH_N_EXT_BSCAN.id_state_reg' in module 'xsdbm_v3_0_0_xsdbm_id', re-encoding will not be performed
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 656.203 ; gain = 278.039
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 44    
++---XORs : 
+	                4 Bit    Wide XORs := 4     
+	                3 Bit    Wide XORs := 4     
+	                2 Bit    Wide XORs := 4     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               28 Bit    Registers := 2     
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 34    
+	                3 Bit    Registers := 17    
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 99    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 10    
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 9     
+	  20 Input      3 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 9     
+	   5 Input      2 Bit        Muxes := 1     
+	  20 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 44    
+	   3 Input      1 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	  20 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xsdbm_v3_0_0_bscan_switch 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_cmd_decode 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+Module xsdbm_v3_0_0_sync 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_stat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module xsdbm_v3_0_0_icon 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  16 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_if_static_status 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+Module xsdbm_v3_0_0_ctl_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module xsdbm_v3_0_0_stat_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xsdbm_v3_0_0_stat_reg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xsdbm_v3_0_0_ctl_reg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               28 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module xsdbm_v3_0_0_if_sel_mask 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module xsdbm_v3_0_0_ctl_reg__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module synchronizer_ff 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module reset_blk_ramfifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
+Module dmem 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module synchronizer_ff__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module clk_x_pntrs 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---XORs : 
+	                4 Bit    Wide XORs := 2     
+	                3 Bit    Wide XORs := 2     
+	                2 Bit    Wide XORs := 2     
++---Registers : 
+	                4 Bit    Registers := 4     
+Module rd_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+Module compare 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
+Module rd_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module rd_handshaking_flags 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module wr_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 3     
+Module wr_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module wr_handshaking_flags 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module xsdbm_v3_0_0_wrreg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module memory__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module rd_handshaking_flags__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module rd_fwft 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 2     
+Module xsdbm_v3_0_0_rdreg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module xsdbm_v3_0_0_stat_reg__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module xsdbm_v3_0_0_ctl_reg__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module xsdbm_v3_0_0_if 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_bus_ctl_cnt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_bus_ctl_flg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module xsdbm_v3_0_0_bus_ctl_flg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module xsdbm_v3_0_0_bus_ctl 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 8     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	  20 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	  20 Input      2 Bit        Muxes := 2     
+	  20 Input      1 Bit        Muxes := 12    
+Module xsdbm_v3_0_0_addr_ctl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_burst_wdlen_ctl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module ltlib_v1_0_0_generic_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_bus_mstr2sl_if 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xsdbm_v3_0_0_xsdbm_id 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "CORE_XSDB.U_ICON/U_SYNC/iGOT_SYNC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_ICON_INTERFACE_SEL_MASK/SL_DEN_MASK_O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_ICON_INTERFACE_SEL_MASK/SL_DEN_MASK_O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_ICON_INTERFACE_SEL_MASK/SL_DEN_MASK_O0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/U_TIMER/timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CORE_XSDB.UUT_MASTER/U_XSDB_BURST_WD_LEN_CONTROLLER/wdc_eq_zero" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CORE_XSDB.UUT_MASTER/U_XSDB_BURST_WD_LEN_CONTROLLER/wdc_eq_zero" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[63]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[62]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[62]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[61]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[60]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[59]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[58]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[57]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[56]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[55]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[54]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[53]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[52]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[51]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[50]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[49]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[48]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[47]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[46]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[45]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[44]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[43]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[42]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[41]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[40]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[39]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[38]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[37]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[36]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[35]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[34]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[33]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[32]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[31]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[30]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[29]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[28]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[27]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[26]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[25]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[24]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[23]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[22]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[21]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[20]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[19]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[18]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[17]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[16]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[15]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[14]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[13]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[12]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[11]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[10]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[9]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[8]' (FDSE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[7]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[6]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[5]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[4]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[3]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[2]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[127]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[126]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[125]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[124]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[123]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[122]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[121]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[120]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[119]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[118]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[117]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[116]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[115]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[114]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[113]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[112]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[111]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[110]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[109]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[108]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[107]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[106]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[105]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[104]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[103]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[102]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[101]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[100]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[99]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[98]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[97]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[96]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[95]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[94]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[93]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[92]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[91]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[90]' (FDRE) to 'inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/U_CLR_ERROR_FLAG/last_flag_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/U_CLR_ERROR_FLAG/G_POS_EDGE.flag_reg )
+WARNING: [Synth 8-3332] Sequential element (CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[1]) is unused and will be removed from module xsdbm_v3_0_0_xsdbm_id.
+WARNING: [Synth 8-3332] Sequential element (CORE_XSDB.U_ICON/U_STAT/STAT_INIT_SLV_reg[0]) is unused and will be removed from module xsdbm_v3_0_0_xsdbm_id.
+WARNING: [Synth 8-3332] Sequential element (CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[1]) is unused and will be removed from module xsdbm_v3_0_0_xsdbm_id.
+WARNING: [Synth 8-3332] Sequential element (CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_STATIC_STATUS/LC_STAT_INIT_SLV_reg[0]) is unused and will be removed from module xsdbm_v3_0_0_xsdbm_id.
+WARNING: [Synth 8-3332] Sequential element (CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/U_CLR_ERROR_FLAG/last_flag_reg) is unused and will be removed from module xsdbm_v3_0_0_xsdbm_id.
+WARNING: [Synth 8-3332] Sequential element (CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/U_CLR_ERROR_FLAG/G_POS_EDGE.flag_reg) is unused and will be removed from module xsdbm_v3_0_0_xsdbm_id.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 680.738 ; gain = 302.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------------+-----------------------------------------------------------+---------------+----------------+
+|Module Name           | RTL Object                                                | Depth x Width | Implemented As | 
++----------------------+-----------------------------------------------------------+---------------+----------------+
+|xsdbm_v3_0_0_bus_ctl  | auto_sl_drdy                                              | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | auto_sl_drdy                                              | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | inc_addr_r                                                | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | inc_addr_r                                                | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | dec_wdc_r                                                 | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | dec_wdc_r                                                 | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | sl_den_r                                                  | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | sl_dwe_r                                                  | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | sl_rdmux_sel_r                                            | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | sl_berr_r                                                 | 32x1          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | ma_err_r                                                  | 32x2          | LUT            | 
+|xsdbm_v3_0_0_bus_ctl  | timer_rst                                                 | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/ma_err_r       | 32x2          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/sl_berr_r      | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/auto_sl_drdy   | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/auto_sl_drdy   | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/inc_addr_r     | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/inc_addr_r     | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/dec_wdc_r      | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/dec_wdc_r      | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/sl_den_r       | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/sl_dwe_r       | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/sl_rdmux_sel_r | 32x1          | LUT            | 
+|xsdbm_v3_0_0_xsdbm_id | CORE_XSDB.UUT_MASTER/U_XSDB_BUS_CONTROLLER/timer_rst      | 32x1          | LUT            | 
++----------------------+-----------------------------------------------------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|Module Name                                                                                                                 | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives   | 
++----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 16              | RAM32M x 3   | 
+|inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 16              | RAM32M x 3   | 
++----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 842.496 ; gain = 464.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 842.945 ; gain = 464.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|Module Name                                                                                                                 | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives   | 
++----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 16              | RAM32M x 3   | 
+|inst/\BSCANID.u_xsdbm_id /\CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 16              | RAM32M x 3   | 
++----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin UPDATE_temp_i_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin RUNTEST_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin TCK_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin TMS_inferred:in0 to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BSCANE2 |     1|
+|2     |BUFG    |     1|
+|3     |CARRY4  |    12|
+|4     |LUT1    |    27|
+|5     |LUT2    |    97|
+|6     |LUT3    |   101|
+|7     |LUT4    |   124|
+|8     |LUT5    |   111|
+|9     |LUT6    |    79|
+|10    |MUXF7   |     1|
+|11    |RAM32M  |     6|
+|12    |FDCE    |   183|
+|13    |FDPE    |    40|
+|14    |FDRE    |   518|
+|15    |FDSE    |    10|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------------------------------------------+---------------------------------------------+------+
+|      |Instance                                                                           |Module                                       |Cells |
++------+-----------------------------------------------------------------------------------+---------------------------------------------+------+
+|1     |top                                                                                |                                             |  1311|
+|2     |  inst                                                                             |xsdbm_v3_0_0_xsdbm                           |  1311|
+|3     |    \BSCANID.u_xsdbm_id                                                            |xsdbm_v3_0_0_xsdbm_id                        |  1311|
+|4     |      \SWITCH_N_EXT_BSCAN.bscan_switch                                             |xsdbm_v3_0_0_bscan_switch                    |   274|
+|5     |      \CORE_XSDB.UUT_MASTER                                                        |xsdbm_v3_0_0_icon2xsdb                       |   909|
+|6     |        U_ICON_INTERFACE                                                           |xsdbm_v3_0_0_if                              |   642|
+|7     |          U_CMD1                                                                   |xsdbm_v3_0_0_ctl_reg                         |    19|
+|8     |          U_CMD2                                                                   |xsdbm_v3_0_0_stat_reg                        |    27|
+|9     |          U_CMD3                                                                   |xsdbm_v3_0_0_stat_reg__parameterized0        |    32|
+|10    |          U_CMD4                                                                   |xsdbm_v3_0_0_ctl_reg__parameterized0         |    74|
+|11    |          U_CMD5                                                                   |xsdbm_v3_0_0_ctl_reg__parameterized1         |    50|
+|12    |          U_CMD6_RD                                                                |xsdbm_v3_0_0_rdreg                           |   206|
+|13    |            U_RD_FIFO                                                              |xsdbm_v3_0_0_rdfifo                          |   182|
+|14    |              \SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst                               |fifo_generator_v13_1_4__parameterized0       |   161|
+|15    |                inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth__parameterized0 |   161|
+|16    |                  \gconvfifo.rf                                                    |fifo_generator_top__parameterized0           |   161|
+|17    |                    \grf.rf                                                        |fifo_generator_ramfifo__parameterized0       |   161|
+|18    |                      \gntv_or_sync_fifo.gcx.clkx                                  |clk_x_pntrs_6                                |    46|
+|19    |                        \gnxpm_cdc.gsync_stage[1].rd_stg_inst                      |synchronizer_ff__parameterized0_18           |     4|
+|20    |                        \gnxpm_cdc.gsync_stage[1].wr_stg_inst                      |synchronizer_ff__parameterized0_19           |     4|
+|21    |                        \gnxpm_cdc.gsync_stage[2].rd_stg_inst                      |synchronizer_ff__parameterized0_20           |     5|
+|22    |                        \gnxpm_cdc.gsync_stage[2].wr_stg_inst                      |synchronizer_ff__parameterized0_21           |     5|
+|23    |                      \gntv_or_sync_fifo.gl0.rd                                    |rd_logic__parameterized0                     |    38|
+|24    |                        \gr1.gr1_int.rfwft                                         |rd_fwft                                      |    17|
+|25    |                        \gras.rsts                                                 |rd_status_flags_as_16                        |     2|
+|26    |                        \grhf.rhf                                                  |rd_handshaking_flags__parameterized0         |     1|
+|27    |                        rpntr                                                      |rd_bin_cntr_17                               |    18|
+|28    |                      \gntv_or_sync_fifo.gl0.wr                                    |wr_logic__parameterized0                     |    21|
+|29    |                        \gwas.wsts                                                 |wr_status_flags_as_13                        |     4|
+|30    |                        \gwhf.whf                                                  |wr_handshaking_flags_14                      |     1|
+|31    |                        wpntr                                                      |wr_bin_cntr_15                               |    16|
+|32    |                      \gntv_or_sync_fifo.mem                                       |memory__parameterized0                       |    35|
+|33    |                        \gdm.dm_gen.dm                                             |dmem_12                                      |    19|
+|34    |                      rstblk                                                       |reset_blk_ramfifo_7                          |    20|
+|35    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff_8                            |     2|
+|36    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_9                            |     2|
+|37    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_10                           |     2|
+|38    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_11                           |     2|
+|39    |          U_CMD6_WR                                                                |xsdbm_v3_0_0_wrreg                           |   156|
+|40    |            U_WR_FIFO                                                              |xsdbm_v3_0_0_wrfifo                          |   132|
+|41    |              \SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst                               |fifo_generator_v13_1_4                       |   131|
+|42    |                inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth                 |   131|
+|43    |                  \gconvfifo.rf                                                    |fifo_generator_top                           |   131|
+|44    |                    \grf.rf                                                        |fifo_generator_ramfifo                       |   131|
+|45    |                      \gntv_or_sync_fifo.gcx.clkx                                  |clk_x_pntrs                                  |    45|
+|46    |                        \gnxpm_cdc.gsync_stage[1].rd_stg_inst                      |synchronizer_ff__parameterized0              |     4|
+|47    |                        \gnxpm_cdc.gsync_stage[1].wr_stg_inst                      |synchronizer_ff__parameterized0_3            |     4|
+|48    |                        \gnxpm_cdc.gsync_stage[2].rd_stg_inst                      |synchronizer_ff__parameterized0_4            |     5|
+|49    |                        \gnxpm_cdc.gsync_stage[2].wr_stg_inst                      |synchronizer_ff__parameterized0_5            |     5|
+|50    |                      \gntv_or_sync_fifo.gl0.rd                                    |rd_logic                                     |    25|
+|51    |                        \gras.rsts                                                 |rd_status_flags_as                           |     4|
+|52    |                        \grhf.rhf                                                  |rd_handshaking_flags                         |     1|
+|53    |                        rpntr                                                      |rd_bin_cntr                                  |    20|
+|54    |                      \gntv_or_sync_fifo.gl0.wr                                    |wr_logic                                     |    21|
+|55    |                        \gwas.wsts                                                 |wr_status_flags_as                           |     4|
+|56    |                        \gwhf.whf                                                  |wr_handshaking_flags                         |     1|
+|57    |                        wpntr                                                      |wr_bin_cntr                                  |    16|
+|58    |                      \gntv_or_sync_fifo.mem                                       |memory                                       |    19|
+|59    |                        \gdm.dm_gen.dm                                             |dmem                                         |    19|
+|60    |                      rstblk                                                       |reset_blk_ramfifo                            |    20|
+|61    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff                              |     2|
+|62    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_0                            |     2|
+|63    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_1                            |     2|
+|64    |                        \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_2                            |     2|
+|65    |          U_CMD7_CTL                                                               |xsdbm_v3_0_0_ctl_reg__parameterized2         |    14|
+|66    |          U_CMD7_STAT                                                              |xsdbm_v3_0_0_stat_reg__parameterized1        |    22|
+|67    |          U_STATIC_STATUS                                                          |xsdbm_v3_0_0_if_static_status                |    19|
+|68    |        U_XSDB_ADDRESS_CONTROLLER                                                  |xsdbm_v3_0_0_addr_ctl                        |    42|
+|69    |        U_XSDB_BURST_WD_LEN_CONTROLLER                                             |xsdbm_v3_0_0_burst_wdlen_ctl                 |    63|
+|70    |        U_XSDB_BUS_CONTROLLER                                                      |xsdbm_v3_0_0_bus_ctl                         |   128|
+|71    |          U_RD_ABORT_FLAG                                                          |xsdbm_v3_0_0_bus_ctl_flg__parameterized0     |     5|
+|72    |          U_RD_REQ_FLAG                                                            |xsdbm_v3_0_0_bus_ctl_flg                     |     7|
+|73    |          U_TIMER                                                                  |xsdbm_v3_0_0_bus_ctl_cnt                     |    58|
+|74    |        U_XSDB_BUS_MSTR2SL_PORT_IFACE                                              |xsdbm_v3_0_0_bus_mstr2sl_if                  |    34|
+|75    |          U_RD_DIN_BUS_MUX                                                         |ltlib_v1_0_0_generic_mux                     |    16|
+|76    |      \CORE_XSDB.U_ICON                                                            |xsdbm_v3_0_0_icon                            |    51|
+|77    |        U_CMD                                                                      |xsdbm_v3_0_0_cmd_decode                      |    22|
+|78    |        U_STAT                                                                     |xsdbm_v3_0_0_stat                            |    14|
+|79    |        U_SYNC                                                                     |xsdbm_v3_0_0_sync                            |    11|
+|80    |      \SWITCH_N_EXT_BSCAN.bscan_inst                                               |ltlib_v1_0_0_bscan                           |     1|
++------+-----------------------------------------------------------------------------------+---------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4489 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 867.402 ; gain = 489.238
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+150 Infos, 206 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:25 . Memory (MB): peak = 872.492 ; gain = 506.285
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'c:/hdl_projects/s7_tdm114/s7_tdm114.runs/impl_1/.Xil/Vivado-3600-DESKTOP-HQKVQ13/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/dbg_hub.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1192.215 ; gain = 319.723

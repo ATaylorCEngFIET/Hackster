@@ -1,0 +1,734 @@
+
+*** Running vivado
+    with args -log design_1_mdm_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mdm_1_0.tcl
+
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+source design_1_mdm_1_0.tcl -notrace
+Command: synth_design -top design_1_mdm_1_0 -part xc7s50csga324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11976 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 484.383 ; gain = 100.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:74]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_BSCANID bound to: 76547328 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'MDM' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:12404' bound to instance 'U0' of component 'MDM' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:1652]
+INFO: [Synth 8-638] synthesizing module 'MDM' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:14056]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_BSCANID bound to: 76547328 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15561]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:253' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15628]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:277]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:277]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_BUFG' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:315' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15827]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:328]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:338]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:328]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_REG_NUM_CE bound to: 4 - type: integer 
+	Parameter C_REG_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'MDM_Core' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:5431' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15911]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:6668]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_REG_NUM_CE bound to: 4 - type: integer 
+	Parameter C_REG_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:2846' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:10026]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3118]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDC_1' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:614' bound to instance 'FDC_I' of component 'MB_FDC_1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3473]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:630]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:651]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (3#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:630]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:673' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3483]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:690]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:713]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (4#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:690]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0000000101100111 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3629]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0000000101100111 
+	Parameter INIT bound to: 16'b0000000101100111 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (5#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100001010000111 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3646]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100001010000111 
+	Parameter INIT bound to: 16'b0100001010000111 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (5#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100010001000011 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3715]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100010001000011 
+	Parameter INIT bound to: 16'b0100010001000011 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (5#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0101100001001101 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3732]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0101100001001101 
+	Parameter INIT bound to: 16'b0101100001001101 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (5#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3891]
+WARNING: [Synth 8-6014] Unused sequential element set_Ext_BRK_reg was removed.  [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3819]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (6#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3118]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (7#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:6668]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (8#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:14056]
+INFO: [Synth 8-256] done synthesizing module 'design_1_mdm_1_0' (9#1) [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/synth/design_1_mdm_1_0.vhd:74]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Clk
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Rst
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Clear_Ext_BRK
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Read_RX_FIFO
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Reset_RX_FIFO
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Write_TX_FIFO
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Reset_TX_FIFO
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[2]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[3]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[4]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[5]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[6]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port TX_Data[7]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port DbgReg_DRCK
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port DbgReg_UPDATE
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port DbgReg_Access_Lock
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port DbgReg_Force_Lock
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port DbgReg_Unlocked
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port AXI_Transaction
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port AXI_Instr_Overrun
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port AXI_Data_Overrun
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port RESET
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port M_AXI_ACLK
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port M_AXI_ARESETn
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_rd_idle
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_rd_resp[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_rd_resp[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_wr_idle
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_wr_resp[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_wr_resp[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[31]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[30]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[29]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[28]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[27]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[26]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[25]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[24]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[23]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[22]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[21]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[20]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[19]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[18]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[17]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[16]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[15]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[14]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[13]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[12]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[11]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[10]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[9]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[8]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[7]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[6]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[5]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[4]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[3]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[2]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_out[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_exists
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_data_empty
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_dwr_done
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_dwr_resp[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Master_dwr_resp[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[2]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[3]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[4]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[5]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[6]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_0[7]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[2]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[3]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[4]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[5]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[6]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_1[7]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[2]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[3]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[4]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[5]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[6]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_2[7]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[0]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[1]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[2]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[3]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[4]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[5]
+WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_3[6]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 551.977 ; gain = 168.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 551.977 ; gain = 168.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 551.977 ; gain = 168.484
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Parsing XDC File [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_mdm_1_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_mdm_1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Parsing XDC File [C:/hdl_projects/s7_tdm114/s7_tdm114.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/hdl_projects/s7_tdm114/s7_tdm114.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  FDC_1 => FDCE (inverted pins: C): 1 instances
+  FDRE_1 => FDRE (inverted pins: C): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 878.238 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 878.238 ; gain = 494.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 878.238 ; gain = 494.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/hdl_projects/s7_tdm114/s7_tdm114.runs/design_1_mdm_1_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 878.238 ; gain = 494.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "mb_data_overrun" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:53 . Memory (MB): peak = 878.238 ; gain = 494.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 22    
+	  12 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module JTAG_CONTROL 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	  12 Input      1 Bit        Muxes := 1     
+Module MDM_Core 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "mb_data_overrun" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.clear_overrun_reg was removed.  [c:/hdl_projects/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3900]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31]) is unused and will be removed from module MDM.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:55 . Memory (MB): peak = 878.238 ; gain = 494.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:11 . Memory (MB): peak = 878.238 ; gain = 494.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 883.734 ; gain = 500.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:13 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|MDM         | MDM_Core_I1/Use_BSCAN.Config_Reg_reg[26] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|MDM         | MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10] | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|MDM         | MDM_Core_I1/Use_BSCAN.Config_Reg_reg[3]  | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BSCANE2 |     1|
+|2     |BUFG    |     1|
+|3     |LUT1    |     2|
+|4     |LUT2    |    13|
+|5     |LUT3    |    27|
+|6     |LUT4    |    15|
+|7     |LUT5    |    18|
+|8     |LUT6    |    34|
+|9     |SRL16E  |     7|
+|10    |FDCE    |   100|
+|11    |FDC_1   |     1|
+|12    |FDPE    |     7|
+|13    |FDRE    |     3|
+|14    |FDRE_1  |     1|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+--------------------------+------+
+|      |Instance                             |Module                    |Cells |
++------+-------------------------------------+--------------------------+------+
+|1     |top                                  |                          |   230|
+|2     |  U0                                 |MDM                       |   230|
+|3     |    MDM_Core_I1                      |MDM_Core                  |   220|
+|4     |      JTAG_CONTROL_I                 |JTAG_CONTROL              |   171|
+|5     |        \Use_BSCAN.FDC_I             |MB_FDC_1                  |    48|
+|6     |        \Use_BSCAN.SYNC_FDRE         |MB_FDRE_1                 |     2|
+|7     |        \Use_Config_SRL16E.SRL16E_1  |MB_SRL16E                 |     4|
+|8     |        \Use_Config_SRL16E.SRL16E_2  |MB_SRL16E__parameterized1 |     1|
+|9     |        \Use_ID_SRL16E.SRL16E_ID_1   |MB_SRL16E__parameterized3 |     3|
+|10    |        \Use_ID_SRL16E.SRL16E_ID_2   |MB_SRL16E__parameterized5 |     1|
+|11    |    \No_Dbg_Reg_Access.BUFG_DRCK     |MB_BUFG                   |     1|
+|12    |    \Use_E2.BSCAN_I                  |MB_BSCANE2                |     9|
++------+-------------------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4312 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 886.387 ; gain = 176.633
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 886.387 ; gain = 502.895
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  FDC_1 => FDCE (inverted pins: C): 1 instances
+  FDRE_1 => FDRE (inverted pins: C): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 886.387 ; gain = 507.867
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/s7_tdm114/s7_tdm114.runs/design_1_mdm_1_0_synth_1/design_1_mdm_1_0.dcp' has been generated.
