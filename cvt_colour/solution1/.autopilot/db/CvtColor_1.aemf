@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1527769718000">
+  <ports id="1" name="p_src_rows_V" type="PortType" originalName="_src.rows.V" coreName="FIFO" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_src_cols_V" type="PortType" originalName="_src.cols.V" coreName="FIFO" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="p_src_data_stream_0_V" type="PortType" originalName="_src.data_stream[0].V" coreName="FIFO" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="p_src_data_stream_1_V" type="PortType" originalName="_src.data_stream[1].V" coreName="FIFO" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="p_src_data_stream_2_V" type="PortType" originalName="_src.data_stream[2].V" coreName="FIFO" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="p_dst_data_stream_V" type="PortType" originalName="_dst.data_stream.V" coreName="FIFO" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="77" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="79" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="80" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="83" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="84" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="85" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="88" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="89" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="92" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="93" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="102" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="106" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="110" source_obj="//@ports.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="112" source_obj="//@ports.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="114" source_obj="//@ports.4" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="128" source_obj="//@regions.1/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.6"/>
+  <edges id="131" source_obj="//@regions.1/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.7"/>
+  <edges id="160" source_obj="//@regions.1/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.10"/>
+  <edges id="161" source_obj="//@regions.1/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.11"/>
+  <edges id="162" source_obj="//@regions.1/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.11"/>
+  <edges id="167" source_obj="//@regions.1/@basic_blocks.0/@node_objs.12" sink_obj="//@ports.5"/>
+  <edges id="168" source_obj="//@regions.1/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.12"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.13"/>
+  <edges id="170" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="373" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="374" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="375" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.4"/>
+  <edges id="376" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="377" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="378" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="379" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="380" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.5"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.6"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.7"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.8"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.8"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.9"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.10"/>
+  <blocks id="16" name="entry" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_23</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="cols" lineNumber="1941" originalName="cols" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" bitwidth="32" opcode="read" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1941" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <dataInputObjs>p_src_cols_V</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="rows" lineNumber="1942" originalName="rows" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" bitwidth="32" opcode="read" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1942" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <dataInputObjs>p_src_rows_V</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="node_15" lineNumber="1947" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" opcode="br" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1947" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <controlInputObjs>block_23</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h">
+      <validLinenumbers>1941</validLinenumbers>
+      <validLinenumbers>1942</validLinenumbers>
+      <validLinenumbers>1947</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="23" name="block_23" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>block_72</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_27</controlOutputObjs>
+    <controlOutputObjs>.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_i" originalName="i" bitwidth="11" opcode="phi" nodeLabel="1.0" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>block_72</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp_i" lineNumber="1947" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="tmp_i_fu_221_p2" contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1947" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i" lineNumber="1947" originalName="i" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="i_fu_226_p2" contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" bitwidth="11" opcode="add" nodeLabel="1.0" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1947" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="node_22" lineNumber="1947" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" opcode="br" nodeLabel="1.0" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1947" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.exit</controlInputObjs>
+      <controlInputObjs>block_27</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h">
+      <validLinenumbers>1947</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="27" name="block_27" type="BlockType">
+    <controlInputObjs>block_23</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_34</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="node_26" lineNumber="1948" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" opcode="br" nodeLabel="1.0" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1948" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <controlInputObjs>block_34</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h">
+      <validLinenumbers>1948</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="72" name="block_72" type="BlockType">
+    <controlInputObjs>block_34</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_23</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="node_71" lineNumber="1947" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" opcode="br" nodeLabel="3.0" m_display="0">
+      <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1947" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+      <controlInputObjs>block_23</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h">
+      <validLinenumbers>1947</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="74" name=".exit" type="BlockType">
+    <controlInputObjs>block_23</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="node_73" opcode="ret" nodeLabel="1.0" m_display="0"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="229" pipe_depth="5" RegionName="loop_width">
+    <basic_blocks id="34" name="block_34" type="BlockType">
+      <controlInputObjs>block_27</controlInputObjs>
+      <controlInputObjs>operator>>.exit.i_ifconv</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>operator>>.exit.i_ifconv</controlOutputObjs>
+      <controlOutputObjs>block_72</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="j_i" originalName="j" bitwidth="11" opcode="phi" nodeLabel="2.0" m_display="0">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <controlInputObjs>block_27</controlInputObjs>
+        <controlInputObjs>operator>>.exit.i_ifconv</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_2_i" lineNumber="1948" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="tmp_2_i_fu_236_p2" contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1948" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="j" lineNumber="1948" originalName="j" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="j_fu_241_p2" contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" bitwidth="11" opcode="add" nodeLabel="2.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1948" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="node_33" lineNumber="1948" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" opcode="br" nodeLabel="2.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1948" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>block_72</controlInputObjs>
+        <controlInputObjs>operator>>.exit.i_ifconv</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h">
+        <validLinenumbers>1948</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="63" region_type="1" typeName="Protocol" id="230" RegionName="hls_label_4">
+    <basic_blocks id="69" name="operator>>.exit.i_ifconv" type="BlockType">
+      <controlInputObjs>block_34</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_34</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_10" lineNumber="624" originalName="tmp" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" fileDirectory=".." contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="656" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator&amp;gt;&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="624" fileDirectory="C:\Users\aptay\HLS_Area" functionName="read"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1951" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>p_src_data_stream_0_V</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tmp_11" lineNumber="624" originalName="tmp" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" fileDirectory=".." contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="656" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator&amp;gt;&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="624" fileDirectory="C:\Users\aptay\HLS_Area" functionName="read"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1951" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>p_src_data_stream_1_V</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp_12" lineNumber="624" originalName="tmp" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" fileDirectory=".." contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="656" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator&amp;gt;&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="624" fileDirectory="C:\Users\aptay\HLS_Area" functionName="read"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1951" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>p_src_data_stream_2_V</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="r_V" lineNumber="1473" originalName="r.V" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="image_filter_mac_cud_U24" contextFuncName="convert&amp;lt;3&amp;gt;" bitwidth="28" opcode="mul" nodeLabel="5.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1473" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="r_V_3_i_i" lineNumber="1477" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="image_filter_mac_dEe_U25" contextFuncName="convert&amp;lt;3&amp;gt;" bitwidth="30" opcode="mul" nodeLabel="5.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1477" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="r_V_4_i_i" lineNumber="1477" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="image_filter_mul_bkb_U23" contextFuncName="convert&amp;lt;3&amp;gt;" bitwidth="29" opcode="mul" nodeLabel="4.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1477" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="p_Val2_1" lineNumber="1477" originalName="__Val2__" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="image_filter_mac_cud_U24" contextFuncName="convert&amp;lt;3&amp;gt;" bitwidth="29" opcode="add" nodeLabel="5.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1477" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="r_V_1" lineNumber="1477" originalName="r.V" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." rtlName="image_filter_mac_dEe_U25" contextFuncName="convert&amp;lt;3&amp;gt;" bitwidth="30" opcode="add" nodeLabel="5.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1477" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="p_Val2_4" lineNumber="409" originalName="__Val2__" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" fileDirectory=".." rtlName="p_Val2_4_fu_285_p2" contextFuncName="operator()&amp;lt;35, 13, 5, 3&amp;gt;" bitwidth="8" opcode="add" nodeLabel="6.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1478" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="409" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator()&amp;lt;35, 13, 5, 3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="500" fileDirectory="C:\Users\aptay\HLS_Area" functionName="sr_cast&amp;lt;unsigned char, ap_fixed&amp;lt;35, 13, 5, 3, 0&amp;gt; &amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="p_Result_2_i_i_i_i_1" lineNumber="409" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" fileDirectory=".." rtlName="p_Result_2_i_i_i_i_1_fu_298_p2" contextFuncName="operator()&amp;lt;35, 13, 5, 3&amp;gt;" bitwidth="1" opcode="xor" nodeLabel="6.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1478" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="409" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator()&amp;lt;35, 13, 5, 3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="500" fileDirectory="C:\Users\aptay\HLS_Area" functionName="sr_cast&amp;lt;unsigned char, ap_fixed&amp;lt;35, 13, 5, 3, 0&amp;gt; &amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="not_carry" lineNumber="409" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" fileDirectory=".." rtlName="not_carry_fu_304_p2" contextFuncName="operator()&amp;lt;35, 13, 5, 3&amp;gt;" bitwidth="1" opcode="or" nodeLabel="6.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1478" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="409" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator()&amp;lt;35, 13, 5, 3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="500" fileDirectory="C:\Users\aptay\HLS_Area" functionName="sr_cast&amp;lt;unsigned char, ap_fixed&amp;lt;35, 13, 5, 3, 0&amp;gt; &amp;gt;"/>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="p_Val2_s" lineNumber="409" originalName="__Val2__" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" fileDirectory=".." rtlName="p_dst_data_stream_V_din" contextFuncName="operator()&amp;lt;35, 13, 5, 3&amp;gt;" bitwidth="8" opcode="select" nodeLabel="6.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1952" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1514" fileDirectory="C:\Users\aptay\HLS_Area" functionName="apply&amp;lt;3, 1&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1478" fileDirectory="C:\Users\aptay\HLS_Area" functionName="convert&amp;lt;3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="409" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator()&amp;lt;35, 13, 5, 3&amp;gt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h" linenumber="500" fileDirectory="C:\Users\aptay\HLS_Area" functionName="sr_cast&amp;lt;unsigned char, ap_fixed&amp;lt;35, 13, 5, 3, 0&amp;gt; &amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="node_65" lineNumber="648" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" fileDirectory=".." contextFuncName="write" opcode="write" nodeLabel="6.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="662" fileDirectory="C:\Users\aptay\HLS_Area" functionName="operator&amp;lt;&amp;lt;"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h" linenumber="648" fileDirectory="C:\Users\aptay\HLS_Area" functionName="write"/>
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1953" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>p_dst_data_stream_V</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="node_68" lineNumber="1948" fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" fileDirectory=".." contextFuncName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;" opcode="br" nodeLabel="6.0" m_display="0">
+        <inlineStackInfo fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h" linenumber="1948" fileDirectory="C:\Users\aptay\HLS_Area" functionName="CvtColor&amp;lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000&amp;gt;"/>
+        <controlInputObjs>block_34</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_types.h">
+        <validLinenumbers>409</validLinenumbers>
+        <validLinenumbers>500</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h">
+        <validLinenumbers>624</validLinenumbers>
+        <validLinenumbers>648</validLinenumbers>
+        <validLinenumbers>656</validLinenumbers>
+        <validLinenumbers>662</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_imgproc.h">
+        <validLinenumbers>1473</validLinenumbers>
+        <validLinenumbers>1477</validLinenumbers>
+        <validLinenumbers>1948</validLinenumbers>
+        <validLinenumbers>1951</validLinenumbers>
+        <validLinenumbers>1952</validLinenumbers>
+        <validLinenumbers>1514</validLinenumbers>
+        <validLinenumbers>1478</validLinenumbers>
+        <validLinenumbers>1953</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="tmp_10_reg_371">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_i_reg_353">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="r_V_4_i_i_reg_386">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="r_V_1_reg_391">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="cols_reg_343">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_i_reg_362">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="j_i_reg_206">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="rows_reg_348">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_357">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_366">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="i_i_reg_195">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="p_Val2_3_reg_396">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_12_reg_381">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_11_reg_376">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_401">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <expressionNodes realName="j_cast_i_fu_232">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_fu_241">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_i_fu_236">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_i_fu_221">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_325">
+    <nodeIds>45</nodeIds>
+    <nodeIds>50</nodeIds>
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_2_i_i_i_i_1_fu_298">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_268">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="OP2_V_1_i_cast_i_fu_253">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_4_i_i_fu_319">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_226">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_8_fu_290">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_i_cast_i_fu_256">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_i_phi_fu_199">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_i_fu_217">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="OP2_V_i_cast_i_fu_250">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_i_phi_fu_210">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_6_i_i_i_i_fu_275">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_fu_278">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_s_fu_310">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="not_carry_fu_304">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_333">
+    <nodeIds>47</nodeIds>
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_4_fu_285">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="OP2_V_2_i_cast_i_fu_247">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Val2_3_fu_259">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="cols_read_fu_158">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_10_read_fu_170">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_64_write_fu_188">
+    <nodeIds>65</nodeIds>
+  </ioNodes>
+  <ioNodes realName="rows_read_fu_164">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_12_read_fu_182">
+    <nodeIds>42</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_11_read_fu_176">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioPorts name="p_dst_data_stream_V">
+    <contents name="write">
+      <nodeIds>65</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_cols_V">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_data_stream_0_V">
+    <contents name="read">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_data_stream_1_V">
+    <contents name="read">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_data_stream_2_V">
+    <contents name="read">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_src_rows_V">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="17"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="19"/>
+    </transitions>
+    <transitions inState="8" outState="2">
+      <condition id="29"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="31"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="32"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="33"/>
+    </transitions>
+    <transitions inState="7" outState="3">
+      <condition id="34"/>
+    </transitions>
+    <transitions inState="3" outState="8">
+      <condition id="30"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="35"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="CvtColor.1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4012001" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="loop_height" mII="-1" mDepth="-1" mMaxTripCount="2000" mMinLatency="4012000" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>23</basicBlocks>
+      <basicBlocks>27</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="loop_width" mII="1" mDepth="5" mMaxTripCount="2000" mMinLatency="2003" mMaxLatency="-1" mType="1">
+      <basicBlocks>34</basicBlocks>
+      <basicBlocks>69</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>72</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>74</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

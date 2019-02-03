@@ -1,0 +1,96 @@
+00:14:42 **** Incremental Build of configuration Debug for project application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:5: warning: implicit declaration of function 'disable_caches' [-Wimplicit-function-declaration]
+     disable_caches();
+     ^~~~~~~~~~~~~~
+../src/helloworld.c:92:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1000000);
+     ^~~~~~
+../src/helloworld.c:198:22: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+  Initial_setting_1 ( cfg_init , 63  );
+                      ^~~~~~~~
+../src/helloworld.c:46:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int  Initial_setting_1 ( u32 *cfg_init , int cfg_init_QTY  );
+      ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:199:22: warning: passing argument 1 of 'Initial_setting_1' from incompatible pointer type [-Wincompatible-pointer-types]
+  Initial_setting_1 ( cfg_720p_60fps , 38  );
+                      ^~~~~~~~~~~~~~
+../src/helloworld.c:46:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 (*)[2] {aka long unsigned int (*)[2]}'
+ int  Initial_setting_1 ( u32 *cfg_init , int cfg_init_QTY  );
+      ^~~~~~~~~~~~~~~~~
+In file included from ../../application_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/helloworld.c:5:
+../src/helloworld.c: In function 'detect_camera':
+../../application_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/helloworld.c:244:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/helloworld.c:230:6: note: declared here
+ void detect_camera()
+      ^~~~~~~~~~~~~
+In file included from ../../application_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/helloworld.c:5:
+../../application_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/helloworld.c:250:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/helloworld.c:230:6: note: declared here
+ void detect_camera()
+      ^~~~~~~~~~~~~
+In file included from ../../application_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/helloworld.c:5:
+../src/helloworld.c: In function 'read_camera':
+../../application_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/helloworld.c:275:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/helloworld.c:261:6: note: declared here
+ void read_camera()
+      ^~~~~~~~~~~
+In file included from ../../application_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/helloworld.c:5:
+../../application_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/helloworld.c:281:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/helloworld.c:261:6: note: declared here
+ void read_camera()
+      ^~~~~~~~~~~
+../src/helloworld.c: In function 'Initial_setting_1':
+../src/helloworld.c:288:16: warning: unused variable 'byte_count' [-Wunused-variable]
+  s32  Status , byte_count;
+                ^~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:146:2: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  xil_printf("Video Mode = %i ", result);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../application_bsp/ps7_cortexa9_0/lib -o "application.elf"  ./src/dynclk.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size application.elf  |tee "application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63372	   2164	11101232	11166768	 aa6430	application.elf
+Finished building: application.elf.size
+ 
+
+00:14:43 Build Finished (took 1s.329ms)
+
