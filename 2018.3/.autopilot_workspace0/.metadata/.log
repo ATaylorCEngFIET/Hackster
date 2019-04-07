@@ -1,0 +1,616 @@
+!SESSION 2019-03-17 17:33:50.596 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/aptay/.vivado_hls/2018.3/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-03-17 17:34:27.251
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2019-03-17 17:34:33.051
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-03-17 17:34:46.278
+!MESSAGE Indexed 'mz_blog' (2 sources, 2 headers) in 0.472 sec: 14 declarations; 39 references; 2 unresolved inclusions; 0 syntax errors; 3 unresolved names (5.4%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-03-17 17:34:47.666
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-03-17 17:34:47.668
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-03-17 17:34:47.672
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-03-17 17:41:00.984
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-17 17:41:01.577
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-03-17 17:41:02.176
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-03-17 17:41:02.177
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+!SESSION 2019-04-07 11:51:25.808 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/aptay/.vivado_hls/2018.3/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-07 11:52:29.741
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-04-07 11:52:29.991
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2019-04-07 11:52:34.150
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 11:59:25.652
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 11:59:25.657
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 11:59:25.658
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 11:59:26.280
+!MESSAGE Indexed 'audio_passthrough' (0 sources, 0 headers) in 0.003 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2019-04-07 12:04:57.823
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:63)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.ui 4 4 2019-04-07 12:04:57.826
+!MESSAGE Exception in Decorator. The 'Link File' decorator will be disabled.
+!SUBENTRY 1 org.eclipse.ui 4 4 2019-04-07 12:04:57.826
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:63)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:09:51.335
+!MESSAGE Indexed 'audio_passthrough' (0 sources, 203 headers) in 11.7 sec: 57,019 declarations; 94,277 references; 0 unresolved inclusions; 0 syntax errors; 50 unresolved names (0.033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:34:27.142
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.506 sec: 6,302 declarations; 16,568 references; 25 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:37:04.594
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.507 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:37:27.327
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.462 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:39:22.309
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.772 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:40:22.324
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.445 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:40:49.980
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.384 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:41:55.521
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.392 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:42:02.248
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.325 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:42:03.587
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.34 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:42:16.698
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.326 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:42:23.294
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.307 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:45:59.128
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.341 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,263 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:46:07.795
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.322 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:46:11.951
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.32 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:48:03.140
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.36 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:48:06.700
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.328 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:48:09.651
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.333 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:53:12.021
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.357 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:53:14.357
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.353 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:53:38.274
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.316 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:54:02.180
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.323 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:54:10.267
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.313 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:54:16.166
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.302 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:54:52.601
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.323 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:54:55.026
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.311 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:57:47.691
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.323 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 12:58:59.910
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.32 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:00:24.060
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.319 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:00:25.831
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.315 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:01:44.394
+!MESSAGE Indexed 'audio_passthrough' (2 sources, 201 headers) in 11.2 sec: 56,962 declarations; 94,194 references; 2 unresolved inclusions; 1 syntax errors; 54 unresolved names (0.036%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:01:56.502
+!MESSAGE Indexed 'audio_passthrough' (2 sources, 250 headers) in 10.7 sec: 63,261 declarations; 110,759 references; 25 unresolved inclusions; 1,259 syntax errors; 189 unresolved names (0.11%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:01:57.080
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.3 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:02:08.222
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.308 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:02:59.408
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.434 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:03:02.689
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.307 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:03:04.744
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.37 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:03:56.611
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.382 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:04:56.903
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.337 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:04:59.042
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.31 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:05:01.077
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.319 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:06:19.722
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.367 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:06:55.542
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.328 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,261 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:07:15.669
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.319 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:07:30.192
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.329 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:07:31.701
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.31 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:08:08.661
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.346 sec: 6,303 declarations; 16,567 references; 24 unresolved inclusions; 1,260 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:08:13.394
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.321 sec: 6,303 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:08:36.337
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.326 sec: 6,304 declarations; 16,568 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:09:04.498
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 50 headers) in 0.339 sec: 6,302 declarations; 16,567 references; 24 unresolved inclusions; 1,259 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:09:27.364
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.325 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:09:37.458
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.319 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:09:38.557
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.327 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:09:39.002
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.306 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:09:59.697
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.314 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:11:31.729
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.394 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:12:00.113
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.326 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:12:09.847
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.302 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:12:34.519
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.31 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:12:47.053
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.376 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:12:52.828
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.355 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:13:08.898
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 49 headers) in 0.335 sec: 6,302 declarations; 16,565 references; 24 unresolved inclusions; 1,258 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:14:02.886
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 95 headers) in 0.442 sec: 6,320 declarations; 22,174 references; 28 unresolved inclusions; 1,553 syntax errors; 135 unresolved names (0.47%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:14:09.819
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 95 headers) in 0.52 sec: 6,320 declarations; 22,174 references; 28 unresolved inclusions; 1,553 syntax errors; 135 unresolved names (0.47%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:14:12.454
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 95 headers) in 0.435 sec: 6,320 declarations; 22,174 references; 28 unresolved inclusions; 1,553 syntax errors; 135 unresolved names (0.47%)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-07 13:14:23.135
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-07 13:14:23.793
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-04-07 13:14:24.307
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-04-07 13:14:24.308
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+!SESSION 2019-04-07 13:21:02.130 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/aptay/.vivado_hls/2018.3/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-07 13:21:35.237
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-04-07 13:21:35.481
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2019-04-07 13:21:38.712
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 13:21:58.996
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 13:21:59.002
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 13:21:59.003
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:22:00.332
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 1.76 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:22:20.479
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.598 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:22:22.004
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.554 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:23:00.606
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 51 headers) in 0.486 sec: 6,302 declarations; 16,568 references; 24 unresolved inclusions; 1,264 syntax errors; 135 unresolved names (0.59%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:26:09.458
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 203 headers) in 10.8 sec: 57,026 declarations; 94,280 references; 1 unresolved inclusions; 0 syntax errors; 52 unresolved names (0.034%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:26:32.792
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 203 headers) in 10.2 sec: 57,026 declarations; 94,282 references; 0 unresolved inclusions; 0 syntax errors; 50 unresolved names (0.033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:27:59.333
+!MESSAGE Indexed 'audio_passthrough' (2 sources, 203 headers) in 10.5 sec: 57,031 declarations; 94,286 references; 0 unresolved inclusions; 1 syntax errors; 53 unresolved names (0.035%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:28:09.759
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 203 headers) in 9.82 sec: 57,027 declarations; 94,284 references; 0 unresolved inclusions; 0 syntax errors; 52 unresolved names (0.034%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:28:20.655
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 203 headers) in 9.84 sec: 57,027 declarations; 94,284 references; 0 unresolved inclusions; 0 syntax errors; 52 unresolved names (0.034%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:29:17.529
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 203 headers) in 9.3 sec: 57,027 declarations; 94,286 references; 0 unresolved inclusions; 0 syntax errors; 51 unresolved names (0.034%)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2019-04-07 13:43:54.178
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:63)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.ui 4 4 2019-04-07 13:43:54.181
+!MESSAGE Exception in Decorator. The 'Link File' decorator will be disabled.
+!SUBENTRY 1 org.eclipse.ui 4 4 2019-04-07 13:43:54.181
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:63)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 13:44:41.765
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 216 headers) in 11.4 sec: 59,790 declarations; 100,100 references; 0 unresolved inclusions; 0 syntax errors; 47 unresolved names (0.029%)
+
+!ENTRY org.eclipse.ui 4 0 2019-04-07 13:56:34.237
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.emf.common.util.BasicEList$BasicIndexOutOfBoundsException: index=0, size=0
+	at org.eclipse.emf.common.util.BasicEList.get(BasicEList.java:346)
+	at com.autoesl.autopilot.ui.platform.repository.ApLogRepository.getInstance(ApLogRepository.java:117)
+	at com.autoesl.autopilot.ui.platform.views.AutoPilotErrorLogView2.updateTreeViewerInput(AutoPilotErrorLogView2.java:186)
+	at com.autoesl.autopilot.ui.platform.views.AutoPilotErrorLogView2.access$300(AutoPilotErrorLogView2.java:75)
+	at com.autoesl.autopilot.ui.platform.views.AutoPilotErrorLogView2$2.run(AutoPilotErrorLogView2.java:276)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3820)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.autoesl.autopilot.ui.platform.Application.start(Application.java:91)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2019-04-07 14:11:01.576
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-07 14:11:02.217
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-04-07 14:11:02.738
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-04-07 14:11:02.739
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+!SESSION 2019-04-07 16:28:00.444 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/aptay/.vivado_hls/2018.3/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-07 16:28:04.558
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-04-07 16:28:04.845
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2019-04-07 16:28:08.193
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 16:28:55.015
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 16:28:55.020
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-04-07 16:28:55.021
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-07 16:29:11.726
+!MESSAGE Indexed 'audio_passthrough' (1 sources, 216 headers) in 17.9 sec: 59,790 declarations; 100,103 references; 0 unresolved inclusions; 0 syntax errors; 47 unresolved names (0.029%)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2019-04-07 16:29:40.222
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:63)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.ui 4 4 2019-04-07 16:29:40.224
+!MESSAGE Exception in Decorator. The 'Link File' decorator will be disabled.
+!SUBENTRY 1 org.eclipse.ui 4 4 2019-04-07 16:29:40.224
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:63)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)

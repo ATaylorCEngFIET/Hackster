@@ -1,0 +1,930 @@
+
+*** Running vivado
+    with args -log design_1_axis_data_fifo_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_data_fifo_0_0.tcl
+
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+source design_1_axis_data_fifo_0_0.tcl -notrace
+Command: synth_design -top design_1_axis_data_fifo_0_0 -part xc7s50csga324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24500 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 456.465 ; gain = 104.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_0_0' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/synth/design_1_axis_data_fifo_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v1_1_18_axis_data_fifo' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5738/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000011111111 
+	Parameter C_FIFO_DEPTH bound to: 16384 - type: integer 
+	Parameter C_FIFO_MODE bound to: 1 - type: integer 
+	Parameter C_IS_ACLK_ASYNC bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_ACLKEN_CONV_MODE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TREADY_EXISTS bound to: 1 - type: integer 
+	Parameter P_TDATA_EXISTS bound to: 1 - type: integer 
+	Parameter P_TSTRB_EXISTS bound to: 1 - type: integer 
+	Parameter P_TKEEP_EXISTS bound to: 1 - type: integer 
+	Parameter P_TLAST_EXISTS bound to: 1 - type: integer 
+	Parameter P_TID_EXISTS bound to: 1 - type: integer 
+	Parameter P_TDEST_EXISTS bound to: 1 - type: integer 
+	Parameter P_TUSER_EXISTS bound to: 1 - type: integer 
+	Parameter P_AXIS_PAYLOAD_WIDTH bound to: 34 - type: integer 
+	Parameter P_WR_PNTR_WIDTH bound to: 14 - type: integer 
+	Parameter P_FIFO_COUNT_WIDTH bound to: 15 - type: integer 
+	Parameter P_FIFO_TYPE bound to: 1 - type: integer 
+	Parameter P_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter P_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter P_MSGON_VAL bound to: 1 - type: integer 
+	Parameter P_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter LP_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter LP_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH bound to: 18 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_DOUT_WIDTH bound to: 18 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 14 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5738/hdl/axis_data_fifo_v1_1_vl_rfs.v:181]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+	Parameter C_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter C_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter C_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 34 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 24 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 27 - type: integer 
+	Parameter P_TLAST_INDX bound to: 30 - type: integer 
+	Parameter P_TID_INDX bound to: 31 - type: integer 
+	Parameter P_TDEST_INDX bound to: 32 - type: integer 
+	Parameter P_TUSER_INDX bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (1#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 34 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 24 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 27 - type: integer 
+	Parameter P_TLAST_INDX bound to: 30 - type: integer 
+	Parameter P_TID_INDX bound to: 31 - type: integer 
+	Parameter P_TDEST_INDX bound to: 32 - type: integer 
+	Parameter P_TUSER_INDX bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (2#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' (3#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1107]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (4#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_v1_1_18_axis_data_fifo' (33#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/5738/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_0_0' (34#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/synth/design_1_axis_data_fifo_0_0.v:57]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port ARESETN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port S_ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_aclken_converter_wrapper has unconnected port M_ACLKEN
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[13]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[12]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[11]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[10]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[9]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[8]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[7]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[6]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[5]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[13]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[12]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[11]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[10]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[9]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[8]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[7]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[6]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[5]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[4]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design wr_status_flags_ss has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design wr_bin_cntr has unconnected port RST
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_BUSY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port EMPTY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[13]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[12]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[11]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[10]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[9]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[8]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[7]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[6]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[5]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[4]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[13]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[12]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[11]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[10]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[9]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[8]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[7]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[6]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[13]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[12]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[11]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[10]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[9]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[8]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[7]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[6]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design updn_cntr has unconnected port RST
+WARNING: [Synth 8-3331] design rd_fwft has unconnected port RD_RST
+WARNING: [Synth 8-3331] design rd_fwft has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_fwft has unconnected port RAM_ALMOST_EMPTY
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[13]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[12]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[11]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[10]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[9]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[8]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[7]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[6]
+WARNING: [Synth 8-3331] design rd_status_flags_ss has unconnected port RD_PNTR_PLUS2[5]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:43 ; elapsed = 00:01:48 . Memory (MB): peak = 738.980 ; gain = 386.637
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 738.980 ; gain = 386.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 738.980 ; gain = 386.637
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_axis_data_fifo_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_axis_data_fifo_0_0_synth_1/dont_touch.xdc]
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 859.328 ; gain = 1.563
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:54 ; elapsed = 00:02:30 . Memory (MB): peak = 859.328 ; gain = 506.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:54 ; elapsed = 00:02:30 . Memory (MB): peak = 859.328 ; gain = 506.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_axis_data_fifo_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst/\gen_fifo_generator.fifo_generator_inst /inst_fifo_gen/\gaxis_fifo.gaxisf.axisf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:02:30 . Memory (MB): peak = 859.328 ; gain = 506.984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:02:31 . Memory (MB): peak = 859.328 ; gain = 506.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 89    
++---Registers : 
+	               34 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	                5 Bit    Registers := 33    
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 141   
++---Muxes : 
+	   4 Input     34 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xpm_cdc_sync_rst 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+Module reset_blk_ramfifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module bindec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module blk_mem_gen_prim_width 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized3 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized4 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized5 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized6 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized7 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized8 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized9 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized10 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized11 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized12 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized13 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_prim_width__parameterized14 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
+Module blk_mem_gen_mux 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     34 Bit        Muxes := 1     
+Module blk_mem_gen_mux__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     34 Bit        Muxes := 1     
+Module memory 
+Detailed RTL Component Info : 
++---Registers : 
+	               34 Bit    Registers := 1     
+Module rd_bin_cntr 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+Module compare 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
+Module rd_status_flags_ss 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module rd_fwft 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
+Module dc_ss_fwft 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module wr_bin_cntr 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+Module wr_status_flags_ss 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:57 ; elapsed = 00:02:33 . Memory (MB): peak = 859.328 ; gain = 506.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:07 ; elapsed = 00:02:45 . Memory (MB): peak = 859.328 ; gain = 506.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:45 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:08 ; elapsed = 00:02:45 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/p_19_out  is driving 62 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name            | RTL Name                                                                                                                                                                                                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fifo_generator_v13_2_2 | inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    12|
+|2     |LUT1       |     7|
+|3     |LUT2       |    11|
+|4     |LUT3       |    17|
+|5     |LUT4       |    35|
+|6     |LUT5       |     6|
+|7     |LUT6       |    35|
+|8     |MUXCY      |    28|
+|9     |RAMB18E1   |     1|
+|10    |RAMB36E1   |     3|
+|11    |RAMB36E1_1 |    12|
+|12    |SRL16E     |     1|
+|13    |FDRE       |   124|
+|14    |FDSE       |    12|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------------------------------------+------------------------------------------+------+
+|      |Instance                                                                     |Module                                    |Cells |
++------+-----------------------------------------------------------------------------+------------------------------------------+------+
+|1     |top                                                                          |                                          |   304|
+|2     |  inst                                                                       |axis_data_fifo_v1_1_18_axis_data_fifo     |   304|
+|3     |    \gen_fifo_generator.fifo_generator_inst                                  |fifo_generator_v13_2_2                    |   304|
+|4     |      inst_fifo_gen                                                          |fifo_generator_v13_2_2_synth              |   304|
+|5     |        \gaxis_fifo.gaxisf.axisf                                             |fifo_generator_top                        |   304|
+|6     |          \grf.rf                                                            |fifo_generator_ramfifo                    |   304|
+|7     |            \gntv_or_sync_fifo.gl0.rd                                        |rd_logic                                  |   134|
+|8     |              \gr1.gdcf.dc                                                   |dc_ss_fwft                                |    15|
+|9     |                dc                                                           |updn_cntr                                 |    15|
+|10    |              \gr1.gr1_int.rfwft                                             |rd_fwft                                   |    37|
+|11    |              \grss.rsts                                                     |rd_status_flags_ss                        |    17|
+|12    |                c1                                                           |compare_1                                 |     7|
+|13    |                c2                                                           |compare_2                                 |     8|
+|14    |              rpntr                                                          |rd_bin_cntr                               |    65|
+|15    |            \gntv_or_sync_fifo.gl0.wr                                        |wr_logic                                  |    66|
+|16    |              \gwss.wsts                                                     |wr_status_flags_ss                        |    29|
+|17    |                c0                                                           |compare                                   |     7|
+|18    |                c1                                                           |compare_0                                 |     8|
+|19    |              wpntr                                                          |wr_bin_cntr                               |    37|
+|20    |            \gntv_or_sync_fifo.mem                                           |memory                                    |    89|
+|21    |              \gbm.gbmg.gbmga.ngecc.bmg                                      |blk_mem_gen_v8_4_1                        |    55|
+|22    |                inst_blk_mem_gen                                             |blk_mem_gen_v8_4_1_synth                  |    55|
+|23    |                  \gnbram.gnativebmg.native_blk_mem_gen                      |blk_mem_gen_top                           |    55|
+|24    |                    \valid.cstr                                              |blk_mem_gen_generic_cstr                  |    55|
+|25    |                      \has_mux_b.B                                           |blk_mem_gen_mux__parameterized0           |    31|
+|26    |                      \ramloop[0].ram.r                                      |blk_mem_gen_prim_width                    |     1|
+|27    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper                  |     1|
+|28    |                      \ramloop[10].ram.r                                     |blk_mem_gen_prim_width__parameterized9    |     1|
+|29    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized9  |     1|
+|30    |                      \ramloop[11].ram.r                                     |blk_mem_gen_prim_width__parameterized10   |     1|
+|31    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized10 |     1|
+|32    |                      \ramloop[12].ram.r                                     |blk_mem_gen_prim_width__parameterized11   |     9|
+|33    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized11 |     2|
+|34    |                      \ramloop[13].ram.r                                     |blk_mem_gen_prim_width__parameterized12   |     1|
+|35    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized12 |     1|
+|36    |                      \ramloop[14].ram.r                                     |blk_mem_gen_prim_width__parameterized13   |     1|
+|37    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized13 |     1|
+|38    |                      \ramloop[15].ram.r                                     |blk_mem_gen_prim_width__parameterized14   |     1|
+|39    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized14 |     1|
+|40    |                      \ramloop[1].ram.r                                      |blk_mem_gen_prim_width__parameterized0    |     1|
+|41    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized0  |     1|
+|42    |                      \ramloop[2].ram.r                                      |blk_mem_gen_prim_width__parameterized1    |     1|
+|43    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized1  |     1|
+|44    |                      \ramloop[3].ram.r                                      |blk_mem_gen_prim_width__parameterized2    |     1|
+|45    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized2  |     1|
+|46    |                      \ramloop[4].ram.r                                      |blk_mem_gen_prim_width__parameterized3    |     1|
+|47    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized3  |     1|
+|48    |                      \ramloop[5].ram.r                                      |blk_mem_gen_prim_width__parameterized4    |     1|
+|49    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized4  |     1|
+|50    |                      \ramloop[6].ram.r                                      |blk_mem_gen_prim_width__parameterized5    |     1|
+|51    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized5  |     1|
+|52    |                      \ramloop[7].ram.r                                      |blk_mem_gen_prim_width__parameterized6    |     1|
+|53    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized6  |     1|
+|54    |                      \ramloop[8].ram.r                                      |blk_mem_gen_prim_width__parameterized7    |     1|
+|55    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized7  |     1|
+|56    |                      \ramloop[9].ram.r                                      |blk_mem_gen_prim_width__parameterized8    |     1|
+|57    |                        \prim_noinit.ram                                     |blk_mem_gen_prim_wrapper__parameterized8  |     1|
+|58    |            rstblk                                                           |reset_blk_ramfifo                         |    15|
+|59    |              \ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst  |xpm_cdc_sync_rst                          |     5|
++------+-----------------------------------------------------------------------------+------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 505 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:02:08 . Memory (MB): peak = 865.695 ; gain = 393.004
+Synthesis Optimization Complete : Time (s): cpu = 00:02:09 ; elapsed = 00:02:47 . Memory (MB): peak = 865.695 ; gain = 513.352
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:02:50 . Memory (MB): peak = 866.457 ; gain = 526.242
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_axis_data_fifo_0_0_synth_1/design_1_axis_data_fifo_0_0.dcp' has been generated.

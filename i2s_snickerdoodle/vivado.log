@@ -1,0 +1,180 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Apr  7 10:10:41 2019
+# Process ID: 852
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6980
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+start_gui
+open_project C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 809.578 ; gain = 211.359
+update_compile_order -fileset sources_1
+open_bd_design {C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:i2s_receiver:1.0 - i2s_receiver_0
+Adding cell -- xilinx.com:ip:i2s_transmitter:1.0 - i2s_transmitter_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_49M
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Successfully read diagram <design_1> from BD file <C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 1107.523 ; gain = 4.949
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+update_ip_catalog -add_ip C:/hdl_projects/audio_passthrough/solution1/impl/ip/adiuvo_hls_audio_top_1_0.zip -repo_path c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository
+INFO: [IP_Flow 19-949] Unzipped 'C:/hdl_projects/audio_passthrough/solution1/impl/ip/adiuvo_hls_audio_top_1_0.zip' into repository 'c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'
+startgroup
+create_bd_cell -type ip -vlnv adiuvo:hls:audio_top:1.0 audio_top_0
+endgroup
+set_property location {5.5 1530 -43} [get_bd_cells audio_top_0]
+set_property location {5 1542 -67} [get_bd_cells audio_top_0]
+delete_bd_objs [get_bd_intf_nets i2s_receiver_0_m_axis_aud]
+connect_bd_intf_net [get_bd_intf_pins i2s_receiver_0/m_axis_aud] [get_bd_intf_pins audio_top_0/AudioA]
+connect_bd_intf_net [get_bd_intf_pins audio_top_0/AudioB] [get_bd_intf_pins i2s_transmitter_0/s_axis_aud]
+connect_bd_net [get_bd_pins audio_top_0/ap_clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins audio_top_0/ap_rst_n] [get_bd_pins rst_ps7_0_49M/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {4 1247 -89} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins audio_top_0/ap_start] [get_bd_pins xlconstant_0/dout]
+WARNING: [BD 41-1306] The connection to interface pin /audio_top_0/ap_start is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:\hdl_projects\i2s_snickerdoodle\i2s_snickerdoodle.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk -hwspec C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk -hwspec C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+CRITICAL WARNING: [BD 41-1343] Reset pin /i2s_receiver_0/aud_mrst (associated clock /i2s_receiver_0/aud_mclk) is connected to reset source /rst_ps7_0_49M/peripheral_reset (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK1.
+CRITICAL WARNING: [BD 41-1343] Reset pin /i2s_transmitter_0/aud_mrst (associated clock /i2s_transmitter_0/aud_mclk) is connected to reset source /rst_ps7_0_49M/peripheral_reset (synchronous to clock source /processing_system7_0/FCLK_CLK0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /processing_system7_0/FCLK_CLK1.
+Wrote  : <C:\hdl_projects\i2s_snickerdoodle\i2s_snickerdoodle.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/audio_top_0/AudioA_TID'(1) to net 'i2s_receiver_0_m_axis_aud_TID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/i2s_transmitter_0/s_axis_aud_tid'(3) to net 'audio_top_0_AudioB_TID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/audio_top_0/AudioA_TID'(1) to net 'i2s_receiver_0_m_axis_aud_TID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/i2s_transmitter_0/s_axis_aud_tid'(3) to net 'audio_top_0_AudioB_TID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block i2s_receiver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block i2s_transmitter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_49M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_top_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 74df5451ac6cb220; cache size = 48.536 MB.
+[Sun Apr  7 14:15:05 2019] Launched design_1_processing_system7_0_0_synth_1, design_1_xbar_0_synth_1, design_1_audio_top_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/design_1_xbar_0_synth_1/runme.log
+design_1_audio_top_0_0_synth_1: C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/design_1_audio_top_0_0_synth_1/runme.log
+synth_1: C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/synth_1/runme.log
+[Sun Apr  7 14:15:05 2019] Launched impl_1...
+Run output will be captured here: C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:45 ; elapsed = 00:00:57 . Memory (MB): peak = 1619.762 ; gain = 140.945
+file copy -force C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/impl_1/design_1_wrapper.sysdef C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk -hwspec C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk -hwspec C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+archive_project C:/hdl_projects/i2s_snickerdoodle.xpr.zip -temp_dir C:/temp -force -exclude_run_results -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/temp' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+WARNING: [Coretcl 2-105] Run 'synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_i2s_receiver_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_i2s_receiver_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_processing_system7_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_processing_system7_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_i2s_transmitter_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_i2s_transmitter_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_ila_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_ila_0_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_xbar_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_xbar_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_rst_ps7_0_49M_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_rst_ps7_0_49M_0_synth_1'...
+WARNING: [Coretcl 2-105] Run 'design_1_audio_top_0_0_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'design_1_audio_top_0_0_synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_i2s_receiver_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_processing_system7_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_i2s_transmitter_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_ila_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_xbar_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_rst_ps7_0_49M_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'design_1_audio_top_0_0_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_audio_top_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_audio_top_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_i2s_receiver_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_i2s_receiver_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_i2s_transmitter_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_i2s_transmitter_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_ila_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_ila_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_processing_system7_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_processing_system7_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_rst_ps7_0_49M_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_rst_ps7_0_49M_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_xbar_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_xbar_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'

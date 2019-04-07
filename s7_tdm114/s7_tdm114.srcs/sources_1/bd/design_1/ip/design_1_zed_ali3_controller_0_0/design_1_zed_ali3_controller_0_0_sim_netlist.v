@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun Sep  9 19:49:13 2018
+// Date        : Mon Mar 18 12:14:29 2019
 // Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_zed_ali3_controller_0_0 -prefix
-//               design_1_zed_ali3_controller_0_0_ design_1_zed_ali3_controller_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_zed_ali3_controller_0_0/design_1_zed_ali3_controller_0_0_sim_netlist.v
 // Design      : design_1_zed_ali3_controller_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,74 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "design_1_zed_ali3_controller_0_0,zed_ali3_controller,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "package_project" *) 
+(* x_core_info = "zed_ali3_controller,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module design_1_zed_ali3_controller_0_0
+   (reset_in,
+    clk_in,
+    pll_locked,
+    reset_out,
+    clk_out,
+    video_de,
+    video_vsync,
+    video_hsync,
+    video_data,
+    ALI_RST_N,
+    ALI_CLK_N,
+    ALI_CLK_P,
+    ALI_DATA_N,
+    ALI_DATA_P);
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset_in RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset_in, POLARITY ACTIVE_LOW" *) input reset_in;
+  input clk_in;
+  output pll_locked;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset_out RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset_out, POLARITY ACTIVE_LOW" *) output reset_out;
+  output clk_out;
+  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN ACTIVE_VIDEO" *) input video_de;
+  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN VSYNC" *) input video_vsync;
+  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN HSYNC" *) input video_hsync;
+  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN DATA" *) input [31:0]video_data;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 ALI_RST_N RST, avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_RST_N" *) (* x_interface_parameter = "XIL_INTERFACENAME ALI_RST_N, POLARITY ACTIVE_LOW" *) output ALI_RST_N;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 ALI_CLK_N CLK, avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_CLK_N" *) (* x_interface_parameter = "XIL_INTERFACENAME ALI_CLK_N, ASSOCIATED_RESET ALI_RST_N, FREQ_HZ 100000000, PHASE 0.000" *) output ALI_CLK_N;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 ALI_CLK_P CLK, avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_CLK_P" *) (* x_interface_parameter = "XIL_INTERFACENAME ALI_CLK_P, FREQ_HZ 100000000, PHASE 0.000" *) output ALI_CLK_P;
+  (* x_interface_info = "avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_DATA_N" *) output [3:0]ALI_DATA_N;
+  (* x_interface_info = "avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_DATA_P" *) output [3:0]ALI_DATA_P;
+
+  wire \<const1> ;
+  (* SLEW = "SLOW" *) wire ALI_CLK_N;
+  (* SLEW = "SLOW" *) wire ALI_CLK_P;
+  (* SLEW = "SLOW" *) wire [3:0]ALI_DATA_N;
+  (* SLEW = "SLOW" *) wire [3:0]ALI_DATA_P;
+  wire clk_in;
+  wire clk_out;
+  wire pll_locked;
+  wire reset_in;
+  wire reset_out;
+  wire [31:0]video_data;
+  wire video_de;
+  wire video_hsync;
+  wire video_vsync;
+
+  assign ALI_RST_N = \<const1> ;
+  design_1_zed_ali3_controller_0_0_zed_ali3_controller U0
+       (.ALI_CLK_N(ALI_CLK_N),
+        .ALI_CLK_P(ALI_CLK_P),
+        .ALI_DATA_N(ALI_DATA_N),
+        .ALI_DATA_P(ALI_DATA_P),
+        .clk_in(clk_in),
+        .clk_out(clk_out),
+        .pll_locked(pll_locked),
+        .reset_in(reset_in),
+        .reset_out(reset_out),
+        .video_data(video_data[23:0]),
+        .video_de(video_de),
+        .video_hsync(video_hsync),
+        .video_vsync(video_vsync));
+  VCC VCC
+       (.P(\<const1> ));
+endmodule
+
+(* ORIG_REF_NAME = "clock_generator_pll_7_to_1_diff_sdr" *) 
 module design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr
    (async,
     pll_locked,
@@ -66,8 +134,8 @@ module design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr
     .CLKFBOUT_MULT_F(21.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(20.000000),
-    .CLKIN2_PERIOD(20.000000),
+    .CLKIN1_PERIOD(30.000000),
+    .CLKIN2_PERIOD(30.000000),
     .CLKOUT0_DIVIDE_F(3.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
@@ -144,73 +212,7 @@ module design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr
         .O(async));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "design_1_zed_ali3_controller_0_0,zed_ali3_controller,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "package_project" *) 
-(* x_core_info = "zed_ali3_controller,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module design_1_zed_ali3_controller_0_0
-   (reset_in,
-    clk_in,
-    pll_locked,
-    reset_out,
-    clk_out,
-    video_de,
-    video_vsync,
-    video_hsync,
-    video_data,
-    ALI_RST_N,
-    ALI_CLK_N,
-    ALI_CLK_P,
-    ALI_DATA_N,
-    ALI_DATA_P);
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset_in RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset_in, POLARITY ACTIVE_LOW" *) input reset_in;
-  input clk_in;
-  output pll_locked;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset_out RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset_out, POLARITY ACTIVE_LOW" *) output reset_out;
-  output clk_out;
-  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN ACTIVE_VIDEO" *) input video_de;
-  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN VSYNC" *) input video_vsync;
-  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN HSYNC" *) input video_hsync;
-  (* x_interface_info = "xilinx.com:interface:vid_io:1.0 VID_IO_IN DATA" *) input [31:0]video_data;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 ALI_RST_N RST, avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_RST_N" *) (* x_interface_parameter = "XIL_INTERFACENAME ALI_RST_N, POLARITY ACTIVE_LOW" *) output ALI_RST_N;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 ALI_CLK_N CLK, avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_CLK_N" *) (* x_interface_parameter = "XIL_INTERFACENAME ALI_CLK_N, ASSOCIATED_RESET ALI_RST_N, FREQ_HZ 100000000, PHASE 0.000" *) output ALI_CLK_N;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 ALI_CLK_P CLK, avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_CLK_P" *) (* x_interface_parameter = "XIL_INTERFACENAME ALI_CLK_P, FREQ_HZ 100000000, PHASE 0.000" *) output ALI_CLK_P;
-  (* x_interface_info = "avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_DATA_N" *) output [3:0]ALI_DATA_N;
-  (* x_interface_info = "avnet.com:interface:avnet_ali3:1.0 ALI3 ALI_DATA_P" *) output [3:0]ALI_DATA_P;
-
-  wire \<const1> ;
-  (* SLEW = "SLOW" *) wire ALI_CLK_N;
-  (* SLEW = "SLOW" *) wire ALI_CLK_P;
-  (* SLEW = "SLOW" *) wire [3:0]ALI_DATA_N;
-  (* SLEW = "SLOW" *) wire [3:0]ALI_DATA_P;
-  wire clk_in;
-  wire clk_out;
-  wire pll_locked;
-  wire reset_in;
-  wire reset_out;
-  wire [31:0]video_data;
-  wire video_de;
-  wire video_hsync;
-  wire video_vsync;
-
-  assign ALI_RST_N = \<const1> ;
-  design_1_zed_ali3_controller_0_0_zed_ali3_controller U0
-       (.ALI_CLK_N(ALI_CLK_N),
-        .ALI_CLK_P(ALI_CLK_P),
-        .ALI_DATA_N(ALI_DATA_N),
-        .ALI_DATA_P(ALI_DATA_P),
-        .clk_in(clk_in),
-        .clk_out(clk_out),
-        .pll_locked(pll_locked),
-        .reset_in(reset_in),
-        .reset_out(reset_out),
-        .video_data(video_data[23:0]),
-        .video_de(video_de),
-        .video_hsync(video_hsync),
-        .video_vsync(video_vsync));
-  VCC VCC
-       (.P(\<const1> ));
-endmodule
-
+(* ORIG_REF_NAME = "serdes_7_to_1_diff_sdr" *) 
 module design_1_zed_ali3_controller_0_0_serdes_7_to_1_diff_sdr
    (ALI_CLK_P,
     ALI_CLK_N,
@@ -617,6 +619,7 @@ module design_1_zed_ali3_controller_0_0_serdes_7_to_1_diff_sdr
         .Q(RST));
 endmodule
 
+(* ORIG_REF_NAME = "synchro" *) 
 module design_1_zed_ali3_controller_0_0_synchro
    (reset_out,
     async,
@@ -652,6 +655,7 @@ module design_1_zed_ali3_controller_0_0_synchro
         .Q(reset_out));
 endmodule
 
+(* ORIG_REF_NAME = "zed_ali3_controller" *) 
 module design_1_zed_ali3_controller_0_0_zed_ali3_controller
    (pll_locked,
     reset_out,
@@ -880,6 +884,7 @@ module design_1_zed_ali3_controller_0_0_zed_ali3_controller
         .vsync(vsync));
 endmodule
 
+(* ORIG_REF_NAME = "zed_ali3_controller_core" *) 
 module design_1_zed_ali3_controller_0_0_zed_ali3_controller_core
    (ALI_CLK_P,
     ALI_CLK_N,

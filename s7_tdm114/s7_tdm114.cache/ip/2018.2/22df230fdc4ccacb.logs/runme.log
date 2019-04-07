@@ -1,0 +1,1248 @@
+
+*** Running vivado
+    with args -log design_1_v_demosaic_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_v_demosaic_0_0.tcl
+
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+source design_1_v_demosaic_0_0.tcl -notrace
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'aptay' on host 'desktop-hqkvq13' (Windows NT_amd64 version 6.2) on Mon Mar 18 11:22:43 +0000 2019
+INFO: [HLS 200-10] In directory 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1'
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1/design_1_v_demosaic_0_0'.
+INFO: [HLS 200-10] Adding design file 'c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic_config.h' to the project
+INFO: [HLS 200-10] Adding design file 'c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.h' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1/design_1_v_demosaic_0_0/prj'.
+INFO: [HLS 200-10] Setting target device to 'xc7s50csga324-1'
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 12.308ns.
+INFO: [HLS 200-10] Analyzing design file 'c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:25 . Memory (MB): peak = 103.598 ; gain = 45.953
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:25 . Memory (MB): peak = 103.598 ; gain = 45.953
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<8, ap_uint<8> >.1' into 'hls::AXIGetBitFields<8, ap_uint<8> >' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_axi_io.h:71).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<8, ap_uint<8> >' into 'AXIvideo2MultiBayer' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:164).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<5, 3841, ap_uint<8>, 0>::getval' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:331).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<5, 3841, ap_uint<8>, 0>::insert_top_row' into 'hls::LineBuffer<5, 3841, ap_uint<8>, 0>::insert_bottom' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:873).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<5, 3841, ap_uint<8>, 0>::insert_bottom' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:352).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::insert_pixel' into 'hls::Window<5, 5, ap_uint<8> >::insert' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:573).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::insert' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:418).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::insert' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:391).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::insert' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:381).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::getval' into 'hls::Window<5, 5, ap_uint<8> >::operator()' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::getval' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:437).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:500).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:498).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:478).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:478).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:478).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:478).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:477).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:477).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:477).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:477).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:455).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:455).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:455).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:454).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:454).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:454).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:453).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:453).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:453).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:452).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:452).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:452).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:451).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:451).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:451).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:450).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:450).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:450).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:449).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:449).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:449).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:448).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:448).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:448).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:447).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:447).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:447).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:446).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:446).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:446).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:445).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:445).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:445).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:444).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:444).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<5, 5, ap_uint<8> >::operator()' into 'DebayerG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:444).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 3841, ap_uint<24>, 0>::getval' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:887).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 3841, ap_uint<24>, 0>::getval' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:643).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 3841, ap_uint<24>, 0>::insert_top_row' into 'hls::LineBuffer<3, 3841, ap_uint<24>, 0>::insert_bottom' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:873).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 3841, ap_uint<24>, 0>::insert_bottom' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:913).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 3841, ap_uint<24>, 0>::insert_bottom' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:670).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert_pixel' into 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:573).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:988).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:956).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:944).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:745).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:713).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::insert' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:701).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::getval' into 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_mem.h:501).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:1008).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:1007).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:1006).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:1005).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:1004).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRandBatG' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:996).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:770).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:769).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:768).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:767).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:766).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<8> > >::operator()' into 'DebayerRatBorBatR' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:753).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:06 ; elapsed = 00:00:35 . Memory (MB): peak = 328.953 ; gain = 271.309
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:235: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:37 . Memory (MB): peak = 336.344 ; gain = 278.699
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' in function 'ZipperRemoval' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:212) in function 'MultiPixStream2AXIvideo' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3.1' in function 'DebayerRatBorBatR' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3.1' in function 'DebayerRandBatG' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' in function 'DebayerG' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:149) in function 'AXIvideo2MultiBayer' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' in function 'ZipperRemoval' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.2' in function 'ZipperRemoval' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.2.1' in function 'ZipperRemoval' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.3' in function 'ZipperRemoval' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (C:/Xilinx/Vivado/2018.2/common/technology/autopilot/hls/hls_video_core.h:171) in function 'MultiPixStream2AXIvideo' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.2' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:230) in function 'MultiPixStream2AXIvideo' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.2.1' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:232) in function 'MultiPixStream2AXIvideo' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.2' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.2.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.3' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.4' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.4.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.5' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.6' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.6.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.6.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.2' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.2.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.8' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.8.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.8.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.9' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.9.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.9.1.1' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.10' in function 'DebayerRatBorBatR' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.2' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.2.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.3' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.4' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.4.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.5' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.6' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.6.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.6.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.2' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.7.2.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.8' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.8.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.8.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.9' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.9.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.9.1.1' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.10' in function 'DebayerRandBatG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.2' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.2.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.3' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.4' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.5' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.6' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.6.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.7' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.7.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.7.2' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.8' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.8.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.9' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.9.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.10' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.10.1' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.10.2' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.10.3' in function 'DebayerG' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:162) in function 'AXIvideo2MultiBayer' completely.
+INFO: [XFORM 203-102] Partitioning array 'PixBufVal.val.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'var.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'SD.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'mean.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'ave.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w' automatically.
+INFO: [XFORM 203-102] Partitioning array 'value.val.V.assign' automatically.
+INFO: [XFORM 203-102] Partitioning array 'value.val.V.assign.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'value.val.V.assign.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'PixBufVal.val.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'en_rgd.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'value.val.V.assign' automatically.
+INFO: [XFORM 203-102] Partitioning array 'value.val.V.assign.4' automatically.
+INFO: [XFORM 203-102] Partitioning array 'value.val.V.assign.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'PixBufVal.val.V' automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'imgBayer.V.val.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'imgRgb.V.val.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'imgUnzip.V.val.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'imgG.V.val.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'imgRB.V.val.V' .
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:197) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.val.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val.V' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:124) in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'Debayer' , detected/extracted 3 process function(s): 
+	 'DebayerG'
+	 'DebayerRatBorBatR'
+	 'DebayerRandBatG'.
+INFO: [XFORM 203-712] Applying dataflow to function 'v_demosaic' , detected/extracted 4 process function(s): 
+	 'AXIvideo2MultiBayer287'
+	 'Debayer'
+	 'ZipperRemoval'
+	 'MultiPixStream2AXIvideo'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'ZipperRemoval'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'DebayerRatBorBatR'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'DebayerRandBatG'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'DebayerG'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:46 . Memory (MB): peak = 336.344 ; gain = 278.699
+WARNING: [XFORM 203-631] Renaming function 'MultiPixStream2AXIvideo' to 'MultiPixStream2AXIvi' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:171:60)
+WARNING: [XFORM 203-631] Renaming function 'AXIvideo2MultiBayer287' to 'AXIvideo2MultiBayer2' (c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/src/v_demosaic.cpp:127:9)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer.val[0].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer.val[1].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer.val[0].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer.val[1].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer.val[0].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer.val[1].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer.val[0].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer.val[1].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.val[2].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.val[0].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.val[3].V'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.val[1].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.val[2].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.val[0].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.val[3].V'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.val[1].V'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:50 . Memory (MB): peak = 336.344 ; gain = 278.699
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'v_demosaic' ...
+WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 50.624 seconds; current allocated memory: 248.718 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.181 seconds; current allocated memory: 248.758 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiBayer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.064 seconds; current allocated memory: 249.216 MB.
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.704 seconds; current allocated memory: 249.959 MB.
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 14.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.283 seconds; current allocated memory: 252.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.974 seconds; current allocated memory: 254.272 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerRatBorBatR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.682 seconds; current allocated memory: 255.356 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.701 seconds; current allocated memory: 256.481 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerRandBatG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.334 seconds; current allocated memory: 257.471 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.599 seconds; current allocated memory: 258.413 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Debayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.761 seconds; current allocated memory: 258.510 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.48 seconds; current allocated memory: 259.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ZipperRemoval' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.957 seconds; current allocated memory: 259.853 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.72 seconds; current allocated memory: 260.244 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.977 seconds; current allocated memory: 260.385 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.573 seconds; current allocated memory: 260.597 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_demosaic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.834 seconds; current allocated memory: 260.747 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.526 seconds; current allocated memory: 261.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.535 seconds; current allocated memory: 261.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiBayer2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiBayer2'.
+INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 263.028 MB.
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+WARNING: [HLS 200-433] Loop - loop_wait_for_start has an initiation interval that is equal to the pipeline depth (1) - this results in an unpipelined loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'DebayerG_linebuf_yuv_val_0_V' to 'DebayerG_linebuf_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'DebayerG_linebuf_yuv_val_1_V' to 'DebayerG_linebuf_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'DebayerG_linebuf_yuv_val_2_V' to 'DebayerG_linebuf_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'DebayerG_linebuf_yuv_val_3_V' to 'DebayerG_linebuf_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_demosaic_mux_53_8_1_1' to 'v_demosaic_mux_53fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_demosaic_mul_mul_9ns_18ns_27_1_1' to 'v_demosaic_mul_mug8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_demosaic_mul_mul_8ns_18ns_26_1_1' to 'v_demosaic_mul_muhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_demosaic_mul_mul_10ns_12s_22_1_1' to 'v_demosaic_mul_muibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_demosaic_mac_muladd_10ns_12s_22s_23_1_1' to 'v_demosaic_mac_mujbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mac_mujbC': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mul_mug8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mul_muhbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mul_muibs': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mux_53fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerG'.
+INFO: [HLS 200-111]  Elapsed time: 2.307 seconds; current allocated memory: 266.692 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerRatBorBatR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'DebayerRatBorBatR_lineBuffer_val_0_V' to 'DebayerRatBorBatRkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'DebayerRatBorBatR_lineBuffer_val_1_V' to 'DebayerRatBorBatRlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'v_demosaic_mux_32_8_1_1' to 'v_demosaic_mux_32mb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mux_32mb6': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerRatBorBatR'.
+INFO: [HLS 200-111]  Elapsed time: 3.744 seconds; current allocated memory: 269.090 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerRandBatG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'DebayerRandBatG_lineBuffer_val_0_V' to 'DebayerRandBatG_lncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'DebayerRandBatG_lineBuffer_val_1_V' to 'DebayerRandBatG_locq' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'v_demosaic_mux_32mb6': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerRandBatG'.
+INFO: [HLS 200-111]  Elapsed time: 2.103 seconds; current allocated memory: 271.146 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Debayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Debayer'.
+INFO: [HLS 200-111]  Elapsed time: 1.937 seconds; current allocated memory: 271.722 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ZipperRemoval' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ZipperRemoval'.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 272.460 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvi'.
+INFO: [HLS 200-111]  Elapsed time: 0.875 seconds; current allocated memory: 273.257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_demosaic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/HwReg_width' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/HwReg_height' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/HwReg_bayer_phase' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'v_demosaic' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'HwReg_width', 'HwReg_height', 'HwReg_bayer_phase' and 'return' to AXI-Lite port CTRL.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w8_d2_A' is changed to 'fifo_w8_d2_A_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w16_d2_A' is changed to 'fifo_w16_d2_A_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_demosaic'.
+INFO: [HLS 200-111]  Elapsed time: 1.213 seconds; current allocated memory: 273.920 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [RTMG 210-279] Implementing memory 'design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'imgG_V_val_0_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgG_V_val_1_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgG_V_val_2_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'bayerPhase_c_i_U(design_1_v_demosaic_0_0_fifo_w16_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRB_V_val_0_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRB_V_val_1_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRB_V_val_2_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'bayerPhase_c3_i_U(design_1_v_demosaic_0_0_fifo_w16_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgBayer_V_val_0_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'HwReg_bayer_phase_c_U(design_1_v_demosaic_0_0_fifo_w16_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRgb_V_val_0_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRgb_V_val_1_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRgb_V_val_2_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgUnzip_V_val_0_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgUnzip_V_val_1_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgUnzip_V_val_2_V_U(design_1_v_demosaic_0_0_fifo_w8_d2_A_x)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:03 ; elapsed = 00:01:41 . Memory (MB): peak = 340.875 ; gain = 283.230
+INFO: [SYSC 207-301] Generating SystemC RTL for v_demosaic with prefix design_1_v_demosaic_0_0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for v_demosaic with prefix design_1_v_demosaic_0_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for v_demosaic with prefix design_1_v_demosaic_0_0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.
+Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:
+
+1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.
+
+2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 18 11:24:44 2019...
+INFO: [HLS 200-112] Total elapsed time: 123.436 seconds; peak allocated memory: 273.920 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Mon Mar 18 11:24:45 2019...
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_AXIvideo2MultiBayer2.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_Debayer.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom.dat" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom.dat" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerRandBatG.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatR.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A_x.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A_x.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_reg_unsigned_short_s.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muibs.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_32mb6.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_53fYi.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_ZipperRemoval.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic.v" already exists in file group "xilinx_veriloghlssynthesis", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_AXIvideo2MultiBayer2.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_Debayer.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom.dat" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom.dat" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerRandBatG.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatR.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A_x.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A_x.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_reg_unsigned_short_s.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muibs.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_32mb6.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_53fYi.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_ZipperRemoval.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+WARNING: [IP_Flow 19-1971] File named "hdl/verilog/design_1_v_demosaic_0_0_v_demosaic.v" already exists in file group "xilinx_veriloghlssimulation", cannot add it again.
+compile_c: Time (s): cpu = 00:00:00 ; elapsed = 00:02:07 . Memory (MB): peak = 358.012 ; gain = 8.316
+Command: synth_design -top design_1_v_demosaic_0_0 -part xc7s50csga324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27612 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 478.961 ; gain = 108.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/synth/design_1_v_demosaic_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi.v:213]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi' (1#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_AXIvideo2MultiBayer2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_AXIvideo2MultiBayer2.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_AXIvideo2MultiBayer2.v:81]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_reg_unsigned_short_s' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_reg_unsigned_short_s.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_reg_unsigned_short_s.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_reg_unsigned_short_s' (2#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_reg_unsigned_short_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_AXIvideo2MultiBayer2' (3#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_AXIvideo2MultiBayer2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:116]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:30]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:31]
+INFO: [Synth 8-3876] $readmem data file './design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom.dat' is read successfully [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:42]
+INFO: [Synth 8-3876] $readmem data file './design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom.dat' is read successfully [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom' (4#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE' (5#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:116]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:54]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:9]
+INFO: [Synth 8-3876] $readmem data file './design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom.dat' is read successfully [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom' (6#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE' (7#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:54]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerG_linebuf_bkb' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v:54]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram' (8#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerG_linebuf_bkb' (9#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb.v:54]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mux_53fYi' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_53fYi.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mux_53fYi' (10#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_53fYi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_mug8j' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_mug8j_DSP48_0' (11#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_mug8j' (12#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_mug8j.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muhbi' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muhbi_DSP48_1' (13#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muhbi' (14#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muhbi.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muibs' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muibs.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muibs_DSP48_2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muibs.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muibs_DSP48_2' (15#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muibs.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mul_muibs' (16#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mul_muibs.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mac_mujbC' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mac_mujbC.v:34]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mac_mujbC_DSP48_3' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mac_mujbC.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mac_mujbC_DSP48_3' (17#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mac_mujbC.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mac_mujbC' (18#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mac_mujbC.v:34]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerRatBorBatRkbM' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v:54]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram' (20#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_DebayerRatBorBatRkbM' (21#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM.v:54]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mux_32mb6' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_32mb6.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_v_demosaic_mux_32mb6' (22#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_v_demosaic_mux_32mb6.v:11]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A_shiftReg' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A_shiftReg' (25#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A' (26#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A_shiftReg' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A_shiftReg' (27#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A' (28#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_MultiPixStream2AXIvi' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:10]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:78]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_dest_V_1_sel_rd_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:262]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_id_V_1_sel_rd_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:288]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_keep_V_1_sel_rd_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:314]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_strb_V_1_sel_rd_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:376]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_MultiPixStream2AXIvi' (31#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_MultiPixStream2AXIvi.v:10]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A_x' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A_x.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A_x_shiftReg' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A_x.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A_x_shiftReg' (32#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A_x.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w8_d2_A_x' (33#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w8_d2_A_x.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A_x' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A_x.v:45]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A_x_shiftReg' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A_x.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A_x_shiftReg' (34#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A_x.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0_fifo_w16_d2_A_x' (35#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_fifo_w16_d2_A_x.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_0' (37#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/synth/design_1_v_demosaic_0_0.v:57]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_DebayerRatBorBatRkbM has unconnected port reset
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_DebayerG_linebuf_bkb has unconnected port reset
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE has unconnected port reset
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE has unconnected port reset
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_Debayer has unconnected port height_ap_vld
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_Debayer has unconnected port width_ap_vld
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_AXIvideo2MultiBayer2 has unconnected port s_axis_video_TKEEP[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_AXIvideo2MultiBayer2 has unconnected port s_axis_video_TSTRB[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_AXIvideo2MultiBayer2 has unconnected port s_axis_video_TID[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_AXIvideo2MultiBayer2 has unconnected port s_axis_video_TDEST[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[31]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[30]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[29]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[28]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[27]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[26]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[25]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[24]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[23]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[22]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[21]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[20]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[19]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[18]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[17]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi has unconnected port WDATA[16]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 570.613 ; gain = 199.777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 570.613 ; gain = 199.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 570.613 ; gain = 199.777
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/design_1_v_demosaic_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/design_1_v_demosaic_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/design_1_v_demosaic_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/design_1_v_demosaic_0_0.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.120 . Memory (MB): peak = 904.000 ; gain = 2.293
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 904.000 ; gain = 533.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 904.000 ; gain = 533.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 904.000 ; gain = 533.164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi'
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5547] Trying to map ROM "ram0" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "ram0" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "ram1" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "ram1" into Block RAM due to explicit "ram_style" or "rom_style" specification
+WARNING: [Synth 8-6014] Unused sequential element q0_t0_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:76]
+WARNING: [Synth 8-6014] Unused sequential element q1_t0_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:86]
+WARNING: [Synth 8-6014] Unused sequential element q2_t0_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:96]
+WARNING: [Synth 8-6014] Unused sequential element q3_t0_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE.v:106]
+WARNING: [Synth 8-6014] Unused sequential element q0_t0_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:44]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_105_i_i_fu_883_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "icmp_fu_1985_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "icmp1_fu_2042_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_22_i_fu_929_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_57_i_fu_641_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_1_fu_312_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'design_1_v_demosaic_0_0_v_demosaic_CTRL_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 904.000 ; gain = 533.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tmp_105_i_i_fu_883_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element DIV2_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom_U/q0_t0_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:44]
+WARNING: [Synth 8-6014] Unused sequential element DIV2_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom_U/q0_t1_reg was removed.  [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_v_demosaic_0_0/hdl/verilog/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE.v:29]
+INFO: [Synth 8-5546] ROM "tmp_22_i_fu_929_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_57_i_fu_641_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "AXIvideo2MultiBayer2_U0/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ZipperRemoval_U0/tmp_1_fu_312_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_Debayer has unconnected port height_ap_vld
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_Debayer has unconnected port width_ap_vld
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[31]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[30]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[29]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[28]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[27]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[26]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[25]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[24]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[23]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[22]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[21]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[20]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[19]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[18]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[17]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WDATA[16]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WSTRB[3]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axi_CTRL_WSTRB[2]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axis_video_TKEEP[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axis_video_TSTRB[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axis_video_TID[0]
+WARNING: [Synth 8-3331] design design_1_v_demosaic_0_0_v_demosaic has unconnected port s_axis_video_TDEST[0]
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[0]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[1]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[2]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[3]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[4]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[5]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[6]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[7]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[8]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[9]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[10]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[11]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[12]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[13]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/y_phase_reg_3804_reg[14]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/y_phase_2_reg_3809_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[0]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[1]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[2]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[3]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[4]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[5]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[6]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[7]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[8]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[9]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[10]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[11]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[12]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[13]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_reg_2230_reg[14]' (FDE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/y_phase_1_reg_2235_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerRandBatG_U0/\tmp_53_cast_i_reg_2069_reg[15] )
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRandBatG_U0/tmp_42_reg_2260_reg[0]' (FDE) to 'inst/Debayer_U0/DebayerRandBatG_U0/tmp_43_reg_2266_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerRatBorBatR_U0/\y_phase_1_reg_2235_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\y_phase_2_reg_3809_reg[15] )
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[0]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[1]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[2]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[3]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[4]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[5]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[6]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/\tmp_518_cast_i_i_reg_4256_reg[14] )
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerG_U0/tmp_518_cast_i_i_reg_4256_reg[7]' (FDE) to 'inst/Debayer_U0/DebayerG_U0/bayerWindow_val_V_2_5_reg_647_pp0_iter12_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/ZipperRemoval_U0/luma_1_V_fu_166_reg[5]' (FD) to 'inst/ZipperRemoval_U0/luma_1_V_fu_166_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/ZipperRemoval_U0/luma_1_V_fu_166_reg[6]' (FD) to 'inst/ZipperRemoval_U0/luma_1_V_fu_166_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ZipperRemoval_U0/luma_1_V_fu_166_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ZipperRemoval_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\AXIvideo2MultiBayer2_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerRatBorBatR_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerG_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Debayer_U0/DebayerRandBatG_U0/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\MultiPixStream2AXIvi_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[16]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[17]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[18]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[19]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[20]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[21]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[22]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[23]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[24]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[25]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[26]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[27]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[28]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[29]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[30]' (FDE) to 'inst/v_demosaic_CTRL_s_axi_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\v_demosaic_CTRL_s_axi_U/rdata_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (tmp_373_0_t_i_i_reg_3870_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (tmp_373_0_t_i_i_reg_3870_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (tmp_373_0_t_i_i_reg_3870_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[15]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[14]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[13]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[12]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[11]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[10]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[9]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[8]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (out_y_reg_3843_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q0_t1_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q2_t1_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q2_t1_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q1_t1_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q1_t1_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q3_t1_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerG.
+WARNING: [Synth 8-3332] Sequential element (tmp_127_0_t_i_reg_2305_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (tmp_127_0_t_i_reg_2305_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (upleft_val_1_V_reg_595_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (downleft_val_1_V_reg_547_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRatBorBatR.
+WARNING: [Synth 8-3332] Sequential element (tmp_262_0_t_i_reg_2086_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRandBatG.
+WARNING: [Synth 8-3332] Sequential element (tmp_262_0_t_i_reg_2086_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRandBatG.
+WARNING: [Synth 8-3332] Sequential element (ap_done_reg_reg) is unused and will be removed from module design_1_v_demosaic_0_0_DebayerRandBatG.
+WARNING: [Synth 8-3332] Sequential element (v_demosaic_CTRL_s_axi_U/rdata_reg[31]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiBayer2_U0/ap_done_reg_reg) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (ZipperRemoval_U0/ap_done_reg_reg) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvi_U0/ap_done_reg_reg) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter5_r2_i_reg_773_reg[8]' (FDRE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter5_b2_i_reg_782_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter5_r2_i_reg_773_reg[9]' (FDRE) to 'inst/Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter5_b2_i_reg_782_reg[9]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:59 . Memory (MB): peak = 904.000 ; gain = 533.164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_0/DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q0_t0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_1/DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q1_t0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_2/DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q2_t0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_4/DIV1_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV1_TABLE_rom_U/q3_t0_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_5/linebuf_yuv_val_0_V_U/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_6/linebuf_yuv_val_1_V_U/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_7/linebuf_yuv_val_2_V_U/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_115/DIV2_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom_U/q0_t0_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/i_115/DIV2_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom_U/q0_t0_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/i_0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/i_0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/i_0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/i_2/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/i_2/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/i_2/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/i_0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/i_0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/i_0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/i_1/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/i_1/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/i_1/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:15 . Memory (MB): peak = 947.609 ; gain = 576.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:17 . Memory (MB): peak = 980.629 ; gain = 609.793
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_center_val_0_V_reg_633_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_en_rgd_V_0_i_reg_745_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_en_rgd_V_0_i_reg_745_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[9]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[8]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter2_b2_i_reg_782_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[9]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[8]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter3_b2_i_reg_782_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[9]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[8]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[1]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter4_b2_i_reg_782_reg[0]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter5_b2_i_reg_782_reg[8]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRatBorBatR_U0/ap_phi_reg_pp0_iter5_b2_i_reg_782_reg[9]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRandBatG_U0/ap_phi_reg_pp0_iter2_pixWindow_val_val_V_10_reg_523_reg[7]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRandBatG_U0/ap_phi_reg_pp0_iter2_pixWindow_val_val_V_10_reg_523_reg[6]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRandBatG_U0/ap_phi_reg_pp0_iter2_pixWindow_val_val_V_10_reg_523_reg[5]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRandBatG_U0/ap_phi_reg_pp0_iter2_pixWindow_val_val_V_10_reg_523_reg[4]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRandBatG_U0/ap_phi_reg_pp0_iter2_pixWindow_val_val_V_10_reg_523_reg[3]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+WARNING: [Synth 8-3332] Sequential element (Debayer_U0/DebayerRandBatG_U0/ap_phi_reg_pp0_iter2_pixWindow_val_val_V_10_reg_523_reg[2]) is unused and will be removed from module design_1_v_demosaic_0_0_v_demosaic.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/linebuf_yuv_val_0_V_U/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/linebuf_yuv_val_1_V_U/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/linebuf_yuv_val_2_V_U/design_1_v_demosaic_0_0_DebayerG_linebuf_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/DIV2_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom_U/q0_t0_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerG_U0/DIV2_TABLE_U/design_1_v_demosaic_0_0_DebayerG_DIV2_TABLE_rom_U/q0_t0_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRatBorBatR_U0/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/lineBuffer_val_0_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/Debayer_U0/DebayerRandBatG_U0/lineBuffer_val_1_V_U/design_1_v_demosaic_0_0_DebayerRatBorBatRkbM_ram_U/ram_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:23 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:23 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:24 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:01:24 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   630|
+|2     |DSP48E1    |     2|
+|3     |DSP48E1_3  |     4|
+|4     |DSP48E1_4  |     2|
+|5     |LUT1       |   406|
+|6     |LUT2       |   884|
+|7     |LUT3       |   563|
+|8     |LUT4       |   893|
+|9     |LUT5       |   455|
+|10    |LUT6       |   846|
+|11    |MUXF7      |     2|
+|12    |RAMB18E1_1 |     2|
+|13    |RAMB36E1   |    15|
+|14    |RAMB36E1_1 |     1|
+|15    |RAMB36E1_2 |     1|
+|16    |RAMB36E1_3 |     1|
+|17    |SRL16E     |    59|
+|18    |FDRE       |  2994|
+|19    |FDSE       |    53|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:01:24 . Memory (MB): peak = 1022.625 ; gain = 651.789
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 133 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 1022.625 ; gain = 318.402
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 1022.625 ; gain = 651.789
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 660 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+232 Infos, 209 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:29 . Memory (MB): peak = 1022.625 ; gain = 663.637
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_v_demosaic_0_0_synth_1/design_1_v_demosaic_0_0.dcp' has been generated.

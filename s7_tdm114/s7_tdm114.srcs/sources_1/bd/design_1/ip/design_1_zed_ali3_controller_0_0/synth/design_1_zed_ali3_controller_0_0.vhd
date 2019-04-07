@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -124,7 +124,7 @@ ARCHITECTURE design_1_zed_ali3_controller_0_0_arch OF design_1_zed_ali3_controll
 BEGIN
   U0 : zed_ali3_controller
     GENERIC MAP (
-      C_PIXEL_CLOCK_RATE => 3,
+      C_PIXEL_CLOCK_RATE => 0,
       C_FAMILY => "spartan7"
     )
     PORT MAP (

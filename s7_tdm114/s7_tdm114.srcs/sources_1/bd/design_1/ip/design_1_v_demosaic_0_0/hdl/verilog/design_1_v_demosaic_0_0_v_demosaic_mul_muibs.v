@@ -2,11 +2,11 @@
 `timescale 1 ns / 1 ps
 
   module design_1_v_demosaic_0_0_v_demosaic_mul_muibs_DSP48_2(a, b, p);
-input [8 - 1 : 0] a;
-input [18 - 1 : 0] b;
-output [26 - 1 : 0] p;
+input [10 - 1 : 0] a;
+input signed [12 - 1 : 0] b;
+output signed [22 - 1 : 0] p;
 
-assign p = $unsigned (a) * $unsigned (b);
+assign p = $signed ({1'b0, a}) * $signed (b);
 
 endmodule
 

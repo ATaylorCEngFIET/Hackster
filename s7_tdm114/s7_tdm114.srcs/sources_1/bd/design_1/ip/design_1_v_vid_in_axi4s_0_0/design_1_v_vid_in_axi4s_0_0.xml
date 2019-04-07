@@ -129,7 +129,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VIDEO_OUT.FREQ_HZ">24000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VIDEO_OUT.FREQ_HZ">81247969</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -138,7 +138,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VIDEO_OUT.PHASE">0.0</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VIDEO_OUT.PHASE">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -147,7 +147,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VIDEO_OUT.CLK_DOMAIN">/clk_wiz_0_clk_out1</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VIDEO_OUT.CLK_DOMAIN">design_1_mig_7series_0_0_ui_clk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -251,11 +251,11 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>vid-in clock frequency</spirit:displayName>
           <spirit:description>vid-in clock frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.FREQ_HZ">74250000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.FREQ_HZ">81247969</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.PHASE">0.000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.PHASE">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -264,7 +264,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.CLK_DOMAIN">design_1_mig_7series_0_0_ui_clk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -284,7 +284,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.vid_io_in_clk_intf" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.vid_io_in_clk_intf" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -313,11 +313,11 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>vid-out clock frequency</spirit:displayName>
           <spirit:description>vid-out clock frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ">24000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ">81247969</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.PHASE">0.0</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.PHASE">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -326,7 +326,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.CLK_DOMAIN">/clk_wiz_0_clk_out1</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.CLK_DOMAIN">design_1_mig_7series_0_0_ui_clk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -512,7 +512,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.vid_io_in_reset_intf" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.vid_io_in_reset_intf" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -536,7 +536,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f5aaed3b</spirit:value>
+            <spirit:value>8:40eb9930</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -550,11 +550,11 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 09 20:17:50 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 18 13:59:07 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f5aaed3b</spirit:value>
+            <spirit:value>8:40eb9930</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -570,11 +570,11 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 09 20:17:50 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 18 13:59:07 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f5aaed3b</spirit:value>
+            <spirit:value>8:40eb9930</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -594,7 +594,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:4bf17e2e</spirit:value>
+            <spirit:value>8:3e45e075</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -610,11 +610,11 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 09 20:17:50 UTC 2018</spirit:value>
+            <spirit:value>Mon Mar 18 13:59:07 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:4bf17e2e</spirit:value>
+            <spirit:value>8:3e45e075</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -628,11 +628,11 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Mar 08 11:36:37 UTC 2019</spirit:value>
+            <spirit:value>Mon Mar 18 14:01:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:f5aaed3b</spirit:value>
+            <spirit:value>8:40eb9930</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -653,7 +653,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vid_io_in_clk" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vid_io_in_clk" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -692,7 +692,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vid_io_in_reset" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vid_io_in_reset" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_ASYNC_CLK&apos;)) == 1)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1139,7 +1139,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_ASYNC_CLK</spirit:name>
         <spirit:displayName>Clock Mode</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ASYNC_CLK" spirit:choiceRef="choice_pairs_1d612f7f">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_ASYNC_CLK" spirit:choiceRef="choice_pairs_1d612f7f">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADDR_WIDTH</spirit:name>
@@ -1377,7 +1377,7 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
     <spirit:parameter>
       <spirit:name>C_HAS_ASYNC_CLK</spirit:name>
       <spirit:displayName>Clock Mode</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HAS_ASYNC_CLK" spirit:choiceRef="choice_pairs_1d612f7f" spirit:order="1403" spirit:configGroups="1 NoDisplay">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HAS_ASYNC_CLK" spirit:choiceRef="choice_pairs_1d612f7f" spirit:order="1403" spirit:configGroups="1 NoDisplay">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1444,21 +1444,24 @@ ribs {resolve_type generated dependency video_data_width format long minimum {} 
       </xilinx:xpmLibraries>
       <xilinx:coreRevision>8</xilinx:coreRevision>
       <xilinx:configElementInfos>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.LAYERED_METADATA" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.TDATA_NUM_BYTES" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_IO_IN_CLK_INTF.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ADDR_WIDTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_HAS_ASYNC_CLK" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_M_AXIS_VIDEO_FORMAT" xilinx:valueSource="user"/>

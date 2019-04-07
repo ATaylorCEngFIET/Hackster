@@ -1,0 +1,273 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xiicps.h"
+#include "xgpiops.h"
+#include "xi2srx.h"
+
+
+
+#define IIC_DEVICE_ID		XPAR_PS7_I2C_1_DEVICE_ID
+#define GPIO_DEVICE_ID  	XPAR_XGPIOPS_0_DEVICE_ID
+#define I2S_RX_DEVICE_ID	XPAR_XI2SRX_0_DEVICE_ID
+#define IIC_SLAVE_ADDR		0x18
+#define IIC_SCLK_RATE		100000
+#define TEST_BUFFER_SIZE	2
+#define I2S_RX_FS		 48 //kHz
+#define I2S_RX_MCLK		(250 * I2S_RX_FS)
+#define I2S_RX_TIME_OUT 500000
+
+XIicPs Iic;
+XGpioPs Gpio;
+XI2s_Rx I2sRxInstance;
+
+u8 SendBuffer[TEST_BUFFER_SIZE];    /**< Buffer for Transmitting Data */
+u8 RecvBuffer[TEST_BUFFER_SIZE];    /**< Buffer for Receiving Data */
+
+
+#define Output_Pin 18
+
+//register for the CODEC
+#define CGCR_reg 102
+#define PLL_a 3
+#define PLL_b 4
+#define PLL_c 5
+#define PLL_d 6
+#define Ctrl_a 8
+#define Cntrl_b 9
+#define Cntrl_c 10
+#define OVF   11
+#define L_Mute 15
+#define R_Mute 16
+#define LADC_Cntrl 17
+#define RADC_Cntrl 18
+#define DAC_Op 37
+#define DACR_Mute 43
+#define DACL_Mute 44
+
+#define LDAC 19
+#define RDAC 22
+#define Path 7
+
+#define LOPM 86
+#define ROPM 93
+
+void i2c_write(u8 reg_addr, u8 reg_value);
+void i2c_read(u8 reg_addr);
+
+
+int main()
+{
+
+	int Status;
+	XIicPs_Config *Config;
+	XGpioPs_Config *ConfigPtr;
+	XI2srx_Config *I2SConfig;
+
+	int Index;
+
+    init_platform();
+
+    print("Adiuvo Audio CODEC Example\n\r");
+
+	ConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+	Status = XGpioPs_CfgInitialize(&Gpio, ConfigPtr, ConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XGpioPs_SetDirectionPin(&Gpio, Output_Pin, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, Output_Pin, 1);
+
+	/* Set the GPIO output to be low. */
+	XGpioPs_WritePin(&Gpio, Output_Pin, 0x0);
+usleep(1000000);
+	XGpioPs_WritePin(&Gpio, Output_Pin, 0x1);
+
+    Config = XIicPs_LookupConfig(IIC_DEVICE_ID);
+	if (NULL == Config) {
+		return XST_FAILURE;
+	}
+
+	Status = XIicPs_CfgInitialize(&Iic, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built correctly.
+	 */
+	Status = XIicPs_SelfTest(&Iic);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XIicPs_SetSClk(&Iic, IIC_SCLK_RATE);
+	i2c_write(1,0x80);
+	i2c_write(CGCR_reg,0x02);
+    i2c_write(PLL_a,0x81);
+	i2c_write(PLL_b,0x04);
+	i2c_write(PLL_c,0x1e);
+	i2c_write(PLL_d,0x00);
+	i2c_write(OVF,0x01);
+	i2c_write(LADC_Cntrl,0xF0);
+	i2c_write(RADC_Cntrl,0xF0);
+	i2c_write(LDAC,0x04);
+	i2c_write(21,0x0);
+	i2c_write(RDAC,0x4);
+	i2c_write(24,0x0);
+	i2c_write(Path,0x0a);
+	i2c_write(L_Mute,0x00);
+	i2c_write(R_Mute,0x00);
+	i2c_write(DAC_Op,0xc0);
+	i2c_write(DACR_Mute,0x00);
+	i2c_write(DACL_Mute,0x00);
+	i2c_write(LOPM, 0x99);
+	i2c_write(ROPM, 0x99);
+	i2c_write(82, 0x80);
+	i2c_write(85, 0x80);
+	i2c_write(81, 0x00);
+	i2c_write(84, 0x00);
+	i2c_write(88, 0x80);
+	i2c_write(89, 0x80);
+
+	usleep(10);
+	i2c_read(PLL_a);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(PLL_b);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(PLL_c);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(PLL_d);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(OVF);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(LADC_Cntrl);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(RADC_Cntrl);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(LDAC);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(RDAC);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(Path);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(L_Mute);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(R_Mute);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(DAC_Op);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(DACR_Mute);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(DACL_Mute);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(LOPM);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(ROPM);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(36);
+	xil_printf("36 = %x\n\r",RecvBuffer[0]);
+	i2c_read(37);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(81);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(82);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(84);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(85);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	i2c_read(94);
+	xil_printf("Reg = %x\n\r",RecvBuffer[0]);
+	while(1){
+
+	}
+    cleanup_platform();
+    return 0;
+}
+
+
+void i2c_write(u8 reg_addr, u8 reg_value){
+	int Status;
+
+	SendBuffer[0]= reg_addr;
+	SendBuffer[1]= reg_value;
+
+	Status = XIicPs_MasterSendPolled(&Iic, SendBuffer,2, IIC_SLAVE_ADDR);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	while (XIicPs_BusIsBusy(&Iic)) {
+		/* NOP */
+	}
+}
+
+void i2c_read(u8 reg_addr){
+	int Status;
+
+	SendBuffer[0]= reg_addr;
+	XIicPs_SetOptions(&Iic,XIICPS_REP_START_OPTION);
+	Status = XIicPs_MasterSendPolled(&Iic, SendBuffer,1, IIC_SLAVE_ADDR);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = XIicPs_MasterRecvPolled(&Iic, RecvBuffer,1, IIC_SLAVE_ADDR);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	XIicPs_ClearOptions(&Iic, XIICPS_REP_START_OPTION);
+	while (XIicPs_BusIsBusy(&Iic)) {
+		/* NOP */
+	}
+}

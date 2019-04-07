@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sun Sep  9 19:49:13 2018
+-- Date        : Mon Mar 18 12:14:29 2019
 -- Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_zed_ali3_controller_0_0 -prefix
---               design_1_zed_ali3_controller_0_0_ design_1_zed_ali3_controller_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_zed_ali3_controller_0_0/design_1_zed_ali3_controller_0_0_sim_netlist.vhdl
 -- Design      : design_1_zed_ali3_controller_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,6 +23,8 @@ entity design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr is
     clk_in : in STD_LOGIC;
     reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr : entity is "clock_generator_pll_7_to_1_diff_sdr";
 end design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr;
 
 architecture STRUCTURE of design_1_zed_ali3_controller_0_0_clock_generator_pll_7_to_1_diff_sdr is
@@ -69,8 +71,8 @@ begin
       CLKFBOUT_MULT_F => 21.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
-      CLKIN1_PERIOD => 20.000000,
-      CLKIN2_PERIOD => 20.000000,
+      CLKIN1_PERIOD => 30.000000,
+      CLKIN2_PERIOD => 30.000000,
       CLKOUT0_DIVIDE_F => 3.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
@@ -171,6 +173,8 @@ entity design_1_zed_ali3_controller_0_0_serdes_7_to_1_diff_sdr is
     hsync : in STD_LOGIC;
     reset_out : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_zed_ali3_controller_0_0_serdes_7_to_1_diff_sdr : entity is "serdes_7_to_1_diff_sdr";
 end design_1_zed_ali3_controller_0_0_serdes_7_to_1_diff_sdr;
 
 architecture STRUCTURE of design_1_zed_ali3_controller_0_0_serdes_7_to_1_diff_sdr is
@@ -583,6 +587,8 @@ entity design_1_zed_ali3_controller_0_0_synchro is
     async : in STD_LOGIC;
     txclk_div : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_zed_ali3_controller_0_0_synchro : entity is "synchro";
 end design_1_zed_ali3_controller_0_0_synchro;
 
 architecture STRUCTURE of design_1_zed_ali3_controller_0_0_synchro is
@@ -639,6 +645,8 @@ entity design_1_zed_ali3_controller_0_0_zed_ali3_controller_core is
     clk_in : in STD_LOGIC;
     reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_zed_ali3_controller_0_0_zed_ali3_controller_core : entity is "zed_ali3_controller_core";
 end design_1_zed_ali3_controller_0_0_zed_ali3_controller_core;
 
 architecture STRUCTURE of design_1_zed_ali3_controller_0_0_zed_ali3_controller_core is
@@ -714,6 +722,8 @@ entity design_1_zed_ali3_controller_0_0_zed_ali3_controller is
     video_hsync : in STD_LOGIC;
     video_data : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_zed_ali3_controller_0_0_zed_ali3_controller : entity is "zed_ali3_controller";
 end design_1_zed_ali3_controller_0_0_zed_ali3_controller;
 
 architecture STRUCTURE of design_1_zed_ali3_controller_0_0_zed_ali3_controller is

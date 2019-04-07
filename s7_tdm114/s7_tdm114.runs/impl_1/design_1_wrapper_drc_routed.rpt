@@ -1,0 +1,116 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Mar 18 14:09:04 2019
+| Host         : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 12
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| DPIP-1    | Warning  | Input pipelining                                    | 2          |
+| PLCK-12   | Warning  | Clock Placer Checks                                 | 1          |
+| REQP-1577 | Warning  | Clock output buffering                              | 1          |
+| REQP-1580 | Warning  | Phase alignment                                     | 5          |
+| REQP-1709 | Warning  | Clock output buffering                              | 1          |
+| RTSTAT-10 | Warning  | No routable loads                                   | 1          |
++-----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/g_3_0_1_i_i_reg_4246_reg input design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/g_3_0_1_i_i_reg_4246_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/tmp14_reg_4251_reg input design_1_i/v_demosaic_0/inst/Debayer_U0/DebayerG_U0/tmp14_reg_4251_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	pclk_0_IBUF_inst (IBUF.O) is locked to T18
+	design_1_i/CAM_interface_0/inst/BUFG_PixelClk (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y3
+
+Related violations: <none>
+
+REQP-1577#1 Warning
+Clock output buffering  
+MMCME2_ADV connectivity violation. The signal design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/clock_generator_serdes/mmcmout_x1 on the design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/clock_generator_serdes/loop8.tx_mmcm_adv_inst/CLKOUT2 pin of design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/clock_generator_serdes/loop8.tx_mmcm_adv_inst does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+REQP-1580#1 Warning
+Phase alignment  
+Unsupported clocking topology used for OSERDESE2 design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[0].oserdes_m. This can result in corrupted data. The design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[0].oserdes_m/CLK / design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[0].oserdes_m/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1580#2 Warning
+Phase alignment  
+Unsupported clocking topology used for OSERDESE2 design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[1].oserdes_m. This can result in corrupted data. The design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[1].oserdes_m/CLK / design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[1].oserdes_m/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1580#3 Warning
+Phase alignment  
+Unsupported clocking topology used for OSERDESE2 design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[2].oserdes_m. This can result in corrupted data. The design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[2].oserdes_m/CLK / design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[2].oserdes_m/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1580#4 Warning
+Phase alignment  
+Unsupported clocking topology used for OSERDESE2 design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[3].oserdes_m. This can result in corrupted data. The design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[3].oserdes_m/CLK / design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/loop0[3].oserdes_m/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1580#5 Warning
+Phase alignment  
+Unsupported clocking topology used for OSERDESE2 design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/oserdes_cm. This can result in corrupted data. The design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/oserdes_cm/CLK / design_1_i/zed_ali3_controller_0/U0/zed_ali3_controller_core_l/videoout/oserdes_cm/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out on the design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+4 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i.
+Related violations: <none>
+
+

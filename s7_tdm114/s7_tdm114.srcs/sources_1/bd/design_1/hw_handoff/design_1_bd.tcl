@@ -482,41 +482,6 @@ proc create_root_design { parentCell } {
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 
-  # Create instance: ila_0, and set properties
-  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
-  set_property -dict [ list \
-   CONFIG.C_DATA_DEPTH {4096} \
-   CONFIG.C_NUM_OF_PROBES {9} \
-   CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
- ] $ila_0
-
-  # Create instance: ila_1, and set properties
-  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1 ]
-  set_property -dict [ list \
-   CONFIG.C_DATA_DEPTH {2048} \
-   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-   CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {9} \
-   CONFIG.C_PROBE3_WIDTH {32} \
- ] $ila_1
-
-  # Create instance: ila_3, and set properties
-  set ila_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_3 ]
-  set_property -dict [ list \
-   CONFIG.ALL_PROBE_SAME_MU_CNT {4} \
-   CONFIG.C_ADV_TRIGGER {true} \
-   CONFIG.C_DATA_DEPTH {2048} \
-   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-   CONFIG.C_EN_STRG_QUAL {1} \
-   CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {4} \
-   CONFIG.C_PROBE0_MU_CNT {4} \
-   CONFIG.C_PROBE0_WIDTH {8} \
-   CONFIG.C_PROBE1_MU_CNT {4} \
-   CONFIG.C_PROBE2_MU_CNT {4} \
-   CONFIG.C_PROBE3_MU_CNT {4} \
- ] $ila_3
-
   # Create instance: mdm_1, and set properties
   set mdm_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mdm:3.2 mdm_1 ]
   set_property -dict [ list \
@@ -605,7 +570,7 @@ proc create_root_design { parentCell } {
   set v_vid_in_axi4s_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_vid_in_axi4s:4.0 v_vid_in_axi4s_0 ]
   set_property -dict [ list \
    CONFIG.C_ADDR_WIDTH {10} \
-   CONFIG.C_HAS_ASYNC_CLK {0} \
+   CONFIG.C_HAS_ASYNC_CLK {1} \
    CONFIG.C_M_AXIS_VIDEO_FORMAT {12} \
  ] $v_vid_in_axi4s_0
 
@@ -616,7 +581,7 @@ proc create_root_design { parentCell } {
   set zed_ali3_controller_0 [ create_bd_cell -type ip -vlnv avnet.com:ip:zed_ali3_controller:1.7 zed_ali3_controller_0 ]
   set_property -dict [ list \
    CONFIG.C_DATA_WIDTH {24} \
-   CONFIG.C_PIXEL_CLOCK_RATE {3} \
+   CONFIG.C_PIXEL_CLOCK_RATE {0} \
  ] $zed_ali3_controller_0
 
   # Create interface connections
@@ -637,17 +602,16 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_ilmb_1 [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
   connect_bd_intf_net -intf_net mig_7series_0_DDR3 [get_bd_intf_ports ddr3_sdram] [get_bd_intf_pins mig_7series_0/DDR3]
   connect_bd_intf_net -intf_net v_demosaic_0_m_axis_video [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
-connect_bd_intf_net -intf_net [get_bd_intf_nets v_demosaic_0_m_axis_video] [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins ila_0/SLOT_0_AXIS]
   connect_bd_intf_net -intf_net v_demosaic_0_m_axis_video1 [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins v_demosaic_0/m_axis_video]
   connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
   connect_bd_intf_net -intf_net v_vid_in_axi4s_0_video_out [get_bd_intf_pins v_demosaic_0/s_axis_video] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
   connect_bd_intf_net -intf_net zed_ali3_controller_0_ALI3 [get_bd_intf_ports ALI3_0] [get_bd_intf_pins zed_ali3_controller_0/ALI3]
 
   # Create port connections
-  connect_bd_net -net CAM_interface_0_Dout [get_bd_pins CAM_interface_0/Dout] [get_bd_pins ila_3/probe0] [get_bd_pins v_vid_in_axi4s_0/vid_data]
-  connect_bd_net -net CAM_interface_0_frame_valid_out [get_bd_pins CAM_interface_0/frame_valid_out] [get_bd_pins ila_3/probe2] [get_bd_pins ila_3/probe3] [get_bd_pins util_vector_logic_3/Op1] [get_bd_pins v_vid_in_axi4s_0/vid_vsync]
-  connect_bd_net -net CAM_interface_0_line_valid_out [get_bd_pins CAM_interface_0/line_valid_out] [get_bd_pins ila_3/probe1] [get_bd_pins util_vector_logic_4/Op1] [get_bd_pins v_vid_in_axi4s_0/vid_active_video] [get_bd_pins v_vid_in_axi4s_0/vid_hsync]
-  connect_bd_net -net CAM_interface_0_pclk_out [get_bd_pins CAM_interface_0/pclk_out] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins ila_0/clk] [get_bd_pins ila_1/clk] [get_bd_pins ila_3/clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_demosaic_0/ap_clk] [get_bd_pins v_vid_in_axi4s_0/aclk] [get_bd_pins zed_ali3_controller_0/clk_in]
+  connect_bd_net -net CAM_interface_0_Dout [get_bd_pins CAM_interface_0/Dout] [get_bd_pins v_vid_in_axi4s_0/vid_data]
+  connect_bd_net -net CAM_interface_0_frame_valid_out [get_bd_pins CAM_interface_0/frame_valid_out] [get_bd_pins util_vector_logic_3/Op1] [get_bd_pins v_vid_in_axi4s_0/vid_vsync]
+  connect_bd_net -net CAM_interface_0_line_valid_out [get_bd_pins CAM_interface_0/line_valid_out] [get_bd_pins util_vector_logic_4/Op1] [get_bd_pins v_vid_in_axi4s_0/vid_active_video] [get_bd_pins v_vid_in_axi4s_0/vid_hsync]
+  connect_bd_net -net CAM_interface_0_pclk_out1 [get_bd_pins CAM_interface_0/pclk_out] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk] [get_bd_pins zed_ali3_controller_0/clk_in]
   connect_bd_net -net axi_iic_0_iic2intc_irpt [get_bd_pins axi_iic_0/iic2intc_irpt] [get_bd_pins axi_intc_0/intr]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins mig_7series_0/sys_clk_i]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins mig_7series_0/clk_ref_i]
@@ -656,7 +620,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets v_demosaic_0_m_axis_video] [get_
   connect_bd_net -net frame_valid_in_0_1 [get_bd_ports frame_valid_in_0] [get_bd_pins CAM_interface_0/frame_valid_in]
   connect_bd_net -net line_valid_in_0_1 [get_bd_ports line_valid_in_0] [get_bd_pins CAM_interface_0/line_valid_in]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_mig_7series_0_81M/mb_debug_sys_rst]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins axi_intc_0/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins rst_mig_7series_0_81M/slowest_sync_clk] [get_bd_pins v_tc_0/s_axi_aclk]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins axi_intc_0/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins rst_mig_7series_0_81M/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_demosaic_0/ap_clk] [get_bd_pins v_tc_0/s_axi_aclk] [get_bd_pins v_vid_in_axi4s_0/aclk]
   connect_bd_net -net mig_7series_0_mmcm_locked [get_bd_pins mig_7series_0/mmcm_locked] [get_bd_pins rst_mig_7series_0_81M/dcm_locked]
   connect_bd_net -net mig_7series_0_ui_clk_sync_rst [get_bd_pins mig_7series_0/ui_clk_sync_rst] [get_bd_pins rst_mig_7series_0_81M/ext_reset_in]
   connect_bd_net -net pclk_0_1 [get_bd_ports pclk_0] [get_bd_pins CAM_interface_0/pclk]
@@ -667,21 +631,15 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets v_demosaic_0_m_axis_video] [get_
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net v2axis_if_0_hblank_op [get_bd_pins util_vector_logic_4/Res] [get_bd_pins v_vid_in_axi4s_0/vid_hblank]
   connect_bd_net -net v2axis_if_0_vblank_op [get_bd_pins util_vector_logic_3/Res] [get_bd_pins v_vid_in_axi4s_0/vid_vblank]
-  connect_bd_net -net v_axi4s_vid_out_0_locked [get_bd_pins ila_1/probe0] [get_bd_pins v_axi4s_vid_out_0/locked]
-  connect_bd_net -net v_axi4s_vid_out_0_overflow [get_bd_pins ila_1/probe1] [get_bd_pins v_axi4s_vid_out_0/overflow]
-  connect_bd_net -net v_axi4s_vid_out_0_status [get_bd_pins ila_1/probe3] [get_bd_pins v_axi4s_vid_out_0/status]
-  connect_bd_net -net v_axi4s_vid_out_0_underflow [get_bd_pins ila_1/probe2] [get_bd_pins v_axi4s_vid_out_0/underflow]
   connect_bd_net -net v_axi4s_vid_out_0_vid_active_video [get_bd_pins v_axi4s_vid_out_0/vid_active_video] [get_bd_pins zed_ali3_controller_0/video_de]
   connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_pins v_axi4s_vid_out_0/vid_data] [get_bd_pins zed_ali3_controller_0/video_data]
   connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_pins v_axi4s_vid_out_0/vid_hsync] [get_bd_pins zed_ali3_controller_0/video_hsync]
   connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_pins v_axi4s_vid_out_0/vid_vsync] [get_bd_pins zed_ali3_controller_0/video_vsync]
-  connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins ila_1/probe5] [get_bd_pins v_axi4s_vid_out_0/vtg_ce]
-  connect_bd_net -net v_tc_0_active_video_out [get_bd_pins ila_1/probe6] [get_bd_pins v_axi4s_vid_out_0/vtg_active_video] [get_bd_pins v_tc_0/active_video_out]
-  connect_bd_net -net v_tc_0_hsync_out [get_bd_pins ila_1/probe8] [get_bd_pins v_axi4s_vid_out_0/vtg_hsync] [get_bd_pins v_tc_0/hsync_out]
-  connect_bd_net -net v_tc_0_vsync_out [get_bd_pins ila_1/probe7] [get_bd_pins v_axi4s_vid_out_0/vtg_vsync] [get_bd_pins v_tc_0/vsync_out]
+  connect_bd_net -net v_tc_0_active_video_out [get_bd_pins v_axi4s_vid_out_0/vtg_active_video] [get_bd_pins v_tc_0/active_video_out]
+  connect_bd_net -net v_tc_0_hsync_out [get_bd_pins v_axi4s_vid_out_0/vtg_hsync] [get_bd_pins v_tc_0/hsync_out]
+  connect_bd_net -net v_tc_0_vsync_out [get_bd_pins v_axi4s_vid_out_0/vtg_vsync] [get_bd_pins v_tc_0/vsync_out]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/gen_clken] [get_bd_pins v_tc_0/s_axi_aclken] [get_bd_pins v_vid_in_axi4s_0/aclken] [get_bd_pins v_vid_in_axi4s_0/axis_enable] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_ce] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net zed_ali3_controller_0_clk_out [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk] [get_bd_pins zed_ali3_controller_0/clk_out]
-  connect_bd_net -net zed_ali3_controller_0_pll_locked [get_bd_pins ila_1/probe4] [get_bd_pins zed_ali3_controller_0/pll_locked]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x40800000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] SEG_axi_iic_0_Reg

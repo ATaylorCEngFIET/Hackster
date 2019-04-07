@@ -1,0 +1,67 @@
+===============================
+Blue Pearl Advanced Clock Environment Report Report created on: Tue Mar 19 11:17:59 2019
+===============================
+Advanced Clock Environment Report:
+From clock: Unknown Clock To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i
+Synchronized: 0
+Unsynchronized: 3
+Issue: Unknown Clock interacts with clock design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i in an unsynchronized manner across domains. Recommendation: Add synchronizers or merge the domains. Turning on the option to auto-detect clock domains may help merge domains.
+
+From clock: pclk_0 To clock: design_1_i.zed_ali3_controller_0.U0.zed_ali3_controller_core_l.clock_generator_serdes.mmcmout_x1
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: sys_clock To clock: design_1_i.clk_wiz_0.inst.clk_out1_design_1_clk_wiz_0_0
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: sys_clock To clock: design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: sys_clock To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.pll_clk3_out
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: sys_clock To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: sys_clock To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.mmcm_ps_clk_bufg_in
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: sys_clock To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_div2_bufg_in
+Synchronized: 0
+Unsynchronized: 0
+Derived clock
+
+From clock: design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0 To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i
+Synchronized: 1
+Unsynchronized: 0
+Issue: design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0 interacts with clock design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i in a synchronized manner within a single domain. Recommendation: Remove the synchronizers, or separate the domains.
+
+From clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i To clock: Unknown Clock
+Synchronized: 0
+Unsynchronized: 1
+Issue: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i interacts with clock Unknown Clock in an unsynchronized manner across domains. Recommendation: Add synchronizers or merge the domains. Turning on the option to auto-detect clock domains may help merge domains.
+
+From clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i To clock: design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0
+Synchronized: 1
+Unsynchronized: 0
+Issue: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i interacts with clock design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0 in a synchronized manner within a single domain. Recommendation: Remove the synchronizers, or separate the domains.
+
+From clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.mmcm_ps_clk_bufg_in
+Synchronized: 0
+Unsynchronized: 1
+
+From clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.mmcm_ps_clk_bufg_in To clock: design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i
+Synchronized: 0
+Unsynchronized: 1
+===============================

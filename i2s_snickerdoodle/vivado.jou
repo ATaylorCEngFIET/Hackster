@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Apr  7 10:10:41 2019
+# Process ID: 852
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6980
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -add_ip C:/hdl_projects/audio_passthrough/solution1/impl/ip/adiuvo_hls_audio_top_1_0.zip -repo_path c:/HDL_projects_git/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/AT426-BU-98000-r0p0-00rel0/vivado/Arm_ipi_repository
+startgroup
+create_bd_cell -type ip -vlnv adiuvo:hls:audio_top:1.0 audio_top_0
+endgroup
+set_property location {5.5 1530 -43} [get_bd_cells audio_top_0]
+set_property location {5 1542 -67} [get_bd_cells audio_top_0]
+delete_bd_objs [get_bd_intf_nets i2s_receiver_0_m_axis_aud]
+connect_bd_intf_net [get_bd_intf_pins i2s_receiver_0/m_axis_aud] [get_bd_intf_pins audio_top_0/AudioA]
+connect_bd_intf_net [get_bd_intf_pins audio_top_0/AudioB] [get_bd_intf_pins i2s_transmitter_0/s_axis_aud]
+connect_bd_net [get_bd_pins audio_top_0/ap_clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins audio_top_0/ap_rst_n] [get_bd_pins rst_ps7_0_49M/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {4 1247 -89} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins audio_top_0/ap_start] [get_bd_pins xlconstant_0/dout]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+save_bd_design
+launch_sdk -workspace C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk -hwspec C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+file copy -force C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.runs/impl_1/design_1_wrapper.sysdef C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk -hwspec C:/hdl_projects/i2s_snickerdoodle/i2s_snickerdoodle.sdk/design_1_wrapper.hdf
+archive_project C:/hdl_projects/i2s_snickerdoodle.xpr.zip -temp_dir C:/temp -force -exclude_run_results -include_local_ip_cache -include_config_settings

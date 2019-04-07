@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Mar  8 11:36:41 2019
-# Process ID: 40552
+# Start of session at: Mon Mar 18 12:13:37 2019
+# Process ID: 20828
 # Current directory: C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_zed_ali3_controller_0_0_synth_1
 # Command line: vivado.exe -log design_1_zed_ali3_controller_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_zed_ali3_controller_0_0.tcl
 # Log file: C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_zed_ali3_controller_0_0_synth_1/design_1_zed_ali3_controller_0_0.vds
@@ -11,5 +11,546 @@
 #-----------------------------------------------------------
 WARNING: [Common 17-1271] The MYVIVADO environment variable specifies an invalid location 'C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado'
 source design_1_zed_ali3_controller_0_0.tcl -notrace
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_zed_ali3_controller_0_0, cache-ID = 7b9a46cf102b7d28.
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  8 11:36:54 2019...
+Command: synth_design -top design_1_zed_ali3_controller_0_0 -part xc7s50csga324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26240 
+WARNING: [Synth 8-1652] attribute target identifier fdb not found in this scope [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:87]
+WARNING: [Synth 8-1652] attribute target identifier fda not found in this scope [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:82]
+WARNING: [Synth 8-1652] attribute target identifier fdb not found in this scope [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:83]
+WARNING: [Synth 8-1652] attribute target identifier fda not found in this scope [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:84]
+WARNING: [Synth 8-1652] attribute target identifier fdb not found in this scope [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:85]
+WARNING: [Synth 8-1652] attribute target identifier fda not found in this scope [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:86]
+WARNING: [Synth 8-2507] parameter declaration becomes local in zed_ali3_controller_core with formal parameter declaration list [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:133]
+WARNING: [Synth 8-2507] parameter declaration becomes local in zed_ali3_controller_core with formal parameter declaration list [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:134]
+WARNING: [Synth 8-2507] parameter declaration becomes local in zed_ali3_controller_core with formal parameter declaration list [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:135]
+WARNING: [Synth 8-2507] parameter declaration becomes local in zed_ali3_controller_core with formal parameter declaration list [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:139]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 466.543 ; gain = 115.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_zed_ali3_controller_0_0' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_zed_ali3_controller_0_0/synth/design_1_zed_ali3_controller_0_0.vhd:75]
+	Parameter C_PIXEL_CLOCK_RATE bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+INFO: [Synth 8-3491] module 'zed_ali3_controller' declared at 'c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/zed_ali3_controller.vhd:56' bound to instance 'U0' of component 'zed_ali3_controller' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_zed_ali3_controller_0_0/synth/design_1_zed_ali3_controller_0_0.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'zed_ali3_controller' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/zed_ali3_controller.vhd:81]
+	Parameter C_PIXEL_CLOCK_RATE bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_PIXEL_CLOCK_RATE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'zed_ali3_controller_core' declared at 'c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:50' bound to instance 'zed_ali3_controller_core_l' of component 'zed_ali3_controller_core' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/zed_ali3_controller.vhd:129]
+INFO: [Synth 8-6157] synthesizing module 'zed_ali3_controller_core' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:50]
+	Parameter C_PIXEL_CLOCK_RATE bound to: 0 - type: integer 
+	Parameter PCLK_D bound to: 3 - type: integer 
+	Parameter PCLK_M bound to: 3 - type: integer 
+	Parameter PCLK_D_REAL bound to: 3.000000 - type: float 
+	Parameter PCLK_M_REAL bound to: 3.000000 - type: float 
+	Parameter CLKIN_PERIOD bound to: 30.000000 - type: float 
+	Parameter S bound to: 7 - type: integer 
+	Parameter D bound to: 4 - type: integer 
+	Parameter DS bound to: 27 - type: integer 
+	Parameter TX_CLK_GEN bound to: 7'b1100001 
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-638] synthesizing module 'clock_generator_pll_7_to_1_diff_sdr' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/clock_generator_pll_7_to_1_diff_sdr.vhd:80]
+	Parameter TX_CLOCK bound to: BUFIO - type: string 
+	Parameter PIXEL_CLOCK bound to: BUF_G - type: string 
+	Parameter PIXEL_CLOCK_D bound to: 3 - type: integer 
+	Parameter PIXEL_CLOCK_M bound to: 3 - type: integer 
+	Parameter PIXEL_CLOCK_D_REAL bound to: 3.000000 - type: float 
+	Parameter PIXEL_CLOCK_M_REAL bound to: 3.000000 - type: float 
+	Parameter USE_PLL bound to: 0 - type: bool 
+	Parameter CLKIN_PERIOD bound to: 30.000000 - type: float 
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 21.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 30.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 30.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 3.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 21 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 21 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLOCK_HOLD bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'tx_mmcm_adv_inst' to cell 'MMCM_ADV' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/clock_generator_pll_7_to_1_diff_sdr.vhd:93]
+INFO: [Synth 8-113] binding component instance 'bufg_mmcm_x1' to cell 'BUFG' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/clock_generator_pll_7_to_1_diff_sdr.vhd:154]
+INFO: [Synth 8-113] binding component instance 'bufio_mmcm_xn' to cell 'BUFIO' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/clock_generator_pll_7_to_1_diff_sdr.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'clock_generator_pll_7_to_1_diff_sdr' (2#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/clock_generator_pll_7_to_1_diff_sdr.vhd:80]
+INFO: [Synth 8-6157] synthesizing module 'synchro' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:52]
+	Parameter INITIALIZE bound to: LOGIC1 - type: string 
+INFO: [Synth 8-6157] synthesizing module 'FDP' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:3893]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'FDP' (3#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:3893]
+INFO: [Synth 8-6155] done synthesizing module 'synchro' (4#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/synchro.v:52]
+INFO: [Synth 8-638] synthesizing module 'serdes_7_to_1_diff_sdr' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:84]
+	Parameter D bound to: 4 - type: integer 
+	Parameter DATA_FORMAT bound to: PER_CLOCK - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'io_data_out' to cell 'OBUFDS' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:107]
+	Parameter DATA_RATE_OQ bound to: SDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'oserdes_m' to cell 'OSERDESE2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:124]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'io_data_out' to cell 'OBUFDS' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:107]
+	Parameter DATA_RATE_OQ bound to: SDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'oserdes_m' to cell 'OSERDESE2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:124]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'io_data_out' to cell 'OBUFDS' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:107]
+	Parameter DATA_RATE_OQ bound to: SDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'oserdes_m' to cell 'OSERDESE2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:124]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'io_data_out' to cell 'OBUFDS' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:107]
+	Parameter DATA_RATE_OQ bound to: SDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'oserdes_m' to cell 'OSERDESE2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:124]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'io_clk_out' to cell 'OBUFDS' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:161]
+	Parameter DATA_RATE_OQ bound to: SDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'oserdes_cm' to cell 'OSERDESE2' [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:166]
+INFO: [Synth 8-256] done synthesizing module 'serdes_7_to_1_diff_sdr' (5#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/serdes_7_to_1_diff_sdr.vhd:84]
+INFO: [Synth 8-6155] done synthesizing module 'zed_ali3_controller_core' (6#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/verilog/zed_ali3_controller_core.v:50]
+INFO: [Synth 8-256] done synthesizing module 'zed_ali3_controller' (7#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ipshared/e40a/hdl/vhdl/zed_ali3_controller.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'design_1_zed_ali3_controller_0_0' (8#1) [c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_zed_ali3_controller_0_0/synth/design_1_zed_ali3_controller_0_0.vhd:75]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[31]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[30]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[29]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[28]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[27]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[26]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[25]
+WARNING: [Synth 8-3331] design zed_ali3_controller has unconnected port video_data[24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 501.137 ; gain = 149.762
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 501.137 ; gain = 149.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 501.137 ; gain = 149.762
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  FDP => FDPE: 2 instances
+  MMCM_ADV => MMCME2_ADV: 1 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 778.699 ; gain = 2.316
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 778.699 ; gain = 427.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 778.699 ; gain = 427.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 778.699 ; gain = 427.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 778.699 ; gain = 427.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module serdes_7_to_1_diff_sdr 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module zed_ali3_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design design_1_zed_ali3_controller_0_0 has port ALI_RST_N driven by constant 1
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[31]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[30]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[29]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[28]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[27]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[26]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[25]
+WARNING: [Synth 8-3331] design design_1_zed_ali3_controller_0_0 has unconnected port video_data[24]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 778.699 ; gain = 427.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 809.359 ; gain = 457.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 809.359 ; gain = 457.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 809.359 ; gain = 457.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     3|
+|2     |BUFIO     |     1|
+|3     |LUT1      |     1|
+|4     |MMCM_ADV  |     1|
+|5     |OSERDESE2 |     5|
+|6     |FDP       |     2|
+|7     |FDPE      |     1|
+|8     |FDRE      |    27|
+|9     |OBUFDS    |     5|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------+------------------------------------+------+
+|      |Instance                       |Module                              |Cells |
++------+-------------------------------+------------------------------------+------+
+|1     |top                            |                                    |    46|
+|2     |  U0                           |zed_ali3_controller                 |    46|
+|3     |    zed_ali3_controller_core_l |zed_ali3_controller_core            |    19|
+|4     |      clock_generator_serdes   |clock_generator_pll_7_to_1_diff_sdr |     4|
+|5     |      synchro_reset            |synchro                             |     2|
+|6     |      videoout                 |serdes_7_to_1_diff_sdr              |    11|
++------+-------------------------------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 810.488 ; gain = 181.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 810.488 ; gain = 459.113
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  FDP => FDPE: 2 instances
+  MMCM_ADV => MMCME2_ADV: 1 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 829.422 ; gain = 490.168
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_zed_ali3_controller_0_0_synth_1/design_1_zed_ali3_controller_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_zed_ali3_controller_0_0/design_1_zed_ali3_controller_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/Hackster/s7_tdm114/s7_tdm114.runs/design_1_zed_ali3_controller_0_0_synth_1/design_1_zed_ali3_controller_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_zed_ali3_controller_0_0_utilization_synth.rpt -pb design_1_zed_ali3_controller_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 833.789 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 18 12:14:30 2019...

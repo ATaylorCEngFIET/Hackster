@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BluePearlReport ReportName="Advanced Clock Environment Report" Created="Tue Mar 19 11:17:59 2019">
+    <Headers>
+        <Header Column="0" Name="From Clock" IntegerValue="No"/>
+        <Header Column="1" Name="From Clock Domain" IntegerValue="No"/>
+        <Header Column="2" Name="To Clock" IntegerValue="No"/>
+        <Header Column="3" Name="To Clock Domain" IntegerValue="No"/>
+        <Header Column="4" Name="Synchronized DFFs" IntegerValue="Yes"/>
+        <Header Column="5" Name="Unsynchronized DFFs" IntegerValue="Yes"/>
+        <Header Column="6" Name="Derived?" IntegerValue="No"/>
+        <Header Column="7" Name="Equivalent?" IntegerValue="No"/>
+        <Header Column="8" Name="Recommendation" IntegerValue="No"/>
+    </Headers>
+    <Row FileID="6" LineNum="41">
+        <Column Column="0" Data="pclk_0"/>
+        <Column Column="1" Data="pclk_0_group"/>
+        <Column Column="2" Data="design_1_i.zed_ali3_controller_0.U0.zed_ali3_controller_core_l.clock_generator_serdes.mmcmout_x1"/>
+        <Column Column="3" Data="pclk_0_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="6" LineNum="43">
+        <Column Column="0" Data="sys_clock"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.clk_wiz_0.inst.clk_out1_design_1_clk_wiz_0_0"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="6" LineNum="43">
+        <Column Column="0" Data="sys_clock"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="6" LineNum="43">
+        <Column Column="0" Data="sys_clock"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.pll_clk3_out"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="6" LineNum="43">
+        <Column Column="0" Data="sys_clock"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="6" LineNum="43">
+        <Column Column="0" Data="sys_clock"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.mmcm_ps_clk_bufg_in"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="6" LineNum="43">
+        <Column Column="0" Data="sys_clock"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_div2_bufg_in"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data="Yes"/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="0" LineNum="104">
+        <Column Column="0" Data="design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="1"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data=""/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data="design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0 interacts with clock design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i in a synchronized manner within a single domain. Recommendation: Remove the synchronizers, or separate the domains."/>
+    </Row>
+    <Row FileID="2" LineNum="216">
+        <Column Column="0" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="1"/>
+        <Column Column="5" Data="0"/>
+        <Column Column="6" Data=""/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i interacts with clock design_1_i.clk_wiz_0.inst.clk_out2_design_1_clk_wiz_0_0 in a synchronized manner within a single domain. Recommendation: Remove the synchronizers, or separate the domains."/>
+    </Row>
+    <Row FileID="2" LineNum="216">
+        <Column Column="0" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.mmcm_ps_clk_bufg_in"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="1"/>
+        <Column Column="6" Data=""/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <Row FileID="2" LineNum="246">
+        <Column Column="0" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.mmcm_ps_clk_bufg_in"/>
+        <Column Column="1" Data="sys_clock_group"/>
+        <Column Column="2" Data="design_1_i.mig_7series_0.u_design_1_mig_7series_0_0_mig.u_ddr3_infrastructure.clk_pll_i"/>
+        <Column Column="3" Data="sys_clock_group"/>
+        <Column Column="4" Data="0"/>
+        <Column Column="5" Data="1"/>
+        <Column Column="6" Data=""/>
+        <Column Column="7" Data=""/>
+        <Column Column="8" Data=""/>
+    </Row>
+    <FileIDs>
+        <File name="s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" id="0"/>
+        <File name="s7_tdm114.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/rtl/clocking/mig_7series_v4_1_infrastructure.v" id="2"/>
+        <File name="s7_tdm114.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" id="6"/>
+    </FileIDs>
+</BluePearlReport>
