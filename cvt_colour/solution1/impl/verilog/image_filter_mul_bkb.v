@@ -2,14 +2,13 @@
 `timescale 1 ns / 1 ps
 
   module image_filter_mul_bkb_DSP48_0(a, b, p);
-input [8 - 1 : 0] a; // synthesis attribute keep a "true"
-input [22 - 1 : 0] b; // synthesis attribute keep b "true"
-output [29 - 1 : 0] p; // synthesis attribute keep p "true"
+input [22 - 1 : 0] a;
+input [8 - 1 : 0] b;
+output [29 - 1 : 0] p;
 
 assign p = $unsigned (a) * $unsigned (b);
 
 endmodule
-
 `timescale 1 ns / 1 ps
 module image_filter_mul_bkb(
     din0,

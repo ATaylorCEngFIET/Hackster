@@ -73,14 +73,14 @@
 						<id>3</id>
 						<name>img_0_rows_V_out</name>
 						<fileName>cvt_colour/cvt_colour.cpp</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
 						<lineNumber>11</lineNumber>
 						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="8" tracking_level="0" version="0">
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second class_id="9" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -115,14 +115,14 @@
 						<id>4</id>
 						<name>img_0_cols_V_out</name>
 						<fileName>cvt_colour/cvt_colour.cpp</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
 						<lineNumber>11</lineNumber>
 						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -157,14 +157,14 @@
 						<id>5</id>
 						<name>img_1_rows_V_out</name>
 						<fileName>cvt_colour/cvt_colour.cpp</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -199,14 +199,14 @@
 						<id>6</id>
 						<name>img_1_cols_V_out</name>
 						<fileName>cvt_colour/cvt_colour.cpp</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -241,14 +241,14 @@
 						<id>7</id>
 						<name>img_2_rows_V_out</name>
 						<fileName>cvt_colour/cvt_colour.cpp</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -283,14 +283,14 @@
 						<id>8</id>
 						<name>img_2_cols_V_out</name>
 						<fileName>cvt_colour/cvt_colour.cpp</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -328,13 +328,27 @@
 						<type>0</type>
 						<id>15</id>
 						<name>cols_read</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
+						<fileName>cvt_colour/cvt_colour.cpp</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>11</lineNumber>
+						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>cvt_colour/cvt_colour.cpp</first>
+											<second>image_filter</second>
+										</first>
+										<second>11</second>
+									</item>
+								</second>
+							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -350,6 +364,12 @@
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>1</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_10">
 				<Value>
@@ -357,13 +377,27 @@
 						<type>0</type>
 						<id>16</id>
 						<name>rows_read</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
+						<fileName>cvt_colour/cvt_colour.cpp</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>11</lineNumber>
+						<contextFuncName>image_filter</contextFuncName>
 						<inlineStackInfo>
-							<count>0</count>
+							<count>1</count>
 							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>cvt_colour/cvt_colour.cpp</first>
+											<second>image_filter</second>
+										</first>
+										<second>11</second>
+									</item>
+								</second>
+							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -379,6 +413,12 @@
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>2</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_11">
 				<Value>
@@ -386,31 +426,31 @@
 						<type>0</type>
 						<id>17</id>
 						<name></name>
-						<fileName>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
-						<lineNumber>601</lineNumber>
+						<fileName>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>656</lineNumber>
 						<contextFuncName>init</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>Mat</second>
 										</first>
-										<second>587</second>
+										<second>642</second>
 									</item>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>init</second>
 										</first>
-										<second>601</second>
+										<second>656</second>
 									</item>
 									<item>
 										<first>
@@ -437,6 +477,12 @@
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>3</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_12">
 				<Value>
@@ -444,31 +490,31 @@
 						<type>0</type>
 						<id>18</id>
 						<name></name>
-						<fileName>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
-						<lineNumber>602</lineNumber>
+						<fileName>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>657</lineNumber>
 						<contextFuncName>init</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>Mat</second>
 										</first>
-										<second>587</second>
+										<second>642</second>
 									</item>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>init</second>
 										</first>
-										<second>602</second>
+										<second>657</second>
 									</item>
 									<item>
 										<first>
@@ -495,6 +541,12 @@
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>4</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_13">
 				<Value>
@@ -502,31 +554,31 @@
 						<type>0</type>
 						<id>19</id>
 						<name></name>
-						<fileName>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
-						<lineNumber>601</lineNumber>
+						<fileName>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>656</lineNumber>
 						<contextFuncName>init</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>Mat</second>
 										</first>
-										<second>587</second>
+										<second>642</second>
 									</item>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>init</second>
 										</first>
-										<second>601</second>
+										<second>656</second>
 									</item>
 									<item>
 										<first>
@@ -553,6 +605,12 @@
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>5</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_14">
 				<Value>
@@ -560,31 +618,31 @@
 						<type>0</type>
 						<id>20</id>
 						<name></name>
-						<fileName>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
-						<lineNumber>602</lineNumber>
+						<fileName>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>657</lineNumber>
 						<contextFuncName>init</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>Mat</second>
 										</first>
-										<second>587</second>
+										<second>642</second>
 									</item>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>init</second>
 										</first>
-										<second>602</second>
+										<second>657</second>
 									</item>
 									<item>
 										<first>
@@ -611,6 +669,12 @@
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>6</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_15">
 				<Value>
@@ -618,31 +682,31 @@
 						<type>0</type>
 						<id>21</id>
 						<name></name>
-						<fileName>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
-						<lineNumber>601</lineNumber>
+						<fileName>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>656</lineNumber>
 						<contextFuncName>init</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>Mat</second>
 										</first>
-										<second>587</second>
+										<second>642</second>
 									</item>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>init</second>
 										</first>
-										<second>601</second>
+										<second>656</second>
 									</item>
 									<item>
 										<first>
@@ -669,6 +733,12 @@
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>7</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_16">
 				<Value>
@@ -676,31 +746,31 @@
 						<type>0</type>
 						<id>22</id>
 						<name></name>
-						<fileName>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</fileName>
-						<fileDirectory>C:\Users\aptay\HLS_Area</fileDirectory>
-						<lineNumber>602</lineNumber>
+						<fileName>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</fileName>
+						<fileDirectory>C:\Users\aptay\Documents\GitHub\Hackster</fileDirectory>
+						<lineNumber>657</lineNumber>
 						<contextFuncName>init</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\aptay\HLS_Area</first>
+								<first>C:\Users\aptay\Documents\GitHub\Hackster</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>Mat</second>
 										</first>
-										<second>587</second>
+										<second>642</second>
 									</item>
 									<item>
 										<first>
-											<first>C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_core.h</first>
+											<first>C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h</first>
 											<second>init</second>
 										</first>
-										<second>602</second>
+										<second>657</second>
 									</item>
 									<item>
 										<first>
@@ -727,6 +797,12 @@
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>8</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="13" object_id="_17">
 				<Value>
@@ -754,6 +830,12 @@
 				</oprand_edges>
 				<opcode>ret</opcode>
 				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>9</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
@@ -803,84 +885,98 @@
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
 				<sink_obj>15</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_20">
 				<id>29</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
 				<sink_obj>16</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_21">
 				<id>32</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
 				<sink_obj>17</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_22">
 				<id>33</id>
 				<edge_type>1</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>17</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_23">
 				<id>35</id>
 				<edge_type>1</edge_type>
 				<source_obj>4</source_obj>
 				<sink_obj>18</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_24">
 				<id>36</id>
 				<edge_type>1</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>18</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_25">
 				<id>38</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>19</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_26">
 				<id>39</id>
 				<edge_type>1</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>19</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_27">
 				<id>41</id>
 				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
 				<sink_obj>20</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_28">
 				<id>42</id>
 				<edge_type>1</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>20</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_29">
 				<id>44</id>
 				<edge_type>1</edge_type>
 				<source_obj>7</source_obj>
 				<sink_obj>21</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_30">
 				<id>45</id>
 				<edge_type>1</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>21</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_31">
 				<id>47</id>
 				<edge_type>1</edge_type>
 				<source_obj>8</source_obj>
 				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="19" object_id="_32">
 				<id>48</id>
 				<edge_type>1</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>22</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
 	</cdfg>
@@ -905,7 +1001,7 @@
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
 			<mMinLatency>0</mMinLatency>
-			<mMaxLatency>-1</mMaxLatency>
+			<mMaxLatency>0</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>

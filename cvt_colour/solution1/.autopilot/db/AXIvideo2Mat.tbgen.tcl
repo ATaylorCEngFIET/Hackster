@@ -1,4 +1,5 @@
 set moduleName AXIvideo2Mat
+set isTaskLevelControl 1
 set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 0
@@ -7,6 +8,7 @@ set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
+set isEnableWaveformDebug 1
 set C_modelName {AXIvideo2Mat}
 set C_modelType { void 0 }
 set C_modelArgList {
@@ -129,12 +131,17 @@ set NewPortList {[
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "AXIvideo2Mat",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "4010003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "AXI_video_strm_V_data_V", "Type" : "Axis", "Direction" : "I",
 				"BlockSignal" : [
@@ -170,13 +177,13 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	AXIvideo2Mat {
-		AXI_video_strm_V_data_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_keep_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_strb_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_user_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_last_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_id_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_dest_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_data_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_keep_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_strb_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_user_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_last_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_id_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_dest_V {Type I LastRead 6 FirstWrite -1}
 		img_rows_V {Type I LastRead 0 FirstWrite -1}
 		img_cols_V {Type I LastRead 0 FirstWrite -1}
 		img_data_stream_0_V {Type O LastRead -1 FirstWrite 5}
@@ -188,13 +195,12 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3", "Max" : "4014003"}
-	, {"Name" : "Interval", "Min" : "3", "Max" : "4014003"}
+	{"Name" : "Latency", "Min" : "3", "Max" : "4010003"}
+	, {"Name" : "Interval", "Min" : "3", "Max" : "4010003"}
 ]}
 
 set PipelineEnableSignalInfo {[
 	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
-	{"Pipeline" : "2", "EnableSignal" : "ap_enable_pp2"}
 ]}
 
 set Spec2ImplPortList { 

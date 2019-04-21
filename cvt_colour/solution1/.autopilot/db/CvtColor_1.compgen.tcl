@@ -7,13 +7,13 @@ set op mul
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 8
+set in0_width 22
 set in0_signed 0
-set in1_width 22
+set in1_width 8
 set in1_signed 0
 set out_width 29
 set exp i0*i1
-set arg_lists {i0 {8 0 +} i1 {22 0 +} p {29 0 +} acc {0} }
+set arg_lists {i0 {22 0 +} i1 {8 0 +} p {29 0 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
@@ -83,15 +83,15 @@ set op mac
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 8
+set in0_width 20
 set in0_signed 0
-set in1_width 20
+set in1_width 8
 set in1_signed 0
 set in2_width 29
 set in2_signed 0
 set out_width 29
 set exp i0*i1+i2
-set arg_lists {i0 {8 0 +} i1 {20 0 +} m {28 0 +} i2 {29 0 +} p {29 0 +} c_reg {1} rnd {0} acc {0} }
+set arg_lists {i0 {20 0 +} i1 {8 0 +} m {28 0 +} i2 {29 0 +} p {29 0 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
@@ -165,15 +165,15 @@ set op mac
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 8
+set in0_width 23
 set in0_signed 0
-set in1_width 23
+set in1_width 8
 set in1_signed 0
 set in2_width 29
 set in2_signed 0
 set out_width 30
 set exp i0*i1+i2
-set arg_lists {i0 {8 0 +} i1 {23 0 +} m {30 0 +} i2 {29 0 +} p {30 0 +} c_reg {1} rnd {0} acc {0} }
+set arg_lists {i0 {23 0 +} i1 {8 0 +} m {30 0 +} i2 {29 0 +} p {30 0 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {

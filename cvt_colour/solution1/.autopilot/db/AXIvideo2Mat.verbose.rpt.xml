@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'AXIvideo2Mat'" level="0">
-<item name = "Date">Thu May 31 13:28:38 2018
+<item name = "Date">Tue Apr  9 13:09:57 2019
 </item>
-<item name = "Version">2017.4_AR70530_AR70530 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">cvt_colour</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.27, 1.25</column>
+<column name="ap_clk">10.00, 7.268, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">3, 4014003, 3, 4014003, none</column>
+<column name="">3, 4010003, 3, 4010003, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,9 +36,9 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- loop_wait_for_start">0, 0, 1, 1, 1, 0, yes</column>
-<column name="- loop_height">0, 4014000, 7 ~ 2007, -, -, 0 ~ 2000, no</column>
-<column name=" + loop_width">1, 2001, 2, 1, 1, 0 ~ 2000, yes</column>
-<column name=" + loop_wait_for_eol">1, 1, 2, 1, 1, 0, yes</column>
+<column name="- loop_height">0, 4010000, 5 ~ 2005, -, -, 0 ~ 2000, no</column>
+<column name=" + loop_width">0, 2000, 2, 1, 1, 0 ~ 2000, yes</column>
+<column name=" + loop_wait_for_eol">0, 0, 1, 1, 1, 0, yes</column>
 </table>
 </item>
 </section>
@@ -51,12 +51,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 214</column>
+<column name="Expression">-, -, 0, 172</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 377</column>
-<column name="Register">-, -, 290, -</column>
+<column name="Multiplexer">-, -, -, 398</column>
+<column name="Register">-, -, 447, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, 1</specialColumn>
 </table>
@@ -81,29 +81,30 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_V_fu_423_p2">+, 0, 0, 18, 11, 1</column>
-<column name="j_V_fu_438_p2">+, 0, 0, 18, 11, 1</column>
-<column name="AXI_video_strm_V_data_V_0_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="AXI_video_strm_V_data_V_0_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="AXI_video_strm_V_last_V_0_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="AXI_video_strm_V_last_V_0_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="AXI_video_strm_V_user_V_0_load_A">and, 0, 0, 8, 1, 1</column>
-<column name="AXI_video_strm_V_user_V_0_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_pp1_stage0_01001">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_pp2_stage0_11001">and, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state9_pp2_stage0_iter1">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_529">and, 0, 0, 8, 1, 1</column>
-<column name="ap_predicate_op75_read_state6">and, 0, 0, 8, 1, 1</column>
+<column name="i_V_fu_400_p2">+, 0, 0, 39, 32, 1</column>
+<column name="j_V_fu_411_p2">+, 0, 0, 39, 32, 1</column>
+<column name="AXI_video_strm_V_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="AXI_video_strm_V_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="AXI_video_strm_V_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="AXI_video_strm_V_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="AXI_video_strm_V_user_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="AXI_video_strm_V_user_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state5_pp1_stage0_iter0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state8">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_598">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_676">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op65_read_state5">and, 0, 0, 2, 1, 1</column>
 <column name="AXI_video_strm_V_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_last_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="AXI_video_strm_V_user_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="exitcond2_i_fu_418_p2">icmp, 0, 0, 13, 12, 12</column>
-<column name="exitcond_i_fu_433_p2">icmp, 0, 0, 13, 12, 12</column>
-<column name="ap_block_state1">or, 0, 0, 8, 1, 1</column>
-<column name="ap_block_state6_pp1_stage0_iter1">or, 0, 0, 8, 1, 1</column>
-<column name="brmerge_i_fu_447_p2">or, 0, 0, 8, 1, 1</column>
-<column name="ap_enable_pp1">xor, 0, 0, 8, 1, 2</column>
-<column name="ap_enable_pp2">xor, 0, 0, 8, 1, 2</column>
+<column name="exitcond2_i_fu_395_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="exitcond_i_fu_406_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="ap_block_pp1_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state6_pp1_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="brmerge_i_fu_420_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp1">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp1_iter1">xor, 0, 0, 2, 2, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -118,20 +119,20 @@
 <column name="INPUT_STREAM_TDATA_blk_n">9, 2, 1, 2</column>
 <column name="ap_NS_fsm">44, 9, 1, 9</column>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="ap_enable_reg_pp1_iter1">9, 2, 1, 2</column>
-<column name="ap_enable_reg_pp2_iter1">9, 2, 1, 2</column>
-<column name="ap_phi_mux_axi_last_V_2_i_phi_fu_332_p4">15, 3, 1, 3</column>
-<column name="ap_phi_mux_eol_2_i_phi_fu_355_p4">9, 2, 1, 2</column>
-<column name="ap_phi_mux_eol_i_phi_fu_297_p4">9, 2, 1, 2</column>
-<column name="ap_phi_mux_p_Val2_s_phi_fu_344_p4">15, 3, 32, 96</column>
-<column name="axi_data_V1_i_reg_261">9, 2, 32, 64</column>
-<column name="axi_data_V_1_i_reg_316">9, 2, 32, 64</column>
-<column name="axi_data_V_3_i_reg_375">9, 2, 32, 64</column>
-<column name="axi_last_V1_i_reg_251">9, 2, 1, 2</column>
-<column name="axi_last_V_3_i_reg_363">9, 2, 1, 2</column>
-<column name="eol_2_i_reg_352">9, 2, 1, 2</column>
-<column name="eol_i_reg_293">9, 2, 1, 2</column>
-<column name="eol_reg_305">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp1_iter1">15, 3, 1, 3</column>
+<column name="ap_phi_mux_axi_data_V_1_i_phi_fu_286_p4">9, 2, 32, 64</column>
+<column name="ap_phi_mux_eol_i_phi_fu_309_p4">9, 2, 1, 2</column>
+<column name="ap_phi_mux_eol_phi_fu_275_p4">9, 2, 1, 2</column>
+<column name="ap_phi_mux_p_Val2_s_phi_fu_334_p4">15, 3, 32, 96</column>
+<column name="axi_data_V1_i_reg_251">9, 2, 32, 64</column>
+<column name="axi_data_V_1_i_reg_283">9, 2, 32, 64</column>
+<column name="axi_data_V_3_i_reg_354">9, 2, 32, 64</column>
+<column name="axi_last_V1_i_reg_241">9, 2, 1, 2</column>
+<column name="axi_last_V_2_i_reg_317">15, 3, 1, 3</column>
+<column name="axi_last_V_3_i_reg_342">9, 2, 1, 2</column>
+<column name="eol_2_i_reg_366">9, 2, 1, 2</column>
+<column name="eol_i_reg_305">9, 2, 1, 2</column>
+<column name="eol_reg_272">9, 2, 1, 2</column>
 <column name="img_cols_V_blk_n">9, 2, 1, 2</column>
 <column name="img_cols_V_out_blk_n">9, 2, 1, 2</column>
 <column name="img_data_stream_0_V_blk_n">9, 2, 1, 2</column>
@@ -139,9 +140,10 @@
 <column name="img_data_stream_2_V_blk_n">9, 2, 1, 2</column>
 <column name="img_rows_V_blk_n">9, 2, 1, 2</column>
 <column name="img_rows_V_out_blk_n">9, 2, 1, 2</column>
+<column name="p_Val2_s_reg_330">15, 3, 32, 96</column>
 <column name="real_start">9, 2, 1, 2</column>
-<column name="t_V_2_reg_282">9, 2, 11, 22</column>
-<column name="t_V_reg_271">9, 2, 11, 22</column>
+<column name="t_V_2_reg_294">9, 2, 32, 64</column>
+<column name="t_V_reg_261">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -166,27 +168,29 @@
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp1_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp1_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp2_iter0">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp2_iter1">1, 0, 1, 0</column>
-<column name="axi_data_V1_i_reg_261">32, 0, 32, 0</column>
-<column name="axi_data_V_1_i_reg_316">32, 0, 32, 0</column>
-<column name="axi_data_V_3_i_reg_375">32, 0, 32, 0</column>
-<column name="axi_last_V1_i_reg_251">1, 0, 1, 0</column>
-<column name="axi_last_V_3_i_reg_363">1, 0, 1, 0</column>
-<column name="brmerge_i_reg_533">1, 0, 1, 0</column>
-<column name="eol_2_i_reg_352">1, 0, 1, 0</column>
-<column name="eol_i_reg_293">1, 0, 1, 0</column>
-<column name="eol_reg_305">1, 0, 1, 0</column>
-<column name="exitcond_i_reg_524">1, 0, 1, 0</column>
-<column name="i_V_reg_519">11, 0, 11, 0</column>
-<column name="sof_1_i_fu_180">1, 0, 1, 0</column>
+<column name="axi_data_V1_i_reg_251">32, 0, 32, 0</column>
+<column name="axi_data_V_1_i_reg_283">32, 0, 32, 0</column>
+<column name="axi_data_V_3_i_reg_354">32, 0, 32, 0</column>
+<column name="axi_last_V1_i_reg_241">1, 0, 1, 0</column>
+<column name="axi_last_V_2_i_reg_317">1, 0, 1, 0</column>
+<column name="axi_last_V_3_i_reg_342">1, 0, 1, 0</column>
+<column name="cols_V_reg_460">32, 0, 32, 0</column>
+<column name="eol_2_i_reg_366">1, 0, 1, 0</column>
+<column name="eol_i_reg_305">1, 0, 1, 0</column>
+<column name="eol_reg_272">1, 0, 1, 0</column>
+<column name="exitcond_i_reg_494">1, 0, 1, 0</column>
+<column name="i_V_reg_489">32, 0, 32, 0</column>
+<column name="p_Val2_s_reg_330">32, 0, 32, 0</column>
+<column name="rows_V_reg_455">32, 0, 32, 0</column>
+<column name="sof_1_i_fu_170">1, 0, 1, 0</column>
 <column name="start_once_reg">1, 0, 1, 0</column>
-<column name="t_V_2_reg_282">11, 0, 11, 0</column>
-<column name="t_V_reg_271">11, 0, 11, 0</column>
-<column name="tmp_13_reg_490">12, 0, 12, 0</column>
-<column name="tmp_data_V_reg_495">32, 0, 32, 0</column>
-<column name="tmp_last_V_reg_503">1, 0, 1, 0</column>
-<column name="tmp_reg_485">12, 0, 12, 0</column>
+<column name="t_V_2_reg_294">32, 0, 32, 0</column>
+<column name="t_V_reg_261">32, 0, 32, 0</column>
+<column name="tmp_5_reg_512">8, 0, 8, 0</column>
+<column name="tmp_6_reg_517">8, 0, 8, 0</column>
+<column name="tmp_data_V_reg_465">32, 0, 32, 0</column>
+<column name="tmp_last_V_reg_473">1, 0, 1, 0</column>
+<column name="tmp_reg_507">8, 0, 8, 0</column>
 </table>
 </item>
 </section>

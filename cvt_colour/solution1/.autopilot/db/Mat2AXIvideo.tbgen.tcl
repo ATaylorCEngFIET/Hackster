@@ -1,4 +1,5 @@
 set moduleName Mat2AXIvideo
+set isTaskLevelControl 1
 set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 0
@@ -7,6 +8,7 @@ set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
+set isEnableWaveformDebug 1
 set C_modelName {Mat2AXIvideo}
 set C_modelType { void 0 }
 set C_modelArgList {
@@ -63,7 +65,7 @@ set portList {
 	{ img_data_stream_2_V_read sc_out sc_logic 1 signal 4 } 
 	{ OUTPUT_STREAM_TDATA sc_out sc_lv 32 signal 5 } 
 	{ OUTPUT_STREAM_TVALID sc_out sc_logic 1 outvld 11 } 
-	{ OUTPUT_STREAM_TREADY sc_in sc_logic 1 outacc 11 } 
+	{ OUTPUT_STREAM_TREADY sc_in sc_logic 1 outacc 5 } 
 	{ OUTPUT_STREAM_TKEEP sc_out sc_lv 4 signal 6 } 
 	{ OUTPUT_STREAM_TSTRB sc_out sc_lv 4 signal 7 } 
 	{ OUTPUT_STREAM_TUSER sc_out sc_lv 1 signal 8 } 
@@ -96,7 +98,7 @@ set NewPortList {[
  	{ "name": "img_data_stream_2_V_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "img_data_stream_2_V", "role": "read" }} , 
  	{ "name": "OUTPUT_STREAM_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "AXI_video_strm_V_data_V", "role": "default" }} , 
  	{ "name": "OUTPUT_STREAM_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "AXI_video_strm_V_dest_V", "role": "default" }} , 
- 	{ "name": "OUTPUT_STREAM_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "AXI_video_strm_V_dest_V", "role": "default" }} , 
+ 	{ "name": "OUTPUT_STREAM_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "AXI_video_strm_V_data_V", "role": "default" }} , 
  	{ "name": "OUTPUT_STREAM_TKEEP", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "AXI_video_strm_V_keep_V", "role": "default" }} , 
  	{ "name": "OUTPUT_STREAM_TSTRB", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "AXI_video_strm_V_strb_V", "role": "default" }} , 
  	{ "name": "OUTPUT_STREAM_TUSER", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "AXI_video_strm_V_user_V", "role": "default" }} , 
@@ -107,12 +109,17 @@ set NewPortList {[
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "Mat2AXIvideo",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "4008001",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "img_rows_V", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "0", "DependentChan" : "0",
 				"BlockSignal" : [
@@ -172,11 +179,11 @@ set Spec2ImplPortList {
 	img_data_stream_0_V { ap_fifo {  { img_data_stream_0_V_dout fifo_data 0 8 }  { img_data_stream_0_V_empty_n fifo_status 0 1 }  { img_data_stream_0_V_read fifo_update 1 1 } } }
 	img_data_stream_1_V { ap_fifo {  { img_data_stream_1_V_dout fifo_data 0 8 }  { img_data_stream_1_V_empty_n fifo_status 0 1 }  { img_data_stream_1_V_read fifo_update 1 1 } } }
 	img_data_stream_2_V { ap_fifo {  { img_data_stream_2_V_dout fifo_data 0 8 }  { img_data_stream_2_V_empty_n fifo_status 0 1 }  { img_data_stream_2_V_read fifo_update 1 1 } } }
-	AXI_video_strm_V_data_V { axis {  { OUTPUT_STREAM_TDATA out_data 1 32 } } }
+	AXI_video_strm_V_data_V { axis {  { OUTPUT_STREAM_TDATA out_data 1 32 }  { OUTPUT_STREAM_TREADY out_acc 0 1 } } }
 	AXI_video_strm_V_keep_V { axis {  { OUTPUT_STREAM_TKEEP out_data 1 4 } } }
 	AXI_video_strm_V_strb_V { axis {  { OUTPUT_STREAM_TSTRB out_data 1 4 } } }
 	AXI_video_strm_V_user_V { axis {  { OUTPUT_STREAM_TUSER out_data 1 1 } } }
 	AXI_video_strm_V_last_V { axis {  { OUTPUT_STREAM_TLAST out_data 1 1 } } }
 	AXI_video_strm_V_id_V { axis {  { OUTPUT_STREAM_TID out_data 1 1 } } }
-	AXI_video_strm_V_dest_V { axis {  { OUTPUT_STREAM_TVALID out_vld 1 1 }  { OUTPUT_STREAM_TREADY out_acc 0 1 }  { OUTPUT_STREAM_TDEST out_data 1 1 } } }
+	AXI_video_strm_V_dest_V { axis {  { OUTPUT_STREAM_TVALID out_vld 1 1 }  { OUTPUT_STREAM_TDEST out_data 1 1 } } }
 }

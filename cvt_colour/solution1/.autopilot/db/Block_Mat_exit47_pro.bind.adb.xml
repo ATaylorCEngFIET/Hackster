@@ -13,7 +13,7 @@
 <operation id="2" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -28,7 +28,7 @@ entry:0  call void (...)* @_ssdm_op_SpecInterface(i32* %img_2_cols_V_out, [8 x i
 <operation id="3" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -43,7 +43,7 @@ entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %img_2_rows_V_out, [8 x i
 <operation id="4" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -58,7 +58,7 @@ entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %img_1_cols_V_out, [8 x i
 <operation id="5" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -73,7 +73,7 @@ entry:3  call void (...)* @_ssdm_op_SpecInterface(i32* %img_1_rows_V_out, [8 x i
 <operation id="6" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -88,7 +88,7 @@ entry:4  call void (...)* @_ssdm_op_SpecInterface(i32* %img_0_cols_V_out, [8 x i
 <operation id="7" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -103,7 +103,7 @@ entry:5  call void (...)* @_ssdm_op_SpecInterface(i32* %img_0_rows_V_out, [8 x i
 <operation id="8" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -118,7 +118,7 @@ entry:6  %cols_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %cols)
 <operation id="9" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -133,7 +133,7 @@ entry:7  %rows_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %rows)
 <operation id="10" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -148,7 +148,7 @@ entry:8  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %img_0_rows_V_out, i32 %row
 <operation id="11" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -163,7 +163,7 @@ entry:9  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %img_0_cols_V_out, i32 %col
 <operation id="12" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -178,7 +178,7 @@ entry:10  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %img_1_rows_V_out, i32 %ro
 <operation id="13" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -193,7 +193,7 @@ entry:11  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %img_1_cols_V_out, i32 %co
 <operation id="14" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -208,7 +208,7 @@ entry:12  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %img_2_rows_V_out, i32 %ro
 <operation id="15" st_id="1" stage="1" lat="1">
 <core>FIFO</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
@@ -223,7 +223,7 @@ entry:13  call void @_ssdm_op_Write.ap_fifo.i32P(i32* %img_2_cols_V_out, i32 %co
 <operation id="16" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="0">
+<condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 

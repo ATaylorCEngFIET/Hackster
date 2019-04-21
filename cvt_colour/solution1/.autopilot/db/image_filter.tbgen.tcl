@@ -1,14 +1,5 @@
-set C_TypeInfoList {{ 
-"image_filter" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"INPUT_STREAM": [[], {"reference": "0"}] }, {"OUTPUT_STREAM": [[], {"reference": "0"}] }, {"rows": [[], {"scalar": "int"}] }, {"cols": [[], {"scalar": "int"}] }],[],""], 
-"0": [ "AXI_STREAM", {"typedef": [[[],"1"],""]}], 
-"1": [ "stream<ap_axiu<32, 1, 1, 1> >", {"hls_type": {"stream": [[[[],"2"]],"3"]}}], 
-"2": [ "ap_axiu<32, 1, 1, 1>", {"struct": [[],[{"D":[[], {"scalar": { "int": 32}}]},{"U":[[], {"scalar": { "int": 1}}]},{"TI":[[], {"scalar": { "int": 1}}]},{"TD":[[], {"scalar": { "int": 1}}]}],[{ "data": [[], "4"]},{ "keep": [[], "5"]},{ "strb": [[], "5"]},{ "user": [[], "6"]},{ "last": [[], "6"]},{ "id": [[], "6"]},{ "dest": [[], "6"]}],""]}], 
-"4": [ "ap_uint<32>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 32}}]],""]}}], 
-"5": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}], 
-"6": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
-"3": ["hls", ""]
-}}
 set moduleName image_filter
+set isTaskLevelControl 1
 set isCombinational 0
 set isDatapathOnly 0
 set isPipelined 1
@@ -17,6 +8,7 @@ set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
+set isEnableWaveformDebug 1
 set C_modelName {image_filter}
 set C_modelType { void 0 }
 set C_modelArgList {
@@ -75,12 +67,12 @@ set portList {
 	{ cols sc_in sc_lv 32 signal 15 } 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
+	{ ap_start sc_in sc_logic 1 start -1 } 
 	{ INPUT_STREAM_TVALID sc_in sc_logic 1 invld 6 } 
 	{ INPUT_STREAM_TREADY sc_out sc_logic 1 inacc 6 } 
 	{ OUTPUT_STREAM_TVALID sc_out sc_logic 1 outvld 13 } 
 	{ OUTPUT_STREAM_TREADY sc_in sc_logic 1 outacc 13 } 
 	{ ap_done sc_out sc_logic 1 predone -1 } 
-	{ ap_start sc_in sc_logic 1 start -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 }
@@ -103,27 +95,32 @@ set NewPortList {[
  	{ "name": "cols", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "cols", "role": "default" }} , 
  	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
+ 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
  	{ "name": "INPUT_STREAM_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "INPUT_STREAM_V_dest_V", "role": "default" }} , 
  	{ "name": "INPUT_STREAM_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "INPUT_STREAM_V_dest_V", "role": "default" }} , 
  	{ "name": "OUTPUT_STREAM_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "OUTPUT_STREAM_V_dest_V", "role": "default" }} , 
  	{ "name": "OUTPUT_STREAM_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "OUTPUT_STREAM_V_dest_V", "role": "default" }} , 
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
- 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"],
 		"CDFG" : "image_filter",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"FunctionPipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
+		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "10", "EstimateLatencyMax" : "4012005",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "1",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
 		"InputProcess" : [
-			{"ID" : "2", "Name" : "AXIvideo2Mat_U0", "ReadyCount" : "AXIvideo2Mat_U0_ap_ready_count"},
-			{"ID" : "1", "Name" : "Block_Mat_exit47_pro_U0", "ReadyCount" : "Block_Mat_exit47_pro_U0_ap_ready_count"}],
+			{"ID" : "1", "Name" : "Block_Mat_exit47_pro_U0", "ReadyCount" : "Block_Mat_exit47_pro_U0_ap_ready_count"},
+			{"ID" : "2", "Name" : "AXIvideo2Mat_U0", "ReadyCount" : "AXIvideo2Mat_U0_ap_ready_count"}],
 		"OutputProcess" : [
 			{"ID" : "8", "Name" : "Mat2AXIvideo_U0"}],
 		"Port" : [
@@ -173,12 +170,17 @@ set RtlHierarchyInfo {[
 			{"Name" : "cols", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Block_Mat_exit47_pro_U0", "Parent" : "0",
 		"CDFG" : "Block_Mat_exit47_pro",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "rows", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cols", "Type" : "None", "Direction" : "I"},
@@ -202,12 +204,17 @@ set RtlHierarchyInfo {[
 					{"Name" : "img_2_cols_V_out_blk_n", "Type" : "RtlSignal"}]}]},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.AXIvideo2Mat_U0", "Parent" : "0",
 		"CDFG" : "AXIvideo2Mat",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "4010003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "AXI_video_strm_V_data_V", "Type" : "Axis", "Direction" : "I",
 				"BlockSignal" : [
@@ -241,12 +248,17 @@ set RtlHierarchyInfo {[
 					{"Name" : "img_cols_V_out_blk_n", "Type" : "RtlSignal"}]}]},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CvtColor_1_U0", "Parent" : "0", "Child" : ["4", "5", "6"],
 		"CDFG" : "CvtColor_1",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "4012001",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"StartSource" : "2",
 		"StartFifo" : "start_for_CvtColog8j_U",
 		"Port" : [
@@ -273,12 +285,17 @@ set RtlHierarchyInfo {[
 	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.CvtColor_1_U0.image_filter_mac_dEe_U25", "Parent" : "3"},
 	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.CvtColor_U0", "Parent" : "0",
 		"CDFG" : "CvtColor",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "4006001",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"StartSource" : "1",
 		"StartFifo" : "start_for_CvtColoeOg_U",
 		"Port" : [
@@ -302,12 +319,17 @@ set RtlHierarchyInfo {[
 					{"Name" : "p_dst_data_stream_2_V_blk_n", "Type" : "RtlSignal"}]}]},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Mat2AXIvideo_U0", "Parent" : "0",
 		"CDFG" : "Mat2AXIvideo",
+		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
-		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "4008001",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
-		"VariableLatency" : "1",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "1",
+		"HasNonBlockingOperation" : "0",
 		"StartSource" : "1",
 		"StartFifo" : "start_for_Mat2AXIfYi_U",
 		"Port" : [
@@ -357,13 +379,13 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	image_filter {
-		INPUT_STREAM_V_data_V {Type I LastRead 7 FirstWrite -1}
-		INPUT_STREAM_V_keep_V {Type I LastRead 7 FirstWrite -1}
-		INPUT_STREAM_V_strb_V {Type I LastRead 7 FirstWrite -1}
-		INPUT_STREAM_V_user_V {Type I LastRead 7 FirstWrite -1}
-		INPUT_STREAM_V_last_V {Type I LastRead 7 FirstWrite -1}
-		INPUT_STREAM_V_id_V {Type I LastRead 7 FirstWrite -1}
-		INPUT_STREAM_V_dest_V {Type I LastRead 7 FirstWrite -1}
+		INPUT_STREAM_V_data_V {Type I LastRead 6 FirstWrite -1}
+		INPUT_STREAM_V_keep_V {Type I LastRead 6 FirstWrite -1}
+		INPUT_STREAM_V_strb_V {Type I LastRead 6 FirstWrite -1}
+		INPUT_STREAM_V_user_V {Type I LastRead 6 FirstWrite -1}
+		INPUT_STREAM_V_last_V {Type I LastRead 6 FirstWrite -1}
+		INPUT_STREAM_V_id_V {Type I LastRead 6 FirstWrite -1}
+		INPUT_STREAM_V_dest_V {Type I LastRead 6 FirstWrite -1}
 		OUTPUT_STREAM_V_data_V {Type O LastRead -1 FirstWrite 3}
 		OUTPUT_STREAM_V_keep_V {Type O LastRead -1 FirstWrite 3}
 		OUTPUT_STREAM_V_strb_V {Type O LastRead -1 FirstWrite 3}
@@ -383,13 +405,13 @@ set ArgLastReadFirstWriteLatency {
 		img_2_rows_V_out {Type O LastRead -1 FirstWrite 0}
 		img_2_cols_V_out {Type O LastRead -1 FirstWrite 0}}
 	AXIvideo2Mat {
-		AXI_video_strm_V_data_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_keep_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_strb_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_user_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_last_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_id_V {Type I LastRead 7 FirstWrite -1}
-		AXI_video_strm_V_dest_V {Type I LastRead 7 FirstWrite -1}
+		AXI_video_strm_V_data_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_keep_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_strb_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_user_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_last_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_id_V {Type I LastRead 6 FirstWrite -1}
+		AXI_video_strm_V_dest_V {Type I LastRead 6 FirstWrite -1}
 		img_rows_V {Type I LastRead 0 FirstWrite -1}
 		img_cols_V {Type I LastRead 0 FirstWrite -1}
 		img_data_stream_0_V {Type O LastRead -1 FirstWrite 5}
@@ -428,8 +450,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "10", "Max" : "4014004"}
-	, {"Name" : "Interval", "Min" : "4", "Max" : "4014004"}
+	{"Name" : "Latency", "Min" : "10", "Max" : "4012005"}
+	, {"Name" : "Interval", "Min" : "4", "Max" : "4012002"}
 ]}
 
 set PipelineEnableSignalInfo {[

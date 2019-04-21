@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {OUTPUT_STREAM} \
     metadata {  } \
     op interface \
-    ports { OUTPUT_STREAM_TDATA { O 32 vector } } \
+    ports { OUTPUT_STREAM_TDATA { O 32 vector } OUTPUT_STREAM_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_data_V'"
@@ -132,7 +132,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {OUTPUT_STREAM} \
     metadata {  } \
     op interface \
-    ports { OUTPUT_STREAM_TVALID { O 1 bit } OUTPUT_STREAM_TREADY { I 1 bit } OUTPUT_STREAM_TDEST { O 1 vector } } \
+    ports { OUTPUT_STREAM_TVALID { O 1 bit } OUTPUT_STREAM_TDEST { O 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'AXI_video_strm_V_dest_V'"

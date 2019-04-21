@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'CvtColor_1' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[51] ('r.V', C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1493->C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1534->C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1972) [45]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[51] ('ret.V', C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1497->C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1534->C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1972) [51]  (3.02 ns)&#xD;&#xA;&#x9;'add' operation of DSP[53] ('ret.V', C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1497->C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1534->C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:1972) [53]  (3.02 ns)" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:55.021+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:55.011+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'CvtColor.1' to 'CvtColor_1'." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:53.483+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block_Mat.exit47_pro' to 'Block_Mat_exit47_pro'." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:53.453+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'Block_Mat.exit47_proc' to 'Block_Mat.exit47_pro' (cvt_colour/cvt_colour.cpp:11)" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:53.419+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat&lt;32, 2000, 2000, 4096>' to 'AXIvideo2Mat' (C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:49:9)" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:52.482+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 2000, 2000>' to 'CvtColor.1' (C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:409:39)" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:52.471+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor&lt;HLS_GRAY2RGB, 0, 4096, 2000, 2000>' to 'CvtColor' (C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:672:39)" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:52.461+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo&lt;32, 2000, 2000, 4096>' to 'Mat2AXIvideo' (C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:78:50)" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:52.452+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (cvt_colour/cvt_colour.cpp:11)." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:49.928+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_1.data_stream.V' (cvt_colour/cvt_colour.cpp:12)." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:49.731+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_2.data_stream.V' (cvt_colour/cvt_colour.cpp:13)." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:49.722+0100" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] C:/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:49.315+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'test.bmp'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:19.363+0100" type="Warning"/>
+        <logs message="WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.&#xD;&#xA;Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:&#xD;&#xA;&#xD;&#xA;1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.&#xD;&#xA;&#xD;&#xA;2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'&#xD;&#xA;" projectName="cvt_colour" solutionName="solution1" date="2019-04-09T13:09:18.309+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="WARNING: Ignoring invalid XILINX_PATH location C:\Xilinx\Vivado\2017.4\patches\AR70530\vivado.&#xD;&#xA;Resolution: An invalid XILINX_PATH location has been detected. To resolve this issue:&#xD;&#xA;&#xD;&#xA;1. Verify the value of XILINX_PATH is accurate by viewing the value the variable via 'set XILINX_PATH' for Windows or 'echo $XILINX_PATH' for Linux, and update it as needed.&#xD;&#xA;&#xD;&#xA;2. To unset the variable using on Windows using 'set XILINX_PATH=' or remove it from Advanced System Settings\Environment Variables. On Linux 'unsetenv XILINX_PATH'&#xD;&#xA;" projectName="cvt_colour" solutionName="solution1" date="2019-04-11T10:09:21.171+0100" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

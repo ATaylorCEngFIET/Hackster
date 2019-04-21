@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'image_filter'" level="0">
-<item name = "Date">Thu May 31 13:28:39 2018
+<item name = "Date">Tue Apr  9 13:09:59 2019
 </item>
-<item name = "Version">2017.4_AR70530_AR70530 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">cvt_colour</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.40, 1.25</column>
+<column name="ap_clk">10.00, 9.400, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">10, 4014004, 4, 4014004, dataflow</column>
+<column name="">10, 4012005, 4, 4012002, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 4014003, 3, 4014003, none</column>
-<column name="CvtColor_1_U0">CvtColor_1, 1, 4012001, 1, 4012001, none</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 4010003, 3, 4010003, none</column>
 <column name="Mat2AXIvideo_U0">Mat2AXIvideo, 1, 4008001, 1, 4008001, none</column>
+<column name="CvtColor_1_U0">CvtColor_1, 1, 4012001, 1, 4012001, none</column>
 <column name="CvtColor_U0">CvtColor, 1, 4006001, 1, 4006001, none</column>
 <column name="Block_Mat_exit47_pro_U0">Block_Mat_exit47_pro, 0, 0, 0, 0, none</column>
 </table>
@@ -52,25 +52,25 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 76</column>
+<column name="Expression">-, -, 0, 34</column>
 <column name="FIFO">0, -, 75, 492</column>
-<column name="Instance">0, 3, 851, 1719</column>
+<column name="Instance">0, 3, 1252, 1685</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 36</column>
 <column name="Register">-, -, 6, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">0, 1, ~0, 4</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, 1, 4</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 290, 591</column>
-<column name="Block_Mat_exit47_pro_U0">Block_Mat_exit47_pro, 0, 0, 3, 80</column>
-<column name="CvtColor_U0">CvtColor, 0, 0, 105, 235</column>
-<column name="CvtColor_1_U0">CvtColor_1, 0, 3, 280, 317</column>
-<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 173, 496</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 447, 570</column>
+<column name="Block_Mat_exit47_pro_U0">Block_Mat_exit47_pro, 0, 0, 3, 74</column>
+<column name="CvtColor_U0">CvtColor, 0, 0, 165, 245</column>
+<column name="CvtColor_1_U0">CvtColor_1, 0, 3, 340, 309</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 297, 487</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -83,34 +83,34 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
-<column name="img_0_cols_V_c18_U">0, 5, 44, 1, 32, 32</column>
-<column name="img_0_cols_V_c_U">0, 5, 44, 1, 32, 32</column>
-<column name="img_0_data_stream_0_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_0_data_stream_1_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_0_data_stream_2_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_0_rows_V_c17_U">0, 5, 44, 1, 32, 32</column>
-<column name="img_0_rows_V_c_U">0, 5, 44, 1, 32, 32</column>
-<column name="img_1_cols_V_c_U">0, 5, 44, 3, 32, 96</column>
-<column name="img_1_data_stream_0_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_1_rows_V_c_U">0, 5, 44, 3, 32, 96</column>
-<column name="img_2_cols_V_c_U">0, 5, 44, 4, 32, 128</column>
-<column name="img_2_data_stream_0_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_2_data_stream_1_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_2_data_stream_2_U">0, 5, 20, 1, 8, 8</column>
-<column name="img_2_rows_V_c_U">0, 5, 44, 4, 32, 128</column>
+<column name="img_0_cols_V_c18_U">0, 5, 44, 2, 32, 64</column>
+<column name="img_0_cols_V_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="img_0_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_0_data_stream_1_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_0_data_stream_2_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_0_rows_V_c17_U">0, 5, 44, 2, 32, 64</column>
+<column name="img_0_rows_V_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="img_1_cols_V_c_U">0, 5, 44, 4, 32, 128</column>
+<column name="img_1_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_1_rows_V_c_U">0, 5, 44, 4, 32, 128</column>
+<column name="img_2_cols_V_c_U">0, 5, 44, 5, 32, 160</column>
+<column name="img_2_data_stream_0_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_2_data_stream_1_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_2_data_stream_2_U">0, 5, 20, 2, 8, 16</column>
+<column name="img_2_rows_V_c_U">0, 5, 44, 5, 32, 160</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="AXIvideo2Mat_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
 <column name="Block_Mat_exit47_pro_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
-<column name="AXIvideo2Mat_U0_ap_start">and, 0, 0, 8, 1, 1</column>
-<column name="Block_Mat_exit47_pro_U0_ap_start">and, 0, 0, 8, 1, 1</column>
-<column name="Block_Mat_exit47_pro_U0_start_full_n">and, 0, 0, 8, 1, 1</column>
-<column name="ap_idle">and, 0, 0, 8, 1, 1</column>
-<column name="ap_sync_ready">and, 0, 0, 8, 1, 1</column>
-<column name="ap_sync_AXIvideo2Mat_U0_ap_ready">or, 0, 0, 8, 1, 1</column>
-<column name="ap_sync_Block_Mat_exit47_pro_U0_ap_ready">or, 0, 0, 8, 1, 1</column>
+<column name="AXIvideo2Mat_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Block_Mat_exit47_pro_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Block_Mat_exit47_pro_U0_start_full_n">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_AXIvideo2Mat_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_Block_Mat_exit47_pro_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -158,8 +158,8 @@
 <column name="cols">in, 32, ap_none, cols, scalar</column>
 <column name="ap_clk">in, 1, ap_ctrl_hs, image_filter, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_hs, image_filter, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, image_filter, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, image_filter, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, image_filter, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, image_filter, return value</column>
 </table>

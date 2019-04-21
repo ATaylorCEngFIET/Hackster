@@ -2,12 +2,13 @@
 
 # FIFO definition:
 set ID 53
-set FifoName fifo_w32_d1_A
+set FifoName fifo_w32_d2_A
+set InstName img_0_rows_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 32
 set AddrWd 1
 set FullThresh 0
@@ -17,7 +18,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -45,6 +46,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -66,12 +68,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 54
-set FifoName fifo_w32_d1_A
+set FifoName fifo_w32_d2_A
+set InstName img_0_cols_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 32
 set AddrWd 1
 set FullThresh 0
@@ -81,7 +84,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -109,6 +112,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -130,12 +134,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 55
-set FifoName fifo_w32_d3_A
+set FifoName fifo_w32_d4_A
+set InstName img_1_rows_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 3
+set Depth 4
 set DataWd 32
 set AddrWd 2
 set FullThresh 0
@@ -145,7 +150,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -173,6 +178,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -194,12 +200,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 56
-set FifoName fifo_w32_d3_A
+set FifoName fifo_w32_d4_A
+set InstName img_1_cols_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 3
+set Depth 4
 set DataWd 32
 set AddrWd 2
 set FullThresh 0
@@ -209,7 +216,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -237,6 +244,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -258,14 +266,15 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 57
-set FifoName fifo_w32_d4_A
+set FifoName fifo_w32_d5_A
+set InstName img_2_rows_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 4
+set Depth 5
 set DataWd 32
-set AddrWd 2
+set AddrWd 3
 set FullThresh 0
 set impl_style auto
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -273,7 +282,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -301,6 +310,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -322,14 +332,15 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 58
-set FifoName fifo_w32_d4_A
+set FifoName fifo_w32_d5_A
+set InstName img_2_cols_V_c_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 4
+set Depth 5
 set DataWd 32
-set AddrWd 2
+set AddrWd 3
 set FullThresh 0
 set impl_style auto
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -337,7 +348,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -365,6 +376,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -386,12 +398,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 59
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_0_data_stream_0_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -401,7 +414,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -429,6 +442,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -450,12 +464,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 60
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_0_data_stream_1_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -465,7 +480,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -493,6 +508,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -514,12 +530,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 61
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_0_data_stream_2_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -529,7 +546,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -557,6 +574,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -578,12 +596,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 62
-set FifoName fifo_w32_d1_A
+set FifoName fifo_w32_d2_A
+set InstName img_0_rows_V_c17_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 32
 set AddrWd 1
 set FullThresh 0
@@ -593,7 +612,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -621,6 +640,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -642,12 +662,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 63
-set FifoName fifo_w32_d1_A
+set FifoName fifo_w32_d2_A
+set InstName img_0_cols_V_c18_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 32
 set AddrWd 1
 set FullThresh 0
@@ -657,7 +678,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -685,6 +706,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -706,12 +728,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 64
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_1_data_stream_0_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -721,7 +744,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -749,6 +772,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -770,12 +794,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 65
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_2_data_stream_0_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -785,7 +810,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -813,6 +838,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -834,12 +860,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 66
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_2_data_stream_1_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -849,7 +876,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -877,6 +904,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -898,12 +926,13 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 # FIFO definition:
 set ID 67
-set FifoName fifo_w8_d1_A
+set FifoName fifo_w8_d2_A
+set InstName img_2_data_stream_2_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 1
+set Depth 2
 set DataWd 8
 set AddrWd 1
 set FullThresh 0
@@ -913,7 +942,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -941,6 +970,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -963,11 +993,12 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 # FIFO definition:
 set ID 68
 set FifoName start_for_CvtColoeOg
+set InstName start_for_CvtColoeOg_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 3
+set Depth 4
 set DataWd 1
 set AddrWd 2
 set FullThresh 0
@@ -977,7 +1008,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -1005,6 +1036,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -1027,13 +1059,14 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 # FIFO definition:
 set ID 69
 set FifoName start_for_Mat2AXIfYi
+set InstName start_for_Mat2AXIfYi_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
 set DualClock 0
-set Depth 4
+set Depth 5
 set DataWd 1
-set AddrWd 2
+set AddrWd 3
 set FullThresh 0
 set impl_style auto
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -1041,7 +1074,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -1069,6 +1102,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \
@@ -1091,6 +1125,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 # FIFO definition:
 set ID 70
 set FifoName start_for_CvtColog8j
+set InstName start_for_CvtColog8j_U
 set CoreName ap_simcore_fifo
 set NumOfStage 2
 set RegisteredInput 0
@@ -1105,7 +1140,7 @@ if {[info proc ap_gen_simcore_fifo] == "ap_gen_simcore_fifo"} {
 eval "ap_gen_simcore_fifo { \
     id ${ID} \
     name ${FifoName} \
-    corename ${CoreName} \
+    instname ${InstName}    corename ${CoreName} \
     op fifo \
     stage_num ${NumOfStage} \
     registered_input ${RegisteredInput} \
@@ -1133,6 +1168,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_FIFO] == "::AESL_LIB_VIRTEX::xil_gen_F
 eval "::AESL_LIB_VIRTEX::xil_gen_FIFO { \
     id ${ID} \
     name ${FifoName} \
+    instname ${InstName}
     corename FIFO \
     op fifo \
     stage_num ${NumOfStage} \

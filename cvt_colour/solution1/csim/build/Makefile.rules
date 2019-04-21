@@ -2,7 +2,7 @@
 #
 # Makefile rules for autopilot SystemC simulation flow
 #
-#-  (c) Copyright 2011-2017 Xilinx, Inc. All rights reserved.
+#-  (c) Copyright 2011-2018 Xilinx, Inc. All rights reserved.
 #-
 #-  This file contains confidential and proprietary information
 #-  of Xilinx, Inc. and is protected under U.S. and
@@ -101,27 +101,35 @@ ifndef HLS_SYSTEMC_HOME
 endif
 
 ifndef HLS_SYSTEMC_LIB_PATH
-  HLS_SYSTEMC_LIB_PATH = $(AUTOPILOT_TOOL)/systemc/lib
-endif
-
-ifndef HLS_FPO_LIB_PATH
-  ifdef __HLS_FPO_v6_1__
-    HLS_FPO_LIB_PATH = $(AUTOPILOT_TOOL)/fpo_v6_1
-  else
-    ifdef __HLS_FPO_v6_2__
-      HLS_FPO_LIB_PATH = $(AUTOPILOT_TOOL)/fpo_v6_2
+  ifeq ($(AUTOPILOT_MACH),win64)
+    ifdef __USE_CLANG__
+      HLS_SYSTEMC_LIB_PATH = $(AUTOPILOT_TOOL)/systemc/clang
     else
-      HLS_FPO_LIB_PATH = $(AUTOPILOT_TOOL)/fpo_v7_0
+      HLS_SYSTEMC_LIB_PATH = $(AUTOPILOT_TOOL)/systemc/gcc
     endif
+  else
+    HLS_SYSTEMC_LIB_PATH = $(AUTOPILOT_TOOL)/systemc/lib
   endif
 endif
 
+ifndef HLS_FPO_LIB_PATH
+   HLS_FPO_LIB_PATH = $(AUTOPILOT_TOOL)/fpo_v7_0
+endif
+
 ifndef HLS_OPENCV_LIB_PATH
-  HLS_OPENCV_LIB_PATH = $(AUTOPILOT_TOOL)/opencv
+  ifneq ($(AUTOPILOT_MACH),win64)
+    #ifdef __USE_CLANG__
+    #  HLS_OPENCV_LIB_PATH = $(AUTOPILOT_TOOL)/opencv/opencv_clang
+    #else
+      HLS_OPENCV_LIB_PATH = $(AUTOPILOT_TOOL)/opencv/opencv_gcc
+    #endif
+  else
+    HLS_OPENCV_LIB_PATH = $(AUTOPILOT_TOOL)/opencv
+  endif
 endif
 
 ifndef HLS_FFT_LIB_PATH
-  HLS_FFT_LIB_PATH = $(AUTOPILOT_TOOL)/fft_v9_0
+  HLS_FFT_LIB_PATH = $(AUTOPILOT_TOOL)/fft_v9_1
 endif
 
 ifndef HLS_FIR_LIB_PATH
@@ -186,16 +194,32 @@ LFLAG += -Wl,-rpath,"$(SYSCLIB)" -L "$(SYSCLIB)" -lsystemc -lpthread
 ifdef __SIM_MATHHLS__
 
   ifdef __USE_CLANG__ 
-    LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39
+    ifeq ($(AUTOPILOT_MACH),win64)
+      LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39-x64
+    else
+      LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39
+    endif
   else 
-    LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-GCC46
+    ifeq ($(AUTOPILOT_MACH),win64)
+      LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-GCC62-x64
+    else
+      LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-GCC46
+    endif
   endif
 
   ifndef __SIM_MATHSTD__ 
     ifdef __USE_CLANG__ 
-      LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-CLANG39
-    else 
-      LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-GCC46
+      ifeq ($(AUTOPILOT_MACH),win64)
+        LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-CLANG39-x64
+      else
+        LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-CLANG39
+      endif
+    else
+      ifeq ($(AUTOPILOT_MACH),win64)
+        LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-GCC62-x64
+      else
+        LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-GCC46
+      endif
     endif
   endif
 
@@ -203,16 +227,7 @@ ifdef __SIM_MATHHLS__
 endif
 
 ifdef __SIM_FPO__
-#LFLAG += -L "$(FPOLIB)" -lgmp -lmpfr -lIp_floating_point_v6_1_bitacc_cmodel -z muldefs
-  ifdef __HLS_FPO_v6_1__
-    LFLAG += -Wl,-rpath,"$(FPOLIB)" -L "$(FPOLIB)" -lgmp -lmpfr -lIp_floating_point_v6_1_bitacc_cmodel
-  else
-    ifdef __HLS_FPO_v6_2__
-      LFLAG += -Wl,-rpath,"$(FPOLIB)" -L "$(FPOLIB)" -lgmp -lmpfr -lIp_floating_point_v6_2_bitacc_cmodel
-    else
-      LFLAG += -Wl,-rpath,"$(FPOLIB)" -L "$(FPOLIB)" -lgmp -lmpfr -lIp_floating_point_v7_0_bitacc_cmodel
-    endif
-  endif
+   LFLAG += -Wl,-rpath,"$(FPOLIB)" -L "$(FPOLIB)" -lgmp -lmpfr -lIp_floating_point_v7_0_bitacc_cmodel
 endif
 
 ifdef __SIM_OPENCV__
@@ -220,12 +235,13 @@ ifdef __SIM_OPENCV__
     LFLAG += -Wl,-rpath,"$(OPENCVLIB)" -L "$(OPENCVLIB)" -lopencv_calib3d -lopencv_contrib -lopencv_core -lopencv_features2d -lopencv_flann -lopencv_gpu -lopencv_highgui -lopencv_imgproc -lopencv_legacy -lopencv_ml -lopencv_objdetect -lopencv_photo -lopencv_stitching -lopencv_superres -lopencv_ts -lopencv_video -lopencv_videostab
   else
     CV_VER = 245
-    LFLAG += -Wl,-rpath,"$(OPENCVLIB)" -L "$(OPENCVLIB)" -lopencv_calib3d$(CV_VER) -lopencv_contrib$(CV_VER) -lopencv_core$(CV_VER) -lopencv_features2d$(CV_VER) -lopencv_flann$(CV_VER) -lopencv_gpu$(CV_VER) -lopencv_highgui$(CV_VER) -lopencv_imgproc$(CV_VER) -lopencv_legacy$(CV_VER) -lopencv_ml$(CV_VER) -lopencv_objdetect$(CV_VER) -lopencv_photo$(CV_VER) -lopencv_stitching$(CV_VER) -lopencv_superres$(CV_VER) -lopencv_video$(CV_VER) -lopencv_videostab$(CV_VER)
+    #delete lopencv_superres245 for win64
+    LFLAG += -Wl,-rpath,"$(OPENCVLIB)" -L "$(OPENCVLIB)" -lopencv_calib3d$(CV_VER) -lopencv_contrib$(CV_VER) -lopencv_core$(CV_VER) -lopencv_features2d$(CV_VER) -lopencv_flann$(CV_VER) -lopencv_gpu$(CV_VER) -lopencv_highgui$(CV_VER) -lopencv_imgproc$(CV_VER) -lopencv_legacy$(CV_VER) -lopencv_ml$(CV_VER) -lopencv_objdetect$(CV_VER) -lopencv_photo$(CV_VER) -lopencv_stitching$(CV_VER) -lopencv_video$(CV_VER) -lopencv_videostab$(CV_VER)
   endif
 endif
 
 ifdef __SIM_FFT__
-  LFLAG += -Wl,-rpath,"$(FFTLIB)" -L "$(FFTLIB)" -lIp_xfft_v9_0_bitacc_cmodel
+  LFLAG += -Wl,-rpath,"$(FFTLIB)" -L "$(FFTLIB)" -lIp_xfft_v9_1_bitacc_cmodel
   export LD_LIBRARY_PATH := ${LD_LIBRARY_PATH}:$(FFTLIB)
 endif
 
@@ -349,7 +365,11 @@ CPPFLAGS += -m32
 LDFLAGS += -m32
 endif
 
+ifdef __USE_CLANG__
+CXX.Flags += $(CXXFLAGS) -fpermissive $(ExtraCXXFlags) $(TOOLCHAIN)
+else
 CXX.Flags += $(CXXFLAGS) -fpermissive $(ExtraCXXFlags)
+endif
 C.Flags   += $(CFLAGS) $(ExtraCFlags)
 CPP.Flags += $(CPPFLAGS) 
 LD.Flags  += $(LDFLAGS) $(ExtraLDFlags)
@@ -358,6 +378,11 @@ LibTool.Flags := --tag=CXX
 #CompileCommonOpts := -Wall -W -Wwrite-strings -Wno-unused
 CompileCommonOpts := 
 
+ifdef __USE_CLANG__
+ifdef __COSIM_FLOW__
+#CompileCommonOpts += -D_GLIBCXX_USE_CXX11_ABI=0
+endif
+endif
 
 #-------------- C/C++ to binary ----------------------------------------
 Compile.C     = $(CC) $(CPP.Flags) $(CompileCommonOpts) -c $(C.Flags)
@@ -412,9 +437,9 @@ $(ObjDir)/%.o: %.c $(ObjDir)/.dir
 Extra.BCCPP.Flags += -emit-llvm -DAUTOPILOT_BC_SIM
 BCC.Flags = $(CPP.Flags) $(CompileCommonOpts) $(C.Flags) $(Extra.BCCPP.Flags)
 BCCXX.Flags = $(CPP.Flags) $(CompileCommonOpts) $(CXX.Flags) $(Extra.BCCPP.Flags)
-Compile.BCC   = clang -hls $(BCC.Flags) -c -emit-llvm 
-Compile.BCCXX = clang++ -hls $(BCCXX.Flags) -c -emit-llvm
-Compile.BCLD  = llvm-ld -disable-inlining
+Compile.BCC   = $(AUTOPILOT_TOOL)/clang/bin/clang -hls $(BCC.Flags) -c -emit-llvm 
+Compile.BCCXX = $(AUTOPILOT_TOOL)/clang/bin/clang++ -hls $(BCCXX.Flags) -c -emit-llvm
+Compile.BCLD  = $(AUTOPILOT_TOOL)/clang/bin/llvm-ld -disable-inlining
 
 #ifndef BCLibDir
 #BCLibDir = $(HLS_RtlSCDir)/../tmp

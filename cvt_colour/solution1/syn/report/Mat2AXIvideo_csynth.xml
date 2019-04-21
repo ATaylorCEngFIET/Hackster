@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.4_AR70530_AR70530</Version>
+<Version>2018.3</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.63</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.186</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -69,8 +69,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>173</FF>
-<LUT>496</LUT>
+<FF>297</FF>
+<LUT>487</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -337,6 +337,17 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<name>OUTPUT_STREAM_TREADY</name>
+<Object>AXI_video_strm_V_data_V</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
 <name>OUTPUT_STREAM_TVALID</name>
 <Object>AXI_video_strm_V_dest_V</Object>
 <Type>pointer</Type>
@@ -344,17 +355,6 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>OUTPUT_STREAM_TREADY</name>
-<Object>AXI_video_strm_V_dest_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>axis</IOProtocol>
-<IOConfig>register, both mode</IOConfig>
-<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>

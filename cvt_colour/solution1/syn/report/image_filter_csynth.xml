@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.4_AR70530_AR70530</Version>
+<Version>2018.3</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -17,21 +17,21 @@
 <PipelineType>dataflow</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>9.40</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.400</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>10</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>4014004</Worst-caseLatency>
+<Worst-caseLatency>4012005</Worst-caseLatency>
 <DataflowPipelineThroughput>
 <range>
 <min>4</min>
-<max>4014004</max>
+<max>4012002</max>
 </range>
 </DataflowPipelineThroughput>
 <Interval-min>4</Interval-min>
-<Interval-max>4014004</Interval-max>
+<Interval-max>4012002</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
@@ -39,8 +39,8 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>3</DSP48E>
-<FF>932</FF>
-<LUT>2323</LUT>
+<FF>1333</FF>
+<LUT>2247</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>
@@ -314,17 +314,6 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_done</name>
-<Object>image_filter</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
 <name>ap_start</name>
 <Object>image_filter</Object>
 <Type>return value</Type>
@@ -332,6 +321,17 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>image_filter</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>

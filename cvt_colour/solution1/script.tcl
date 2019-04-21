@@ -5,10 +5,10 @@
 ############################################################
 open_project cvt_colour
 set_top image_filter
-add_files cvt_colour/cvt_colour.cpp
-add_files cvt_colour/cvt_colour.hpp
 add_files cvt_colour/test.bmp
-add_files -tb cvt_colour/cvt_colour_tb.cpp
+add_files cvt_colour/cvt_colour.hpp
+add_files cvt_colour/cvt_colour.cpp
+add_files -tb cvt_colour/cvt_colour_tb.cpp -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020clg400-1} -tool vivado
 create_clock -period 10 -name default

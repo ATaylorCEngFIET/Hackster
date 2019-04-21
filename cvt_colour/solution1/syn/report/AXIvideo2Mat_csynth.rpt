@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'AXIvideo2Mat'
 ================================================================
-* Date:           Thu May 31 13:28:37 2018
+* Date:           Tue Apr  9 13:09:57 2019
 
-* Version:        2017.4_AR70530_AR70530 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
 * Project:        cvt_colour
 * Solution:       solution1
 * Product family: zynq
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      7.27|        1.25|
+    |ap_clk  |  10.00|     7.268|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |    Latency    |    Interval   | Pipeline|
     | min |   max   | min |   max   |   Type  |
     +-----+---------+-----+---------+---------+
-    |    3|  4014003|    3|  4014003|   none  |
+    |    3|  4010003|    3|  4010003|   none  |
     +-----+---------+-----+---------+---------+
 
     + Detail: 
@@ -42,9 +42,9 @@
         |       Loop Name       | min |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
         +-----------------------+-----+---------+----------+-----------+-----------+----------+----------+
         |- loop_wait_for_start  |    0|        0|         1|          1|          1|         0|    yes   |
-        |- loop_height          |    0|  4014000| 7 ~ 2007 |          -|          -| 0 ~ 2000 |    no    |
-        | + loop_width          |    1|     2001|         2|          1|          1| 0 ~ 2000 |    yes   |
-        | + loop_wait_for_eol   |    1|        1|         2|          1|          1|         0|    yes   |
+        |- loop_height          |    0|  4010000| 5 ~ 2005 |          -|          -| 0 ~ 2000 |    no    |
+        | + loop_width          |    0|     2000|         2|          1|          1| 0 ~ 2000 |    yes   |
+        | + loop_wait_for_eol   |    0|        0|         1|          1|          1|         0|    yes   |
         +-----------------------+-----+---------+----------+-----------+-----------+----------+----------+
 
 
@@ -57,14 +57,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|    214|
+|Expression       |        -|      -|       0|    172|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      -|       -|      -|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    377|
-|Register         |        -|      -|     290|      -|
+|Multiplexer      |        -|      -|       -|    398|
+|Register         |        -|      -|     447|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|     290|    591|
+|Total            |        0|      0|     447|    570|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -88,31 +88,32 @@
     +------------------------------------------+----------+-------+---+----+------------+------------+
     |               Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------------------------+----------+-------+---+----+------------+------------+
-    |i_V_fu_423_p2                             |     +    |      0|  0|  18|          11|           1|
-    |j_V_fu_438_p2                             |     +    |      0|  0|  18|          11|           1|
-    |AXI_video_strm_V_data_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
-    |AXI_video_strm_V_data_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
-    |AXI_video_strm_V_last_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
-    |AXI_video_strm_V_last_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
-    |AXI_video_strm_V_user_V_0_load_A          |    and   |      0|  0|   8|           1|           1|
-    |AXI_video_strm_V_user_V_0_load_B          |    and   |      0|  0|   8|           1|           1|
-    |ap_block_pp1_stage0_01001                 |    and   |      0|  0|   8|           1|           1|
-    |ap_block_pp2_stage0_11001                 |    and   |      0|  0|   8|           1|           1|
-    |ap_block_state9_pp2_stage0_iter1          |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_529                          |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op75_read_state6             |    and   |      0|  0|   8|           1|           1|
+    |i_V_fu_400_p2                             |     +    |      0|  0|  39|          32|           1|
+    |j_V_fu_411_p2                             |     +    |      0|  0|  39|          32|           1|
+    |AXI_video_strm_V_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |AXI_video_strm_V_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |AXI_video_strm_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |AXI_video_strm_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |AXI_video_strm_V_user_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |AXI_video_strm_V_user_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state5_pp1_stage0_iter0          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state8                           |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_598                          |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_676                          |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op65_read_state5             |    and   |      0|  0|   2|           1|           1|
     |AXI_video_strm_V_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
     |AXI_video_strm_V_user_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
-    |exitcond2_i_fu_418_p2                     |   icmp   |      0|  0|  13|          12|          12|
-    |exitcond_i_fu_433_p2                      |   icmp   |      0|  0|  13|          12|          12|
-    |ap_block_state1                           |    or    |      0|  0|   8|           1|           1|
-    |ap_block_state6_pp1_stage0_iter1          |    or    |      0|  0|   8|           1|           1|
-    |brmerge_i_fu_447_p2                       |    or    |      0|  0|   8|           1|           1|
-    |ap_enable_pp1                             |    xor   |      0|  0|   8|           1|           2|
-    |ap_enable_pp2                             |    xor   |      0|  0|   8|           1|           2|
+    |exitcond2_i_fu_395_p2                     |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond_i_fu_406_p2                      |   icmp   |      0|  0|  18|          32|          32|
+    |ap_block_pp1_stage0_01001                 |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                           |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state6_pp1_stage0_iter1          |    or    |      0|  0|   2|           1|           1|
+    |brmerge_i_fu_420_p2                       |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp1                             |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp1_iter1                   |    xor   |      0|  0|   2|           2|           1|
     +------------------------------------------+----------+-------+---+----+------------+------------+
-    |Total                                     |          |      0|  0| 214|          68|          47|
+    |Total                                     |          |      0|  0| 172|         152|          87|
     +------------------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -129,20 +130,20 @@
     |INPUT_STREAM_TDATA_blk_n                 |   9|          2|    1|          2|
     |ap_NS_fsm                                |  44|          9|    1|          9|
     |ap_done                                  |   9|          2|    1|          2|
-    |ap_enable_reg_pp1_iter1                  |   9|          2|    1|          2|
-    |ap_enable_reg_pp2_iter1                  |   9|          2|    1|          2|
-    |ap_phi_mux_axi_last_V_2_i_phi_fu_332_p4  |  15|          3|    1|          3|
-    |ap_phi_mux_eol_2_i_phi_fu_355_p4         |   9|          2|    1|          2|
-    |ap_phi_mux_eol_i_phi_fu_297_p4           |   9|          2|    1|          2|
-    |ap_phi_mux_p_Val2_s_phi_fu_344_p4        |  15|          3|   32|         96|
-    |axi_data_V1_i_reg_261                    |   9|          2|   32|         64|
-    |axi_data_V_1_i_reg_316                   |   9|          2|   32|         64|
-    |axi_data_V_3_i_reg_375                   |   9|          2|   32|         64|
-    |axi_last_V1_i_reg_251                    |   9|          2|    1|          2|
-    |axi_last_V_3_i_reg_363                   |   9|          2|    1|          2|
-    |eol_2_i_reg_352                          |   9|          2|    1|          2|
-    |eol_i_reg_293                            |   9|          2|    1|          2|
-    |eol_reg_305                              |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter1                  |  15|          3|    1|          3|
+    |ap_phi_mux_axi_data_V_1_i_phi_fu_286_p4  |   9|          2|   32|         64|
+    |ap_phi_mux_eol_i_phi_fu_309_p4           |   9|          2|    1|          2|
+    |ap_phi_mux_eol_phi_fu_275_p4             |   9|          2|    1|          2|
+    |ap_phi_mux_p_Val2_s_phi_fu_334_p4        |  15|          3|   32|         96|
+    |axi_data_V1_i_reg_251                    |   9|          2|   32|         64|
+    |axi_data_V_1_i_reg_283                   |   9|          2|   32|         64|
+    |axi_data_V_3_i_reg_354                   |   9|          2|   32|         64|
+    |axi_last_V1_i_reg_241                    |   9|          2|    1|          2|
+    |axi_last_V_2_i_reg_317                   |  15|          3|    1|          3|
+    |axi_last_V_3_i_reg_342                   |   9|          2|    1|          2|
+    |eol_2_i_reg_366                          |   9|          2|    1|          2|
+    |eol_i_reg_305                            |   9|          2|    1|          2|
+    |eol_reg_272                              |   9|          2|    1|          2|
     |img_cols_V_blk_n                         |   9|          2|    1|          2|
     |img_cols_V_out_blk_n                     |   9|          2|    1|          2|
     |img_data_stream_0_V_blk_n                |   9|          2|    1|          2|
@@ -150,11 +151,12 @@
     |img_data_stream_2_V_blk_n                |   9|          2|    1|          2|
     |img_rows_V_blk_n                         |   9|          2|    1|          2|
     |img_rows_V_out_blk_n                     |   9|          2|    1|          2|
+    |p_Val2_s_reg_330                         |  15|          3|   32|         96|
     |real_start                               |   9|          2|    1|          2|
-    |t_V_2_reg_282                            |   9|          2|   11|         22|
-    |t_V_reg_271                              |   9|          2|   11|         22|
+    |t_V_2_reg_294                            |   9|          2|   32|         64|
+    |t_V_reg_261                              |   9|          2|   32|         64|
     +-----------------------------------------+----+-----------+-----+-----------+
-    |Total                                    | 377|         81|  213|        474|
+    |Total                                    | 398|         85|  318|        717|
     +-----------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -181,29 +183,31 @@
     |ap_done_reg                          |   1|   0|    1|          0|
     |ap_enable_reg_pp1_iter0              |   1|   0|    1|          0|
     |ap_enable_reg_pp1_iter1              |   1|   0|    1|          0|
-    |ap_enable_reg_pp2_iter0              |   1|   0|    1|          0|
-    |ap_enable_reg_pp2_iter1              |   1|   0|    1|          0|
-    |axi_data_V1_i_reg_261                |  32|   0|   32|          0|
-    |axi_data_V_1_i_reg_316               |  32|   0|   32|          0|
-    |axi_data_V_3_i_reg_375               |  32|   0|   32|          0|
-    |axi_last_V1_i_reg_251                |   1|   0|    1|          0|
-    |axi_last_V_3_i_reg_363               |   1|   0|    1|          0|
-    |brmerge_i_reg_533                    |   1|   0|    1|          0|
-    |eol_2_i_reg_352                      |   1|   0|    1|          0|
-    |eol_i_reg_293                        |   1|   0|    1|          0|
-    |eol_reg_305                          |   1|   0|    1|          0|
-    |exitcond_i_reg_524                   |   1|   0|    1|          0|
-    |i_V_reg_519                          |  11|   0|   11|          0|
-    |sof_1_i_fu_180                       |   1|   0|    1|          0|
+    |axi_data_V1_i_reg_251                |  32|   0|   32|          0|
+    |axi_data_V_1_i_reg_283               |  32|   0|   32|          0|
+    |axi_data_V_3_i_reg_354               |  32|   0|   32|          0|
+    |axi_last_V1_i_reg_241                |   1|   0|    1|          0|
+    |axi_last_V_2_i_reg_317               |   1|   0|    1|          0|
+    |axi_last_V_3_i_reg_342               |   1|   0|    1|          0|
+    |cols_V_reg_460                       |  32|   0|   32|          0|
+    |eol_2_i_reg_366                      |   1|   0|    1|          0|
+    |eol_i_reg_305                        |   1|   0|    1|          0|
+    |eol_reg_272                          |   1|   0|    1|          0|
+    |exitcond_i_reg_494                   |   1|   0|    1|          0|
+    |i_V_reg_489                          |  32|   0|   32|          0|
+    |p_Val2_s_reg_330                     |  32|   0|   32|          0|
+    |rows_V_reg_455                       |  32|   0|   32|          0|
+    |sof_1_i_fu_170                       |   1|   0|    1|          0|
     |start_once_reg                       |   1|   0|    1|          0|
-    |t_V_2_reg_282                        |  11|   0|   11|          0|
-    |t_V_reg_271                          |  11|   0|   11|          0|
-    |tmp_13_reg_490                       |  12|   0|   12|          0|
-    |tmp_data_V_reg_495                   |  32|   0|   32|          0|
-    |tmp_last_V_reg_503                   |   1|   0|    1|          0|
-    |tmp_reg_485                          |  12|   0|   12|          0|
+    |t_V_2_reg_294                        |  32|   0|   32|          0|
+    |t_V_reg_261                          |  32|   0|   32|          0|
+    |tmp_5_reg_512                        |   8|   0|    8|          0|
+    |tmp_6_reg_517                        |   8|   0|    8|          0|
+    |tmp_data_V_reg_465                   |  32|   0|   32|          0|
+    |tmp_last_V_reg_473                   |   1|   0|    1|          0|
+    |tmp_reg_507                          |   8|   0|    8|          0|
     +-------------------------------------+----+----+-----+-----------+
-    |Total                                | 290|   0|  290|          0|
+    |Total                                | 447|   0|  447|          0|
     +-------------------------------------+----+----+-----+-----------+
 
 
