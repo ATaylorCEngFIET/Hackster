@@ -15,7 +15,7 @@ src/fsbl_hooks.o src/fsbl_hooks.o: ../src/fsbl_hooks.c ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_assert.h ../src/fsbl_debug.h \
- C:\hdl_projects\block_compile\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h \
+ C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h ../src/fsbl_hooks.h
 
 ../src/fsbl.h:
@@ -56,7 +56,7 @@ src/fsbl_hooks.o src/fsbl_hooks.o: ../src/fsbl_hooks.c ../src/fsbl.h \
 
 ../src/fsbl_debug.h:
 
-C:\hdl_projects\block_compile\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h:
+C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h:
 
 ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h:
 

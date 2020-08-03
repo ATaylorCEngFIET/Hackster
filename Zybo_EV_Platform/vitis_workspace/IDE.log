@@ -1,0 +1,1475 @@
+17:54:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\temp_xsdb_launch_script.tcl
+17:54:32 INFO  : XSCT server has started successfully.
+17:54:32 INFO  : Successfully done setting XSCT server connection channel  
+17:54:32 INFO  : plnx-install-location is set to ''
+17:54:32 INFO  : Successfully done setting workspace for the tool. 
+17:54:32 INFO  : Successfully done query RDI_DATADIR 
+17:54:33 INFO  : Registering command handlers for Vitis TCF services
+17:58:58 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+17:59:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:59:39 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+17:59:39 INFO  : 'jtag frequency' command is executed.
+17:59:39 INFO  : Context for 'APU' is selected.
+17:59:40 INFO  : System reset is completed.
+17:59:43 INFO  : 'after 3000' command is executed.
+17:59:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+17:59:45 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+17:59:45 INFO  : Context for 'APU' is selected.
+17:59:45 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+17:59:45 INFO  : 'configparams force-mem-access 1' command is executed.
+17:59:45 INFO  : Context for 'APU' is selected.
+17:59:45 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+17:59:45 INFO  : 'ps7_init' command is executed.
+17:59:45 INFO  : 'ps7_post_config' command is executed.
+17:59:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:59:46 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:59:46 INFO  : 'configparams force-mem-access 0' command is executed.
+17:59:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:59:46 INFO  : Memory regions updated for context APU
+17:59:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:59:46 INFO  : 'con' command is executed.
+17:59:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:59:46 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:00:54 INFO  : Disconnected from the channel tcfchan#2.
+18:03:49 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:04:29 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:04:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:04:42 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:04:42 INFO  : 'jtag frequency' command is executed.
+18:04:42 INFO  : Context for 'APU' is selected.
+18:04:43 INFO  : System reset is completed.
+18:04:46 INFO  : 'after 3000' command is executed.
+18:04:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:04:48 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:04:48 INFO  : Context for 'APU' is selected.
+18:04:48 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:04:48 INFO  : 'configparams force-mem-access 1' command is executed.
+18:04:48 INFO  : Context for 'APU' is selected.
+18:04:48 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:04:49 INFO  : 'ps7_init' command is executed.
+18:04:49 INFO  : 'ps7_post_config' command is executed.
+18:04:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:04:49 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:04:49 INFO  : 'configparams force-mem-access 0' command is executed.
+18:04:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:04:49 INFO  : Memory regions updated for context APU
+18:04:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:04:49 INFO  : 'con' command is executed.
+18:04:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:04:49 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:05:47 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:05:55 INFO  : Disconnected from the channel tcfchan#3.
+18:05:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:05:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:05:56 INFO  : 'jtag frequency' command is executed.
+18:05:56 INFO  : Context for 'APU' is selected.
+18:05:56 INFO  : System reset is completed.
+18:05:59 INFO  : 'after 3000' command is executed.
+18:05:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:06:01 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:06:01 INFO  : Context for 'APU' is selected.
+18:06:01 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:06:01 INFO  : 'configparams force-mem-access 1' command is executed.
+18:06:01 INFO  : Context for 'APU' is selected.
+18:06:01 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:06:02 INFO  : 'ps7_init' command is executed.
+18:06:02 INFO  : 'ps7_post_config' command is executed.
+18:06:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:06:02 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:06:02 INFO  : 'configparams force-mem-access 0' command is executed.
+18:06:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:06:02 INFO  : Memory regions updated for context APU
+18:06:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:06:02 INFO  : 'con' command is executed.
+18:06:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:06:02 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:06:41 INFO  : Disconnected from the channel tcfchan#4.
+18:09:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:09:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:09:16 INFO  : 'jtag frequency' command is executed.
+18:09:16 INFO  : Context for 'APU' is selected.
+18:09:16 INFO  : System reset is completed.
+18:09:19 INFO  : 'after 3000' command is executed.
+18:09:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:09:21 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:09:21 INFO  : Context for 'APU' is selected.
+18:09:21 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:09:21 INFO  : 'configparams force-mem-access 1' command is executed.
+18:09:21 INFO  : Context for 'APU' is selected.
+18:09:21 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:09:22 INFO  : 'ps7_init' command is executed.
+18:09:22 INFO  : 'ps7_post_config' command is executed.
+18:09:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:09:22 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:09:22 INFO  : 'configparams force-mem-access 0' command is executed.
+18:09:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:09:22 INFO  : Memory regions updated for context APU
+18:09:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:09:22 INFO  : 'con' command is executed.
+18:09:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:09:22 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:10:59 INFO  : Disconnected from the channel tcfchan#5.
+18:10:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:11:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:11:00 INFO  : 'jtag frequency' command is executed.
+18:11:00 INFO  : Context for 'APU' is selected.
+18:11:00 INFO  : System reset is completed.
+18:11:03 INFO  : 'after 3000' command is executed.
+18:11:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:11:05 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:11:05 INFO  : Context for 'APU' is selected.
+18:11:05 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:11:05 INFO  : 'configparams force-mem-access 1' command is executed.
+18:11:05 INFO  : Context for 'APU' is selected.
+18:11:05 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:11:06 INFO  : 'ps7_init' command is executed.
+18:11:06 INFO  : 'ps7_post_config' command is executed.
+18:11:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:11:06 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:11:06 INFO  : 'configparams force-mem-access 0' command is executed.
+18:11:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:11:06 INFO  : Memory regions updated for context APU
+18:11:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:11:06 INFO  : 'con' command is executed.
+18:11:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:11:06 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:12:21 INFO  : Disconnected from the channel tcfchan#6.
+18:12:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:12:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:12:21 INFO  : 'jtag frequency' command is executed.
+18:12:21 INFO  : Context for 'APU' is selected.
+18:12:21 INFO  : System reset is completed.
+18:12:24 INFO  : 'after 3000' command is executed.
+18:12:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:12:26 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:12:27 INFO  : Context for 'APU' is selected.
+18:12:27 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:12:27 INFO  : 'configparams force-mem-access 1' command is executed.
+18:12:27 INFO  : Context for 'APU' is selected.
+18:12:27 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:12:27 INFO  : 'ps7_init' command is executed.
+18:12:27 INFO  : 'ps7_post_config' command is executed.
+18:12:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:12:27 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:12:27 INFO  : 'configparams force-mem-access 0' command is executed.
+18:12:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:12:27 INFO  : Memory regions updated for context APU
+18:12:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:12:28 INFO  : 'con' command is executed.
+18:12:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:12:28 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:15:48 INFO  : Disconnected from the channel tcfchan#7.
+18:15:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:15:48 INFO  : 'jtag frequency' command is executed.
+18:15:48 INFO  : Context for 'APU' is selected.
+18:15:48 INFO  : System reset is completed.
+18:15:51 INFO  : 'after 3000' command is executed.
+18:15:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:15:54 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:15:54 INFO  : Context for 'APU' is selected.
+18:15:54 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:15:54 INFO  : 'configparams force-mem-access 1' command is executed.
+18:15:54 INFO  : Context for 'APU' is selected.
+18:15:54 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:15:54 INFO  : 'ps7_init' command is executed.
+18:15:54 INFO  : 'ps7_post_config' command is executed.
+18:15:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:54 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:15:54 INFO  : 'configparams force-mem-access 0' command is executed.
+18:15:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:15:54 INFO  : Memory regions updated for context APU
+18:15:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:54 INFO  : 'con' command is executed.
+18:15:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:15:54 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:17:50 INFO  : Disconnected from the channel tcfchan#8.
+18:17:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:17:51 INFO  : 'jtag frequency' command is executed.
+18:17:51 INFO  : Context for 'APU' is selected.
+18:17:51 INFO  : System reset is completed.
+18:17:54 INFO  : 'after 3000' command is executed.
+18:17:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:17:56 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:17:56 INFO  : Context for 'APU' is selected.
+18:17:56 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:17:56 INFO  : 'configparams force-mem-access 1' command is executed.
+18:17:56 INFO  : Context for 'APU' is selected.
+18:17:56 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:17:57 INFO  : 'ps7_init' command is executed.
+18:17:57 INFO  : 'ps7_post_config' command is executed.
+18:17:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:17:57 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:17:57 INFO  : 'configparams force-mem-access 0' command is executed.
+18:17:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:17:57 INFO  : Memory regions updated for context APU
+18:17:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:17:57 INFO  : 'con' command is executed.
+18:17:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:17:57 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:18:34 INFO  : Disconnected from the channel tcfchan#9.
+18:18:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:18:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:18:34 INFO  : 'jtag frequency' command is executed.
+18:18:34 INFO  : Context for 'APU' is selected.
+18:18:34 INFO  : System reset is completed.
+18:18:37 INFO  : 'after 3000' command is executed.
+18:18:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:18:40 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:18:40 INFO  : Context for 'APU' is selected.
+18:18:40 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:18:40 INFO  : 'configparams force-mem-access 1' command is executed.
+18:18:40 INFO  : Context for 'APU' is selected.
+18:18:40 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:18:40 INFO  : 'ps7_init' command is executed.
+18:18:40 INFO  : 'ps7_post_config' command is executed.
+18:18:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:18:40 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:18:40 INFO  : 'configparams force-mem-access 0' command is executed.
+18:18:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:18:40 INFO  : Memory regions updated for context APU
+18:18:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:18:40 INFO  : 'con' command is executed.
+18:18:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:18:40 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:20:25 INFO  : Disconnected from the channel tcfchan#10.
+18:21:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:21:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:21:09 INFO  : 'jtag frequency' command is executed.
+18:21:09 INFO  : Context for 'APU' is selected.
+18:21:09 INFO  : System reset is completed.
+18:21:12 INFO  : 'after 3000' command is executed.
+18:21:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:21:14 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:21:14 INFO  : Context for 'APU' is selected.
+18:21:14 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:21:14 INFO  : 'configparams force-mem-access 1' command is executed.
+18:21:14 INFO  : Context for 'APU' is selected.
+18:21:14 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:21:15 INFO  : 'ps7_init' command is executed.
+18:21:15 INFO  : 'ps7_post_config' command is executed.
+18:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:21:15 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:21:15 INFO  : 'configparams force-mem-access 0' command is executed.
+18:21:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:21:15 INFO  : Memory regions updated for context APU
+18:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:21:15 INFO  : 'con' command is executed.
+18:21:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:21:15 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:22:15 INFO  : Disconnected from the channel tcfchan#11.
+18:22:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:22:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:22:15 INFO  : 'jtag frequency' command is executed.
+18:22:15 INFO  : Context for 'APU' is selected.
+18:22:15 INFO  : System reset is completed.
+18:22:18 INFO  : 'after 3000' command is executed.
+18:22:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:22:21 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:22:21 INFO  : Context for 'APU' is selected.
+18:22:21 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:22:21 INFO  : 'configparams force-mem-access 1' command is executed.
+18:22:21 INFO  : Context for 'APU' is selected.
+18:22:21 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:22:21 INFO  : 'ps7_init' command is executed.
+18:22:21 INFO  : 'ps7_post_config' command is executed.
+18:22:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:21 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:22:21 INFO  : 'configparams force-mem-access 0' command is executed.
+18:22:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:22:21 INFO  : Memory regions updated for context APU
+18:22:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:21 INFO  : 'con' command is executed.
+18:22:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:22:21 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:24:05 INFO  : Disconnected from the channel tcfchan#12.
+18:24:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:24:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:24:05 INFO  : 'jtag frequency' command is executed.
+18:24:05 INFO  : Context for 'APU' is selected.
+18:24:05 INFO  : System reset is completed.
+18:24:08 INFO  : 'after 3000' command is executed.
+18:24:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:24:10 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:24:10 INFO  : Context for 'APU' is selected.
+18:24:10 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:24:10 INFO  : 'configparams force-mem-access 1' command is executed.
+18:24:10 INFO  : Context for 'APU' is selected.
+18:24:10 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:24:11 INFO  : 'ps7_init' command is executed.
+18:24:11 INFO  : 'ps7_post_config' command is executed.
+18:24:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:24:11 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:24:11 INFO  : 'configparams force-mem-access 0' command is executed.
+18:24:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:24:11 INFO  : Memory regions updated for context APU
+18:24:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:24:11 INFO  : 'con' command is executed.
+18:24:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:24:11 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:24:56 INFO  : Disconnected from the channel tcfchan#13.
+18:24:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:24:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:24:56 INFO  : 'jtag frequency' command is executed.
+18:24:56 INFO  : Context for 'APU' is selected.
+18:24:56 INFO  : System reset is completed.
+18:24:59 INFO  : 'after 3000' command is executed.
+18:24:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:25:01 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:25:01 INFO  : Context for 'APU' is selected.
+18:25:01 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:25:01 INFO  : 'configparams force-mem-access 1' command is executed.
+18:25:01 INFO  : Context for 'APU' is selected.
+18:25:01 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:25:02 INFO  : 'ps7_init' command is executed.
+18:25:02 INFO  : 'ps7_post_config' command is executed.
+18:25:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:25:02 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:25:02 INFO  : 'configparams force-mem-access 0' command is executed.
+18:25:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:25:02 INFO  : Memory regions updated for context APU
+18:25:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:25:02 INFO  : 'con' command is executed.
+18:25:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:25:02 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:27:59 INFO  : Disconnected from the channel tcfchan#14.
+18:27:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:27:59 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:27:59 INFO  : 'jtag frequency' command is executed.
+18:27:59 INFO  : Context for 'APU' is selected.
+18:27:59 INFO  : System reset is completed.
+18:28:02 INFO  : 'after 3000' command is executed.
+18:28:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:28:05 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:28:05 INFO  : Context for 'APU' is selected.
+18:28:05 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:28:05 INFO  : 'configparams force-mem-access 1' command is executed.
+18:28:05 INFO  : Context for 'APU' is selected.
+18:28:05 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:28:05 INFO  : 'ps7_init' command is executed.
+18:28:05 INFO  : 'ps7_post_config' command is executed.
+18:28:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:05 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:28:05 INFO  : 'configparams force-mem-access 0' command is executed.
+18:28:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:28:05 INFO  : Memory regions updated for context APU
+18:28:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:05 INFO  : 'con' command is executed.
+18:28:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:28:05 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:28:36 INFO  : Disconnected from the channel tcfchan#15.
+18:28:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:28:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:28:37 INFO  : 'jtag frequency' command is executed.
+18:28:37 INFO  : Context for 'APU' is selected.
+18:28:37 INFO  : System reset is completed.
+18:28:40 INFO  : 'after 3000' command is executed.
+18:28:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:28:42 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:28:42 INFO  : Context for 'APU' is selected.
+18:28:42 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:28:42 INFO  : 'configparams force-mem-access 1' command is executed.
+18:28:42 INFO  : Context for 'APU' is selected.
+18:28:42 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:28:42 INFO  : 'ps7_init' command is executed.
+18:28:42 INFO  : 'ps7_post_config' command is executed.
+18:28:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:43 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:28:43 INFO  : 'configparams force-mem-access 0' command is executed.
+18:28:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:28:43 INFO  : Memory regions updated for context APU
+18:28:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:43 INFO  : 'con' command is executed.
+18:28:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:28:43 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:29:28 INFO  : Disconnected from the channel tcfchan#16.
+18:29:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:29:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:29:29 INFO  : 'jtag frequency' command is executed.
+18:29:29 INFO  : Context for 'APU' is selected.
+18:29:29 INFO  : System reset is completed.
+18:29:32 INFO  : 'after 3000' command is executed.
+18:29:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:29:34 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:29:34 INFO  : Context for 'APU' is selected.
+18:29:34 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:29:34 INFO  : 'configparams force-mem-access 1' command is executed.
+18:29:34 INFO  : Context for 'APU' is selected.
+18:29:34 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:29:34 INFO  : 'ps7_init' command is executed.
+18:29:35 INFO  : 'ps7_post_config' command is executed.
+18:29:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:29:35 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:29:35 INFO  : 'configparams force-mem-access 0' command is executed.
+18:29:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:29:35 INFO  : Memory regions updated for context APU
+18:29:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:29:35 INFO  : 'con' command is executed.
+18:29:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:29:35 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:29:54 INFO  : Disconnected from the channel tcfchan#17.
+18:29:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:29:54 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:29:54 INFO  : 'jtag frequency' command is executed.
+18:29:54 INFO  : Context for 'APU' is selected.
+18:29:54 INFO  : System reset is completed.
+18:29:57 INFO  : 'after 3000' command is executed.
+18:29:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:29:59 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:29:59 INFO  : Context for 'APU' is selected.
+18:29:59 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:29:59 INFO  : 'configparams force-mem-access 1' command is executed.
+18:29:59 INFO  : Context for 'APU' is selected.
+18:29:59 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:30:00 INFO  : 'ps7_init' command is executed.
+18:30:00 INFO  : 'ps7_post_config' command is executed.
+18:30:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:30:00 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:30:00 INFO  : 'configparams force-mem-access 0' command is executed.
+18:30:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:30:00 INFO  : Memory regions updated for context APU
+18:30:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:30:00 INFO  : 'con' command is executed.
+18:30:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:30:00 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:30:17 INFO  : Disconnected from the channel tcfchan#18.
+18:30:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:30:18 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:30:18 INFO  : 'jtag frequency' command is executed.
+18:30:18 INFO  : Context for 'APU' is selected.
+18:30:18 INFO  : System reset is completed.
+18:30:21 INFO  : 'after 3000' command is executed.
+18:30:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:30:23 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:30:23 INFO  : Context for 'APU' is selected.
+18:30:23 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:30:23 INFO  : 'configparams force-mem-access 1' command is executed.
+18:30:23 INFO  : Context for 'APU' is selected.
+18:30:23 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:30:23 INFO  : 'ps7_init' command is executed.
+18:30:24 INFO  : 'ps7_post_config' command is executed.
+18:30:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:30:24 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:30:24 INFO  : 'configparams force-mem-access 0' command is executed.
+18:30:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:30:24 INFO  : Memory regions updated for context APU
+18:30:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:30:24 INFO  : 'con' command is executed.
+18:30:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:30:24 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:30:39 INFO  : Disconnected from the channel tcfchan#19.
+18:30:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:30:39 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:30:39 INFO  : 'jtag frequency' command is executed.
+18:30:39 INFO  : Context for 'APU' is selected.
+18:30:39 INFO  : System reset is completed.
+18:30:42 INFO  : 'after 3000' command is executed.
+18:30:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:30:44 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:30:45 INFO  : Context for 'APU' is selected.
+18:30:45 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:30:45 INFO  : 'configparams force-mem-access 1' command is executed.
+18:30:45 INFO  : Context for 'APU' is selected.
+18:30:45 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:30:45 INFO  : 'ps7_init' command is executed.
+18:30:45 INFO  : 'ps7_post_config' command is executed.
+18:30:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:30:45 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:30:45 INFO  : 'configparams force-mem-access 0' command is executed.
+18:30:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:30:45 INFO  : Memory regions updated for context APU
+18:30:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:30:45 INFO  : 'con' command is executed.
+18:30:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:30:45 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:31:52 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:32:02 INFO  : Disconnected from the channel tcfchan#20.
+18:32:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:32:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:32:02 INFO  : 'jtag frequency' command is executed.
+18:32:02 INFO  : Context for 'APU' is selected.
+18:32:02 INFO  : System reset is completed.
+18:32:05 INFO  : 'after 3000' command is executed.
+18:32:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:32:07 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:32:07 INFO  : Context for 'APU' is selected.
+18:32:07 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:32:07 INFO  : 'configparams force-mem-access 1' command is executed.
+18:32:07 INFO  : Context for 'APU' is selected.
+18:32:07 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:32:08 INFO  : 'ps7_init' command is executed.
+18:32:08 INFO  : 'ps7_post_config' command is executed.
+18:32:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:32:08 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:32:08 INFO  : 'configparams force-mem-access 0' command is executed.
+18:32:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:32:08 INFO  : Memory regions updated for context APU
+18:32:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:32:08 INFO  : 'con' command is executed.
+18:32:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:32:08 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:36:02 INFO  : Disconnected from the channel tcfchan#21.
+18:36:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:36:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:36:02 INFO  : 'jtag frequency' command is executed.
+18:36:02 INFO  : Context for 'APU' is selected.
+18:36:02 INFO  : System reset is completed.
+18:36:05 INFO  : 'after 3000' command is executed.
+18:36:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:36:07 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:36:07 INFO  : Context for 'APU' is selected.
+18:36:07 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:36:07 INFO  : 'configparams force-mem-access 1' command is executed.
+18:36:07 INFO  : Context for 'APU' is selected.
+18:36:07 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:36:08 INFO  : 'ps7_init' command is executed.
+18:36:08 INFO  : 'ps7_post_config' command is executed.
+18:36:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:36:08 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:36:08 INFO  : 'configparams force-mem-access 0' command is executed.
+18:36:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:36:08 INFO  : Memory regions updated for context APU
+18:36:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:36:08 INFO  : 'con' command is executed.
+18:36:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:36:08 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:37:10 INFO  : Disconnected from the channel tcfchan#22.
+18:37:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:37:10 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:37:10 INFO  : 'jtag frequency' command is executed.
+18:37:10 INFO  : Context for 'APU' is selected.
+18:37:10 INFO  : System reset is completed.
+18:37:13 INFO  : 'after 3000' command is executed.
+18:37:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:37:16 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:37:16 INFO  : Context for 'APU' is selected.
+18:37:16 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:37:16 INFO  : 'configparams force-mem-access 1' command is executed.
+18:37:16 INFO  : Context for 'APU' is selected.
+18:37:16 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:37:16 INFO  : 'ps7_init' command is executed.
+18:37:16 INFO  : 'ps7_post_config' command is executed.
+18:37:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:37:16 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:37:16 INFO  : 'configparams force-mem-access 0' command is executed.
+18:37:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:37:16 INFO  : Memory regions updated for context APU
+18:37:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:37:16 INFO  : 'con' command is executed.
+18:37:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:37:16 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:37:43 INFO  : Disconnected from the channel tcfchan#23.
+18:37:52 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:38:25 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:38:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:38:34 INFO  : 'jtag frequency' command is executed.
+18:38:34 INFO  : Context for 'APU' is selected.
+18:38:34 INFO  : System reset is completed.
+18:38:37 INFO  : 'after 3000' command is executed.
+18:38:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:38:39 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:38:40 INFO  : Context for 'APU' is selected.
+18:38:40 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:38:40 INFO  : 'configparams force-mem-access 1' command is executed.
+18:38:40 INFO  : Context for 'APU' is selected.
+18:38:40 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:38:40 INFO  : 'ps7_init' command is executed.
+18:38:40 INFO  : 'ps7_post_config' command is executed.
+18:38:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:40 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:38:40 INFO  : 'configparams force-mem-access 0' command is executed.
+18:38:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:38:40 INFO  : Memory regions updated for context APU
+18:38:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:40 INFO  : 'con' command is executed.
+18:38:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:38:40 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:43:44 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:43:57 INFO  : Disconnected from the channel tcfchan#24.
+18:43:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:43:58 INFO  : 'jtag frequency' command is executed.
+18:43:58 INFO  : Context for 'APU' is selected.
+18:43:58 INFO  : System reset is completed.
+18:44:01 INFO  : 'after 3000' command is executed.
+18:44:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:44:03 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:44:03 INFO  : Context for 'APU' is selected.
+18:44:03 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:44:03 INFO  : 'configparams force-mem-access 1' command is executed.
+18:44:03 INFO  : Context for 'APU' is selected.
+18:44:03 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:44:04 INFO  : 'ps7_init' command is executed.
+18:44:04 INFO  : 'ps7_post_config' command is executed.
+18:44:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:04 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:44:04 INFO  : 'configparams force-mem-access 0' command is executed.
+18:44:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:44:04 INFO  : Memory regions updated for context APU
+18:44:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:04 INFO  : 'con' command is executed.
+18:44:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:44:04 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:44:22 INFO  : Disconnected from the channel tcfchan#25.
+18:44:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:44:22 INFO  : 'jtag frequency' command is executed.
+18:44:22 INFO  : Context for 'APU' is selected.
+18:44:22 INFO  : System reset is completed.
+18:44:25 INFO  : 'after 3000' command is executed.
+18:44:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:44:28 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:44:28 INFO  : Context for 'APU' is selected.
+18:44:28 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:44:28 INFO  : 'configparams force-mem-access 1' command is executed.
+18:44:28 INFO  : Context for 'APU' is selected.
+18:44:28 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:44:28 INFO  : 'ps7_init' command is executed.
+18:44:28 INFO  : 'ps7_post_config' command is executed.
+18:44:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:28 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:44:28 INFO  : 'configparams force-mem-access 0' command is executed.
+18:44:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:44:28 INFO  : Memory regions updated for context APU
+18:44:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:29 INFO  : 'con' command is executed.
+18:44:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:44:29 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:52:31 INFO  : Disconnected from the channel tcfchan#26.
+18:52:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:52:31 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:52:31 INFO  : 'jtag frequency' command is executed.
+18:52:31 INFO  : Context for 'APU' is selected.
+18:52:31 INFO  : System reset is completed.
+18:52:34 INFO  : 'after 3000' command is executed.
+18:52:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:52:37 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:52:37 INFO  : Context for 'APU' is selected.
+18:52:37 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:52:37 INFO  : 'configparams force-mem-access 1' command is executed.
+18:52:37 INFO  : Context for 'APU' is selected.
+18:52:37 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:52:37 INFO  : 'ps7_init' command is executed.
+18:52:37 INFO  : 'ps7_post_config' command is executed.
+18:52:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:52:37 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:52:37 INFO  : 'configparams force-mem-access 0' command is executed.
+18:52:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:52:37 INFO  : Memory regions updated for context APU
+18:52:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:52:37 INFO  : 'con' command is executed.
+18:52:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:52:37 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:52:50 INFO  : Disconnected from the channel tcfchan#27.
+18:52:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:52:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:52:51 INFO  : 'jtag frequency' command is executed.
+18:52:51 INFO  : Context for 'APU' is selected.
+18:52:51 INFO  : System reset is completed.
+18:52:54 INFO  : 'after 3000' command is executed.
+18:52:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:52:56 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:52:56 INFO  : Context for 'APU' is selected.
+18:52:56 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:52:56 INFO  : 'configparams force-mem-access 1' command is executed.
+18:52:56 INFO  : Context for 'APU' is selected.
+18:52:56 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:52:57 INFO  : 'ps7_init' command is executed.
+18:52:57 INFO  : 'ps7_post_config' command is executed.
+18:52:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:52:57 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:52:57 INFO  : 'configparams force-mem-access 0' command is executed.
+18:52:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:52:57 INFO  : Memory regions updated for context APU
+18:52:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:52:57 INFO  : 'con' command is executed.
+18:52:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:52:57 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:53:23 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:53:31 INFO  : Disconnected from the channel tcfchan#28.
+18:53:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:53:32 INFO  : 'jtag frequency' command is executed.
+18:53:32 INFO  : Context for 'APU' is selected.
+18:53:32 INFO  : System reset is completed.
+18:53:35 INFO  : 'after 3000' command is executed.
+18:53:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:53:37 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:53:37 INFO  : Context for 'APU' is selected.
+18:53:37 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:53:37 INFO  : 'configparams force-mem-access 1' command is executed.
+18:53:37 INFO  : Context for 'APU' is selected.
+18:53:37 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:53:38 INFO  : 'ps7_init' command is executed.
+18:53:38 INFO  : 'ps7_post_config' command is executed.
+18:53:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:38 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:53:38 INFO  : 'configparams force-mem-access 0' command is executed.
+18:53:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:53:38 INFO  : Memory regions updated for context APU
+18:53:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:38 INFO  : 'con' command is executed.
+18:53:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:53:38 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:54:05 INFO  : Disconnected from the channel tcfchan#29.
+18:54:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:54:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:54:05 INFO  : 'jtag frequency' command is executed.
+18:54:05 INFO  : Context for 'APU' is selected.
+18:54:05 INFO  : System reset is completed.
+18:54:08 INFO  : 'after 3000' command is executed.
+18:54:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:54:11 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:54:11 INFO  : Context for 'APU' is selected.
+18:54:11 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:54:11 INFO  : 'configparams force-mem-access 1' command is executed.
+18:54:11 INFO  : Context for 'APU' is selected.
+18:54:11 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:54:11 INFO  : 'ps7_init' command is executed.
+18:54:11 INFO  : 'ps7_post_config' command is executed.
+18:54:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:54:11 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:54:11 INFO  : 'configparams force-mem-access 0' command is executed.
+18:54:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:54:11 INFO  : Memory regions updated for context APU
+18:54:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:54:11 INFO  : 'con' command is executed.
+18:54:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:54:11 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+18:54:13 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+18:54:17 INFO  : Disconnected from the channel tcfchan#30.
+18:54:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:54:17 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+18:54:17 INFO  : 'jtag frequency' command is executed.
+18:54:17 INFO  : Context for 'APU' is selected.
+18:54:17 INFO  : System reset is completed.
+18:54:20 INFO  : 'after 3000' command is executed.
+18:54:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+18:54:22 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+18:54:22 INFO  : Context for 'APU' is selected.
+18:54:22 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+18:54:22 INFO  : 'configparams force-mem-access 1' command is executed.
+18:54:22 INFO  : Context for 'APU' is selected.
+18:54:22 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+18:54:23 INFO  : 'ps7_init' command is executed.
+18:54:23 INFO  : 'ps7_post_config' command is executed.
+18:54:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:54:23 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:54:23 INFO  : 'configparams force-mem-access 0' command is executed.
+18:54:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:54:23 INFO  : Memory regions updated for context APU
+18:54:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:54:23 INFO  : 'con' command is executed.
+18:54:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:54:23 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+19:09:40 INFO  : Checking for BSP changes to sync application flags for project 'crc'...
+19:09:47 INFO  : Disconnected from the channel tcfchan#31.
+19:09:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:09:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+19:09:47 INFO  : 'jtag frequency' command is executed.
+19:09:47 INFO  : Context for 'APU' is selected.
+19:09:48 INFO  : System reset is completed.
+19:09:51 INFO  : 'after 3000' command is executed.
+19:09:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+19:09:53 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit"
+19:09:53 INFO  : Context for 'APU' is selected.
+19:09:53 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:09:53 INFO  : 'configparams force-mem-access 1' command is executed.
+19:09:53 INFO  : Context for 'APU' is selected.
+19:09:53 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl' is done.
+19:09:53 INFO  : 'ps7_init' command is executed.
+19:09:53 INFO  : 'ps7_post_config' command is executed.
+19:09:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:09:54 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:09:54 INFO  : 'configparams force-mem-access 0' command is executed.
+19:09:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/git_repos/hackster/Zybo_EV_Platform/vitis_workspace/crc/Debug/crc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:09:54 INFO  : Memory regions updated for context APU
+19:09:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:09:54 INFO  : 'con' command is executed.
+19:09:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:09:54 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\vitis_workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_crc_system_standalone.tcl'
+22:36:30 INFO  : Disconnected from the channel tcfchan#32.

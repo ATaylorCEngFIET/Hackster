@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="color_convert" xd:componentRef="color_convert" xd:initiationInterval="1" xd:clockPeriod="7.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="stream_in_24-&gt;data.p1" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="7:0" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_in_24-&gt;data.p2" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:8" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_in_24-&gt;data.p3" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="23:16" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_in_24-&gt;user" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_in_24-&gt;last" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_out_24-&gt;data.p1" xd:originalName="stream_out_24" xd:direction="out" xd:interfaceRef="stream_out_24" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="7:0" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_out_24-&gt;data.p2" xd:originalName="stream_out_24" xd:direction="out" xd:interfaceRef="stream_out_24" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:8" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_out_24-&gt;data.p3" xd:originalName="stream_out_24" xd:direction="out" xd:interfaceRef="stream_out_24" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="23:16" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_out_24-&gt;user" xd:originalName="stream_out_24" xd:direction="out" xd:interfaceRef="stream_out_24" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_out_24-&gt;last" xd:originalName="stream_out_24" xd:direction="out" xd:interfaceRef="stream_out_24" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="c1.c1" xd:originalName="c1" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c1.c2" xd:originalName="c1" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c1.c3" xd:originalName="c1" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c2.c1" xd:originalName="c2" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c2.c2" xd:originalName="c2" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c2.c3" xd:originalName="c2" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c3.c1" xd:originalName="c3" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c3.c2" xd:originalName="c3" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x48" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="c3.c3" xd:originalName="c3" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x50" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="bias.c1" xd:originalName="bias" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x58" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="bias.c2" xd:originalName="bias" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x60" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="bias.c3" xd:originalName="bias" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x68" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:latencyEstimates xd:best-case="6" xd:worst-case="6" xd:average-case="6"/>
+  <xd:resourceEstimates xd:LUT="1227" xd:FF="1227" xd:BRAM="0" xd:DSP="6"/>
+</xd:acceleratorMap>

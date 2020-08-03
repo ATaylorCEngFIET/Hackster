@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Fri May 11 19:36:28 2018
--- Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+-- Date        : Sun Dec  8 17:40:08 2019
+-- Host        : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/design_1_rgb2dvi_0_1_stub.vhdl
+--               C:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_1/design_1_rgb2dvi_0_1_stub.vhdl
 -- Design      : design_1_rgb2dvi_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -35,6 +35,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "TMDS_Clk_p,TMDS_Clk_n,TMDS_Data_p[2:0],TMDS_Data_n[2:0],aRst,vid_pData[23:0],vid_pVDE,vid_pHSync,vid_pVSync,PixelClk,SerialClk";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "rgb2dvi,Vivado 2017.4_AR70530_AR70530";
+attribute x_core_info of stub : architecture is "rgb2dvi,Vivado 2019.2";
 begin
 end;

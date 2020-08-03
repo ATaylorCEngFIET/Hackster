@@ -15,7 +15,7 @@ src/image_mover.o src/image_mover.o: ../src/image_mover.c ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_assert.h ../src/fsbl_debug.h \
- C:\hdl_projects\block_compile\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h \
+ C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h \
  ../src/image_mover.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../src/fsbl_hooks.h ../src/md5.h \
@@ -59,7 +59,7 @@ src/image_mover.o src/image_mover.o: ../src/image_mover.c ../src/fsbl.h \
 
 ../src/fsbl_debug.h:
 
-C:\hdl_projects\block_compile\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h:
+C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\design_1_wrapper_hw_platform_0/ps7_init.h:
 
 ../src/image_mover.h:
 

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:abstractionDefinition xmlns:xilinx="http://www.xilinx.com"
+		xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<spirit:vendor>avnet.com</spirit:vendor>
+	<spirit:library>interface</spirit:library>
+	<spirit:name>onsemi_vita_cam_rtl</spirit:name>
+	<spirit:version>1.0</spirit:version>
+	<spirit:busType spirit:vendor="avnet.com"
+			spirit:library="interface"
+			spirit:name="onsemi_vita_cam"
+			spirit:version="1.0"/>
+	<spirit:ports>
+		<spirit:port>
+			<spirit:logicalName>clk_pll</spirit:logicalName>
+			<spirit:description>VITA Reference clock</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isClock>true</spirit:isClock>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>reset_n</spirit:logicalName>
+			<spirit:description>VITA Reset</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isReset>true</spirit:isReset>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>trigger</spirit:logicalName>
+			<spirit:description>VITA Triggers</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:width>3</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>monitor</spirit:logicalName>
+			<spirit:description>VITA Monitor</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:width>2</spirit:width>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>clk_out_p</spirit:logicalName>
+			<spirit:description>VITA Serialized Clock</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isClock>true</spirit:isClock>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>clk_out_n</spirit:logicalName>
+			<spirit:description>VITA Serialized Clock</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isClock>true</spirit:isClock>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>sync_p</spirit:logicalName>
+			<spirit:description>VITA Serialized Sync Channel</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>sync_n</spirit:logicalName>
+			<spirit:description>VITA Serialized Sync Channel</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>data_p</spirit:logicalName>
+			<spirit:description>VITA Serialized Data Channels</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>data_n</spirit:logicalName>
+			<spirit:description>VITA Serialized Data Channels</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:direction>in</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+	</spirit:ports>
+</spirit:abstractionDefinition>

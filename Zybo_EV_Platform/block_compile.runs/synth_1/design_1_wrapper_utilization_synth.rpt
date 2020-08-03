@@ -1,8 +1,8 @@
-Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri May 11 20:58:32 2018
-| Host         : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 17:45:01 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : 7z020clg400-1
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    8 |     0 |     53200 |  0.02 |
-|   LUT as Logic          |    8 |     0 |     53200 |  0.02 |
+| Slice LUTs*             |   35 |     0 |     53200 |  0.07 |
+|   LUT as Logic          |   35 |     0 |     53200 |  0.07 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |    0 |     0 |    106400 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |    106400 |  0.00 |
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    3 |     0 |       125 |  2.40 |
+| Bonded IOB                  |    1 |     0 |       125 |  0.80 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,9 +146,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT1     |    8 |                 LUT |
-| OBUFT    |    2 |                  IO |
-| IBUF     |    2 |                  IO |
+| LUT1     |   35 |                 LUT |
 | OBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
@@ -159,27 +157,25 @@ Table of Contents
 +------------------------------------+------+
 |              Ref Name              | Used |
 +------------------------------------+------+
-| design_1_xlconstant_0_1            |    1 |
-| design_1_xlconstant_0_0            |    1 |
-| design_1_xbar_1                    |    1 |
-| design_1_xbar_0                    |    1 |
-| design_1_v_vid_in_axi4s_0_0        |    1 |
+| design_1_xbar_4                    |    1 |
+| design_1_xbar_3                    |    1 |
 | design_1_v_tc_1_0                  |    1 |
-| design_1_v_tc_0_1                  |    1 |
 | design_1_v_axi4s_vid_out_0_0       |    1 |
 | design_1_rst_ps7_0_50M_0           |    1 |
 | design_1_rgb2dvi_0_1               |    1 |
 | design_1_processing_system7_0_0    |    1 |
 | design_1_ila_4_0                   |    1 |
 | design_1_ila_3_0                   |    1 |
-| design_1_ila_1_0                   |    1 |
+| design_1_ila_1_1                   |    1 |
 | design_1_ila_0_0                   |    1 |
-| design_1_dvi2rgb_1_1               |    1 |
 | design_1_axis_subset_converter_0_1 |    1 |
-| design_1_axis_subset_converter_0_0 |    1 |
 | design_1_axi_vdma_0_0              |    1 |
 | design_1_axi_gpio_0_0              |    1 |
 | design_1_axi_dynclk_0_0            |    1 |
+| design_1_auto_pc_5                 |    1 |
+| design_1_auto_pc_4                 |    1 |
+| design_1_auto_pc_3                 |    1 |
+| design_1_auto_pc_2                 |    1 |
 | design_1_auto_pc_1                 |    1 |
 | design_1_auto_pc_0                 |    1 |
 +------------------------------------+------+

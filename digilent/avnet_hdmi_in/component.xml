@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com"
+		xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<spirit:vendor>avnet</spirit:vendor>
+	<spirit:library>avnet_hdmi</spirit:library>
+	<spirit:name>avnet_hdmi_in</spirit:name>
+	<spirit:version>3.1</spirit:version>
+	<spirit:busInterfaces>
+		<spirit:busInterface>
+			<spirit:name>HDMI_CLOCK</spirit:name>
+			<spirit:displayName>HDMI_CLOCK</spirit:displayName>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="clock"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="signal"
+					spirit:name="clock_rtl"
+					spirit:version="1.0"/>
+			<spirit:slave/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>CLK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>clk</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>VID_IO_OUT</spirit:name>
+			<spirit:displayName>VID_IO_OUT</spirit:displayName>
+			<spirit:description>Video Interface</spirit:description>
+			<spirit:busType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="vid_io"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="xilinx.com"
+					spirit:library="interface"
+					spirit:name="vid_io_rtl"
+					spirit:version="1.0"/>
+			<spirit:master/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>HBLANK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>video_hblank</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>video_data</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>VBLANK</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>video_vblank</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>ACTIVE_VIDEO</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>video_de</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+		</spirit:busInterface>
+		<spirit:busInterface>
+			<spirit:name>IO_HDMII</spirit:name>
+			<spirit:displayName>IO_HDMII</spirit:displayName>
+			<spirit:description>HDMI Input Interface (IO pins)</spirit:description>
+			<spirit:busType spirit:vendor="avnet.com"
+					spirit:library="interface"
+					spirit:name="avnet_hdmi"
+					spirit:version="1.0"/>
+			<spirit:abstractionType spirit:vendor="avnet.com"
+					spirit:library="interface"
+					spirit:name="avnet_hdmi_rtl"
+					spirit:version="1.0"/>
+			<spirit:slave/>
+			<spirit:portMaps>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>DATA</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>io_hdmii_video</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+				<spirit:portMap>
+					<spirit:logicalPort>
+						<spirit:name>SPDIF</spirit:name>
+					</spirit:logicalPort>
+					<spirit:physicalPort>
+						<spirit:name>io_hdmii_spdif</spirit:name>
+					</spirit:physicalPort>
+				</spirit:portMap>
+			</spirit:portMaps>
+		</spirit:busInterface>
+	</spirit:busInterfaces>
+	<spirit:model>
+		<spirit:views>
+			<spirit:view>
+				<spirit:name>xilinx_vhdlsynthesis</spirit:name>
+				<spirit:displayName>VHDL Synthesis</spirit:displayName>
+				<spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+				<spirit:language>vhdl</spirit:language>
+				<spirit:modelName>avnet_hdmi_in</spirit:modelName>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+			</spirit:view>
+			<spirit:view>
+				<spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
+				<spirit:displayName>VHDL Simulation</spirit:displayName>
+				<spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+				<spirit:language>vhdl</spirit:language>
+				<spirit:modelName>avnet_hdmi_in</spirit:modelName>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+			</spirit:view>
+			<spirit:view>
+				<spirit:name>xilinx_xpgui</spirit:name>
+				<spirit:displayName>UI Layout</spirit:displayName>
+				<spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+				<spirit:fileSetRef>
+					<spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+				</spirit:fileSetRef>
+			</spirit:view>
+		</spirit:views>
+		<spirit:ports>
+			<spirit:port>
+				<spirit:name>clk</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>io_hdmii_spdif</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+					<spirit:driver>
+						<spirit:defaultValue>0</spirit:defaultValue>
+					</spirit:driver>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>io_hdmii_video</spirit:name>
+				<spirit:wire>
+					<spirit:direction>in</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long"
+								spirit:resolve="immediate">15</spirit:left>
+						<spirit:right spirit:format="long"
+								spirit:resolve="immediate">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>audio_spdif</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>video_vblank</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>video_hblank</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>video_de</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>video_data</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long"
+								spirit:resolve="dependent"
+								spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_WIDTH&apos;)) - 1)">15</spirit:left>
+						<spirit:right spirit:format="long"
+								spirit:resolve="immediate">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+			</spirit:port>
+			<spirit:port>
+				<spirit:name>debug_o</spirit:name>
+				<spirit:wire>
+					<spirit:direction>out</spirit:direction>
+					<spirit:vector>
+						<spirit:left spirit:format="long"
+								spirit:resolve="immediate">23</spirit:left>
+						<spirit:right spirit:format="long"
+								spirit:resolve="immediate">0</spirit:right>
+					</spirit:vector>
+					<spirit:wireTypeDefs>
+						<spirit:wireTypeDef>
+							<spirit:typeName>std_logic_vector</spirit:typeName>
+							<spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+							<spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+						</spirit:wireTypeDef>
+					</spirit:wireTypeDefs>
+				</spirit:wire>
+				<spirit:vendorExtensions>
+					<xilinx:portInfo>
+						<xilinx:enablement>
+							<xilinx:presence>optional</xilinx:presence>
+							<xilinx:isEnabled xilinx:resolve="dependent"
+									xilinx:dependency="spirit:decode(id(&apos;PARAM_VALUE.C_DEBUG_PORT&apos;))">false</xilinx:isEnabled>
+						</xilinx:enablement>
+					</xilinx:portInfo>
+				</spirit:vendorExtensions>
+			</spirit:port>
+		</spirit:ports>
+		<spirit:modelParameters>
+			<spirit:modelParameter xsi:type="spirit:nameValueTypeType"
+					spirit:dataType="integer">
+				<spirit:name>C_DATA_WIDTH</spirit:name>
+				<spirit:displayName>Video Data Width</spirit:displayName>
+				<spirit:description>Video Data Width</spirit:description>
+				<spirit:value spirit:format="long"
+						spirit:resolve="generated"
+						spirit:id="MODELPARAM_VALUE.C_DATA_WIDTH">16</spirit:value>
+			</spirit:modelParameter>
+			<spirit:modelParameter spirit:dataType="string">
+				<spirit:name>C_FAMILY</spirit:name>
+				<spirit:value spirit:format="string"
+						spirit:resolve="generated"
+						spirit:id="MODELPARAM_VALUE.C_FAMILY">zynq</spirit:value>
+			</spirit:modelParameter>
+		</spirit:modelParameters>
+	</spirit:model>
+	<spirit:fileSets>
+		<spirit:fileSet>
+			<spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+			<spirit:file>
+				<spirit:name>hdl/vhdl/avnet_hdmi_in.vhd</spirit:name>
+				<spirit:fileType>vhdlSource</spirit:fileType>
+				<spirit:logicalName>work</spirit:logicalName>
+			</spirit:file>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
+			<spirit:file>
+				<spirit:name>hdl/vhdl/avnet_hdmi_in.vhd</spirit:name>
+				<spirit:fileType>vhdlSource</spirit:fileType>
+				<spirit:logicalName>work</spirit:logicalName>
+			</spirit:file>
+		</spirit:fileSet>
+		<spirit:fileSet>
+			<spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+			<spirit:file>
+				<spirit:name>xgui/avnet_hdmi_in_v3_1.tcl</spirit:name>
+				<spirit:fileType>tclSource</spirit:fileType>
+				<spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+			</spirit:file>
+		</spirit:fileSet>
+	</spirit:fileSets>
+	<spirit:description>Avnet HDMI Input (for ADV7611)</spirit:description>
+	<spirit:parameters>
+		<spirit:parameter>
+			<spirit:name>C_DATA_WIDTH</spirit:name>
+			<spirit:displayName>Video Data Width</spirit:displayName>
+			<spirit:description>Video Data Width</spirit:description>
+			<spirit:value spirit:format="long"
+					spirit:resolve="user"
+					spirit:id="PARAM_VALUE.C_DATA_WIDTH"
+					spirit:order="10000"
+					spirit:configGroups="1 UnGrouped">16</spirit:value>
+		</spirit:parameter>
+		<spirit:parameter>
+			<spirit:name>Component_Name</spirit:name>
+			<spirit:value spirit:resolve="user"
+					spirit:id="PARAM_VALUE.Component_Name"
+					spirit:order="1">avnet_hdmi_in_v3_1</spirit:value>
+		</spirit:parameter>
+		<spirit:parameter>
+			<spirit:name>C_DEBUG_PORT</spirit:name>
+			<spirit:displayName>Enable Debug Port</spirit:displayName>
+			<spirit:description>Enable Debug Port</spirit:description>
+			<spirit:value spirit:format="bool"
+					spirit:resolve="user"
+					spirit:id="PARAM_VALUE.C_DEBUG_PORT"
+					spirit:order="10100"
+					spirit:configGroups="1 UnGrouped">FALSE</spirit:value>
+		</spirit:parameter>
+	</spirit:parameters>
+	<spirit:vendorExtensions>
+		<xilinx:coreExtensions>
+			<xilinx:supportedFamilies>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">virtex7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">qvirtex7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">kintex7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">kintex7l</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">qkintex7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">qkintex7l</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">artix7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">artix7l</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">aartix7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">qartix7</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">qzynq</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">azynq</xilinx:family>
+				<xilinx:family xilinx:lifeCycle="Pre-Production">ZYNQUPLUS</xilinx:family>
+			</xilinx:supportedFamilies>
+			<xilinx:taxonomies>
+				<xilinx:taxonomy>/Video_&amp;_Image_Processing</xilinx:taxonomy>
+			</xilinx:taxonomies>
+			<xilinx:displayName>Avnet HDMI Input (for ADV7611)</xilinx:displayName>
+			<xilinx:vendorDisplayName>Avnet</xilinx:vendorDisplayName>
+			<xilinx:vendorURL>http://em.avnet.com</xilinx:vendorURL>
+			<xilinx:coreRevision>1</xilinx:coreRevision>
+			<xilinx:coreCreationDateTime>2013-12-18T19:57:05Z</xilinx:coreCreationDateTime>
+			<xilinx:tags>
+				<xilinx:tag xilinx:name="nopcore"/>
+			</xilinx:tags>
+		</xilinx:coreExtensions>
+		<xilinx:packagingInfo>
+			<xilinx:xilinxVersion>2013.3</xilinx:xilinxVersion>
+		</xilinx:packagingInfo>
+	</spirit:vendorExtensions>
+</spirit:component>

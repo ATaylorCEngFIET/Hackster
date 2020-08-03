@@ -1,0 +1,235 @@
+11:44:24 **** Build of configuration Debug for project hdmi_conf ****
+make all 
+'Building file: ../src/lib/clk_wiz.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/clk_wiz.o" -MMD -MP -MF"src/lib/clk_wiz.d" -MT"src/lib/clk_wiz.o" -o "src/lib/clk_wiz.o" "../src/lib/clk_wiz.c"
+'Finished building: ../src/lib/clk_wiz.c'
+' '
+'Building file: ../src/lib/i2c.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/i2c.o" -MMD -MP -MF"src/lib/i2c.d" -MT"src/lib/i2c.o" -o "src/lib/i2c.o" "../src/lib/i2c.c"
+../src/lib/i2c.c: In function 'i2c_read_block':
+../src/lib/i2c.c:275:23: warning: unused variable 'bus_data' [-Wunused-variable]
+  union i2c_smbus_data bus_data;
+                       ^~~~~~~~
+../src/lib/i2c.c:274:6: warning: unused variable 'i' [-Wunused-variable]
+  int i, fd, err;
+      ^
+'Finished building: ../src/lib/i2c.c'
+' '
+'Building file: ../src/lib/tda1997x.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/tda1997x.o" -MMD -MP -MF"src/lib/tda1997x.d" -MT"src/lib/tda1997x.o" -o "src/lib/tda1997x.o" "../src/lib/tda1997x.c"
+../src/lib/tda1997x.c:2013:12: warning: 'tda1997x_soft_rst' defined but not used [-Wunused-function]
+ static int tda1997x_soft_rst(struct tda1997x_dev *dev, uint8_t rst)
+            ^~~~~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1702:22: warning: 'rgb_full_itu709' defined but not used [-Wunused-const-variable=]
+ static const int16_t rgb_full_itu709[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1694:22: warning: 'rgb_full_itu601' defined but not used [-Wunused-const-variable=]
+ static const int16_t rgb_full_itu601[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1686:22: warning: 'rgb_lim_itu709' defined but not used [-Wunused-const-variable=]
+ static const int16_t rgb_lim_itu709[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1678:22: warning: 'rgb_lim_itu601' defined but not used [-Wunused-const-variable=]
+ static const int16_t rgb_lim_itu601[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1669:22: warning: 'rgb_lim_rgb_full' defined but not used [-Wunused-const-variable=]
+ static const int16_t rgb_lim_rgb_full[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1661:22: warning: 'yuv601_rgb_full' defined but not used [-Wunused-const-variable=]
+ static const int16_t yuv601_rgb_full[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1653:22: warning: 'yuv709_rgb_full' defined but not used [-Wunused-const-variable=]
+ static const int16_t yuv709_rgb_full[COLOR_CONV_MATRIX_LENGTH] = {
+                      ^~~~~~~~~~~~~~~
+../src/lib/tda1997x.c:1635:22: warning: 'blank_yuv' defined but not used [-Wunused-const-variable=]
+ static const uint8_t blank_yuv[6] = {
+                      ^~~~~~~~~
+'Finished building: ../src/lib/tda1997x.c'
+' '
+'Building file: ../src/lib/tda998x.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/tda998x.o" -MMD -MP -MF"src/lib/tda998x.d" -MT"src/lib/tda998x.o" -o "src/lib/tda998x.o" "../src/lib/tda998x.c"
+../src/lib/tda998x.c: In function 'tda998x_aud_set_input':
+../src/lib/tda998x.c:2473:14: warning: unused variable 'acrN' [-Wunused-variable]
+     uint32_t acrN;
+              ^~~~
+../src/lib/tda998x.c:2472:14: warning: unused variable 'uCtsX' [-Wunused-variable]
+     uint16_t uCtsX;                    /* CtsX value */
+              ^~~~~
+../src/lib/tda998x.c:2471:13: warning: unused variable 'layout' [-Wunused-variable]
+     uint8_t layout;                    /* 0 or 1 */
+             ^~~~~~
+../src/lib/tda998x.c:2469:13: warning: unused variable 'reg_val' [-Wunused-variable]
+     uint8_t reg_val;
+             ^~~~~~~
+../src/lib/tda998x.c: In function 'clear_edid_request':
+../src/lib/tda998x.c:2795:6: warning: unused variable 'ret' [-Wunused-variable]
+  int ret;
+      ^~~
+../src/lib/tda998x.c: In function 'tda998x_video_set_inout':
+../src/lib/tda998x.c:3549:10: warning: unused variable 'reg_idx' [-Wunused-variable]
+  uint8_t reg_idx;
+          ^~~~~~~
+../src/lib/tda998x.c:3547:27: warning: unused variable 'sca_mode' [-Wunused-variable]
+  enum tda998x_scaler_mode sca_mode;
+                           ^~~~~~~~
+../src/lib/tda998x.c: In function 'tda998x_PktSetIsrc1':
+../src/lib/tda998x.c:4094:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  if (dev->sink != SINK_HDMI)
+  ^~
+../src/lib/tda998x.c:4098:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   ret = write_reg_mask(dev,
+   ^~~
+../src/lib/tda998x.c: In function 'input_config':
+../src/lib/tda998x.c:4449:10: warning: unused variable 'ssd' [-Wunused-variable]
+  uint8_t ssd = 0;  /* Packed srl, scg and de */
+          ^~~
+../src/lib/tda998x.c:4448:19: warning: unused variable 'reg_idx3D' [-Wunused-variable]
+  uint8_t reg_idx, reg_idx3D; /* Video format value used for register */
+                   ^~~~~~~~~
+../src/lib/tda998x.c:4448:10: warning: unused variable 'reg_idx' [-Wunused-variable]
+  uint8_t reg_idx, reg_idx3D; /* Video format value used for register */
+          ^~~~~~~
+../src/lib/tda998x.c: In function 'tda998x_set_input_output':
+../src/lib/tda998x.c:4815:23: warning: variable 'toggle' set but not used [-Wunused-but-set-variable]
+  enum tda998x_pix_tgl toggle;   /**< Toggling */
+                       ^~~~~~
+../src/lib/tda998x.c:4811:10: warning: variable 'pix_rpt' set but not used [-Wunused-but-set-variable]
+  uint8_t pix_rpt;    /**< Pixel repetition */
+          ^~~~~~~
+../src/lib/tda998x.c: In function 'tda998x_handle_interrupt':
+../src/lib/tda998x.c:5164:7: warning: unused variable 'hpdOrRxsLevelHasChanged' [-Wunused-variable]
+  bool hpdOrRxsLevelHasChanged = false;
+       ^~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:5159:11: warning: unused variable 'fInterruptMask' [-Wunused-variable]
+  uint16_t fInterruptMask;  /* Mask to test each interrupt bit */
+           ^~~~~~~~~~~~~~
+At top level:
+../src/lib/tda998x.c:4438:1: warning: 'input_config' defined but not used [-Wunused-function]
+ input_config(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~
+../src/lib/tda998x.c:4417:1: warning: 'tda998x_set_pix_edge' defined but not used [-Wunused-function]
+ tda998x_set_pix_edge(struct tda998x_dev *dev, enum vip_cntrl_3_edge edge)
+ ^~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4373:1: warning: 'tda998x_pkt_set_vs_infoframe' defined but not used [-Wunused-function]
+ tda998x_pkt_set_vs_infoframe(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4333:1: warning: 'tda998x_pkt_set_raw_vid_infoframe' defined but not used [-Wunused-function]
+ tda998x_pkt_set_raw_vid_infoframe(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4284:1: warning: 'tda998x_pkg_set_spdinfo' defined but not used [-Wunused-function]
+ tda998x_pkg_set_spdinfo(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4262:1: warning: 'tda998x_pkt_set_null' defined but not used [-Wunused-function]
+ tda998x_pkt_set_null(struct tda998x_dev *dev)
+ ^~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4244:1: warning: 'tda998x_pkt_set_null_insert' defined but not used [-Wunused-function]
+ tda998x_pkt_set_null_insert(struct tda998x_dev *dev, bool en)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4185:1: warning: 'tda998x_PktSetMpegInfoframe' defined but not used [-Wunused-function]
+ tda998x_PktSetMpegInfoframe(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4140:1: warning: 'tda998x_PktSetIsrc2' defined but not used [-Wunused-function]
+ tda998x_PktSetIsrc2(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4080:1: warning: 'tda998x_PktSetIsrc1' defined but not used [-Wunused-function]
+ tda998x_PktSetIsrc1(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:4055:1: warning: 'tda998x_PktSetGeneralCntrl' defined but not used [-Wunused-function]
+ tda998x_PktSetGeneralCntrl(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3935:1: warning: 'tda998x_set_pkt_acp' defined but not used [-Wunused-function]
+ tda998x_set_pkt_acp(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3920:1: warning: 'tda998x_set_aud_pkt_enable' defined but not used [-Wunused-function]
+ tda998x_set_aud_pkt_enable(struct tda998x_dev *dev, bool en)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3865:1: warning: 'tda998x_mtx_set_outoffset' defined but not used [-Wunused-function]
+ tda998x_mtx_set_outoffset(struct tda998x_dev *dev, struct mtx_offset *offset)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3837:1: warning: 'tda998x_mtx_set_inoffset' defined but not used [-Wunused-function]
+ tda998x_mtx_set_inoffset(struct tda998x_dev *dev, struct mtx_offset *offset)
+ ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3689:1: warning: 'tda998x_mtx_set_coeffs' defined but not used [-Wunused-function]
+ tda998x_mtx_set_coeffs(struct tda998x_dev *dev, struct tda998x_mtx_coeff *mtx)
+ ^~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3340:1: warning: 'tda998x_vidout_enable' defined but not used [-Wunused-function]
+ tda998x_vidout_enable(struct tda998x_dev *dev, bool en)
+ ^~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:3268:1: warning: 'tda998x_vidin_set_sync' defined but not used [-Wunused-function]
+ tda998x_vidin_set_sync(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:2401:1: warning: 'tda998x_aud_set_chan_status_mapping' defined but not used [-Wunused-function]
+ tda998x_aud_set_chan_status_mapping(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:2344:1: warning: 'tda998x_aud_set_chan_status' defined but not used [-Wunused-function]
+ tda998x_aud_set_chan_status(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:2106:1: warning: 'tda998x_aud_set_cts' defined but not used [-Wunused-function]
+ tda998x_aud_set_cts(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c:1990:1: warning: 'tda998x_aud_set_config' defined but not used [-Wunused-function]
+ tda998x_aud_set_config(struct tda998x_dev *dev,
+ ^~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tda998x.c: In function 'tda998x_mtx_set_conv':
+../src/lib/tda998x.c:3812:36: warning: 'mtx_idx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    buf[i] = mtx_cfg_preset[mtx_idx][i];
+             ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../src/lib/tda998x.c: In function 'input_config':
+../src/lib/tda998x.c:4468:22: warning: 'vidin_cfg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  vidin_cfg->pix_rate = pix_rate;
+  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+'Finished building: ../src/lib/tda998x.c'
+' '
+'Building file: ../src/lib/tlv320aic3104.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/tlv320aic3104.o" -MMD -MP -MF"src/lib/tlv320aic3104.d" -MT"src/lib/tlv320aic3104.o" -o "src/lib/tlv320aic3104.o" "../src/lib/tlv320aic3104.c"
+../src/lib/tlv320aic3104.c: In function 'aic3x_init':
+../src/lib/tlv320aic3104.c:401:18: warning: unused variable 'reg' [-Wunused-variable]
+  enum aic3x_reg *reg;
+                  ^~~
+At top level:
+../src/lib/tlv320aic3104.c:339:1: warning: 'aic3x_configure_clock_source' defined but not used [-Wunused-function]
+ aic3x_configure_clock_source(struct aic3x_dev *codec, enum aic3x_clkgen_ctrl clk_in, enum aic3x_clkgen_ctrl_source source)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/lib/tlv320aic3104.c:254:23: warning: 'headout' defined but not used [-Wunused-variable]
+ static enum aic3x_reg headout[] = {
+                       ^~~~~~~
+../src/lib/tlv320aic3104.c:245:23: warning: 'lineout' defined but not used [-Wunused-variable]
+ static enum aic3x_reg lineout[] = {
+                       ^~~~~~~
+'Finished building: ../src/lib/tlv320aic3104.c'
+' '
+'Building file: ../src/lib/vdma.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/vdma.o" -MMD -MP -MF"src/lib/vdma.d" -MT"src/lib/vdma.o" -o "src/lib/vdma.o" "../src/lib/vdma.c"
+../src/lib/vdma.c: In function 'vdma_config':
+../src/lib/vdma.c:178:6: warning: unused variable 'en' [-Wunused-variable]
+  int en;
+      ^~
+'Finished building: ../src/lib/vdma.c'
+' '
+'Building file: ../src/lib/vid_tpg.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/vid_tpg.o" -MMD -MP -MF"src/lib/vid_tpg.d" -MT"src/lib/vid_tpg.o" -o "src/lib/vid_tpg.o" "../src/lib/vid_tpg.c"
+'Finished building: ../src/lib/vid_tpg.c'
+' '
+'Building file: ../src/lib/vtc.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lib/vtc.o" -MMD -MP -MF"src/lib/vtc.d" -MT"src/lib/vtc.o" -o "src/lib/vtc.o" "../src/lib/vtc.c"
+'Finished building: ../src/lib/vtc.c'
+' '
+'Building file: ../src/hdmi-config/hdmi-config.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/hdmi-config/hdmi-config.o" -MMD -MP -MF"src/hdmi-config/hdmi-config.d" -MT"src/hdmi-config/hdmi-config.o" -o "src/hdmi-config/hdmi-config.o" "../src/hdmi-config/hdmi-config.c"
+../src/hdmi-config/hdmi-config.c:52:10: fatal error: i2c.h: No such file or directory
+ #include "i2c.h"
+          ^~~~~~~
+compilation terminated.
+make: *** [src/hdmi-config/subdir.mk:26: src/hdmi-config/hdmi-config.o] Error 1
+
+11:44:27 Build Finished (took 2s.803ms)
+

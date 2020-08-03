@@ -1,3 +1,841 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_xlconstant_2_0 (xilinx.com:ip:xlconstant:1.1 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_xlconstant_0_1 (xilinx.com:ip:xlconstant:1.1 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_xlconstant_0_0 (xilinx.com:ip:xlconstant:1.1 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_v_tc_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_v_tc_1_0 from xilinx.com:ip:v_tc:6.1 (Rev. 13) to xilinx.com:ip:v_tc:6.2
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'GEN_F0_VSYNC_HSTART' from '640' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F0_VSYNC_HEND' from '695' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F0_VBLANK_HSTART' from '640' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F0_VBLANK_HEND' from '640' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F1_VSYNC_HSTART' from '695' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F1_VSYNC_HEND' from '695' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F1_VBLANK_HSTART' from '640' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+An attempt to modify the value of disabled parameter 'GEN_F1_VBLANK_HEND' from '640' to '1280' has been ignored for IP 'design_1_v_tc_1_0'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:v_tc:6.2 -user_name design_1_v_tc_1_0
+set_property -dict "\
+  CONFIG.C_FAMILY {virtex7} \
+  CONFIG.Component_Name {design_1_v_tc_1_0} \
+  CONFIG.DET_FIELDID_EN {false} \
+  CONFIG.FSYNC_HSTART0 {0} \
+  CONFIG.FSYNC_HSTART1 {0} \
+  CONFIG.FSYNC_HSTART10 {0} \
+  CONFIG.FSYNC_HSTART11 {0} \
+  CONFIG.FSYNC_HSTART12 {0} \
+  CONFIG.FSYNC_HSTART13 {0} \
+  CONFIG.FSYNC_HSTART14 {0} \
+  CONFIG.FSYNC_HSTART15 {0} \
+  CONFIG.FSYNC_HSTART2 {0} \
+  CONFIG.FSYNC_HSTART3 {0} \
+  CONFIG.FSYNC_HSTART4 {0} \
+  CONFIG.FSYNC_HSTART5 {0} \
+  CONFIG.FSYNC_HSTART6 {0} \
+  CONFIG.FSYNC_HSTART7 {0} \
+  CONFIG.FSYNC_HSTART8 {0} \
+  CONFIG.FSYNC_HSTART9 {0} \
+  CONFIG.FSYNC_VSTART0 {0} \
+  CONFIG.FSYNC_VSTART1 {0} \
+  CONFIG.FSYNC_VSTART10 {0} \
+  CONFIG.FSYNC_VSTART11 {0} \
+  CONFIG.FSYNC_VSTART12 {0} \
+  CONFIG.FSYNC_VSTART13 {0} \
+  CONFIG.FSYNC_VSTART14 {0} \
+  CONFIG.FSYNC_VSTART15 {0} \
+  CONFIG.FSYNC_VSTART2 {0} \
+  CONFIG.FSYNC_VSTART3 {0} \
+  CONFIG.FSYNC_VSTART4 {0} \
+  CONFIG.FSYNC_VSTART5 {0} \
+  CONFIG.FSYNC_VSTART6 {0} \
+  CONFIG.FSYNC_VSTART7 {0} \
+  CONFIG.FSYNC_VSTART8 {0} \
+  CONFIG.FSYNC_VSTART9 {0} \
+  CONFIG.GEN_ACHROMA_POLARITY {High} \
+  CONFIG.GEN_AVIDEO_POLARITY {High} \
+  CONFIG.GEN_CPARITY {0} \
+  CONFIG.GEN_F0_VBLANK_HEND {1280} \
+  CONFIG.GEN_F0_VBLANK_HSTART {1280} \
+  CONFIG.GEN_F0_VFRAME_SIZE {750} \
+  CONFIG.GEN_F0_VSYNC_HEND {1280} \
+  CONFIG.GEN_F0_VSYNC_HSTART {1280} \
+  CONFIG.GEN_F0_VSYNC_VEND {729} \
+  CONFIG.GEN_F0_VSYNC_VSTART {724} \
+  CONFIG.GEN_F1_VBLANK_HEND {1280} \
+  CONFIG.GEN_F1_VBLANK_HSTART {1280} \
+  CONFIG.GEN_F1_VFRAME_SIZE {750} \
+  CONFIG.GEN_F1_VSYNC_HEND {1280} \
+  CONFIG.GEN_F1_VSYNC_HSTART {1280} \
+  CONFIG.GEN_F1_VSYNC_VEND {729} \
+  CONFIG.GEN_F1_VSYNC_VSTART {724} \
+  CONFIG.GEN_FIELDID_EN {false} \
+  CONFIG.GEN_FIELDID_POLARITY {High} \
+  CONFIG.GEN_HACTIVE_SIZE {1280} \
+  CONFIG.GEN_HBLANK_POLARITY {High} \
+  CONFIG.GEN_HFRAME_SIZE {1650} \
+  CONFIG.GEN_HSYNC_END {1430} \
+  CONFIG.GEN_HSYNC_POLARITY {High} \
+  CONFIG.GEN_HSYNC_START {1390} \
+  CONFIG.GEN_INTERLACED {false} \
+  CONFIG.GEN_VACTIVE_SIZE {720} \
+  CONFIG.GEN_VBLANK_POLARITY {High} \
+  CONFIG.GEN_VIDEO_FORMAT {RGB} \
+  CONFIG.GEN_VSYNC_POLARITY {High} \
+  CONFIG.HAS_AXI4_LITE {true} \
+  CONFIG.HAS_INTC_IF {false} \
+  CONFIG.INTERLACE_EN {false} \
+  CONFIG.IRQ.PortWidth {1} \
+  CONFIG.IRQ.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.SYNC_EN {false} \
+  CONFIG.VIDEO_MODE {720p} \
+  CONFIG.active_chroma_detection {false} \
+  CONFIG.active_chroma_generation {false} \
+  CONFIG.active_video_detection {true} \
+  CONFIG.active_video_generation {true} \
+  CONFIG.auto_generation_mode {false} \
+  CONFIG.clk_intf.ASSOCIATED_BUSIF {vtiming_in:vtiming_out} \
+  CONFIG.clk_intf.ASSOCIATED_CLKEN {clken} \
+  CONFIG.clk_intf.ASSOCIATED_RESET {resetn} \
+  CONFIG.clk_intf.CLK_DOMAIN {design_1_axi_dynclk_0_0_PXL_CLK_O} \
+  CONFIG.clk_intf.FREQ_HZ {100000000} \
+  CONFIG.clk_intf.INSERT_VIP {0} \
+  CONFIG.clk_intf.PHASE {0.000} \
+  CONFIG.clken_intf.POLARITY {ACTIVE_LOW} \
+  CONFIG.ctrl.ADDR_WIDTH {9} \
+  CONFIG.ctrl.ARUSER_WIDTH {0} \
+  CONFIG.ctrl.AWUSER_WIDTH {0} \
+  CONFIG.ctrl.BUSER_WIDTH {0} \
+  CONFIG.ctrl.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.ctrl.DATA_WIDTH {32} \
+  CONFIG.ctrl.FREQ_HZ {200000000} \
+  CONFIG.ctrl.HAS_BRESP {1} \
+  CONFIG.ctrl.HAS_BURST {0} \
+  CONFIG.ctrl.HAS_CACHE {0} \
+  CONFIG.ctrl.HAS_LOCK {0} \
+  CONFIG.ctrl.HAS_PROT {0} \
+  CONFIG.ctrl.HAS_QOS {0} \
+  CONFIG.ctrl.HAS_REGION {0} \
+  CONFIG.ctrl.HAS_RRESP {1} \
+  CONFIG.ctrl.HAS_WSTRB {1} \
+  CONFIG.ctrl.ID_WIDTH {0} \
+  CONFIG.ctrl.INSERT_VIP {0} \
+  CONFIG.ctrl.MAX_BURST_LENGTH {1} \
+  CONFIG.ctrl.NUM_READ_OUTSTANDING {8} \
+  CONFIG.ctrl.NUM_READ_THREADS {1} \
+  CONFIG.ctrl.NUM_WRITE_OUTSTANDING {8} \
+  CONFIG.ctrl.NUM_WRITE_THREADS {1} \
+  CONFIG.ctrl.PHASE {0.000} \
+  CONFIG.ctrl.PROTOCOL {AXI4LITE} \
+  CONFIG.ctrl.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.ctrl.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.ctrl.RUSER_WIDTH {0} \
+  CONFIG.ctrl.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.ctrl.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.ctrl.WUSER_WIDTH {0} \
+  CONFIG.enable_detection {false} \
+  CONFIG.enable_generation {true} \
+  CONFIG.frame_syncs {1} \
+  CONFIG.horizontal_blank_detection {true} \
+  CONFIG.horizontal_blank_generation {true} \
+  CONFIG.horizontal_sync_detection {true} \
+  CONFIG.horizontal_sync_generation {true} \
+  CONFIG.max_clocks_per_line {4096} \
+  CONFIG.max_lines_per_frame {4096} \
+  CONFIG.resetn_intf.INSERT_VIP {0} \
+  CONFIG.resetn_intf.POLARITY {ACTIVE_LOW} \
+  CONFIG.s_axi_aclk_intf.ASSOCIATED_BUSIF {ctrl} \
+  CONFIG.s_axi_aclk_intf.ASSOCIATED_CLKEN {s_axi_aclken} \
+  CONFIG.s_axi_aclk_intf.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk_intf.CLK_DOMAIN {design_1_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.s_axi_aclk_intf.FREQ_HZ {200000000} \
+  CONFIG.s_axi_aclk_intf.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk_intf.PHASE {0.000} \
+  CONFIG.s_axi_aclken_intf.POLARITY {ACTIVE_LOW} \
+  CONFIG.s_axi_aresetn_intf.INSERT_VIP {0} \
+  CONFIG.s_axi_aresetn_intf.POLARITY {ACTIVE_LOW} \
+  CONFIG.vertical_blank_detection {true} \
+  CONFIG.vertical_blank_generation {true} \
+  CONFIG.vertical_sync_detection {true} \
+  CONFIG.vertical_sync_generation {true} " [get_ips design_1_v_tc_1_0]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ps7_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ps7_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_4_0 (xilinx.com:ip:ila:6.2) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_3_0 (xilinx.com:ip:ila:6.2) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_1_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_1_1 (xilinx.com:ip:ila:6.2) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_0_0 (xilinx.com:ip:ila:6.2) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axis_subset_converter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axis_subset_converter_0_1 (xilinx.com:ip:axis_subset_converter:1.1) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_vdma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_vdma_0_0 (xilinx.com:ip:axi_vdma:6.3) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_interconnect_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_interconnect_0_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Dec  8 16:45:16 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_xlconstant_0_1 (xilinx.com:ip:xlconstant:1.1) from (Rev. 3) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_xlconstant_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_xlconstant_0_0 (xilinx.com:ip:xlconstant:1.1) from (Rev. 3) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_v_vid_in_axi4s_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_v_vid_in_axi4s_0_0 (xilinx.com:ip:v_vid_in_axi4s:4.0) from (Rev. 7) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_v_tc_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_v_tc_1_0 (xilinx.com:ip:v_tc:6.1) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_v_tc_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_v_tc_0_1 (xilinx.com:ip:v_tc:6.1) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_v_axi4s_vid_out_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_v_axi4s_vid_out_0_0 (xilinx.com:ip:v_axi4s_vid_out:4.0) from (Rev. 8) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_v_axi4s_vid_out_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'fifo_read_level'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps7_0_50M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_rst_ps7_0_50M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ps7_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ps7_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 16) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_4_0 (xilinx.com:ip:ila:6.2) from (Rev. 5) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_3_0 (xilinx.com:ip:ila:6.2) from (Rev. 5) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_1_0 (xilinx.com:ip:ila:6.2) from (Rev. 5) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ila_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_ila_0_0 (xilinx.com:ip:ila:6.2) from (Rev. 5) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_dvi2rgb_1_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_dvi2rgb_1_1 (digilentinc.com:ip:dvi2rgb:1.9 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axis_subset_converter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axis_subset_converter_0_1 (xilinx.com:ip:axis_subset_converter:1.1) from (Rev. 15) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axis_subset_converter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axis_subset_converter_0_0 (xilinx.com:ip:axis_subset_converter:1.1) from (Rev. 15) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_vdma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_vdma_0_0 (xilinx.com:ip:axi_vdma:6.3) from (Rev. 3) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_interconnect_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_interconnect_0_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 16) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Dec  7 22:26:00 2019
+| Host         : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_gpio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 17) to (Rev. 21)
+
+
+
+
+
+
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="pixel_pack" xd:componentRef="pixel_pack" xd:initiationInterval="x" xd:clockPeriod="7.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="stream_in_24-&gt;data" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:arraySize="24" xd:dataWidth="24"/>
+  <xd:arg xd:name="stream_in_24-&gt;user" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:arraySize="24" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_in_24-&gt;last" xd:originalName="stream_in_24" xd:direction="in" xd:interfaceRef="stream_in_24" xd:busTypeRef="axis" xd:arraySize="24" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_out_32-&gt;data" xd:originalName="stream_out_32" xd:direction="out" xd:interfaceRef="stream_out_32" xd:busTypeRef="axis" xd:arraySize="24" xd:dataWidth="32"/>
+  <xd:arg xd:name="stream_out_32-&gt;user" xd:originalName="stream_out_32" xd:direction="out" xd:interfaceRef="stream_out_32" xd:busTypeRef="axis" xd:arraySize="24" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_out_32-&gt;last" xd:originalName="stream_out_32" xd:direction="out" xd:interfaceRef="stream_out_32" xd:busTypeRef="axis" xd:arraySize="24" xd:dataWidth="1"/>
+  <xd:arg xd:name="mode" xd:originalName="mode" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="alpha" xd:originalName="alpha" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="1294" xd:FF="1109" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

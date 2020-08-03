@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4_AR70530_AR70530 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Fri May 11 19:46:28 2018
-// Host        : DESKTOP-HQKVQ13 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+// Date        : Sun Dec  8 17:42:12 2019
+// Host        : DESKTOP-L3OMJC1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               C:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_stub.v
+//               C:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_stub.v
 // Design      : design_1_axi_vdma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "axi_vdma,Vivado 2017.4_AR70530_AR70530" *)
+(* x_core_info = "axi_vdma,Vivado 2019.2" *)
 module design_1_axi_vdma_0_0(s_axi_lite_aclk, m_axi_mm2s_aclk, 
   m_axis_mm2s_aclk, m_axi_s2mm_aclk, s_axis_s2mm_aclk, axi_resetn, s_axi_lite_awvalid, 
   s_axi_lite_awready, s_axi_lite_awaddr, s_axi_lite_wvalid, s_axi_lite_wready, 

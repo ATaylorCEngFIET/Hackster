@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="design_1_axi_vdma_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1526063378">
+<GenRun Id="design_1_axi_vdma_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1575826718">
   <File Type="PA-TCL" Name="design_1_axi_vdma_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_axi_vdma_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_axi_vdma_0_0_reports.tcl"/>
@@ -39,8 +39,14 @@
       <Option Name="UseBlackboxStub" Val="1"/>
     </Config>
   </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
       <Desc>Vivado Synthesis Defaults</Desc>
     </StratHandle>
     <Step Id="synth_design"/>

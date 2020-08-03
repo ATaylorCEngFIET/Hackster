@@ -1,0 +1,232 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include <unistd.h >
+#include "platform.h"
+#include "xil_printf.h"
+#include "xiicps.h"
+#include "xgpiops.h"
+#include "iic_setup.h"
+#include "xvtc.h"
+
+
+#define IIC_DEVICE_ID		XPAR_XIICPS_0_DEVICE_ID
+#define GPIO_DEVICE_ID		XPAR_XGPIOPS_0_DEVICE_ID
+#define IIC_SLAVE_ADDR		0x4C // 98 7 bit address and r/w bit
+#define IIC_SCLK_RATE		100000
+#define TEST_BUFFER_SIZE	256
+#define reset 54
+
+u8 SendBuffer[TEST_BUFFER_SIZE];    /**< Buffer for Transmitting Data */
+u8 RecvBuffer[TEST_BUFFER_SIZE];    /**< Buffer for Receiving Data */
+
+XIicPs_Config *Config;
+XIicPs Iic;
+XGpioPs_Config *GPIOConfigPtr;
+XGpioPs Gpio;
+XVtc	VtcInst;
+XVtc_Config *vtc_config;
+
+int main()
+{
+	int Status,i;
+	XVtc_Timing det;
+	u16 result;
+
+	init_platform();
+
+    print("Hello World\n\r");
+
+	Config = XIicPs_LookupConfig(IIC_DEVICE_ID);
+	if (NULL == Config) {
+		return XST_FAILURE;
+	}
+
+	Status = XIicPs_CfgInitialize(&Iic, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = XIicPs_SelfTest(&Iic);
+	if (Status != XST_SUCCESS) {
+		xil_printf("I2C failed self test");
+		return XST_FAILURE;
+	}
+
+	XIicPs_SetSClk(&Iic, IIC_SCLK_RATE);
+
+
+	GPIOConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+	Status = XGpioPs_CfgInitialize(&Gpio, GPIOConfigPtr,GPIOConfigPtr->BaseAddr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("GPIO INIT FAILED\n\r");
+		return XST_FAILURE;
+	}
+
+	//set direction and enable output
+	XGpioPs_SetDirectionPin(&Gpio, reset, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, reset, 1);
+
+	XGpioPs_WritePin(&Gpio, reset, 1);
+	usleep(6000);
+	XGpioPs_WritePin(&Gpio, reset, 0);
+	usleep(6000);
+	XGpioPs_WritePin(&Gpio, reset, 1);
+
+	vtc_config = XVtc_LookupConfig(XPAR_VTC_0_DEVICE_ID);
+	XVtc_CfgInitialize(&VtcInst, vtc_config, vtc_config->BaseAddress);
+
+	memset((void *)&det, 0, sizeof(det));
+	u32 data;
+	i=0;
+
+	while(1){
+
+		SendBuffer[0] = iic_IO_hdmi_config[i][0];
+		SendBuffer[1] = iic_IO_hdmi_config[i][1];
+		XIicPs_MasterSendPolled(&Iic, SendBuffer,2, IIC_SLAVE_ADDR);
+		while (XIicPs_BusIsBusy(&Iic)) {
+			/* NOP */
+		}
+		if ((iic_IO_hdmi_config[i][0] == 0xff) && (iic_IO_hdmi_config[i][1] == 0x80)){
+			// first command is i2c reset wait 5ms same as for normal reset
+			// before issuing any other commands.
+			usleep(5000);
+		}
+		if ((iic_IO_hdmi_config[i][0] == 0x33) && (iic_IO_hdmi_config[i][1] == 0x40)){
+			break;
+		}
+		i++;
+	}
+
+	SendBuffer[0] = 0xBA;
+	SendBuffer[1] = 0x01;
+	XIicPs_MasterSendPolled(&Iic, SendBuffer,2, 0x22);
+	while (XIicPs_BusIsBusy(&Iic)) {
+		/* NOP */
+	}
+
+	SendBuffer[0] = 0x40;
+	SendBuffer[1] = 0x81;
+	XIicPs_MasterSendPolled(&Iic, SendBuffer,2, 0x32);
+	while (XIicPs_BusIsBusy(&Iic)) {
+		/* NOP */
+	}
+
+	i=0;
+
+	while(1){
+
+		SendBuffer[0] = iic_HDMI_hdmi_config[i][0];
+		SendBuffer[1] = iic_HDMI_hdmi_config[i][1];
+		XIicPs_MasterSendPolled(&Iic, SendBuffer,2, 0x34);
+		while (XIicPs_BusIsBusy(&Iic)) {
+			/* NOP */
+		}
+		if ((iic_HDMI_hdmi_config[i][0] == 0x75) && (iic_HDMI_hdmi_config[i][1] == 0x10)){
+						break;
+		}
+		i++;
+	}
+
+	while(1){
+
+		SendBuffer[0] = adv7611_edid_content[i];
+		XIicPs_MasterSendPolled(&Iic, SendBuffer,1, 0x36);
+		while (XIicPs_BusIsBusy(&Iic)) {
+			/* NOP */
+		}
+		if (i==255){
+			break;
+		}
+		i++;
+	}
+
+//read back a register to prove we set it correctly
+	XIicPs_SetOptions(&Iic,XIICPS_REP_START_OPTION);
+	SendBuffer[0] = 0x04;
+	XIicPs_MasterSendPolled(&Iic, SendBuffer,1, IIC_SLAVE_ADDR);
+	if (!(Iic.IsRepeatedStart)) {
+		while (XIicPs_BusIsBusy(&Iic));
+	}
+
+	XIicPs_MasterRecvPolled(&Iic, RecvBuffer,1, IIC_SLAVE_ADDR);
+	if (!(Iic.IsRepeatedStart)) {
+		while (XIicPs_BusIsBusy(&Iic));
+	}
+	for(i =0; i<1; i++){
+	xil_printf("%X ", RecvBuffer[i]);
+	}
+	xil_printf("\n\r ");
+
+	//XVtc_RegUpdateEnable(&VtcInst);
+	XVtc_Enable(&VtcInst);
+	XVtc_EnableDetector(&VtcInst);
+	//XVtc_SyncReset(&VtcInst);
+while(1){
+	usleep(1000000);
+	data = Xil_In32(0x43c00000);
+	xil_printf("Control %X ", data);
+	data = Xil_In32(0x43c00004);
+	xil_printf("Status %X ", data);
+	data = Xil_In32(0x43c00008);
+	xil_printf("Error %X ", data);
+	data = Xil_In32(0x43c0000C);
+	xil_printf("Int Status %X ", data);
+	data = Xil_In32(0x43c00020);
+	xil_printf("H and V Size %X ", data);
+	data = Xil_In32(0x43c00024);
+	xil_printf("Detector Timing Status %X ", data);
+	XVtc_GetDetectorTiming(&VtcInst,&det);
+	result = XVtc_GetDetectorVideoMode(&VtcInst);
+	xil_printf("Video Mode = %i ", result);
+	xil_printf("\n\r");
+}
+    cleanup_platform();
+    return 0;
+}

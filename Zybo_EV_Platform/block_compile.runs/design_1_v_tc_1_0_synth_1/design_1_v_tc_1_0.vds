@@ -1,25 +1,31 @@
 #-----------------------------------------------------------
-# Vivado v2017.4_AR70530_AR70530 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri May 11 19:33:57 2018
-# Process ID: 6132
-# Current directory: C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Dec  8 17:38:47 2019
+# Process ID: 64024
+# Current directory: C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1
 # Command line: vivado.exe -log design_1_v_tc_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_v_tc_1_0.tcl
-# Log file: C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1/design_1_v_tc_1_0.vds
-# Journal file: C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1\vivado.jou
+# Log file: C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1/design_1_v_tc_1_0.vds
+# Journal file: C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_v_tc_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 462.121 ; gain = 161.777
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/git_repos/hackster/digilent'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 486.945 ; gain = 24.824
 Command: synth_design -top design_1_v_tc_1_0 -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15316 
+INFO: Helper process launched with PID 59248 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 410.781 ; gain = 101.664
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1031.602 ; gain = 235.375
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_1_0' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/synth/design_1_v_tc_1_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_1_0' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/synth/design_1_v_tc_1_0.vhd:96]
 	Parameter C_HAS_AXI4_LITE bound to: 1 - type: integer 
 	Parameter C_HAS_INTC_IF bound to: 0 - type: integer 
 	Parameter C_GEN_INTERLACED bound to: 0 - type: integer 
@@ -105,10 +111,10 @@ INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_1_0' [c:/hdl_projects/blo
 	Parameter C_GEN_ACHROMA_EN bound to: 0 - type: integer 
 	Parameter C_GEN_FIELDID_EN bound to: 0 - type: integer 
 	Parameter C_DET_FIELDID_EN bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'v_tc' declared at 'c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/6694/hdl/v_tc_v6_1_vh_rfs.vhd:7217' bound to instance 'U0' of component 'v_tc' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/synth/design_1_v_tc_1_0.vhd:282]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110011 
+INFO: [Synth 8-3491] module 'v_tc' declared at 'c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/111e/hdl/v_tc_v6_2_vh_rfs.vhd:7218' bound to instance 'U0' of component 'v_tc' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/synth/design_1_v_tc_1_0.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 10 - type: integer 
 	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
@@ -116,29 +122,29 @@ INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/hdl_projects/bloc
 	Parameter C_USE_WSTRB bound to: 0 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 512 - type: integer 
 	Parameter C_FAMILY bound to: virtex5 - type: string 
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
-	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110011 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
 	Parameter C_BAR bound to: 9'b100000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 1 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
 	Parameter C_BAR bound to: 9'b000000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'design_1_v_tc_1_0' (11#1) [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/synth/design_1_v_tc_1_0.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'design_1_v_tc_1_0' (11#1) [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/synth/design_1_v_tc_1_0.vhd:96]
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[11]
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[10]
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[9]
@@ -241,7 +247,7 @@ WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_star
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start_hori[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 580.410 ; gain = 271.293
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1143.461 ; gain = 347.234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -251,51 +257,63 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 580.410 ; gain = 271.293
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1143.461 ; gain = 347.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1143.461 ; gain = 347.234
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.277 . Memory (MB): peak = 1143.461 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1/dont_touch.xdc]
-Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_v_tc_1_0_propImpl.xdc].
+Parsing XDC File [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_v_tc_1_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_v_tc_1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1276.242 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.201 . Memory (MB): peak = 871.391 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1280.281 ; gain = 4.039
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:15 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,7 +334,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               45 Bit    Registers := 4     
 	               34 Bit    Registers := 3     
-	               32 Bit    Registers := 99    
+	               32 Bit    Registers := 101   
 	               17 Bit    Registers := 1     
 	               12 Bit    Registers := 17    
 	               10 Bit    Registers := 1     
@@ -329,9 +347,9 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 57    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 78    
+	   2 Input     32 Bit        Muxes := 82    
 	   4 Input     32 Bit        Muxes := 2     
-	   4 Input     29 Bit        Muxes := 10    
+	   4 Input     29 Bit        Muxes := 11    
 	   4 Input     28 Bit        Muxes := 17    
 	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 16    
@@ -340,10 +358,13 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
 	   7 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 61    
+	   2 Input      1 Bit        Muxes := 56    
 	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -371,10 +392,12 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
 	   7 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 8     
 Module video_clock_cross 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -390,7 +413,6 @@ Detailed RTL Component Info :
 	                7 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 40    
-	   2 Input      1 Bit        Muxes := 1     
 Module mux_tree__parameterized0 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -398,19 +420,18 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 20    
-	   2 Input      1 Bit        Muxes := 1     
 Module video_ctrl 
 Detailed RTL Component Info : 
 +---Registers : 
 	               45 Bit    Registers := 1     
-	               32 Bit    Registers := 69    
+	               32 Bit    Registers := 71    
 	                5 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 14    
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 15    
-	   4 Input     29 Bit        Muxes := 10    
+	   4 Input     29 Bit        Muxes := 11    
 	   4 Input     28 Bit        Muxes := 17    
 	   4 Input     10 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
@@ -440,8 +461,9 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 1     
 Module v_tc 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -465,114 +487,14 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_reg was removed.  [c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2674]
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_reg) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[16][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[16][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[16][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[16][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[16][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[16][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][28]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][27]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][26]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][25]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][24]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][23]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][22]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][21]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][20]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][19]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][18]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][17]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][16]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][12]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][11]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][10]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][6]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][5]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][4]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][3]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][2]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][1]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[18][0]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][28]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][27]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][26]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][25]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][24]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][23]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][22]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][21]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][20]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][19]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][18]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][17]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][16]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][12]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][11]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][10]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][9]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][8]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][7]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[19][6]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[20][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[20][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[20][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[20][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[20][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[20][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[21][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[21][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[21][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[21][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[21][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[21][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[22][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[22][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[22][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[22][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[22][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[22][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[23][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[23][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[23][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[23][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[23][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[23][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[24][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[24][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[24][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[24][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[24][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[24][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[25][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[25][30]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[25][29]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[25][15]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[25][14]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[25][13]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[26][31]) is unused and will be removed from module video_ctrl.
-INFO: [Synth 8-3332] Sequential element (AXI4_LITE_INTERFACE.time_control_regs2_int_reg[26][30]) is unused and will be removed from module video_ctrl.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[0]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[1]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[1]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[2]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[2]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[0]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[1]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[2]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/all_lock_reg )
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[4]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[4]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[5]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[5]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[6]'
@@ -602,8 +524,41 @@ INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[1]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[3]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[5]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[3]'
 INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[3]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[0]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[1]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[2]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[3]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[4]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[5]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[6]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[7]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\U_TC_TOP/GEN_GENERATOR.U_TC_GEN/active_chroma_int_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/GEN_GENERATOR.U_TC_GEN/field_id_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[8] )
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[14]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[15] )
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[17]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[18]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[19]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[20]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[21]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[22]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[23]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[24]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[25]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[26]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[27]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[28]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[29]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[30]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[31] )
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][3]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][3]'
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][2]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][2]'
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[2].sel_int_reg[2][1]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[2].sel_int_reg[2][1]'
@@ -620,7 +575,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDE
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][3] )
-INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][3]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][16]'
+INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][3]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][17]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][4] )
@@ -659,10 +614,10 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDE
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][16] )
-INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][16]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][25]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][17] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][17] )
+INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][17]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][25]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][18] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][18] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][18] )
@@ -698,32 +653,14 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDE
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][30] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[1].sel_int_reg[1][0]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[1].sel_int_reg[1][0]'
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[2].sel_int_reg[2][0]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[2].sel_int_reg[2][0]'
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][1]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[50].GEN_MUX_REG.data_out_reg_reg[50][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[34].GEN_MUX_REG.data_out_reg_reg[34][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][31] )
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][0]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.CORE_MUX0/GEN_TREE.GEN_BRANCH[6].GEN_MUX_REG.data_out_reg_reg[6][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.CORE_MUX0/GEN_TREE.GEN_BRANCH[6].GEN_MUX_REG.data_out_reg_reg[6][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.CORE_MUX0/GEN_TREE.GEN_BRANCH[6].GEN_MUX_REG.data_out_reg_reg[6][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.CORE_MUX0/GEN_TREE.GEN_BRANCH[6].GEN_MUX_REG.data_out_reg_reg[6][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.CORE_MUX0/GEN_TREE.GEN_BRANCH[6].GEN_MUX_REG.data_out_reg_reg[6][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/U_VIDEO_CTRL/\AXI4_LITE_INTERFACE.CORE_MUX0/GEN_TREE.GEN_BRANCH[6].GEN_MUX_REG.data_out_reg_reg[6][5] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][0]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_error_int_reg[0]' (FDRE) to 'U0/U_TC_TOP/intr_error_int_reg[1]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_error_int_reg[1]' (FDRE) to 'U0/U_TC_TOP/intr_error_int_reg[2]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_error_int_reg[2]' (FDRE) to 'U0/U_TC_TOP/intr_error_int_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_error_int_reg[3]' (FDRE) to 'U0/U_TC_TOP/intr_error_int_reg[4]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_error_int_reg[4]' (FDRE) to 'U0/U_TC_TOP/intr_error_int_reg[5]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_error_int_reg[5]' (FDRE) to 'U0/U_TC_TOP/intr_error_int_reg[6]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:28 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -735,13 +672,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:01:55 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:57 . Memory (MB): peak = 871.391 ; gain = 562.273
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -753,7 +690,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:02:01 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -773,13 +710,24 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4618] Found max_fanout attribute set to 128 on net ipif_Addr[2]. Fanout reduced from 703 to 112 by creating 6 replicas.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:42 ; elapsed = 00:02:04 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1280.281 ; gain = 484.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
@@ -788,40 +736,28 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:42 ; elapsed = 00:02:04 . Memory (MB): peak = 888.273 ; gain = 579.156
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:43 ; elapsed = 00:02:04 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:43 ; elapsed = 00:02:04 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:43 ; elapsed = 00:02:05 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:43 ; elapsed = 00:02:05 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -834,7 +770,6 @@ Static Shift Register Report:
 |video_ctrl  | AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[5].sel_int_reg[5][0] | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |video_ctrl  | AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |video_ctrl  | AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|video_ctrl  | AXI4_LITE_INTERFACE.read_ack_d_reg[4]                            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
 |v_tc        | U_TC_TOP/detect_en_d_reg[3]                                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
 |v_tc        | U_TC_TOP/generate_en_d_reg[3]                                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
 +------------+------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
@@ -857,57 +792,65 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |    31|
-|2     |LUT1   |    61|
-|3     |LUT2   |    48|
-|4     |LUT3   |   550|
-|5     |LUT4   |    72|
-|6     |LUT5   |    94|
-|7     |LUT6   |   429|
+|2     |LUT1   |    45|
+|3     |LUT2   |    44|
+|4     |LUT3   |   580|
+|5     |LUT4   |    77|
+|6     |LUT5   |    91|
+|7     |LUT6   |   433|
 |8     |MUXF7  |   134|
-|9     |SRL16E |     6|
-|10    |FDRE   |  2742|
-|11    |FDSE   |   184|
+|9     |SRL16E |     5|
+|10    |FDRE   |  2786|
+|11    |FDSE   |   197|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------------------------------+----------------------------------+------+
 |      |Instance                                    |Module                            |Cells |
 +------+--------------------------------------------+----------------------------------+------+
-|1     |top                                         |                                  |  4351|
-|2     |  U0                                        |v_tc                              |  4351|
-|3     |    U_VIDEO_CTRL                            |video_ctrl                        |  3970|
-|4     |      \AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I  |axi_lite_ipif                     |   106|
-|5     |        I_SLAVE_ATTACHMENT                  |slave_attachment                  |   106|
+|1     |top                                         |                                  |  4423|
+|2     |  U0                                        |v_tc                              |  4423|
+|3     |    U_VIDEO_CTRL                            |video_ctrl                        |  4037|
+|4     |      \AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I  |axi_lite_ipif                     |   113|
+|5     |        I_SLAVE_ATTACHMENT                  |slave_attachment                  |   113|
 |6     |          I_DECODER                         |address_decoder                   |     9|
 |7     |      \AXI4_LITE_INTERFACE.CORE_MUX0        |mux_tree__parameterized0          |   130|
 |8     |      \AXI4_LITE_INTERFACE.GENR_MUX0        |mux_tree                          |  1075|
 |9     |      \AXI4_LITE_INTERFACE.SYNC2PROCCLK_I   |video_clock_cross__parameterized0 |   107|
-|10    |      \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I    |video_clock_cross                 |   775|
-|11    |    U_TC_TOP                                |tc_top                            |   378|
-|12    |      \GEN_GENERATOR.U_TC_GEN               |tc_generator                      |   359|
+|10    |      \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I    |video_clock_cross                 |   786|
+|11    |    U_TC_TOP                                |tc_top                            |   384|
+|12    |      \GEN_GENERATOR.U_TC_GEN               |tc_generator                      |   357|
 +------+--------------------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:43 ; elapsed = 00:02:05 . Memory (MB): peak = 888.273 ; gain = 579.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1280.281 ; gain = 484.055
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 774 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:01:41 . Memory (MB): peak = 888.273 ; gain = 288.176
-Synthesis Optimization Complete : Time (s): cpu = 00:01:44 ; elapsed = 00:02:05 . Memory (MB): peak = 888.273 ; gain = 579.156
+Synthesis finished with 0 errors, 0 critical warnings and 798 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1280.281 ; gain = 347.234
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1280.281 ; gain = 484.055
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.235 . Memory (MB): peak = 1280.281 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 165 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1280.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-288 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+203 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:49 ; elapsed = 00:02:10 . Memory (MB): peak = 888.273 ; gain = 590.629
-INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1/design_1_v_tc_1_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/hdl_projects/block_compile/block_compile.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0.xci
+synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1280.281 ; gain = 779.973
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1280.281 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1/design_1_v_tc_1_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_v_tc_1_0, cache-ID = a7406b668a72333a
 INFO: [Coretcl 2-1174] Renamed 11 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/block_compile/block_compile.runs/design_1_v_tc_1_0_synth_1/design_1_v_tc_1_0.dcp' has been generated.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1280.281 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.runs/design_1_v_tc_1_0_synth_1/design_1_v_tc_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_v_tc_1_0_utilization_synth.rpt -pb design_1_v_tc_1_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 888.273 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May 11 19:36:36 2018...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 17:40:39 2019...

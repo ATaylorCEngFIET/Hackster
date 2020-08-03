@@ -133,7 +133,7 @@ wire [C_S_AXIS_TDATA_WIDTH/8-1:0]  m_axis_tkeep_i;
 wire [C_S_AXIS_TDATA_WIDTH/8-1:0]  m_axis_tstrb_i;
 wire m_axis_tlast_i;
 
-axis_subset_converter_v1_1_15_core #(
+axis_subset_converter_v1_1_20_core #(
 .C_FAMILY             ( C_FAMILY             ),
 .C_AXIS_TDATA_WIDTH   ( C_S_AXIS_TDATA_WIDTH ),
 .C_S_AXIS_TID_WIDTH   ( C_S_AXIS_TID_WIDTH   ),
@@ -145,7 +145,7 @@ axis_subset_converter_v1_1_15_core #(
 .C_M_AXIS_SIGNAL_SET  ( C_M_AXIS_SIGNAL_SET  ),
 .C_DEFAULT_TLAST      ( C_DEFAULT_TLAST      )
 )
-axis_subset_converter_v1_1_15_core (
+axis_subset_converter_v1_1_20_core (
 .aclk                 (aclk                 ),
 .aresetn              (aresetn              ),
 .aclken               (aclken               ),

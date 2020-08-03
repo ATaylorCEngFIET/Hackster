@@ -7093,3 +7093,509 @@ con
 20:49:25 INFO  : Creating new bif file C:\hdl_projects\block_compile\block_compile.sdk\application\bootimage\application.bif
 20:49:29 INFO  : Bootgen command execution is done.
 22:20:18 INFO  : Disconnected from the channel tcfchan#1.
+10:12:07 INFO  : Registering command handlers for SDK TCF services
+10:12:08 INFO  : Launching XSCT server: xsct.bat -interactive C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\temp_xsdb_launch_script.tcl
+10:12:10 INFO  : XSCT server has started successfully.
+10:12:10 INFO  : Successfully done setting XSCT server connection channel  
+10:12:11 INFO  : Successfully done setting SDK workspace  
+10:12:11 INFO  : Processing command line option -hwspec C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf.
+10:13:38 INFO  : Registering command handlers for SDK TCF services
+10:13:39 INFO  : Launching XSCT server: xsct.bat -interactive C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\temp_xsdb_launch_script.tcl
+10:13:41 INFO  : XSCT server has started successfully.
+10:13:41 INFO  : Successfully done setting XSCT server connection channel  
+10:13:41 INFO  : Successfully done setting SDK workspace  
+10:13:41 INFO  : Processing command line option -hwspec C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf.
+12:07:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.
+12:07:32 ERROR : (XSDB Server)5 not found in repositories
+ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+
+12:07:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:07:32 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+12:07:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.5 not found in repositories
+
+12:07:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+
+12:07:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+
+12:07:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:07:32 INFO  : Unable to read in MSS file C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\application_bsp\system.mss : null
+12:07:36 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.5 n
+12:07:36 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+12:07:36 ERROR : (XSDB Server)ot found in repositories
+ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:07:36 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.5 not fou
+12:07:36 ERROR : (XSDB Server)nd in repositories
+
+12:07:36 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+
+12:07:36 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+
+12:07:36 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open
+12:07:36 ERROR : (XSDB Server)_sw_design.
+
+12:07:36 INFO  : Unable to read in MSS file C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\application_bsp\system.mss : null
+12:12:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:12:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+12:12:43 INFO  : 'jtag frequency' command is executed.
+12:12:43 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:12:44 INFO  : Context for 'APU' is selected.
+12:12:44 INFO  : System reset is completed.
+12:12:47 INFO  : 'after 3000' command is executed.
+12:12:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+12:12:48 ERROR : couldn't open "C:/hdl_projects/block_compile/block_compile.runs/impl_1/design_1_wrapper.bit": no such file or directory
+12:12:48 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: couldn't open "C:/hdl_projects/block_compile/block_compile.runs/impl_1/design_1_wrapper.bit": no such file or directory
+12:12:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+12:14:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:14:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+12:14:27 INFO  : 'jtag frequency' command is executed.
+12:14:27 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:14:27 INFO  : Context for 'APU' is selected.
+12:14:27 INFO  : System reset is completed.
+12:14:30 INFO  : 'after 3000' command is executed.
+12:14:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+12:14:32 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:14:32 INFO  : Context for 'APU' is selected.
+12:14:32 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+12:14:32 INFO  : 'configparams force-mem-access 1' command is executed.
+12:14:32 INFO  : Context for 'APU' is selected.
+12:14:33 INFO  : 'ps7_init' command is executed.
+12:14:33 INFO  : 'ps7_post_config' command is executed.
+12:14:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:14:33 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:14:33 INFO  : 'configparams force-mem-access 0' command is executed.
+12:14:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:14:33 INFO  : Memory regions updated for context APU
+12:14:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:14:33 INFO  : 'con' command is executed.
+12:14:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+12:14:33 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:22:50 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575811180286,  Project:1575758837944
+13:22:50 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:24:33 INFO  : Copied contents of C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+13:24:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:24:46 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of versio
+13:24:46 ERROR : (XSDB Server)n 3.5 not found in repositories
+ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+13:24:46 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+13:24:46 ERROR : Error updating BSP project MSS files.
+13:24:47 INFO  : Updating hardware inferred compiler options for application.
+13:24:47 INFO  : Updating hardware inferred compiler options for fsbl.
+13:24:47 INFO  : Clearing existing target manager status.
+13:28:56 INFO  : Disconnected from the channel tcfchan#1.
+13:28:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:28:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+13:28:57 ERROR : port closed
+13:28:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:29:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:29:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+13:29:09 INFO  : 'jtag frequency' command is executed.
+13:29:09 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:29:09 INFO  : Context for 'APU' is selected.
+13:29:09 INFO  : System reset is completed.
+13:29:12 INFO  : 'after 3000' command is executed.
+13:29:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+13:29:14 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:29:14 INFO  : Context for 'APU' is selected.
+13:29:14 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:29:14 INFO  : 'configparams force-mem-access 1' command is executed.
+13:29:14 INFO  : Context for 'APU' is selected.
+13:29:15 INFO  : 'ps7_init' command is executed.
+13:29:15 INFO  : 'ps7_post_config' command is executed.
+13:29:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:15 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:29:15 INFO  : 'configparams force-mem-access 0' command is executed.
+13:29:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:29:15 INFO  : Memory regions updated for context APU
+13:29:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:15 INFO  : 'con' command is executed.
+13:29:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+13:29:15 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:35:22 INFO  : Disconnected from the channel tcfchan#2.
+13:35:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+13:35:24 INFO  : 'jtag frequency' command is executed.
+13:35:24 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:35:24 INFO  : Context for 'APU' is selected.
+13:35:24 INFO  : System reset is completed.
+13:35:27 INFO  : 'after 3000' command is executed.
+13:35:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+13:35:29 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:35:29 INFO  : Context for 'APU' is selected.
+13:35:34 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:35:34 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:34 INFO  : Context for 'APU' is selected.
+13:35:34 INFO  : 'ps7_init' command is executed.
+13:35:34 INFO  : 'ps7_post_config' command is executed.
+13:35:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:34 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:34 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:34 INFO  : Memory regions updated for context APU
+13:35:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:34 INFO  : 'con' command is executed.
+13:35:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+13:35:34 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:38:23 INFO  : Disconnected from the channel tcfchan#3.
+13:38:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:38:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+13:38:24 INFO  : 'jtag frequency' command is executed.
+13:38:24 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:38:24 INFO  : Context for 'APU' is selected.
+13:38:24 INFO  : System reset is completed.
+13:38:27 INFO  : 'after 3000' command is executed.
+13:38:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+13:38:29 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:38:29 INFO  : Context for 'APU' is selected.
+13:38:29 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:38:29 INFO  : 'configparams force-mem-access 1' command is executed.
+13:38:29 INFO  : Context for 'APU' is selected.
+13:38:30 INFO  : 'ps7_init' command is executed.
+13:38:30 INFO  : 'ps7_post_config' command is executed.
+13:38:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:38:30 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:38:30 INFO  : 'configparams force-mem-access 0' command is executed.
+13:38:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:38:30 INFO  : Memory regions updated for context APU
+13:38:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:38:30 INFO  : 'con' command is executed.
+13:38:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+13:38:30 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:13:23 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575814383059,  Project:1575811180286
+14:13:23 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:13:52 INFO  : Copied contents of C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+14:13:59 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:14:00 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.5 not found 
+14:14:00 ERROR : (XSDB Server)in repositories
+ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 225 - No IP instance named v_tc_0 present in hardware design
+ERROR: [Hs
+14:14:00 ERROR : (XSDB Server)i 55-1403] C:/git_repos
+14:14:00 ERROR : (XSDB Server)/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 231 - No IP instance named v_tc_1 present in hardware design
+
+14:14:00 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/git_repos/hackst
+14:14:00 ERROR : (XSDB Server)er/Zybo_EV_Platform/block_compile.sdk/appli
+14:14:00 ERROR : (XSDB Server)cation_bsp/system.mss line 237 - No I
+14:14:00 ERROR : (XSDB Server)P instance named axi_dynclk_0 present in hardware design
+
+14:14:00 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 243 - No IP instance named axi_gpio_0 present in hardware design
+
+14:14:00 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+14:14:00 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+14:14:00 ERROR : Error updating BSP project MSS files.
+14:14:00 INFO  : Updating hardware inferred compiler options for application.
+14:14:01 INFO  : Updating hardware inferred compiler options for fsbl.
+14:14:01 INFO  : Clearing existing target manager status.
+14:16:40 INFO  : Disconnected from the channel tcfchan#4.
+14:16:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+14:16:41 INFO  : 'jtag frequency' command is executed.
+14:16:41 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:16:41 INFO  : Context for 'APU' is selected.
+14:16:41 INFO  : System reset is completed.
+14:16:44 INFO  : 'after 3000' command is executed.
+14:16:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+14:16:46 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:16:47 INFO  : Context for 'APU' is selected.
+14:16:47 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:16:47 INFO  : 'configparams force-mem-access 1' command is executed.
+14:16:47 INFO  : Context for 'APU' is selected.
+14:16:47 INFO  : 'ps7_init' command is executed.
+14:16:47 INFO  : 'ps7_post_config' command is executed.
+14:16:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:47 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:16:47 INFO  : 'configparams force-mem-access 0' command is executed.
+14:16:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:16:47 INFO  : Memory regions updated for context APU
+14:16:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:47 INFO  : 'con' command is executed.
+14:16:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+14:16:47 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:39:14 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575815802638,  Project:1575814383059
+14:39:14 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:51:39 INFO  : Copied contents of C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+14:51:48 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:51:49 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.5 not 
+14:51:49 ERROR : (XSDB Server)found in repositories
+ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 225 - No IP instance named v_tc_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 231 - No IP instance named v_tc_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 243 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+14:51:49 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+14:51:49 ERROR : Error updating BSP project MSS files.
+14:51:50 INFO  : Updating hardware inferred compiler options for application.
+14:51:51 INFO  : Updating hardware inferred compiler options for fsbl.
+14:51:51 INFO  : Clearing existing target manager status.
+14:54:32 INFO  : Disconnected from the channel tcfchan#5.
+14:54:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:33 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+14:54:33 ERROR : port closed
+14:54:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+14:54:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:59 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+14:54:59 INFO  : 'jtag frequency' command is executed.
+14:54:59 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:54:59 INFO  : Context for 'APU' is selected.
+14:54:59 INFO  : System reset is completed.
+14:55:02 INFO  : 'after 3000' command is executed.
+14:55:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+14:55:04 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:55:04 INFO  : Context for 'APU' is selected.
+14:55:05 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:55:05 INFO  : 'configparams force-mem-access 1' command is executed.
+14:55:05 INFO  : Context for 'APU' is selected.
+14:55:05 INFO  : 'ps7_init' command is executed.
+14:55:05 INFO  : 'ps7_post_config' command is executed.
+14:55:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:05 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:55:05 INFO  : 'configparams force-mem-access 0' command is executed.
+14:55:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:55:05 INFO  : Memory regions updated for context APU
+14:55:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:05 INFO  : 'con' command is executed.
+14:55:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+14:55:05 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+15:31:41 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575818719471,  Project:1575815802638
+15:31:41 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:33:03 INFO  : Copied contents of C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+15:33:10 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:33:11 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core emacps of version 3.5 not found in repositories
+
+15:33:11 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+15:33:11 ERROR : (XSDB Server)ERROR: [Hsi 55-1594] Core sdps of version 3.3 not found in repositories
+ERROR: [Hsi 55-1594] Core uartps of version 3.4 not found in repositories
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 225 - No IP instance named v_tc_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 231 - No IP instance named v_tc_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application_bsp/system.mss line 243 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+15:33:11 ERROR : Error updating BSP project MSS files.
+15:33:12 INFO  : Updating hardware inferred compiler options for application.
+15:33:12 INFO  : Updating hardware inferred compiler options for fsbl.
+15:33:12 INFO  : Clearing existing target manager status.
+15:34:35 INFO  : Disconnected from the channel tcfchan#6.
+15:34:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:34:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+15:34:36 ERROR : port closed
+15:34:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+15:35:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:35:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A6B224A' is selected.
+15:35:51 INFO  : 'jtag frequency' command is executed.
+15:35:51 INFO  : Sourcing of 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:35:51 INFO  : Context for 'APU' is selected.
+15:35:51 INFO  : System reset is completed.
+15:35:54 INFO  : 'after 3000' command is executed.
+15:35:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1' command is executed.
+15:35:57 INFO  : FPGA configured successfully with bitstream "C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+15:35:57 INFO  : Context for 'APU' is selected.
+15:35:57 INFO  : Hardware design information is loaded from 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+15:35:57 INFO  : 'configparams force-mem-access 1' command is executed.
+15:35:57 INFO  : Context for 'APU' is selected.
+15:35:57 INFO  : 'ps7_init' command is executed.
+15:35:57 INFO  : 'ps7_post_config' command is executed.
+15:35:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:57 INFO  : The application 'C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:35:57 INFO  : 'configparams force-mem-access 0' command is executed.
+15:35:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A" && level==0} -index 1
+fpga -file C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+loadhw -hw C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+dow C:/git_repos/hackster/Zybo_EV_Platform/block_compile.sdk/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:35:58 INFO  : Memory regions updated for context APU
+15:35:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:58 INFO  : 'con' command is executed.
+15:35:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A6B224A"} -index 0
+con
+----------------End of Script----------------
+
+15:35:58 INFO  : Launch script is exported to file 'C:\git_repos\hackster\Zybo_EV_Platform\block_compile.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+16:10:08 INFO  : Disconnected from the channel tcfchan#7.

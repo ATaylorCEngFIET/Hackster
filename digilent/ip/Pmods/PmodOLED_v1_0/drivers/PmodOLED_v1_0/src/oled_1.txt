@@ -1,0 +1,24 @@
+OLED_WriteByte(InstancePtr, 0x8D);//From Univision data sheet, not in SSD1306 data sheet
+	OLED_WriteByte(InstancePtr, 0x14);
+
+	OLED_WriteByte(InstancePtr, 0xD9);//From Univision data sheet, not in SSD1306 data sheet
+	OLED_WriteByte(InstancePtr, 0xF1);
+
+	/* Turn on VCC and wait 100ms
+	*/
+	OLED_SetGPIOBits(InstancePtr, VbatCtrl, false);
+	OLED_Delay(100);
+
+	/* Send the commands to invert the display.
+	*/
+	OLED_WriteByte(InstancePtr, cmdOledSegRemap);//remap columns
+	OLED_WriteByte(InstancePtr, cmdOledComDir);//remap the rows
+
+	/* Send the commands to select sequential COM configuration
+	*/
+	OLED_WriteByte(InstancePtr, cmdOledComConfig);//set COM configuration command
+	OLED_WriteByte(InstancePtr, 0x20);//sequential COM, left/right remap enabled
+
+	/* Send Display On command
+	*/
+	OLED_WriteByte(InstancePtr, cmdOledDisplayOn);

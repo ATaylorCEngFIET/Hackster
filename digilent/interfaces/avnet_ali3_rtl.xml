@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:abstractionDefinition xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>avnet.com</spirit:vendor>
+  <spirit:library>interface</spirit:library>
+  <spirit:name>avnet_ali3_rtl</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busType spirit:vendor="avnet.com" spirit:library="interface" spirit:name="avnet_ali3" spirit:version="1.0"/>
+  <spirit:ports>
+		<spirit:port>
+			<spirit:logicalName>ALI_RST_N</spirit:logicalName>
+			<spirit:description>ALI3 Reset</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isReset>true</spirit:isReset>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:width>1</spirit:width>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>ALI_CLK_P</spirit:logicalName>
+			<spirit:description>ALI3 Serialized Clock</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isClock>true</spirit:isClock>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>ALI_CLK_N</spirit:logicalName>
+			<spirit:description>ALI3 Serialized Clock</spirit:description>
+			<spirit:wire>
+				<spirit:qualifier>
+					<spirit:isClock>true</spirit:isClock>
+				</spirit:qualifier>
+				<spirit:onSlave>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>ALI_DATA_P</spirit:logicalName>
+			<spirit:description>ALI3 Serialized Data Channels</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+		<spirit:port>
+			<spirit:logicalName>ALI_DATA_N</spirit:logicalName>
+			<spirit:description>ALI3 Serialized Data Channels</spirit:description>
+			<spirit:wire>
+				<spirit:onSlave>
+					<spirit:direction>out</spirit:direction>
+				</spirit:onSlave>
+			</spirit:wire>
+		</spirit:port>
+  </spirit:ports>
+</spirit:abstractionDefinition>

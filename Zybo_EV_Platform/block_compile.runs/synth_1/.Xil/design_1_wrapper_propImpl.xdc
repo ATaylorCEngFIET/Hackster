@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/hdl_projects/block_compile/block_compile.srcs/constrs_1/new/cosnt.xdc rfile:../../../block_compile.srcs/constrs_1/new/cosnt.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/git_repos/hackster/Zybo_EV_Platform/block_compile.srcs/constrs_1/new/cosnt.xdc rfile:../../../block_compile.srcs/constrs_1/new/cosnt.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { HDMI_HPD_IN }]; #IO_L22N_T3_34 Sch=hdmi_rx_hpd
 set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]
